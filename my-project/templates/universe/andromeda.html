@@ -1,0 +1,428 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    The Andromeda Galaxy
+{% endblock %}
+
+{% block style %}
+        <style>
+            .crosslink:link {color:#0000bb;}
+            .header-tb-link:link {color:#cccc00;}
+            .crosslink:visited, .header-tb-link:visited {color:#ff751a;}
+            .crosslink:hover, .header-tb-link:hover {
+                text-decoration: none;
+                color: #009900;
+                cursor: pointer;
+            }
+            .crosslink:active, .header-tb-link:active {color:#ff0000;}
+
+            .sm-text {
+                font-size: 16px;
+            }
+            @media screen and (min-width:993px){.head-img{background-image:url("https://wallpaperaccess.com/full/435260.jpg");}}
+            @media screen and (min-width:601px){table th{padding:20px 10px!important;}}
+            @media screen and (max-width:992px){.sm-text{font-size:14px;}.head-img{background-image:url("/static/images/universe/hero-andromeda-medium.jpg");}}
+            @media screen and (max-width:600px){.w3-table{table-layout:auto!important;}.head-img{height:76%;background-image:url("/static/images/universe/hero-andromeda-small.jpg");}}
+            @media screen and (max-width:545px){.no-smpad{padding:0 !important;}}
+        </style>
+{% endblock %}
+
+{% block head_content %}
+            <div class="w3-display-bottomleft w3-center w3-margin-bottom w3-padding-large w3-hide-medium w3-hide-small">
+                <span class="w3-tag">So much universe, and so little time</span>
+            </div>
+            <div class="w3-display-top w3-center w3-padding-large">
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>THE ANDROMEDA</b></h1>
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>GALAXY</b></h1>
+            </div>
+            <div class="w3-display-bottomright w3-center w3-margin-bottom w3-padding-large tag-text">
+                <span id="bigger_font" class="contour w3-text-white">At some point, entireness will be known</span>
+            </div>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center dark-blue-grad w3-bottombar w3-border-amber w3-padding-64 header-text">General information</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The Andromeda Galaxy, also known as Messier 31, M31, or NGC 224 and originally the Andromeda Nebula,
+                            is a barred spiral galaxy approximately 2.5 million light-years (770 kiloparsecs) from Earth,
+                            and the nearest major galaxy to the Milky Way. The galaxy's name stems from the area of the Earth's sky
+                            in which it appears, the constellation of Andromeda, which itself is named after the Ethiopian
+                            (or Phoenician) princess who was the wife of Perseus in Greek Mythology.
+                        </p>
+                        <p>
+                            The virial mass of the Andromeda Galaxy is of the same order of magnitude as that of the Milky Way,
+                            at 1 trillion solar masses (2.0×1042 kilograms). The mass of either galaxy is difficult to estimate with
+                            any accuracy, but it was long thought that the Andromeda Galaxy is more massive than the Milky Way by
+                            a margin of some 25% to 50%. This has been called into question by a 2018 study which cited a lower estimate on
+                            the mass of the Andromeda Galaxy, combined with preliminary reports on a 2019 study estimating a higher mass of
+                            the Milky Way. The Andromeda Galaxy has a diameter of about 220,000 ly (67 kpc), making it the largest member of
+                            the Local Group at least in terms of extension, if not mass.
+                        </p>
+                        <p>
+                            The number of stars contained in the Andromeda Galaxy is estimated at one trillion (1×1012),
+                            or roughly twice the number estimated for the Milky Way.
+                        </p>
+                        <p>
+                            The Milky Way and Andromeda galaxies are expected to collide in around 4.5 billion years, merging to form
+                            a giant elliptical galaxy or a large lenticular galaxy. With an apparent magnitude of 3.4, the Andromeda Galaxy is
+                            among the brightest of the Messier objects making it visible to the naked eye from Earth on moonless nights,
+                            even when viewed from areas with moderate light pollution.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center dark-green-grad w3-bottombar w3-border-amber w3-padding-64 header-text">Observation history</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Around the year 964, the Persian astronomer Abd al-Rahman al-Sufi was the first to describe the Andromeda Galaxy.
+                            He referred to it in his Book of Fixed Stars as a "nebulous smear".
+                        </p>
+                        <p>
+                            Star charts of that period labeled it as the Little Cloud. In 1612, the German astronomer Simon Marius gave
+                            an early description of the Andromeda Galaxy based on telescopic observations. Pierre Louis Maupertuis conjectured
+                            in 1745 that the blurry spot was an island universe. In 1764, Charles Messier cataloged Andromeda as object M31
+                            and incorrectly credited Marius as the discoverer despite it being visible to the naked eye. In 1785,
+                            the astronomer William Herschel noted a faint reddish hue in the core region of Andromeda.
+                            He believed Andromeda to be the nearest of all the "great nebulae", and based on the color and magnitude of the nebula,
+                            he incorrectly guessed that it was no more than 2,000 times the distance of Sirius, or roughly 18,000 ly (5.5 kpc).
+                            In 1850, William Parsons, 3rd Earl of Rosse made the first drawing of Andromeda's spiral structure.
+                        </p>
+                        <p>
+                            In 1864, William Huggins noted that the spectrum of Andromeda differed from that of a gaseous nebula.
+                            The spectra of Andromeda displays a continuum of frequencies, superimposed with dark absorption lines that
+                            help identify the chemical composition of an object. Andromeda's spectrum is very similar to the spectra of individual stars,
+                            and from this, it was deduced that Andromeda has a stellar nature. In 1885, a supernova (known as S Andromedae) was seen in Andromeda,
+                            the first and so far only one observed in that galaxy. At the time Andromeda was considered to be a nearby object,
+                            so the cause was thought to be a much less luminous and unrelated event called a nova, and was named accordingly; "Nova 1885".
+                        </p>
+                        <p>
+                            In 1887, Isaac Roberts took the first photographs of Andromeda, which was still commonly thought to be a nebula within our galaxy.
+                            Roberts mistook Andromeda and similar spiral nebulae as solar systems being formed. In 1912, Vesto Slipher used spectroscopy to measure
+                            the radial velocity of Andromeda with respect to our Solar System—the largest velocity yet measured, at 300 km/s (190 mi/s).
+                        </p>
+                        <div class="w3-content w3-margin-bottom w3-center cool-font" style="max-width:600px;padding:0;">
+                            <!--https://upload.wikimedia.org/wikipedia/commons/5/51/Pic_iroberts1.jpg-->
+                            <img class="load-after-body" alt="Great Andromeda Nebula by Isaac Roberts, 1899" style="width:100%;" />
+                            <div class="w3-container w3-black w3-center">
+                                <p class="sm-text">
+                                    Great Andromeda Nebula by Isaac Roberts, 1899.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center red-orange-grad w3-bottombar w3-border-amber w3-padding-64 header-text">Island universe</h2>
+                    <div class="w3-padding">
+                        <p>
+                            In 1917, Heber Curtis observed a nova within Andromeda. Searching the photographic record, 11 more novae were discovered.
+                            Curtis noticed that these novae were, on average, 10 magnitudes fainter than those that occurred elsewhere in the sky.
+                            As a result, he was able to come up with a distance estimate of 500,000 ly (3.2×1010 AU). He became a proponent of
+                            the so-called "island universes" hypothesis, which held that spiral nebulae were actually independent galaxies.
+                        </p>
+                        <p>
+                            In 1920, the Great Debate between Harlow Shapley and Curtis took place concerning the nature of the Milky Way,
+                            spiral nebulae, and the dimensions of the Universe. To support his claim of the Great Andromeda Nebula being, in fact,
+                            an external galaxy, Curtis also noted the appearance of dark lanes within Andromeda which resembled the dust clouds
+                            in our own galaxy, as well as historical observations of Andromeda Galaxy's significant Doppler shift.
+                            In 1922 Ernst Öpik presented a method to estimate the distance of Andromeda using the measured velocities of its stars.
+                            His result placed the Andromeda Nebula far outside our galaxy at a distance of about 450 kpc (1,500 kly).
+                            Edwin Hubble settled the debate in 1925 when he identified extragalactic Cepheid variable stars for the first time
+                            on astronomical photos of Andromeda. These were made using the 2.5-metre (8 ft 2 in) Hooker telescope,
+                            and they enabled the distance of Great Andromeda Nebula to be determined. His measurement demonstrated conclusively that
+                            this feature was not a cluster of stars and gas within our own galaxy, but an entirely separate galaxy located
+                            a significant distance from the Milky Way.
+                        </p>
+                        <p>
+                            In 1943, Walter Baade was the first person to resolve stars in the central region of the Andromeda Galaxy.
+                            Baade identified two distinct populations of stars based on their metallicity, naming the young, high-velocity stars in
+                            the disk Type I and the older, red stars in the bulge Type II. This nomenclature was subsequently adopted for stars within
+                            the Milky Way, and elsewhere. (The existence of two distinct populations had been noted earlier by Jan Oort.)
+                            Baade also discovered that there were two types of Cepheid variables, which resulted in a doubling of
+                            the distance estimate to Andromeda, as well as the remainder of the Universe.
+                        </p>
+                        <p>
+                            In 1950, radio emission from the Andromeda Galaxy was detected by Hanbury Brown and Cyril Hazard at Jodrell Bank Observatory.
+                            The first radio maps of the galaxy were made in the 1950s by John Baldwin and collaborators at the Cambridge Radio Astronomy Group.
+                            The core of the Andromeda Galaxy is called 2C 56 in the 2C radio astronomy catalog. In 2009,
+                            the first planet may have been discovered in the Andromeda Galaxy. This was detected using a technique called microlensing,
+                            which is caused by the deflection of light by a massive object.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center teal-grad w3-bottombar w3-border-deep-purple w3-padding-64 header-text">Formation and history</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The Andromeda Galaxy was formed roughly 10 billion years ago from the collision and subsequent merger of smaller protogalaxies.
+                        </p>
+                        <p>
+                            This violent collision formed most of the galaxy's (metal-rich) galactic halo and extended disk. During this epoch,
+                            its rate of star formation would have been very high, to the point of becoming a luminous infrared galaxy
+                            for roughly 100 million years. Andromeda and the Triangulum Galaxy had a very close passage 2–4 billion years ago.
+                            This event produced high rates of star formation across the Andromeda Galaxy's disk—even some globular clusters and
+                            disturbed M33's outer disk.
+                        </p>
+                        <p>
+                            Over the past 2 billion years, star formation throughout Andromeda's disk is thought to have decreased to the point of
+                            near-inactivity. There have been interactions with satellite galaxies like M32, M110, or others that have already been absorbed
+                            by Andromeda Galaxy. These interactions have formed structures like Andromeda's Giant Stellar Stream.
+                            A galactic merger roughly 100 million years ago is believed to be responsible for a counter-rotating disk of gas found in
+                            the center of Andromeda as well as the presence there of a relatively young (100 million years old) stellar population.
+                        </p>
+                        <div class="w3-content w3-margin-bottom w3-center cool-font" style="max-width:700px;padding:0;">
+                            <picture>
+                                <!--/static/images/universe/andromeda-small.jpg-->
+                                <source class="load-after-body" media="(max-width: 600px)" />
+                                <!--/static/images/universe/andromeda-md-lg.jpg-->
+                                <img class="load-after-body" alt="The Andromeda Galaxy as seen by NASA's Wide-field Infrared Survey Explorer" style="width:100%;" />
+                            </picture>
+                            <div class="w3-container w3-dark-grey w3-center">
+                                <p class="sm-text">
+                                    The Andromeda Galaxy as seen by NASA's Wide-field Infrared Survey Explorer.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center blue-grey-grad w3-bottombar w3-border-orange w3-padding-64 header-text">Structure</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Based on its appearance in visible light, the Andromeda Galaxy is classified as an SA(s)b galaxy in the de Vaucouleurs–Sandage
+                            extended classification system of spiral galaxies. However, infrared data from the 2MASS survey and from
+                            the Spitzer Space Telescope showed that Andromeda is actually a barred spiral galaxy, like the Milky Way,
+                            with Andromeda's bar major axis oriented 55 degrees anti-clockwise from the disc major axis.
+                        </p>
+                        <p>
+                            In 2005, astronomers used the Keck telescopes to show that the tenuous sprinkle of stars extending outward from
+                            the galaxy is actually part of the main disk itself. This means that the spiral disk of stars in the Andromeda Galaxy is
+                            three times larger in diameter than previously estimated. This constitutes evidence that there is a vast,
+                            extended stellar disk that makes the galaxy more than 220,000 light-years (67 kiloparsecs) in diameter. Previously,
+                            estimates of the Andromeda Galaxy's size ranged from 70,000 to 120,000 light-years (21 to 37 kpc) across.
+                        </p>
+                        <p>
+                            The galaxy is inclined an estimated 77° relative to Earth (where an angle of 90° would be viewed directly from the side).
+                            Analysis of the cross-sectional shape of the galaxy appears to demonstrate a pronounced, S-shaped warp, rather than just
+                            a flat disk. A possible cause of such a warp could be gravitational interaction with the satellite galaxies near
+                            the Andromeda Galaxy. The Galaxy M33 could be responsible for some warp in Andromeda's arms, though more precise distances
+                            and radial velocities are required.
+                        </p>
+                        <p>
+                            Spectroscopic studies have provided detailed measurements of the rotational velocity of the Andromeda Galaxy as a function of
+                            radial distance from the core. The rotational velocity has a maximum value of 225 km/s (140 mi/s) at 1,300 ly (82,000,000 AU)
+                            from the core, and it has its minimum possibly as low as 50 km/s (31 mi/s) at 7,000 ly (440,000,000 AU) from the core.
+                            Further out, rotational velocity rises out to a radius of 33,000 ly (2.1×109 AU), where it reaches a peak of 250 km/s (160 mi/s).
+                            The velocities slowly decline beyond that distance, dropping to around 200 km/s (120 mi/s) at 80,000 ly (5.1×109 AU).
+                            These velocity measurements imply a concentrated mass of about 6×109 M☉ in the nucleus. The total mass of
+                            he galaxy increases linearly out to 45,000 ly (2.8×109 AU), then more slowly beyond that radius.
+                        </p>
+                        <p>
+                            The spiral arms of the Andromeda Galaxy are outlined by a series of HII regions, first studied in great detail by Walter Baade
+                            and described by him as resembling "beads on a string". His studies show two spiral arms that appear to be tightly wound,
+                            although they are more widely spaced than in our galaxy. His descriptions of the spiral structure, as each arm crosses
+                            the major axis of the Andromeda Galaxy, are as follows:
+                        </p>
+                    </div>
+                    <p class="w3-padding w3-center w3-xlarge">Baade's spiral arms of M31</p>
+                    <div class="no-smpad w3-padding">
+                        <div class="w3-responsive my-xxlarge w3-margin-bottom w3-card">
+                            <table class="w3-table w3-striped w3-bordered" style="table-layout:fixed">
+                                <tbody>
+                                    <tr class="my-theme">
+                                        <th>Arms (N=cross M31's major axis at north, S=cross M31's major axis at south)</th>
+                                        <th>Distance from center (<a href="https://en.wikipedia.org/wiki/Minute_and_second_of_arc" title="Minute and second of arc" class="header-tb-link">arcminutes</a>) (N*/S*)</th>
+                                        <th>Distance from center (kpc) (N*/S*)</th>
+                                        <th>Notes</th>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">N1/S1</td>
+                                        <td>3.4/1.7</td>
+                                        <td>0.7/0.4</td>
+                                        <td>Dust arms with no <a href="https://en.wikipedia.org/wiki/Stellar_kinematics#OB_associations" title="Stellar kinematics" class="crosslink">OB associations</a> of <a href="/wiki/H_II_region" title="H II region" class="crosslink">HII regions</a>.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">N2/S2</td>
+                                        <td>8.0/10.0</td>
+                                        <td>1.7/2.1</td>
+                                        <td>Dust arms with some OB associations.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">N3/S3</td>
+                                        <td>25/30</td>
+                                        <td>5.3/6.3</td>
+                                        <td>As per N2/S2, but with some HII regions too.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">N4/S4</td>
+                                        <td>50/47</td>
+                                        <td>11/9.9</td>
+                                        <td>Large numbers of OB associations, HII regions, and little dust.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">N5/S5</td>
+                                        <td>70/66</td>
+                                        <td>15/14</td>
+                                        <td>As per N4/S4 but much fainter.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">N6/S6</td>
+                                        <td>91/95</td>
+                                        <td>19/20</td>
+                                        <td>Loose OB associations. No dust visible.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="left">N7/S7</td>
+                                        <td>110/116</td>
+                                        <td>23/24</td>
+                                        <td>As per N6/S6 but fainter and inconspicuous.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="w3-padding">
+                        <p>
+                            Since the Andromeda Galaxy is seen close to edge-on, it is difficult to study its spiral structure. Rectified images of
+                            the galaxy seem to show a fairly normal spiral galaxy, exhibiting two continuous trailing arms that are separated
+                            from each other by a minimum of about 13,000 ly (820,000,000 AU) and that can be followed outward from
+                            a distance of roughly 1,600 ly (100,000,000 AU) from the core. Alternative spiral structures have been proposed such as
+                            a single spiral arm or a flocculent pattern of long, filamentary, and thick spiral arms.
+                        </p>
+                        <p>
+                            The most likely cause of the distortions of the spiral pattern is thought to be interaction with galaxy satellites M32 and M110.
+                            This can be seen by the displacement of the neutral hydrogen clouds from the stars.
+                        </p>
+                        <p>
+                            In 1998, images from the European Space Agency's Infrared Space Observatory demonstrated that the overall form of
+                            the Andromeda Galaxy may be transitioning into a ring galaxy. The gas and dust within the galaxy is generally formed
+                            into several overlapping rings, with a particularly prominent ring formed at a radius of 32,000 ly (9.8 kpc) from the core,
+                            nicknamed by some astronomers the ring of fire. This ring is hidden from visible light images of the galaxy because
+                            it is composed primarily of cold dust, and most of the star formation that is taking place in the Andromeda Galaxy
+                            is concentrated there.
+                        </p>
+                        <p>
+                            Later studies with the help of the Spitzer Space Telescope showed how Andromeda Galaxy's spiral structure in
+                            the infrared appears to be composed of two spiral arms that emerge from a central bar and continue beyond
+                            the large ring mentioned above. Those arms, however, are not continuous and have a segmented structure.
+                        </p>
+                        <p>
+                            Close examination of the inner region of the Andromeda Galaxy with the same telescope also showed a smaller dust ring
+                            that is believed to have been caused by the interaction with M32 more than 200  million years ago.
+                            Simulations show that the smaller galaxy passed through the disk of the Andromeda Galaxy along the latter's polar axis.
+                            This collision stripped more than half the mass from the smaller M32 and created the ring structures in Andromeda.
+                            It is the co-existence of the long-known large ring-like feature in the gas of Messier 31, together with
+                            this newly discovered inner ring-like structure, offset from the barycenter, that suggested a nearly head-on collision
+                            with the satellite M32, a milder version of the Cartwheel encounter.
+                        </p>
+                        <p>
+                            Studies of the extended halo of the Andromeda Galaxy show that it is roughly comparable to that of the Milky Way,
+                            with stars in the halo being generally "metal-poor", and increasingly so with greater distance. This evidence indicates
+                            that the two galaxies have followed similar evolutionary paths. They are likely to have accreted and
+                            assimilated about 100–200 low-mass galaxies during the past 12 billion years. The stars in the extended halos of
+                            the Andromeda Galaxy and the Milky Way may extend nearly one third the distance separating the two galaxies.
+                        </p>
+                        <div class="w3-content w3-margin-bottom w3-center cool-font" style="max-width:1100px;padding:0;">
+                            <picture>
+                                <!--/static/images/universe/andromeda2-small.jpg-->
+                                <source class="last-load" media="(max-width: 600px)" />
+                                <!--/static/images/universe/andromeda2-medium.jpg-->
+                                <source class="last-load" media="(max-width: 992px)" />
+                                <!--/static/images/universe/andromeda2-large.jpg-->
+                                <img class="last-load" alt="The Andromeda Galaxy" style="width:100%;" />
+                            </picture>
+                            <div class="w3-container w3-justify">
+                                <p class="sm-text">
+                                    A Galaxy Evolution Explorer image of the Andromeda Galaxy. The bands of blue-white making up
+                                    the galaxy's striking rings are neighborhoods that harbor hot, young, massive stars.
+                                    Dark blue-grey lanes of cooler dust show up starkly against these bright rings, tracing the regions where
+                                    star formation is currently taking place in dense cloudy cocoons. When observed in visible light,
+                                    Andromeda Galaxy's rings look more like spiral arms. The ultraviolet view shows that
+                                    these arms more closely resemble the ring-like structure previously observed in infrared wavelengths with
+                                    NASA's Spitzer Space Telescope. Astronomers using the latter interpreted these rings as evidence that
+                                    the galaxy was involved in a direct collision with its neighbor, M32, more than 200 million years ago.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="w3-row-padding w3-stretch">
+                        <div class="w3-col l2 m4 s6 w3-left w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/whirlpool">
+                                    <!--/static/images/universe/whirlpool-link.jpg-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>The Whirlpool</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-right w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/sombrero">
+                                    <!--https://www.iliketowastemytime.com/sites/default/files/imagecache/blog_image/sombrero-galaxy-hd-wallpaper.jpg-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>The Sombrero</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+{% block info %}
+                <span>The source of most text information is</span>
+                <a class="source" href="https://en.wikipedia.org/wiki/Andromeda_Galaxy" target="_blank">Wikipedia</a>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            // Load images after a page has loaded
+            loadImgsAfterBody([
+                'https://upload.wikimedia.org/wikipedia/commons/5/51/Pic_iroberts1.jpg',
+                '/static/images/universe/andromeda-small.jpg',
+                '/static/images/universe/andromeda-md-lg.jpg'
+            ], true);
+            // Load images when a user has scrolled down the middle of a page
+            loadAfterScrollMid([
+                '/static/images/universe/andromeda2-small.jpg',
+                '/static/images/universe/andromeda2-medium.jpg',
+                '/static/images/universe/andromeda2-large.jpg',
+                '/static/images/universe/whirlpool-link.jpg',
+                'https://www.iliketowastemytime.com/sites/default/files/imagecache/blog_image/sombrero-galaxy-hd-wallpaper.jpg'
+            ]);
+            // Make a link to the current page active
+            makeActive('.andromeda');
+        </script>
+{% endblock %}

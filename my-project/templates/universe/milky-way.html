@@ -1,0 +1,304 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    The Milky Way Galaxy
+{% endblock %}
+
+{% block style %}
+        <style>
+            /* Transparent bg for text */
+            .fix-text {
+                width: 100%;
+                background-color: rgba(0,0,0,0.6);
+                margin: 0 auto;
+            }
+            .sm-text {
+                font-size: 16px;
+            }
+            @media screen and (min-width:993px){.head-img{background-image:url("https://wallpaperaccess.com/full/381254.jpg");}}
+            @media screen and (max-width:992px){.sm-text{font-size:14px;}.head-img{background-image:url("/static/images/universe/hero-milky-way-medium.jpg");}}
+            @media screen and (max-width:600px){.head-img{height:76%;background-image:url("/static/images/universe/hero-milky-way-small.jpg");}}
+        </style>
+{% endblock %}
+
+{% block head_content %}
+            <div class="w3-display-bottomleft w3-center w3-margin-bottom w3-padding-large w3-hide-medium w3-hide-small">
+                <span class="w3-tag">So much universe, and so little time</span>
+            </div>
+            <div class="w3-display-top w3-center w3-padding-large">
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>THE MILKY WAY</b></h1>
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>GALAXY</b></h1>
+            </div>
+            <div class="w3-display-bottomright w3-center w3-margin-bottom w3-padding-large tag-text">
+                <span id="bigger_font" class="contour w3-text-white">At some point, entireness will be known</span>
+            </div>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center dark-blue-grad w3-bottombar w3-border-amber w3-padding-64 header-text">General information</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The Milky Way is the galaxy that contains the Solar System, with the name describing the galaxy's appearance from Earth:
+                            a hazy band of light seen in the night sky formed from stars that cannot be individually distinguished by the naked eye.
+                            The term Milky Way is a translation of the Latin via lactea, from the Greek γαλαξίας κύκλος (galaxías kýklos, "milky circle").
+                            From Earth, the Milky Way appears as a band because its disk-shaped structure is viewed from within.
+                            Galileo Galilei first resolved the band of light into individual stars with his telescope in 1610. Until the early 1920s,
+                            most astronomers thought that the Milky Way contained all the stars in the Universe. Following the 1920 Great Debate between
+                            the astronomers Harlow Shapley and Heber Curtis, observations by Edwin Hubble showed that
+                            the Milky Way is just one of many galaxies.
+                        </p>
+                        <p>
+                            The Milky Way is a barred spiral galaxy with a visible diameter between 150,000 and 200,000 light-years (ly).
+                            It is estimated to contain 100–400 billion stars and more than 100 billion planets. The dark matter halo around
+                            the Milky Way may span as much as 2 million light years. The Solar System is located at a radius of about 27,000
+                            light-years from the Galactic Center, on the inner edge of the Orion Arm, one of the spiral-shaped concentrations of gas and dust.
+                            The stars in the innermost 10,000 light-years form a bulge and one or more bars that radiate from the bulge.
+                            The galactic center is an intense radio source known as Sagittarius A*, a supermassive black hole of 4.100 (± 0.034)
+                            million solar masses.
+                        </p>
+                        <p>
+                            Stars and gases at a wide range of distances from the Galactic Center orbit at approximately 220 kilometers per second.
+                            The constant rotation speed contradicts the laws of Keplerian dynamics and suggests that much (about 90%)
+                            of the mass of the Milky Way is invisible to telescopes, neither emitting nor absorbing electromagnetic radiation.
+                            This conjectural mass has been termed "dark matter". The rotational period is about 240 million years at the radius of the Sun.
+                            The Milky Way as a whole is moving at a velocity of approximately 600 km per second with respect to
+                            extragalactic frames of reference. The oldest stars in the Milky Way are nearly as old as the Universe itself and
+                            thus probably formed shortly after the Dark Ages of the Big Bang. The Milky Way has several satellite galaxies and is
+                            part of the Local Group of galaxies, which form part of the Virgo Supercluster, which is itself a component of
+                            the Laniakea Supercluster.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center dark-green-grad w3-bottombar w3-border-amber w3-padding-64 header-text">Appearance</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The Milky Way is visible from Earth as a hazy band of white light, some 30° wide, arching across the night sky.
+                            In night sky observing, although all the individual naked-eye stars in the entire sky are part of the Milky Way,
+                            the term "Milky Way" is limited to this band of light. The light originates from the accumulation of unresolved stars
+                            and other material located in the direction of the galactic plane. Dark regions within the band,
+                            such as the Great Rift and the Coalsack, are areas where interstellar dust blocks light from distant stars.
+                            The area of sky that the Milky Way obscures is called the Zone of Avoidance.
+                        </p>
+                        <p>
+                            The Milky Way has a relatively low surface brightness. Its visibility can be greatly reduced by background light,
+                            such as light pollution or moonlight. The sky needs to be darker than about 20.2 magnitude per square arcsecond
+                            in order for the Milky Way to be visible. It should be visible if the limiting magnitude is approximately +5.1 or
+                            better and shows a great deal of detail at +6.1. This makes the Milky Way difficult to see from brightly lit urban
+                            or suburban areas, but very prominent when viewed from rural areas when the Moon is below the horizon.
+                            Maps of artificial night sky brightness show that more than one-third of Earth's population cannot see the Milky Way
+                            from their homes due to light pollution.
+                        </p>
+                        <p>
+                            As viewed from Earth, the visible region of the Milky Way's galactic plane occupies an area of the sky that
+                            includes 30 constellations. The Galactic Center lies in the direction of Sagittarius, where the Milky Way is brightest.
+                            From Sagittarius, the hazy band of white light appears to pass around to the galactic anticenter in Auriga.
+                            The band then continues the rest of the way around the sky, back to Sagittarius,
+                            dividing the sky into two roughly equal hemispheres.
+                        </p>
+                        <p>
+                            The galactic plane is inclined by about 60° to the ecliptic (the plane of Earth's orbit). Relative to the celestial equator,
+                            it passes as far north as the constellation of Cassiopeia and as far south as the constellation of Crux,
+                            indicating the high inclination of Earth's equatorial plane and the plane of the ecliptic, relative to the galactic plane.
+                            The north galactic pole is situated at right ascension 12h 49m, declination +27.4° (B1950) near β Comae Berenices,
+                            and the south galactic pole is near α Sculptoris. Because of this high inclination, depending on the time of night and year,
+                            the arch of the Milky Way may appear relatively low or relatively high in the sky. For observers from
+                            latitudes approximately 65° north to 65° south, the Milky Way passes directly overhead twice a day.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="w3-center">
+                        <picture>
+                            <!--/static/images/universe/milky-small.jpg-->
+                            <source class="load-after-body" media="(max-width: 600px)">
+                            <!--/static/images/universe/milky-medium.jpg-->
+                            <source class="load-after-body" media="(max-width: 992px)">
+                            <!--/static/images/universe/milky-large.jpg-->
+                            <img class="load-after-body" alt="The Milky Way" style="width:100%;" />
+                        </picture>
+                    </div>
+                    <div class="fix-text w3-container w3-margin-top w3-margin-bottom w3-padding w3-round">
+                        <p>
+                            The Milky Way arching at a high inclination across the night sky, (this composited panorama was taken
+                            at Paranal Observatory in northern Chile), the bright object is Jupiter in the constellation Sagittarius,
+                            and the Magellanic Clouds can be seen on the left; galactic north is downward
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center dark-brown-grad w3-bottombar w3-border-amber w3-padding-64 header-text">Size and mass</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The Milky Way is the second-largest galaxy in the Local Group, with its stellar disk approximately 100,000 ly (30 kpc)
+                            in diameter and, on average, approximately 1,000 ly (0.3 kpc) thick. The Milky Way is approximately 890 billion times
+                            the mass of the Sun. To compare the relative physical scale of the Milky Way, if the Solar System out to Neptune were
+                            the size of a US quarter (24.3 mm (0.955 in)), the Milky Way would be approximately the size of
+                            the contiguous United States. There is a ring-like filament of stars rippling above and below
+                            the relatively flat galactic plane, wrapping around the Milky Way at a diameter of 150,000–180,000 light-years (46–55 kpc),
+                            which may be part of the Milky Way itself.
+                        </p>
+                        <p>
+                            Estimates of the mass of the Milky Way vary, depending upon the method and data used. The low end of the estimate range
+                            is 5.8×1011 solar masses (M☉), somewhat less than that of the Andromeda Galaxy. Measurements using
+                            the Very Long Baseline Array in 2009 found velocities as large as 254 km/s (570,000 mph) for stars at
+                            the outer edge of the Milky Way. Because the orbital velocity depends on the total mass inside the orbital radius,
+                            this suggests that the Milky Way is more massive, roughly equaling the mass of Andromeda Galaxy
+                            at 7×1011 M☉ within 160,000 ly (49 kpc) of its center. In 2010, a measurement of the radial velocity of halo stars found
+                            that the mass enclosed within 80 kiloparsecs is 7×1011 M☉. According to a study published in 2014, the mass of
+                            the entire Milky Way is estimated to be 8.5×1011 M☉, but this is only half the mass of the Andromeda Galaxy.
+                            A recent mass estimate for the Milky Way is 1.29×1012 M☉.
+                        </p>
+                        <p>
+                            Much of the mass of the Milky Way seems to be dark matter, an unknown and invisible form of matter that interacts gravitationally
+                            with ordinary matter. A dark matter halo is conjectured to spread out relatively uniformly to a distance beyond
+                            one hundred kiloparsecs (kpc) from the Galactic Center. Mathematical models of the Milky Way suggest that
+                            the mass of dark matter is 1–1.5×1012 M☉. Recent studies indicate a range in mass, as large as 4.5×1012 M☉
+                            and as small as 8×1011 M☉. The total mass of all the stars in the Milky Way is estimated to be between 4.6×1010 M☉.
+                            and 6.43×1010 M☉. In addition to the stars, there is also interstellar gas, comprising 90% hydrogen and 10% helium by mass,
+                            with two thirds of the hydrogen found in the atomic form and the remaining one-third as molecular hydrogen.
+                            The mass of the Milky Way's interstellar gas is equal to between 10% and 15% of the total mass of its stars.
+                            Interstellar dust accounts for an additional 1% of the total mass of the gas.
+                        </p>
+                        <p>
+                            In March 2019, astronomers reported that the mass of the Milky Way galaxy is 1.5 trillion solar masses within a radius of
+                            about 129,000 light-years, over twice as much as was determined in earlier studies, and suggesting
+                            that about 90% of the mass of the galaxy is dark matter.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center yellow-grad w3-bottombar w3-border-amber w3-padding-64 header-text">Contents</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The Milky Way contains between 100 and 400 billion stars and at least 100 billion planets.
+                            An exact figure would depend on counting the number of very-low-mass stars, which are difficult to detect,
+                            especially at distances of more than 300 ly (90 pc) from the Sun. As a comparison,
+                            the neighboring Andromeda Galaxy contains an estimated one trillion (1012) stars. Perhaps,
+                            the Milky Way may contain ten billion white dwarfs, a billion neutron stars, and a hundred million stellar black holes.
+                            Filling the space between the stars is a disk of gas and dust called the interstellar medium.
+                            This disk has at least a comparable extent in radius to the stars, whereas the thickness of
+                            the gas layer ranges from hundreds of light-years for the colder gas to thousands of light-years for warmer gas.
+                        </p>
+                        <p>
+                            The disk of stars in the Milky Way does not have a sharp edge beyond which there are no stars. Rather,
+                            the concentration of stars decreases with distance from the center of the Milky Way.
+                            For reasons that are not understood, beyond a radius of roughly 40,000 ly (13 kpc) from the center,
+                            the number of stars per cubic parsec drops much faster with radius. Surrounding the galactic disk is
+                            a spherical Galactic Halo of stars and globular clusters that extends farther outward,
+                            but is limited in size by the orbits of two Milky Way satellites, the Large and Small Magellanic Clouds,
+                            whose closest approach to the Galactic Center is about 180,000 ly (55 kpc). At this distance or beyond,
+                            the orbits of most halo objects would be disrupted by the Magellanic Clouds. Hence,
+                            such objects would probably be ejected from the vicinity of the Milky Way.
+                            The integrated absolute visual magnitude of the Milky Way is estimated to be around −20.9.
+                        </p>
+                        <p>
+                            Both gravitational microlensing and planetary transit observations indicate that there may be
+                            at least as many planets bound to stars as there are stars in the Milky Way,
+                            and microlensing measurements indicate that there are more rogue planets not bound to host stars
+                            than there are stars. The Milky Way contains at least one planet per star,
+                            resulting in 100–400 billion planets, according to a January 2013 study of
+                            the five-planet star system Kepler-32 with the Kepler space observatory. A different January 2013 analysis of
+                            Kepler data estimated that at least 17 billion Earth-sized planets reside in the Milky Way.
+                            On November 4, 2013, astronomers reported, based on Kepler space mission data, that there could be
+                            as many as 40 billion Earth-sized planets orbiting in the habitable zones of Sun-like stars and
+                            red dwarfs within the Milky Way. 11 billion of these estimated planets may be orbiting Sun-like stars.
+                            The nearest extra-Solar planet may be 4.2 light-years away, orbiting the red dwarf Proxima Centauri,
+                            according to a 2016 study. Such Earth-sized planets may be more numerous than gas giants.
+                            Besides extra-Solar planets, extra-Solar comets have also been detected and may be common in the Milky Way.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="w3-center">
+                        <picture>
+                            <!--/static/images/universe/milky2-small.jpg-->
+                            <source class="last-load" media="(max-width: 600px)">
+                            <!--/static/images/universe/milky2-medium.jpg-->
+                            <source class="last-load" media="(max-width: 992px)">
+                            <!--/static/images/universe/milky2-large.jpg-->
+                            <img class="last-load" alt="The Milky Way" style="width:100%;" />
+                        </picture>
+                    </div>
+                    <div class="fix-text w3-container w3-margin-top w3-margin-bottom w3-padding w3-round">
+                        <p>
+                            360-degree panorama view of the Milky Way (an assembled mosaic of photographs) by ESO,
+                            the galactic centre is in the middle of the view, with galactic north up
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="w3-row-padding w3-stretch">
+                        <div class="w3-col l2 m4 s6 w3-left w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/galaxy">
+                                    <!--https://www.wallpaperup.com/uploads/wallpapers/2012/04/04/2040/0680f415682b6b42da0d9834b5c887da-700.jpg-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>A galaxy</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-right w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/whirlpool">
+                                    <!--/static/images/universe/whirlpool-link.jpg-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>The Whirlpool</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+{% block info %}
+                <span>The source of most text information is</span>
+                <a class="source" href="https://en.wikipedia.org/wiki/Milky_Way" target="_blank">Wikipedia</a>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            // Load images after a page has loaded
+            loadImgsAfterBody([
+                '/static/images/universe/milky-small.jpg',
+                '/static/images/universe/milky-medium.jpg',
+                '/static/images/universe/milky-large.jpg'
+            ], true);
+            // Load images when a user has scrolled down the middle of a page
+            loadAfterScrollMid([
+                '/static/images/universe/milky2-small.jpg',
+                '/static/images/universe/milky2-medium.jpg',
+                '/static/images/universe/milky2-large.jpg',
+                'https://www.wallpaperup.com/uploads/wallpapers/2012/04/04/2040/0680f415682b6b42da0d9834b5c887da-700.jpg',
+                '/static/images/universe/whirlpool-link.jpg'
+            ]);
+            // Make a link to the current page active
+            makeActive('.milky-way');
+        </script>
+{% endblock %}

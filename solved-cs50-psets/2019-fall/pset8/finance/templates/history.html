@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table table-hover">
+        <tr class="bg-primary">
+            <th scope="col">Symbol</th>
+            <th scope="col">Shares</th>
+            <th scope="col">Price</th>
+            <th scope="col">Transacted</th>
+        </tr>
+        {% if rows %}
+            {% for row in rows %}
+                {% if row["trade"] > 0 %}
+                    <tr class="table-success">
+                {% else %}
+                    <tr class="table-danger">
+                {% endif %}
+                    <td>{{ row["symbol"] }}</td>
+                    <td>{{ row["trade"] }}</td>
+                    <td>{{ "${:,.2f}".format(row["price"]) }}</td>
+                    <td>{{ row["date"] }}</td>
+                </tr>
+            {% endfor %}
+        {% endif %}
+    </table>
+{% endblock %}

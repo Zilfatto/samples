@@ -1,0 +1,493 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    The Solar System
+{% endblock %}
+
+{% block style %}
+        <style>
+            #cutout_div {
+                height: 300px;
+                background-position: bottom;
+            }
+            .cutout-text {
+                background-color: #ffff66;
+                font-weight: bold;
+                text-shadow: -1px 0 #ff944d, 0 1px #ff944d, 1px 0 #ff944d, 0 -1px #ff944d;
+                margin: 0 auto;
+                padding: 15px;
+                width: 50%;
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                mix-blend-mode: screen;
+            }
+            /* Transparent bg for text */
+            .fix-text {
+                width: 60%;
+                background-color: rgba(0,0,0,0.8);
+                margin: 0 auto;
+            }
+            /* Transparent header bg */
+            .transp_header {
+                color: #fff;
+                background-color: rgba(250, 232, 0, 0.6);
+            }
+            @media screen and (min-width:993px){.head-img{background-image:url("/static/images/solar-system/hero-system-large.jpg");}}
+            @media screen and (min-width:601px){.cutout_div{background-image:url("https://www.wallpaperup.com/uploads/wallpapers/2016/10/03/1022559/7a630cb1bb94401d687519e3b7b9044c-700.jpg");}}
+            @media screen and (max-width:992px){.fix-text{width:85%;}.head-img{background-image:url("/static/images/solar-system/hero-system-medium.jpg");}}
+            @media screen and (max-width:600px){.cutout-text{width:87%!important;font-size:30px!important;padding:0 3px!important;}#cutout_div{height:180px!important;background-image:url("/static/images/solar-system/cutout-img-small.jpg");}.head-img{height:76%;background-image:url('https://i.pinimg.com/originals/1a/4c/f7/1a4cf7789eee41a6665267f5953d37aa.jpg');}}
+        </style>
+{% endblock %}
+
+{% block head_content %}
+            <div class="w3-display-bottomleft w3-center w3-margin-bottom w3-padding-large w3-hide-medium w3-hide-small">
+                <span class="w3-tag">You belong among the stars</span>
+            </div>
+            <div class="w3-display-top w3-center w3-padding-large">
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>THE SOLAR SYSTEM</b></h1>
+            </div>
+            <div class="w3-display-bottomright w3-center w3-margin-bottom w3-padding-large tag-text">
+                <span id="bigger_font" class="contour w3-text-white">The solar system has no anxiety about its reputation</span>
+            </div>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center teal-grad w3-bottombar w3-border-deep-purple w3-padding-64 header-text">The Solar System</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The Solar System is the gravitationally bound system of the Sun and the objects that orbit it, either directly
+                            or indirectly. Of the objects that orbit the Sun directly, the largest are the eight planets,
+                            with the remainder being smaller objects, the dwarf planets and small Solar System bodies. Of the objects
+                            that orbit the Sun indirectly—the moons—two are larger than the smallest planet, Mercury.
+                        </p>
+                        <p>
+                            The Solar System formed 4.6 billion years ago from the gravitational collapse of a giant interstellar molecular cloud.
+                            The vast majority of the system's mass is in the Sun, with the majority of the remaining mass contained in Jupiter.
+                            The four smaller inner planets, Mercury, Venus, Earth and Mars, are terrestrial planets, being primarily composed
+                            of rock and metal. The four outer planets are giant planets, being substantially more massive than the terrestrials.
+                            The two largest, Jupiter and Saturn, are gas giants, being composed mainly of hydrogen and helium;
+                            the two outermost planets, Uranus and Neptune, are ice giants, being composed mostly of substances with relatively
+                            high melting points compared with hydrogen and helium, called volatiles, such as water, ammonia and methane.
+                            All eight planets have almost circular orbits that lie within a nearly flat disc called the ecliptic.
+                        </p>
+                        <p>
+                            The Solar System also contains smaller objects. The asteroid belt, which lies between the orbits of Mars and Jupiter,
+                            mostly contains objects composed, like the terrestrial planets, of rock and metal.
+                            Beyond Neptune's orbit lie the Kuiper belt and scattered disc, which are populations of
+                            trans-Neptunian objects composed mostly of ices, and beyond them a newly discovered population of sednoids.
+                            Within these populations, some objects are large enough to have rounded under their own gravity,
+                            though there is considerable debate as to how many there will prove to be. Such objects are categorized as dwarf planets.
+                            Identified or accepted dwarf planets include the asteroid Ceres and the trans-Neptunian objects Pluto and Eris.
+                            In addition to these two regions, various other small-body populations, including comets, centaurs and
+                            interplanetary dust clouds, freely travel between regions. Six of the planets, the six largest possible dwarf planets,
+                            and many of the smaller bodies are orbited by natural satellites, usually termed "moons" after the Moon.
+                            Each of the outer planets is encircled by planetary rings of dust and other small objects.
+                        </p>
+                        <p>
+                            The solar wind, a stream of charged particles flowing outwards from the Sun, creates a bubble-like region
+                            in the interstellar medium known as the heliosphere. The heliopause is the point at which pressure from the solar wind
+                            is equal to the opposing pressure of the interstellar medium; it extends out to the edge of the scattered disc.
+                            The Oort cloud, which is thought to be the source for long-period comets, may also exist at a distance roughly
+                            a thousand times further than the heliosphere. The Solar System is located in the Orion Arm, 26,000 light-years
+                            from the center of the Milky Way galaxy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <div id="cutout_div" class="boximg cutout_div w3-display-container" style="margin:0;padding:0;background-attachment:scroll;">
+                        <div class="cutout-text w3-xxxlarge">Formation and evolution</div>
+                    </div>
+                    <div class="w3-padding">
+                        <p>
+                            The Solar System formed 4.568 billion years ago from the gravitational collapse of a region within
+                            a large molecular cloud. This initial cloud was likely several light-years across
+                            and probably birthed several stars. As is typical of molecular clouds, this one consisted mostly of hydrogen,
+                            with some helium, and small amounts of heavier elements fused by previous generations of stars.
+                            As the region that would become the Solar System, known as the pre-solar nebula, collapsed,
+                            conservation of angular momentum caused it to rotate faster. The centre, where most of the mass collected,
+                            became increasingly hotter than the surrounding disc. As the contracting nebula rotated faster,
+                            it began to flatten into a protoplanetary disc with a diameter of roughly 200 AU and a hot,
+                            dense protostar at the centre. The planets formed by accretion from this disc,
+                            in which dust and gas gravitationally attracted each other, coalescing to form ever larger bodies.
+                            Hundreds of protoplanets may have existed in the early Solar System, but they either merged or were destroyed,
+                            leaving the planets, dwarf planets, and leftover minor bodies.
+                        </p>
+                        <p>
+                            Due to their higher boiling points, only metals and silicates could exist in solid form in the warm inner Solar System
+                            close to the Sun, and these would eventually form the rocky planets of Mercury, Venus, Earth, and Mars.
+                            Because metallic elements only comprised a very small fraction of the solar nebula,
+                            the terrestrial planets could not grow very large. The giant planets (Jupiter, Saturn, Uranus, and Neptune)
+                            formed further out, beyond the frost line, the point between the orbits of Mars and Jupiter where
+                            material is cool enough for volatile icy compounds to remain solid. The ices that formed
+                            these planets were more plentiful than the metals and silicates that formed the terrestrial inner planets,
+                            allowing them to grow massive enough to capture large atmospheres of hydrogen and helium, the lightest
+                            and most abundant elements. Leftover debris that never became planets congregated in regions
+                            such as the asteroid belt, Kuiper belt, and Oort cloud. The Nice model is an explanation for
+                            the creation of these regions and how the outer planets could have formed in different positions
+                            and migrated to their current orbits through various gravitational interactions.
+                        </p>
+                        <p>
+                            Within 50 million years, the pressure and density of hydrogen in the centre of the protostar became
+                            great enough for it to begin thermonuclear fusion. The temperature, reaction rate, pressure,
+                            and density increased until hydrostatic equilibrium was achieved: the thermal pressure equalled
+                            the force of gravity. At this point, the Sun became a main-sequence star. The main-sequence phase,
+                            from beginning to end, will last about 10 billion years for the Sun compared to around two billion years
+                            for all other phases of the Sun's pre-remnant life combined. Solar wind from the Sun created
+                            the heliosphere and swept away the remaining gas and dust from the protoplanetary disc into interstellar space,
+                            ending the planetary formation process. The Sun is growing brighter; early in its main-sequence life
+                            its brightness was 70% that of what it is today.
+                        </p>
+                        <p>
+                            The Solar System will remain roughly as we know it today until the hydrogen in the core of the Sun
+                            has been entirely converted to helium, which will occur roughly 5 billion years from now.
+                            This will mark the end of the Sun's main-sequence life. At this time, the core of the Sun will contract
+                            with hydrogen fusion occurring along a shell surrounding the inert helium, and the energy output
+                            will be much greater than at present. The outer layers of the Sun will expand to roughly 260 times
+                            its current diameter, and the Sun will become a red giant. Because of its vastly increased surface area,
+                            the surface of the Sun will be considerably cooler (2,600 K at its coolest) than it is on the main sequence.
+                            The expanding Sun is expected to vaporize Mercury and render Earth uninhabitable. Eventually,
+                            the core will be hot enough for helium fusion; the Sun will burn helium for a fraction of the time
+                            it burned hydrogen in the core. The Sun is not massive enough to commence the fusion of heavier elements,
+                            and nuclear reactions in the core will dwindle. Its outer layers will move away into space,
+                            leaving a white dwarf, an extraordinarily dense object, half the original mass of the Sun but only the size
+                            of Earth. The ejected outer layers will form what is known as a planetary nebula,
+                            returning some of the material that formed the Sun—but now enriched with heavier elements like carbon—to
+                            the interstellar medium.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center orange-grad w3-bottombar w3-border-blue w3-padding-64 header-text">Discovery and exploration</h2>
+                    <div class="w3-padding">
+                        <p>
+                            For most of history, humanity did not recognize or understand the concept of the Solar System.
+                            Most people up to the Late Middle Ages–Renaissance believed Earth to be stationary
+                            at the centre of the universe and categorically different from the divine or ethereal objects
+                            that moved through the sky. Although the Greek philosopher Aristarchus of Samos had speculated
+                            on a heliocentric reordering of the cosmos, Nicolaus Copernicus was the first to develop
+                            a mathematically predictive heliocentric system.
+                        </p>
+                        <p>
+                            In the 17th century, Galileo discovered that the Sun was marked with sunspots,
+                            and that Jupiter had four satellites in orbit around it. Christiaan Huygens followed
+                            on from Galileo's discoveries by discovering Saturn's moon Titan and the shape of the rings of Saturn.
+                            Edmond Halley realised in 1705 that repeated sightings of a comet were recording the same object,
+                            returning regularly once every 75–76 years. This was the first evidence that anything other than the planets
+                            orbited the Sun. Around this time (1704), the term "Solar System" first appeared in English. In 1838,
+                            Friedrich Bessel successfully measured a stellar parallax, an apparent shift in the position of a star
+                            created by Earth's motion around the Sun, providing the first direct, experimental proof of heliocentrism.
+                            Improvements in observational astronomy and the use of unmanned spacecraft have since enabled
+                            the detailed investigation of other bodies orbiting the Sun.
+                        </p>
+                        <div class="boxshadow w3-content w3-margin-bottom w3-center w3-round">
+                            <a href="https://en.wikipedia.org/wiki/File:Solar-System.pdf" title="Comprehensive overview of the Solar System. The Sun, planets, dwarf planets and moons are at scale for their relative sizes, not for distances. A separate distance scale is at the bottom. Moons are listed near their planets by proximity of their orbits; only the largest moons are shown.">
+                                <img alt="The Solar System" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Solar-System.pdf/page1-1200px-Solar-System.pdf.jpg" decoding="async" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Solar-System.pdf/page1-1350px-Solar-System.pdf.jpg 1.5x, https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Solar-System.pdf/page1-1800px-Solar-System.pdf.jpg 2x" data-file-width="3897" data-file-height="1476" style="width:100%;" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="div_add_to" class="boximg w3-container" style="margin:0;padding:0;">
+                <div class="fix-text">
+                    <h2 class="w3-center transp_header w3-bottombar w3-border-orange w3-padding-64 header-text mb2">Structure and composition</h2>
+                    <div id="add_to" class="w3-padding">
+                    </div>
+                </div>
+            </div>
+
+            <div id="div_copy_from" class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center yellow-grad w3-bottombar w3-border-orange w3-padding-64 header-text mb2">Structure and composition</h2>
+                    <div id="copy_from" class="w3-padding">
+                        <p>
+                            The principal component of the Solar System is the Sun, a G2 main-sequence star that contains 99.86% of the system's known mass
+                            and dominates it gravitationally. The Sun's four largest orbiting bodies, the giant planets, account for 99% of the remaining mass,
+                            with Jupiter and Saturn together comprising more than 90%. The remaining objects of the Solar System (including the four terrestrial planets,
+                            the dwarf planets, moons, asteroids, and comets) together comprise less than 0.002% of the Solar System's total mass.
+                        </p>
+                        <p>
+                            Most large objects in orbit around the Sun lie near the plane of Earth's orbit, known as the ecliptic. The planets are very close to the ecliptic,
+                            whereas comets and Kuiper belt objects are frequently at significantly greater angles to it. As a result of the formation of the Solar System planets,
+                            and most other objects, orbit the Sun in the same direction that the Sun is rotating (counter-clockwise, as viewed from above Earth's north pole).
+                            There are exceptions, such as Halley's Comet. Also most of the larger moons orbit their planets in this prograde direction and
+                            most larger objects rotate themselves in the same direction (with Venus being a notable retrograde exception).
+                        </p>
+                        <p>
+                            The overall structure of the charted regions of the Solar System consists of the Sun, four relatively small inner planets
+                            surrounded by a belt of mostly rocky asteroids, and four giant planets surrounded by the Kuiper belt of mostly icy objects.
+                            Astronomers sometimes informally divide this structure into separate regions. The inner Solar System includes
+                            the four terrestrial planets and the asteroid belt. The outer Solar System is beyond the asteroids, including the four giant planets.
+                            Since the discovery of the Kuiper belt, the outermost parts of the Solar System are considered
+                            a distinct region consisting of the objects beyond Neptune.
+                        </p>
+                        <p>
+                            Most of the planets in the Solar System have secondary systems of their own,
+                            being orbited by planetary objects called natural satellites, or moons (two of which, Titan and Ganymede,
+                            are larger than the planet Mercury), and, in the case of the four giant planets, by planetary rings,
+                            thin bands of tiny particles that orbit them in unison. Most of the largest natural satellites are
+                            in synchronous rotation, with one face permanently turned toward their parent.
+                        </p>
+                        <p>
+                            Kepler's laws of planetary motion describe the orbits of objects about the Sun. Following Kepler's laws,
+                            each object travels along an ellipse with the Sun at one focus. Objects closer to the Sun
+                            (with smaller semi-major axes) travel more quickly because they are more affected by the Sun's gravity.
+                            On an elliptical orbit, a body's distance from the Sun varies over the course of its year.
+                            A body's closest approach to the Sun is called its perihelion, whereas its most distant point from the Sun
+                            is called its aphelion. The orbits of the planets are nearly circular, but many comets, asteroids,
+                            and Kuiper belt objects follow highly elliptical orbits. The positions of the bodies in the Solar System
+                            can be predicted using numerical models.
+                        </p>
+                        <p>
+                            Although the Sun dominates the system by mass, it accounts for only about 2% of the angular momentum.
+                            The planets, dominated by Jupiter, account for most of the rest of the angular momentum due to the combination of
+                            their mass, orbit, and distance from the Sun, with a possibly significant contribution from comets.
+                        </p>
+                        <p>
+                            The Sun, which comprises nearly all the matter in the Solar System, is composed of roughly 98% hydrogen
+                            and helium. Jupiter and Saturn, which comprise nearly all the remaining matter, are also primarily composed of
+                            hydrogen and helium. A composition gradient exists in the Solar System, created by heat and light pressure
+                            from the Sun; those objects closer to the Sun, which are more affected by heat and light pressure,
+                            are composed of elements with high melting points. Objects farther from the Sun are composed largely of materials
+                            with lower melting points. The boundary in the Solar System beyond which those volatile substances could condense
+                            is known as the frost line, and it lies at roughly 5 AU from the Sun.
+                        </p>
+                        <p>
+                            The objects of the inner Solar System are composed mostly of rock, the collective name for compounds
+                            with high melting points, such as silicates, iron or nickel, that remained solid under almost all conditions
+                            in the protoplanetary nebula. Jupiter and Saturn are composed mainly of gases, the astronomical term for materials
+                            with extremely low melting points and high vapour pressure, such as hydrogen, helium, and neon, which were always
+                            in the gaseous phase in the nebula. Ices, like water, methane, ammonia, hydrogen sulfide, and carbon dioxide,
+                            have melting points up to a few hundred kelvins. They can be found as ices, liquids,
+                            or gases in various places in the Solar System, whereas in the nebula they were either in the solid or gaseous phase.
+                            Icy substances comprise the majority of the satellites of the giant planets,
+                            as well as most of Uranus and Neptune (the so-called "ice giants") and
+                            the numerous small objects that lie beyond Neptune's orbit. Together, gases and ices are referred to as volatiles.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center red-orange-grad w3-bottombar w3-border-cyan w3-padding-64 header-text">Distances and scales</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The distance from Earth to the Sun is 1 astronomical unit [AU] (150,000,000 km; 93,000,000 mi). For comparison,
+                            the radius of the Sun is 0.0047 AU (700,000 km). Thus, the Sun occupies 0.00001% (10−5 %) of the volume of a sphere
+                            with a radius the size of Earth's orbit, whereas Earth's volume is roughly one millionth (10−6) that of the Sun.
+                            Jupiter, the largest planet, is 5.2 astronomical units (780,000,000 km) from the Sun and has a radius of 71,000 km (0.00047 AU),
+                            whereas the most distant planet, Neptune, is 30 AU (4.5×109 km) from the Sun.
+                        </p>
+                        <p>
+                            With a few exceptions, the farther a planet or belt is from the Sun, the larger the distance between its orbit and
+                            the orbit of the next nearer object to the Sun. For example, Venus is approximately 0.33 AU farther out from the Sun than Mercury,
+                            whereas Saturn is 4.3 AU out from Jupiter, and Neptune lies 10.5 AU out from Uranus. Attempts have been made to determine a relationship
+                            between these orbital distances (for example, the Titius–Bode law), but no such theory has been accepted. The images at the beginning of this
+                            section show the orbits of the various constituents of the Solar System on different scales.
+                        </p>
+                        <p>
+                            Some Solar System models attempt to convey the relative scales involved in the Solar System on human terms. Some are small in scale
+                            (and may be mechanical—called orreries)—whereas others extend across cities or regional areas. The largest such scale model, the Sweden Solar System,
+                            uses the 110-metre (361 ft) Ericsson Globe in Stockholm as its substitute Sun, and, following the scale, Jupiter is a 7.5-metre (25-foot) sphere
+                            at Stockholm Arlanda Airport, 40 km (25 mi) away, whereas the farthest current object, Sedna, is a 10 cm (4 in) sphere in Luleå, 912 km (567 mi) away.
+                        </p>
+                        <p>
+                            If the Sun–Neptune distance is scaled to 100 metres, then the Sun would be about 3 cm in diameter (roughly two-thirds the diameter of a golf ball),
+                            the giant planets would be all smaller than about 3 mm, and Earth's diameter along with that of the other terrestrial planets
+                            would be smaller than a flea (0.3 mm) at this scale.
+                        </p>
+                    </div>
+                    <div class="w3-content w3-center">
+                        <div style="overflow-x:auto;">
+                            <div style="width:5000px;height:110px;">
+                                <a href="https://en.wikipedia.org/wiki/File:Solar_System_Objects_in_Scale.jpg" title="The Solar System. Distances are to scale, objects are not.">
+                                    <img alt="The Solar System" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Solar_System_Objects_in_Scale.jpg/5000px-Solar_System_Objects_in_Scale.jpg" decoding="async" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Solar_System_Objects_in_Scale.jpg/7500px-Solar_System_Objects_in_Scale.jpg 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Solar_System_Objects_in_Scale.jpg/10000px-Solar_System_Objects_in_Scale.jpg 2x" data-file-width="30000" data-file-height="660" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="w3-row-padding w3-stretch">
+                        <div class="w3-col l2 m4 s6 w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/sun"><!-- style="background-image:url('https://www1.cbn.com/sites/default/files/styles/video_ratio_16_9/public/media/slider/images/sun_hdv.jpg');" -->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>The Sun</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/mercury"><!-- style="background-image:url('/static/images/mercury-link.jpg');" -->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>Mercury</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/venus"><!-- style="background-image:url('/static/images/venus-link.jpg');" -->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>Venus</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/earth"><!-- style="background-image:url('https://www.technewsworld.com/article_images/story_graphics_xlarge/xl-2020-earth-1.jpg');" -->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>Earth</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/mars"><!-- style="background-image:url('https://www.wfyi.org/files/wfyi/programs_radio/current/wsky-mars-esa.jpg');" -->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>Mars</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/jupiter"><!-- style="background-image:url('https://ak.picdn.net/shutterstock/videos/3217210/thumb/1.jpg');" -->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>Jupiter</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-row-padding w3-stretch">
+                        <div class="w3-col l2 m4 s6 w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/saturn"><!-- style="background-image:url('https://images.immediate.co.uk/production/volatile/sites/4/2019/10/Saturn-NasaPA-dd3706c.jpg');" -->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>Saturn</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/uranus"><!-- style="background-image:url('https://www.worldatlas.com/r/w1200-h701-c1200x701/upload/eb/32/7d/shutterstock-508294324.jpg');" -->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>Uranus</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/neptune"><!-- style="background-image:url('https://www.thefactsite.com/wp-content/uploads/2012/11/neptune-facts.jpg');" -->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>Neptune</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/pluto"><!-- style="background-image:url('https://specials-images.forbesimg.com/imageserve/5d72a5675b52ce00088287fb/960x0.jpg');" -->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>Pluto</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/asteroid-belt"><!-- style="background-image:url('/static/images/ast-belt-link.jpg');" -->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>The asteroid belt</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/comets"><!-- style="background-image:url('https://www.rochesterfirst.com/wp-content/uploads/sites/66/2020/03/960x0.jpg');" -->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>Comets</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+{% block info %}
+                <span>The source of most text information is</span>
+                <a class="source" href="https://en.wikipedia.org/wiki/Solar_System" target="_blank">Wikipedia</a>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            // For different screens display different layout for the same content
+            (function () {
+                // Actions for smartphones
+                if (isMobile) {
+                    document.getElementById('div_add_to').style.display = 'none';
+                // and for more powerful devices
+                } else {
+                    document.getElementById('add_to').innerHTML =
+                    document.getElementById('copy_from').innerHTML;
+                    document.getElementById('div_copy_from').style.display = 'none';
+                    document.getElementById('div_add_to').style.backgroundImage = 'url("https://snagfilms-a.akamaihd.net/aa/24/bf2d6cf7459792250c849ee2ec00/1898-lec3-1536x865.jpg")';
+                }
+            })();
+            // Load images when a user has scrolled down the middle of a page
+            loadAfterScrollMid([
+                'https://www1.cbn.com/sites/default/files/styles/video_ratio_16_9/public/media/slider/images/sun_hdv.jpg',
+                '/static/images/solar-system/mercury-link.jpg',
+                '/static/images/solar-system/venus-link.jpg',
+                'https://www.technewsworld.com/article_images/story_graphics_xlarge/xl-2020-earth-1.jpg',
+                'https://www.wfyi.org/files/wfyi/programs_radio/current/wsky-mars-esa.jpg',
+                'https://ak.picdn.net/shutterstock/videos/3217210/thumb/1.jpg',
+                'https://images.immediate.co.uk/production/volatile/sites/4/2019/10/Saturn-NasaPA-dd3706c.jpg',
+                'https://www.worldatlas.com/r/w1200-h701-c1200x701/upload/eb/32/7d/shutterstock-508294324.jpg',
+                'https://www.thefactsite.com/wp-content/uploads/2012/11/neptune-facts.jpg',
+                'https://specials-images.forbesimg.com/imageserve/5d72a5675b52ce00088287fb/960x0.jpg',
+                '/static/images/solar-system/ast-belt-link.jpg',
+                'https://www.rochesterfirst.com/wp-content/uploads/sites/66/2020/03/960x0.jpg'
+            ]);
+            // Make a link to the current page active
+            makeActive('.solar-system');
+        </script>
+{% endblock %}

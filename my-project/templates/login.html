@@ -1,0 +1,263 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block style %}
+        <style>
+            #head_img, footer {
+                display: none;
+            }
+            input {
+                width: 100%;
+                font-weight: 500;
+                padding: 12px 20px;
+                border: 3px solid #ccc;
+                transition: 0.7s;
+                outline: none;
+                display: block;
+                margin: 8px 0;
+                box-sizing: border-box;
+            }
+            button {
+                width: 100%;
+                font-family: "Railway", Arial, Helvetica, sans-serif;
+                font-size: 18px;
+                letter-spacing: 2px;
+                background-image: linear-gradient(to right top, #4dffb8, #4dff4d);
+                color: black;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: 2px outset #ccc;
+                cursor: pointer;
+            }
+            .form {
+                max-width: 700px;
+                border-radius: 5px;
+                background-color: white;
+                padding: 20px 30px !important;
+                margin-bottom: 70px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            .form-control {
+                margin-bottom: 10px;
+            	padding-bottom: 20px;
+            	position: relative;
+            }
+            .form-control.success input {border: 3px solid #1aff1a;}
+            .form-control.error input {border: 3px solid #ff2e10;}
+            .form-control i {
+            	position: absolute;
+            	top: 50px;
+            	right: 13px;
+            	font-size: 25px;
+            	visibility: hidden;
+            }
+            .custom-select.form-control i {
+                top: 41px;
+            }
+            .form-control.success i.fa-check-circle {
+            	color: #00b300;
+            	visibility: visible;
+            }
+            .form-control.error i.fa-exclamation-circle {
+            	color: #e62e00;
+            	visibility: visible;
+            }
+            .form-control small {
+            	color: #e74c3c;
+            	position: absolute;
+            	visibility: hidden;
+            	bottom: 5px;
+            	left: 3px;
+            }
+            .form-control.error small {
+            	visibility: visible;
+            }
+            .form-control > label {
+                background-color: #111;
+                color: #ffffff;
+                padding: 0 8px;
+                border-radius: 40px 20px 40px 20px;
+            }
+            input:focus {
+                border: 3px solid #555;
+                background-color: #d9d9d9;
+                color: black;
+            }
+            button:hover {
+                background-image: linear-gradient(to right top, #00664d, #009900);
+                color: white;
+            }
+            input::placeholder {
+                font-weight: 400;
+                opacity: 0.7;
+            }
+            input:focus::placeholder {
+                color: #666;
+                font-weight: 400;
+                opacity: 1;  /* Firefox */
+            }
+            .form-head {
+                max-width:700px;
+                border-radius:60px 60px 0 0;
+                text-shadow: -1px 2px 6px black, 0 0 9px blue, 0 0 7px darkblue;
+            }
+            .field-icon {
+                color: #000;
+                font-size: 23px;
+                float: right;
+                margin-right: 35px;
+                margin-top: -48px;
+                position: relative;
+                z-index: 2;
+            }
+            @media screen and (max-width:600px){.form{padding:15px 20px!important;}.form-control{margin-bottom:0;}.header-text{padding:16px 8px!important;border-radius:30px 30px 0 0;}.field-icon{font-size:19px;margin-top:-45px;}}
+            @media screen and (max-width:380px){.form{padding:10px 15px!important;}.header-text{font-size:30px!important;}}
+            @media screen and (max-width:350px){.form{padding:8px 9px!important;}input, label{font-size:15px;}.form-control small{font-size:12px;}button{margin-top:20px;font-size:15px;}}
+        </style>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <h2 class="w3-padding-32 w3-content blue-black-grad w3-center header-text form-head">Login</h2>
+                <div class="w3-content form w3-padding w3-round-large my-xxcard w3-white">
+                    <form id="form1" name="form1" action="/login" method="post" novalidate="novalidate">
+                        <div class="form-control">
+                            <label>Username</label>
+                            <input type="text" name="username" placeholder="Your username" autofocus="autofocus" maxlength="127" />
+                            <i class="fa fa-check-circle"></i>
+                			<i class="fa fa-exclamation-circle"></i>
+                			<small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Password</label>
+                            <input type="password" autocomplete="off" name="password" placeholder="Enter a password" maxlength="64" />
+                            <span class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            <i class="fa fa-check-circle"></i>
+                			<i class="fa fa-exclamation-circle"></i>
+                			<small>Error message</small>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            const EYES = document.getElementsByClassName('toggle-password'),
+                SNACK_BAR = document.getElementById('snackbar');
+            // If a browser supports storage, create new empty storage
+            if (typeof(Storage) !== 'undefined') {
+                cart = [];
+                setStorageObj('cart', cart);
+            }
+            // Toggle password visibility
+            for (let i = 0, j = EYES.length; i < j; i++) {
+                EYES[i].addEventListener('click', function(e) {
+                    const inpt = this.parentNode.querySelector('input');
+                    if (this.classList.contains('fa-eye-slash')) {
+                        this.classList.remove('fa-eye-slash');
+                        this.classList.add('fa-eye');
+                    } else {
+                        this.classList.add('fa-eye-slash');
+                        this.classList.remove('fa-eye');
+                    }
+                    inpt.type === 'password' ? inpt.type = 'text' : inpt.type = 'password';
+                });
+            }
+            // On submit validate all the inputs
+            document.getElementById('form1').addEventListener('submit', e => {
+                e.preventDefault();
+                validateForm();
+            });
+            // Validation of a form
+            function validateForm() {
+                const form = document.forms['form1'],
+                    username = form['username'],
+                    password = form['password'],
+                    usernameValue = username.value.trim(),
+                    passwordValue = password.value.trim(),
+                    imojiRegEx = /(?:[\u2700-\u27bf]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\u0023-\u0039]\ufe0f?\u20e3|\u3299|\u3297|\u303d|\u3030|\u24c2|\ud83c[\udd70-\udd71]|\ud83c[\udd7e-\udd7f]|\ud83c\udd8e|\ud83c[\udd91-\udd9a]|\ud83c[\udde6-\uddff]|\ud83c[\ude01-\ude02]|\ud83c\ude1a|\ud83c\ude2f|\ud83c[\ude32-\ude3a]|\ud83c[\ude50-\ude51]|\u203c|\u2049|[\u25aa-\u25ab]|\u25b6|\u25c0|[\u25fb-\u25fe]|\u00a9|\u00ae|\u2122|\u2139|\ud83c\udc04|[\u2600-\u26FF]|\u2b05|\u2b06|\u2b07|\u2b1b|\u2b1c|\u2b50|\u2b55|\u231a|\u231b|\u2328|\u23cf|[\u23e9-\u23f3]|[\u23f8-\u23fa]|\ud83c\udccf|\u2934|\u2935|[\u2190-\u21ff])/,
+                    // Users can have account only with a strong password
+                    mediumRegEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*(\s|\t))(?=.{6,})(?!.{41,})/;
+                let result = 0,
+                    values = '';
+
+                if (usernameValue === '') {
+                    setErrorFor(username, 'Please provide your username');
+                } else if (usernameValue.length > 127) {
+                    setErrorFor(username, 'Wrong username');
+                } else {
+                    username.parentElement.classList.remove('error');
+                    result++;
+                }
+
+                if (passwordValue === '') {
+                    setErrorFor(password, 'Please enter your password');
+                } else if (!mediumRegEx.test(passwordValue)) {
+                    setErrorFor(password, 'Wrong password');
+                } else if (imojiRegEx.test(passwordValue)) {
+                    setErrorFor(password, 'Password cannot contain emoji');
+                } else {
+                    password.parentElement.classList.remove('error');
+                    result++;
+                }
+
+                if (result !== 2) {
+                    showErrorBar('One or more of your inputs are invalid', 5000);
+                    return;
+                }
+                values += 'username=' + usernameValue + '&' + 'password=' + passwordValue;
+                askServer(values, '/login');
+            }
+            // Trow an error to user if an input is invalid
+        	function setErrorFor(input, message) {
+            	input.parentElement.classList.add('error');
+            	input.parentElement.querySelector('small').innerText = message;
+            }
+            // Common AJAX function for sending and loading data
+            function askServer(values, url) {
+                const xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState === 4 && this.status === 200) {
+                        const response = JSON.parse(this.responseText);
+                        if (response['validated']) {
+                            showSuccessBar();
+                            document.forms['form1'].reset();
+                            window.location.assign('/');
+                        } else {
+                            if (response['username']) {
+                                showErrorBar(response['username']);
+                                setErrorFor(document.forms['form1']['username'], response['username']);
+                            } else {
+                                showErrorBar(response['password']);
+                                setErrorFor(document.forms['form1']['password'], response['password']);
+                            }
+                        }
+                    } else if (this.status >= 500) {
+                        showErrorBar();
+                        setErrorFor(document.forms['form1']['username'], 'Sorry, cannot validate your username');
+                        setErrorFor(document.forms['form1']['password'], 'Sorry, cannot validate your password');
+                    }
+                };
+                xmlhttp.open('POST', url, true);
+                xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                xmlhttp.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+                xmlhttp.send(values);
+            }
+            function showSuccessBar(text='Successfully') {
+                SNACK_BAR.innerText = text;
+                SNACK_BAR.className = 'show success';
+            }
+            function showErrorBar(text='Server does not respond', time = 6000) {
+                SNACK_BAR.innerText = text;
+                SNACK_BAR.className = 'show error';
+                // After 5 seconds, remove the show class from DIV
+                setTimeout(function(){ SNACK_BAR.className = SNACK_BAR.className.replace('show ', ''); }, time);
+            }
+        </script>
+{% endblock %}

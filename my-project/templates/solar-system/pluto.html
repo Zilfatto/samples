@@ -1,0 +1,260 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Pluto
+{% endblock %}
+
+{% block style %}
+        <style>
+            /* Transparent bg for text */
+            .fix-text {
+                width: 100%;
+                background-color: rgba(0,0,0,0.6);
+                margin: 0 auto;
+            }
+            .sm-text {
+                font-size: 16px;
+            }
+            @media screen and (min-width:993px){.head-img{background-image:url("/static/images/solar-system/hero-pluto-large.jpg");}}
+            @media screen and (max-width:992px){.sm-text{font-size:14px;}.head-img{background-image:url("/static/images/solar-system/hero-pluto-medium.jpg");}}
+            @media screen and (max-width:600px){.head-img{height:76%;background-image:url("/static/images/solar-system/hero-pluto-small.jpg");}}
+        </style>
+{% endblock %}
+
+{% block head_content %}
+            <div class="w3-display-bottomleft w3-center w3-margin-bottom w3-padding-large w3-hide-medium w3-hide-small">
+                <span class="w3-tag">Poor little Pluto, all alone</span>
+            </div>
+            <div class="w3-display-top w3-center w3-padding-large">
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>PLUTO</b></h1>
+            </div>
+            <div class="w3-display-bottomright w3-center w3-margin-bottom w3-padding-large tag-text">
+                <span id="bigger_font" class="contour w3-text-white">Back in my day we had 9 planets</span>
+            </div>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center dark-blue-grad w3-bottombar w3-border-orange w3-padding-64 header-text">General information</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Pluto (minor planet designation: 134340 Pluto) is an icy dwarf planet in the Kuiper belt, a ring of bodies beyond the orbit of Neptune.
+                            It was the first and the largest Kuiper belt object to be discovered.
+                        </p>
+                        <p>
+                            Pluto was discovered by Clyde Tombaugh in 1930 and declared to be the ninth planet from the Sun. After 1992, its status
+                            as a planet was questioned following the discovery of several objects of similar size in the Kuiper belt. In 2005,
+                            Eris, a dwarf planet in the scattered disc which is 27% more massive than Pluto, was discovered.
+                            This led the International Astronomical Union (IAU) to define the term "planet" formally in 2006, during their 26th General Assembly.
+                            That definition excluded Pluto and reclassified it as a dwarf planet.
+                        </p>
+                        <p>
+                            It is the ninth-largest and tenth-most-massive known object directly orbiting the Sun. It is the largest known trans-Neptunian object
+                            by volume but is less massive than Eris. Like other Kuiper belt objects, Pluto is primarily made of ice and rock and is relatively small—one-sixth
+                            the mass of the Moon and one-third its volume. It has a moderately eccentric and inclined orbit during which it ranges
+                            from 30 to 49 astronomical units or AU (4.4–7.4 billion km) from the Sun. This means that Pluto periodically comes closer to the Sun than Neptune,
+                            but a stable orbital resonance with Neptune prevents them from colliding. Light from the Sun takes 5.5 hours to reach Pluto
+                            at its average distance (39.5 AU).
+                        </p>
+                        <p>
+                            Pluto has five known moons: Charon (the largest, with a diameter just over half that of Pluto), Styx, Nix, Kerberos, and Hydra.
+                            Pluto and Charon are sometimes considered a binary system because the barycenter of their orbits does not lie within either body.
+                        </p>
+                        <p>
+                            The New Horizons spacecraft performed a flyby of Pluto on July 14, 2015, becoming the first ever, and to date only, spacecraft to do so.
+                            During its brief flyby, New Horizons made detailed measurements and observations of Pluto and its moons. In September 2016,
+                            astronomers announced that the reddish-brown cap of the north pole of Charon is composed of tholins, organic macromolecules
+                            that may be ingredients for the emergence of life, and produced from methane, nitrogen and other gases released from
+                            the atmosphere of Pluto and transferred 19,000 km (12,000 mi) to the orbiting moon.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center blue-grey-grad w3-bottombar w3-border-amber w3-padding-64 header-text">Discovery</h2>
+                    <div class="w3-padding">
+                        <p>
+                            In the 1840s, Urbain Le Verrier used Newtonian mechanics to predict the position of the then-undiscovered planet Neptune
+                            after analyzing perturbations in the orbit of Uranus. Subsequent observations of Neptune in the late 19th century led astronomers
+                            to speculate that Uranus's orbit was being disturbed by another planet besides Neptune.
+                        </p>
+                        <p>
+                            In 1906, Percival Lowell—a wealthy Bostonian who had founded Lowell Observatory in Flagstaff, Arizona, in 1894—started an extensive project
+                            in search of a possible ninth planet, which he termed "Planet X". By 1909, Lowell and William H. Pickering had suggested several possible
+                            celestial coordinates for such a planet. Lowell and his observatory conducted his search until his death in 1916, but to no avail.
+                            Unknown to Lowell, his surveys had captured two faint images of Pluto on March 19 and April 7, 1915, but they were not recognized
+                            for what they were. There are fourteen other known precovery observations, with the earliest made by the Yerkes Observatory on August 20, 1909.
+                        </p>
+                        <p>
+                            Percival's widow, Constance Lowell, entered into a ten-year legal battle with the Lowell Observatory over her husband's legacy,
+                            and the search for Planet X did not resume until 1929. Vesto Melvin Slipher, the observatory director, gave the job of locating Planet X to
+                            23-year-old Clyde Tombaugh, who had just arrived at the observatory after Slipher had been impressed by a sample of his astronomical drawings.
+                        </p>
+                        <p>
+                            Tombaugh's task was to systematically image the night sky in pairs of photographs, then examine each pair and determine whether
+                            any objects had shifted position. Using a blink comparator, he rapidly shifted back and forth between views of each of the plates to create
+                            the illusion of movement of any objects that had changed position or appearance between photographs. On February 18, 1930, after nearly
+                            a year of searching, Tombaugh discovered a possible moving object on photographic plates taken on January 23 and 29.
+                            A lesser-quality photograph taken on January 21 helped confirm the movement. After the observatory obtained further confirmatory photographs,
+                            news of the discovery was telegraphed to the Harvard College Observatory on March 13, 1930. Pluto has yet to complete a full orbit of
+                            the Sun since its discovery, as one Plutonian year is 247.68 years long.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="fix-text w3-container w3-margin-top w3-margin-bottom w3-padding w3-round">
+                        <p>
+                            &#8220;Pluto is as far across as Manhatton to Miami, but its atmosphere is bigger than the Earth's&#8221;
+                        </p>
+                        <p>
+                            - Alan Stern
+                        </p>
+                    </div>
+                    <div class="w3-center">
+                        <picture>
+                            <!--/static/images/solar-system/pluto-small.jpg-->
+                            <source class="load-after-body" media="(max-width: 600px)" />
+                            <!--/static/images/solar-system/pluto-medium.jpg-->
+                            <source class="load-after-body" media="(max-width: 992px)" />
+                            <!--/static/images/solar-system/pluto-large.jpg-->
+                            <img class="load-after-body" alt="Pluto" style="width:100%;" />
+                        </picture>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center teal-grad w3-bottombar w3-border-orange w3-padding-64 header-text">Planet X disproved</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Once Pluto was found, its faintness and lack of a resolvable disc cast doubt on the idea that it was Lowell's Planet X.
+                            Estimates of Pluto's mass were revised downward throughout the 20th century.
+                        </p>
+                        <p>
+                            Astronomers initially calculated its mass based on its presumed effect on Neptune and Uranus. In 1931, Pluto was calculated
+                            to be roughly the mass of Earth, with further calculations in 1948 bringing the mass down to roughly that of Mars.
+                            In 1976, Dale Cruikshank, Carl Pilcher and David Morrison of the University of Hawaii calculated Pluto's albedo for the first time,
+                            finding that it matched that for methane ice; this meant Pluto had to be exceptionally luminous for its size and therefore
+                            could not be more than 1 percent the mass of Earth. (Pluto's albedo is 1.4–1.9 times that of Earth.)
+                        </p>
+                        <p>
+                            In 1978, the discovery of Pluto's moon Charon allowed the measurement of Pluto's mass for the first time: roughly 0.2% that of Earth,
+                            and far too small to account for the discrepancies in the orbit of Uranus. Subsequent searches for an alternative Planet X,
+                            notably by Robert Sutton Harrington, failed. In 1992, Myles Standish used data from Voyager 2's flyby of Neptune in 1989,
+                            which had revised the estimates of Neptune's mass downward by 0.5%—an amount comparable to the mass of Mars—to recalculate
+                            its gravitational effect on Uranus. With the new figures added in, the discrepancies, and with them the need for a Planet X, vanished.
+                            Today, the majority of scientists agree that Planet X, as Lowell defined it, does not exist. Lowell had made a prediction of Planet X's orbit
+                            and position in 1915 that was fairly close to Pluto's actual orbit and its position at that time; Ernest W.
+                            Brown concluded soon after Pluto's discovery that this was a coincidence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center silver-grad w3-bottombar w3-border-indigo w3-padding-64 header-text">Atmosphere</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Pluto has a tenuous atmosphere consisting of nitrogen (N2), methane (CH4), and carbon monoxide (CO), which are in equilibrium
+                            with their ices on Pluto's surface. According to the measurements by New Horizons, the surface pressure is about 1 Pa (10 μbar),
+                            roughly one million to 100,000 times less than Earth's atmospheric pressure. It was initially thought that,
+                            as Pluto moves away from the Sun, its atmosphere should gradually freeze onto the surface; studies of New Horizons data and
+                            ground-based occultations show that Pluto's atmospheric density increases, and that it likely remains gaseous throughout Pluto's orbit.
+                            New Horizons observations showed that atmospheric escape of nitrogen to be 10,000 times less than expected.
+                            Alan Stern has contended that even a small increase in Pluto's surface temperature can lead to exponential increases
+                            in Pluto's atmospheric density; from 18 hPa to as much as 280 hPa (three times that of Mars to a quarter that of the Earth).
+                            At such densities, nitrogen could flow across the surface as liquid. Just like sweat cools the body as it evaporates from the skin,
+                            the sublimation of Pluto's atmosphere cools its surface. The presence of atmospheric gases was traced up to 1670 kilometers high;
+                            the atmosphere does not have a sharp upper boundary.
+                        </p>
+                        <div class="w3-content w3-center cool-font" style="max-width:1000px;padding:0;">
+                            <picture>
+                                <!--/static/images/solar-system/pluto2-small.jpg-->
+                                <source class="last-load" media="(max-width: 600px)" />
+                                <!--/static/images/solar-system/pluto2-medium.jpg-->
+                                <source class="last-load" media="(max-width: 992px)" />
+                                <!--/static/images/solar-system/pluto2-large.jpg-->
+                                <img class="last-load" alt="Pluto" style="width:100%;" />
+                            </picture>
+                            <div class="w3-container w3-dark-grey">
+                                <p class="sm-text">
+                                    A near-true-color image taken by New Horizons after its flyby. Numerous layers of blue haze float in Pluto's atmosphere.
+                                    Along and near the limb, mountains and their shadows are visible.
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            The presence of methane, a powerful greenhouse gas, in Pluto's atmosphere creates a temperature inversion,
+                            with the average temperature of its atmosphere tens of degrees warmer than its surface,
+                            though observations by New Horizons have revealed Pluto's upper atmosphere to be far colder than expected
+                            (70 K, as opposed to about 100 K). Pluto's atmosphere is divided into roughly 20 regularly spaced haze layers up to 150 km high,
+                            thought to be the result of pressure waves created by airflow across Pluto's mountains.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="w3-row-padding w3-stretch">
+                        <div class="w3-col l2 m4 s6 w3-left w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/neptune">
+                                    <!--https://www.thefactsite.com/wp-content/uploads/2012/11/neptune-facts.jpg-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>Neptune</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-right w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/asteroid-belt">
+                                    <!--/static/images/solar-system/ast-belt-link.jpg-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>The asteroid belt</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+{% block info %}
+                <span>The source of most text information is</span>
+                <a class="source" href="https://en.wikipedia.org/wiki/Pluto" target="_blank">Wikipedia</a>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            // Load images after a page has loaded
+            loadImgsAfterBody([
+                '/static/images/solar-system/pluto-small.jpg',
+                '/static/images/solar-system/pluto-medium.jpg',
+                '/static/images/solar-system/pluto-large.jpg'
+            ], true);
+            // Load images when a user has scrolled down the middle of a page
+            loadAfterScrollMid([
+                '/static/images/solar-system/pluto2-small.jpg',
+                '/static/images/solar-system/pluto2-medium.jpg',
+                '/static/images/solar-system/pluto2-large.jpg',
+                'https://www.thefactsite.com/wp-content/uploads/2012/11/neptune-facts.jpg',
+                '/static/images/solar-system/ast-belt-link.jpg'
+            ]);
+            // Make a link to the current page active
+            makeActive('.pluto');
+        </script>
+{% endblock %}

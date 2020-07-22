@@ -1,0 +1,239 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Venus
+{% endblock %}
+
+{% block style %}
+        <style>
+            /* Transparent bg for text */
+            .fix-text {
+                width: 100%;
+                background-color: rgba(0,0,0,0.6);
+                margin: 0 auto;
+            }
+            @media screen and (min-width:993px){.head-img{background-image:url("/static/images/solar-system/hero-venus-large.jpg");}}
+            @media screen and (max-width:992px){.head-img{background-image:url("/static/images/solar-system/hero-venus-medium.jpg");}}
+            @media screen and (max-width:600px){.head-img{height:76%;background-image:url("/static/images/solar-system/hero-venus-small.jpg");}}
+        </style>
+{% endblock %}
+
+{% block head_content %}
+            <div class="w3-display-bottomleft w3-center w3-margin-bottom w3-padding-large w3-hide-medium w3-hide-small">
+                <span class="w3-tag">Venus favors the bold.</span>
+            </div>
+            <div class="w3-display-top w3-center w3-padding-large">
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>VENUS</b></h1>
+            </div>
+            <div class="w3-display-bottomright w3-center w3-margin-bottom w3-padding-large tag-text">
+                <span id="bigger_font" class="contour w3-text-white">Venus can see at night without eyes.</span>
+            </div>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center teal-grad w3-bottombar w3-border-orange w3-padding-64 header-text">General information</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty. As the second-brightest natural object
+                            in the night sky after the Moon, Venus can cast shadows and, rarely, is visible to the naked eye in broad daylight.
+                            Venus lies within Earth's orbit, and so never appears to venture far from the Sun, either setting in the west just after dusk
+                            or rising in the east a bit before dawn. Venus orbits the Sun every 224.7 Earth days. With a rotation period of 243 Earth days,
+                            it takes longer to rotate about its axis than any other planet in the Solar System and does so in the opposite direction to all but Uranus
+                            (meaning the Sun rises in the west and sets in the east). Venus does not have any moons, a distinction it shares only with Mercury
+                            among planets in the Solar System.
+                        </p>
+                        <p>
+                            Venus is a terrestrial planet and is sometimes called Earth's "sister planet" because of their similar size, mass, proximity to the Sun,
+                            and bulk composition. It is radically different from Earth in other respects. It has the densest atmosphere of the four terrestrial planets,
+                            consisting of more than 96% carbon dioxide. The atmospheric pressure at the planet's surface is 92 times that of Earth,
+                            or roughly the pressure found 900 m (3,000 ft) underwater on Earth. Venus is by far the hottest planet in the Solar System,
+                            with a mean surface temperature of 735 K (462 °C; 863 °F), even though Mercury is closer to the Sun. Venus is shrouded by an opaque
+                            layer of highly reflective clouds of sulfuric acid, preventing its surface from being seen from space in visible light.
+                            It may have had water oceans in the past, but these would have vaporized as the temperature rose due to a runaway greenhouse effect.
+                            The water has probably photodissociated, and the free hydrogen has been swept into interplanetary space by the solar wind
+                            because of the lack of a planetary magnetic field. Venus's surface is a dry desertscape interspersed with slab-like rocks
+                            and is periodically resurfaced by volcanism.
+                        </p>
+                        <p>
+                            As one of the brightest objects in the sky, Venus has been a major fixture in human culture for as long as records have existed.
+                            It has been made sacred to gods of many cultures, and has been a prime inspiration for writers and poets as the morning star and evening star.
+                            Venus was the first planet to have its motions plotted across the sky, as early as the second millennium BC.
+                        </p>
+                        <p>
+                            As the planet with the closest approach to Earth, Venus has been a prime target for early interplanetary exploration.
+                            It was the first planet beyond Earth visited by a spacecraft (Mariner 2 in 1962), and the first to be successfully landed on (by Venera 7 in 1970).
+                            Venus's thick clouds render observation of its surface impossible in visible light, and the first detailed maps did not emerge until
+                            the arrival of the Magellan orbiter in 1991. Plans have been proposed for rovers or more complex missions, but they are hindered
+                            by Venus's hostile surface conditions.
+                        </p>
+                        <p>
+                            In January 2020, astronomers reported evidence that suggests that Venus is currently volcanically active.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="fix-text w3-container w3-margin-top w3-margin-bottom w3-padding w3-round">
+                        <p>
+                            &#8220;There are so many stars shining in the sky, so many beautiful things winking at you, but when Venus comes out,
+                            all the others are waned, they are pushed to the background.&#8221;
+                        </p>
+                        <p>
+                            - Mehmet Murat Ildan
+                        </p>
+                    </div>
+                    <div class="w3-center">
+                        <picture>
+                            <!--/static/images/solar-system/venus2-sm-md.jpg-->
+                            <source class="load-after-body" media="(max-width: 600px)" />
+                            <!--/static/images/solar-system/venus-medium.jpg-->
+                            <source class="load-after-body" media="(max-width: 992px)" />
+                            <!--/static/images/solar-system/venus-large.jpg-->
+                            <img class="load-after-body" alt="Venus" style="width:100%;" />
+                        </picture>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center dark-brown-grad w3-bottombar w3-border-amber w3-padding-64 header-text">Geography</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The Venusian surface was a subject of speculation until some of its secrets were revealed by planetary science in the 20th century.
+                            Venera landers in 1975 and 1982 returned images of a surface covered in sediment and relatively angular rocks. The surface was mapped
+                            in detail by Magellan in 1990–91. The ground shows evidence of extensive volcanism, and the sulfur in the atmosphere may indicate
+                            that there have been recent eruptions.
+                        </p>
+                        <p>
+                            About 80% of the Venusian surface is covered by smooth, volcanic plains, consisting of 70% plains with wrinkle ridges and 10% smooth
+                            or lobate plains. Two highland "continents" make up the rest of its surface area, one lying in the planet's northern hemisphere
+                            and the other just south of the equator. The northern continent is called Ishtar Terra after Ishtar, the Babylonian goddess of love,
+                            and is about the size of Australia. Maxwell Montes, the highest mountain on Venus, lies on Ishtar Terra. Its peak is 11 km (7 mi)
+                            above the Venusian average surface elevation. The southern continent is called Aphrodite Terra, after the Greek goddess of love,
+                            and is the larger of the two highland regions at roughly the size of South America.
+                            A network of fractures and faults covers much of this area.
+                        </p>
+                        <p>
+                            The absence of evidence of lava flow accompanying any of the visible calderas remains an enigma. The planet has few impact craters,
+                            demonstrating that the surface is relatively young, approximately 300–600 million years old. Venus has some unique surface features
+                            in addition to the impact craters, mountains, and valleys commonly found on rocky planets. Among these are flat-topped
+                            volcanic features called "farra", which look somewhat like pancakes and range in size from 20 to 50 km (12 to 31 mi) across,
+                            and from 100 to 1,000 m (330 to 3,280 ft) high; radial, star-like fracture systems called "novae"; features with both radial and
+                            concentric fractures resembling spider webs, known as "arachnoids"; and "coronae", circular rings of fractures sometimes
+                            surrounded by a depression. These features are volcanic in origin.
+                        </p>
+                        <p>
+                            Most Venusian surface features are named after historical and mythological women. Exceptions are Maxwell Montes,
+                            named after James Clerk Maxwell, and highland regions Alpha Regio, Beta Regio, and Ovda Regio.
+                            The last three features were named before the current system was adopted by the International Astronomical Union,
+                            the body which oversees planetary nomenclature.
+                        </p>
+                        <p>
+                            The longitude of physical features on Venus are expressed relative to its prime meridian. The original prime meridian passed through
+                            the radar-bright spot at the centre of the oval feature Eve, located south of Alpha Regio. After the Venera missions were completed,
+                            the prime meridian was redefined to pass through the central peak in the crater Ariadne.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center blue-grey-grad w3-bottombar w3-border-amber w3-padding-64 header-text">Internal structure</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Without seismic data or knowledge of its moment of inertia, little direct information is available about
+                            the internal structure and geochemistry of Venus. The similarity in size and density between Venus and
+                            Earth suggests they share a similar internal structure: a core, mantle, and crust. Like that of Earth,
+                            the Venusian core is at least partially liquid because the two planets have been cooling at about the same rate.
+                            The slightly smaller size of Venus means pressures are 24% lower in its deep interior than Earth's.
+                            The principal difference between the two planets is the lack of evidence for plate tectonics on Venus,
+                            possibly because its crust is too strong to subduct without water to make it less viscous.
+                            This results in reduced heat loss from the planet, preventing it from cooling and
+                            providing a likely explanation for its lack of an internally generated magnetic field.
+                            Instead, Venus may lose its internal heat in periodic major resurfacing events.
+                        </p>
+                        <div class="w3-row w3-black">
+                            <div class="w3-col m6 w3-content">
+                                <picture>
+                                    <!--/static/images/solar-system/venus2-sm-md.jpg-->
+                                    <source class="last-load" media="(max-width: 992px)" />
+                                    <!--/static/images/solar-system/venus2-large.jpg-->
+                                    <img class="last-load" alt="Venus" style="width:100%;" />
+                                </picture>
+                            </div>
+                            <div class="w3-col m6 w3-content">
+                                <!--https://www.technewsworld.com/article_images/story_graphics_xlarge/xl-2020-earth-1.jpg-->
+                                <img class="last-load" alt="Earth" style="width:100%;" />
+                            </div>
+                        </div>
+                        <p>
+                            Venus is one of the four terrestrial planets in the Solar System, meaning that it is a rocky body like Earth.
+                            It is similar to Earth in size and mass, and is often described as Earth's "sister" or "twin".
+                            The diameter of Venus is 12,103.6 km (7,520.8 mi)—only 638.4 km (396.7 mi) less than Earth's—and its mass is 81.5% of Earth's.
+                            Conditions on the Venusian surface differ radically from those on Earth because its dense atmosphere is 96.5% carbon dioxide,
+                            with most of the remaining 3.5% being nitrogen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="w3-row-padding w3-stretch">
+                        <div class="w3-col l2 m4 s6 w3-left w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/mercury">
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>Mercury</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-right w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/earth">
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>Earth</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+{% block info %}
+                <span>The source of most text information is</span>
+                <a class="source" href="https://en.wikipedia.org/wiki/Venus" target="_blank">Wikipedia</a>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            // Load images after a page has loaded
+            loadImgsAfterBody([
+                '/static/images/solar-system/venus2-sm-md.jpg',
+                '/static/images/solar-system/venus-medium.jpg',
+                '/static/images/solar-system/venus-large.jpg'
+            ], true);
+            // Load images when a user has scrolled down the middle of a page
+            loadAfterScrollMid([
+                '/static/images/solar-system/venus2-sm-md.jpg',
+                '/static/images/solar-system/venus2-large.jpg',
+                'https://www.technewsworld.com/article_images/story_graphics_xlarge/xl-2020-earth-1.jpg',
+                '/static/images/solar-system/mercury-link.jpg',
+                'https://www.technewsworld.com/article_images/story_graphics_xlarge/xl-2020-earth-1.jpg'
+            ]);
+            // Make a link to the current page active
+            makeActive('.venus');
+        </script>
+{% endblock %}

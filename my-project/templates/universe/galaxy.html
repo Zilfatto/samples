@@ -1,0 +1,337 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    A galaxy
+{% endblock %}
+
+{% block style %}
+        <style>
+            .sm-text {
+                font-size: 16px;
+            }
+            @media screen and (min-width:993px){.head-img{background-image:url("https://www.setaswall.com/wp-content/uploads/2017/03/Galaxies-Space-Universe-Stars-Wallpaper-1920x1200.jpg");}}
+            @media screen and (max-width:992px){.sm-text{font-size:14px;}.head-img{background-image:url("/static/images/universe/hero-galaxy-medium.jpg");}}
+            @media screen and (max-width:600px){.head-img{height:76%;background-image:url("/static/images/universe/hero-galaxy-small.jpg");}}
+        </style>
+{% endblock %}
+
+{% block head_content %}
+            <div class="w3-display-bottomleft w3-center w3-margin-bottom w3-padding-large w3-hide-medium w3-hide-small">
+                <span class="w3-tag">So much universe, and so little time</span>
+            </div>
+            <div class="w3-display-top w3-center w3-padding-large">
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>A GALAXY</b></h1>
+            </div>
+            <div class="w3-display-bottomright w3-center w3-margin-bottom w3-padding-large tag-text">
+                <span id="bigger_font" class="contour w3-text-white">The vastness of the universe humbles me...</span>
+            </div>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center dark-blue-grad w3-bottombar w3-border-amber w3-padding-64 header-text">General information</h2>
+                    <div class="w3-padding">
+                        <p>
+                            A galaxy is a gravitationally bound system of stars, stellar remnants, interstellar gas, dust, and dark matter.
+                            The word galaxy is derived from the Greek galaxias (γαλαξίας), literally "milky", a reference to the Milky Way.
+                            Galaxies range in size from dwarfs with just a few hundred million (108) stars to giants with one hundred trillion (1014) stars,
+                            each orbiting its galaxy's center of mass.
+                        </p>
+                        <p>
+                            Galaxies are categorized according to their visual morphology as elliptical, spiral, or irregular. Many galaxies are
+                            thought to have supermassive black holes at their centers. The Milky Way's central black hole, known as Sagittarius A*,
+                            has a mass four million times greater than the Sun. As of March 2016, GN-z11 is the oldest and most distant observed galaxy with
+                            a comoving distance of 32 billion light-years from Earth, and observed as it existed just 400 million years after the Big Bang.
+                        </p>
+                        <p>
+                            Research released in 2016 revised the number of galaxies in the observable universe from a previous estimate of 200 billion
+                            (2×1011) to a suggested two trillion (2×1012) or more and, overall, as many as an estimated 1×1024 stars
+                            (more stars than all the grains of sand on planet Earth). Most of the galaxies are 1,000 to 100,000 parsecs in diameter
+                            (approximately 3,000 to 300,000 light years) and separated by distances on the order of millions of parsecs (or megaparsecs).
+                            For comparison, the Milky Way has a diameter of at least 30,000 parsecs (100,000 ly) and is separated from the Andromeda Galaxy,
+                            its nearest large neighbor, by 780,000 parsecs (2.5 million ly.)
+                        </p>
+                        <div class="w3-content w3-margin-bottom cool-font" style="max-width:900px;padding:0;">
+                            <picture>
+                                <!--/static/images/universe/galaxy-small.jpg-->
+                                <source class="load-after-body" media="(max-width: 600px)" />
+                                <!--/static/images/universe/galaxy-md-lg.jpg-->
+                                <img class="load-after-body" alt="NGC 4414, a typical spiral galaxy" style="width:100%;" />
+                            </picture>
+                            <div class="w3-container w3-center">
+                                <p class="sm-text">
+                                    <b>NGC 4414</b>, a typical spiral galaxy in the constellation Coma Berenices, is about 55,000 light-years in diameter
+                                    and approximately 60 million light-years from Earth.
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            The space between galaxies is filled with a tenuous gas (the intergalactic medium) having an average density of less than
+                            one atom per cubic meter. The majority of galaxies are gravitationally organized into groups, clusters, and superclusters.
+                            The Milky Way is part of the Local Group, which is dominated by it and the Andromeda Galaxy and is part of the Virgo Supercluster.
+                            At the largest scale, these associations are generally arranged into sheets and filaments surrounded by immense voids.
+                            Both the Local Group and the Virgo Supercluster are contained in a much larger cosmic structure named Laniakea.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center orange-grad w3-bottombar w3-border-amber w3-padding-64 header-text">Types and morphology</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Galaxies come in three main types: ellipticals, spirals, and irregulars. A slightly more extensive description of
+                            galaxy types based on their appearance is given by the Hubble sequence. Since the Hubble sequence is entirely
+                            based upon visual morphological type (shape), it may miss certain important characteristics of galaxies such as
+                            star formation rate in starburst galaxies and activity in the cores of active galaxies.
+                        </p>
+                        <div class="w3-content w3-margin-bottom cool-font" style="max-width:700px;padding:0;">
+                            <!--https://upload.wikimedia.org/wikipedia/commons/8/8a/Hubble_sequence_photo.png-->
+                            <img class="load-after-body" alt="Types of galaxies according to the Hubble classification scheme" style="width:100%;" />
+                            <div class="w3-container w3-dark-grey w3-center">
+                                <p class="sm-text">
+                                    Types of galaxies according to the Hubble classification scheme: an E indicates a type of elliptical galaxy;
+                                    an S is a spiral; and SB is a barred-spiral galaxy.
+                                </p>
+                            </div>
+                        </div>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Ellipticals</h3>
+                        <p>
+                            The Hubble classification system rates elliptical galaxies on the basis of their ellipticity, ranging from E0,
+                            being nearly spherical, up to E7, which is highly elongated. These galaxies have an ellipsoidal profile,
+                            giving them an elliptical appearance regardless of the viewing angle. Their appearance shows little structure and
+                            they typically have relatively little interstellar matter. Consequently, these galaxies also have a low portion of
+                            open clusters and a reduced rate of new star formation. Instead they are dominated by generally older,
+                            more evolved stars that are orbiting the common center of gravity in random directions.
+                            The stars contain low abundances of heavy elements because star formation ceases after the initial burst.
+                            In this sense they have some similarity to the much smaller globular clusters.
+                        </p>
+                        <p>
+                            The largest galaxies are giant ellipticals. Many elliptical galaxies are believed to form due to
+                            the interaction of galaxies, resulting in a collision and merger.
+                            They can grow to enormous sizes (compared to spiral galaxies, for example),
+                            and giant elliptical galaxies are often found near the core of large galaxy clusters.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Shell galaxy</h3>
+                        <p>
+                            A shell galaxy is a type of elliptical galaxy where the stars in the galaxy's halo are arranged
+                            in concentric shells. About one-tenth of elliptical galaxies have a shell-like structure,
+                            which has never been observed in spiral galaxies. The shell-like structures are thought to develop
+                            when a larger galaxy absorbs a smaller companion galaxy. As the two galaxy centers approach,
+                            the centers start to oscillate around a center point, the oscillation creates gravitational ripples
+                            forming the shells of stars, similar to ripples spreading on water. For example,
+                            galaxy NGC 3923 has over twenty shells.
+                        </p>
+                        <div class="w3-content w3-margin-bottom cool-font" style="max-width:800px;padding:0;">
+                            <!--https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/NGC_3923_Elliptical_Shell_Galaxy.jpg/800px-NGC_3923_Elliptical_Shell_Galaxy.jpg-->
+                            <img class="load-after-body" alt="NGC 3923 Elliptical Shell Galaxy" style="width:100%;" />
+                            <div class="w3-container w3-center w3-dark-grey">
+                                <p class="sm-text">
+                                    NGC 3923 Elliptical Shell Galaxy (Hubble photograph)
+                                </p>
+                            </div>
+                        </div>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Spirals</h3>
+                        <p>
+                            Spiral galaxies resemble spiraling pinwheels. Though the stars and other visible material contained
+                            in such a galaxy lie mostly on a plane, the majority of mass in spiral galaxies exists in
+                            a roughly spherical halo of dark matter which extends beyond the visible component,
+                            as demonstrated by the universal rotation curve concept.
+                        </p>
+                        <p>
+                            Spiral galaxies consist of a rotating disk of stars and interstellar medium, along with
+                            a central bulge of generally older stars. Extending outward from the bulge are relatively bright arms.
+                            In the Hubble classification scheme, spiral galaxies are listed as type S, followed by
+                            a letter (a, b, or c) which indicates the degree of tightness of the spiral arms and the size of
+                            the central bulge. An Sa galaxy has tightly wound, poorly defined arms and possesses
+                            a relatively large core region. At the other extreme, an Sc galaxy has open, well-defined arms
+                            and a small core region. A galaxy with poorly defined arms is sometimes referred to as
+                            a flocculent spiral galaxy; in contrast to the grand design spiral galaxy that has prominent
+                            and well-defined spiral arms. The speed in which a galaxy rotates is thought to correlate with
+                            the flatness of the disc as some spiral galaxies have thick bulges, while others are thin and dense.
+                        </p>
+                        <p>
+                            In spiral galaxies, the spiral arms do have the shape of approximate logarithmic spirals,
+                            a pattern that can be theoretically shown to result from a disturbance in
+                            a uniformly rotating mass of stars. Like the stars, the spiral arms rotate around the center,
+                            but they do so with constant angular velocity. The spiral arms are thought to be areas of
+                            high-density matter, or "density waves".[67] As stars move through an arm, the space velocity of
+                            each stellar system is modified by the gravitational force of the higher density.
+                            (The velocity returns to normal after the stars depart on the other side of the arm.)
+                            This effect is akin to a "wave" of slowdowns moving along a highway full of moving cars.
+                            The arms are visible because the high density facilitates star formation, and therefore
+                            they harbor many bright and young stars.
+                        </p>
+                        <div class="w3-content w3-margin-bottom cool-font" style="max-width:1000px;padding:0;">
+                            <picture>
+                                <!--/static/images/universe/galaxy2-small.jpg-->
+                                <source class="load-after-body" media="(max-width: 600px)" />
+                                <!--/static/images/universe/galaxy2-md-lg.jpg-->
+                                <img class="load-after-body" alt="The Pinwheel Galaxy, NGC 5457" style="width:100%;" />
+                            </picture>
+                            <div class="w3-container w3-dark-grey w3-center">
+                                <p class="sm-text">
+                                    The Pinwheel Galaxy, NGC 5457
+                                </p>
+                            </div>
+                        </div>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Barred spiral galaxy</h3>
+                        <p>
+                            A majority of spiral galaxies, including our own Milky Way galaxy, have a linear,
+                            bar-shaped band of stars that extends outward to either side of the core, then merges into
+                            the spiral arm structure. In the Hubble classification scheme, these are designated by an SB,
+                            followed by a lower-case letter (a, b or c) which indicates the form of the spiral arms
+                            (in the same manner as the categorization of normal spiral galaxies). Bars are thought to be temporary structures
+                            that can occur as a result of a density wave radiating outward from the core, or else due to
+                            a tidal interaction with another galaxy. Many barred spiral galaxies are active, possibly as
+                            a result of gas being channeled into the core along the arms.
+                        </p>
+                        <p>
+                            Our own galaxy, the Milky Way, is a large disk-shaped barred-spiral galaxy about 30 kiloparsecs
+                            in diameter and a kiloparsec thick. It contains about two hundred billion (2×1011) stars and
+                            has a total mass of about six hundred billion (6×1011) times the mass of the Sun.
+                        </p>
+                        <div class="w3-content w3-margin-bottom cool-font" style="max-width:1000px;padding:0;">
+                            <picture>
+                                <!--/static/images/universe/galaxy3-small.jpg-->
+                                <source class="last-load" media="(max-width: 600px)" />
+                                <!--/static/images/universe/galaxy3-md-lg.jpg-->
+                                <img class="last-load" alt="NGC 1300, an example of a barred spiral galaxy" style="width:100%;" />
+                            </picture>
+                            <div class="w3-container w3-dark-grey w3-center">
+                                <p class="sm-text">
+                                    NGC 1300, an example of a barred spiral galaxy
+                                </p>
+                            </div>
+                        </div>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Super-luminous spiral</h3>
+                        <p>
+                            Recently, researchers described galaxies called super-luminous spirals. They are very large with
+                            an upward diameter of 437,000 light-years (compared to the Milky Way's 100,000 light-year diameter).
+                            With a mass of 340 billion solar masses, they generate a significant amount of ultraviolet and
+                            mid-infrared light. They are thought to have an increased star formation rate around 30 times faster
+                            than the Milky Way.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Other morphologies</h3>
+                        <ul>
+                            <li>Peculiar galaxies are galactic formations that develop unusual properties due to tidal interactions with other galaxies.</li>
+                            <li>
+                                A ring galaxy has a ring-like structure of stars and interstellar medium surrounding a bare core.
+                                A ring galaxy is thought to occur when a smaller galaxy passes through the core of a spiral galaxy.
+                                Such an event may have affected the Andromeda Galaxy, as it displays a multi-ring-like structure
+                                when viewed in infrared radiation.
+                            </li>
+                            <li>
+                                A lenticular galaxy is an intermediate form that has properties of both elliptical and spiral galaxies.
+                                These are categorized as Hubble type S0, and they possess ill-defined spiral arms with
+                                an elliptical halo of stars (barred lenticular galaxies receive Hubble classification SB0.)
+                            </li>
+                            <li>Irregular galaxies are galaxies that can not be readily classified into an elliptical or spiral morphology.</li>
+                            <li>An Irr-I galaxy has some structure but does not align cleanly with the Hubble classification scheme.</li>
+                            <li>
+                                Irr-II galaxies do not possess any structure that resembles a Hubble classification, and may have been disrupted.
+                                Nearby examples of (dwarf) irregular galaxies include the Magellanic Clouds.
+                            </li>
+                            <li>
+                                An ultra diffuse galaxy (UDG) is an extremely-low-density galaxy. The galaxy may be the same size as the Milky Way
+                                but has a visible star count only one percent of the Milky Way. The lack of luminosity is because there is
+                                a lack of star-forming gas in it, which results in old stellar populations.
+                            </li>
+                        </ul>
+                        <div class="w3-content w3-margin-bottom cool-font" style="max-width:900px;padding:0;">
+                            <picture>
+                                <!--/static/images/universe/galaxy4-small.jpg-->
+                                <source class="last-load" media="(max-width: 600px)" />
+                                <!--/static/images/universe/galaxy4-md-lg.jpg-->
+                                <img class="last-load" alt="Hoag's Object, an example of a ring galaxy" style="width:100%;" />
+                            </picture>
+                            <div class="w3-container w3-dark-grey w3-center">
+                                <p class="sm-text">
+                                    Hoag's Object, an example of a ring galaxy
+                                </p>
+                            </div>
+                        </div>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Dwarfs</h3>
+                        <p>
+                            Despite the prominence of large elliptical and spiral galaxies, most galaxies are dwarf galaxies. These galaxies are
+                            relatively small when compared with other galactic formations, being about one hundredth the size of the Milky Way,
+                            containing only a few billion stars. Ultra-compact dwarf galaxies have recently been discovered that are only 100 parsecs across.
+                        </p>
+                        <p>
+                            Many dwarf galaxies may orbit a single larger galaxy; the Milky Way has at least a dozen such satellites, with
+                            an estimated 300–500 yet to be discovered.[82] Dwarf galaxies may also be classified as elliptical, spiral,
+                            or irregular. Since small dwarf ellipticals bear little resemblance to large ellipticals, they are often called
+                            dwarf spheroidal galaxies instead.
+                        </p>
+                        <p>
+                            A study of 27 Milky Way neighbors found that in all dwarf galaxies, the central mass is approximately 10 million solar masses,
+                            regardless of whether the galaxy has thousands or millions of stars. This has led to the suggestion that galaxies are
+                            largely formed by dark matter, and that the minimum size may indicate a form of warm dark matter incapable of
+                            gravitational coalescence on a smaller scale.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="w3-row-padding w3-stretch">
+                        <div class="w3-col l2 m4 s6 w3-left w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/big-bang">
+                                    <!--/static/images/universe/big-bang-link.jpg-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>The Big Bang</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-right w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/milky-way">
+                                    <!--https://www.dw.com/image/45348566_303.jpg-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>The Milky Way</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+{% block info %}
+                <span>The source of most text information is</span>
+                <a class="source" href="https://en.wikipedia.org/wiki/Galaxy" target="_blank">Wikipedia</a>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            // Load images after a page has loaded
+            loadImgsAfterBody([
+                '/static/images/universe/galaxy-small.jpg',
+                '/static/images/universe/galaxy-md-lg.jpg',
+                'https://upload.wikimedia.org/wikipedia/commons/8/8a/Hubble_sequence_photo.png',
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/NGC_3923_Elliptical_Shell_Galaxy.jpg/800px-NGC_3923_Elliptical_Shell_Galaxy.jpg',
+                '/static/images/universe/galaxy2-small.jpg',
+                '/static/images/universe/galaxy2-md-lg.jpg'
+            ], true);
+            // Load images when a user has scrolled down the middle of a page
+            loadAfterScrollMid([
+                '/static/images/universe/galaxy3-small.jpg',
+                '/static/images/universe/galaxy3-md-lg.jpg',
+                '/static/images/universe/galaxy4-small.jpg',
+                '/static/images/universe/galaxy4-md-lg.jpg',
+                '/static/images/universe/big-bang-link.jpg',
+                'https://www.dw.com/image/45348566_303.jpg'
+            ]);
+            // Make a link to the current page active
+            makeActive('.galaxy');
+        </script>
+{% endblock %}

@@ -1,0 +1,255 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    The Sombrero Galaxy
+{% endblock %}
+
+{% block style %}
+        <style>
+            .sm-text {
+                font-size: 16px;
+            }
+            @media screen and (min-width:993px){.head-img{background-image:url("/static/images/universe/hero-sombrero-large.jpg");}}
+            @media screen and (max-width:992px){.sm-text{font-size:14px;}.head-img{background-image:url("/static/images/universe/hero-sombrero-medium.jpg");}}
+            @media screen and (max-width:600px){.head-img{height:76%;background-image:url("/static/images/universe/hero-sombrero-small.jpg");}}
+       </style>
+{% endblock %}
+
+{% block head_content %}
+            <div class="w3-display-bottomleft w3-center w3-margin-bottom w3-padding-large w3-hide-medium w3-hide-small">
+                <span class="w3-tag">So much universe, and so little time</span>
+            </div>
+            <div class="w3-display-top w3-center w3-padding-large">
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>THE SOMBRERO</b></h1>
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>GALAXY</b></h1>
+            </div>
+            <div class="w3-display-bottomright w3-center w3-margin-bottom w3-padding-large tag-text">
+                <span id="bigger_font" class="contour w3-text-white">At some point, entireness will be known</span>
+            </div>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center dark-blue-grad w3-bottombar w3-border-amber w3-padding-32 header-text">General information</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The Sombrero Galaxy (also known as Messier Object 104, M104 or NGC 4594) is a lenticular galaxy in
+                            the constellation Virgo found 9.55 megaparsecs (31.1 million light-years) from Earth. The galaxy has
+                            a diameter of approximately 15 kiloparsecs (49,000 light-years), 30% the size of the Milky Way.
+                            It has a bright nucleus, an unusually large central bulge, and a prominent dust lane in its inclined disk.
+                            The dark dust lane and the bulge give this galaxy the appearance of a sombrero hat. Astronomers initially thought that
+                            the halo was small and light, indicative of a spiral galaxy, but the Spitzer Space Telescope found that
+                            the dust ring around the Sombrero Galaxy is larger and more massive than previously thought, indicative of
+                            a giant elliptical galaxy. The galaxy has an apparent magnitude of +8.0, making it easily visible with
+                            amateur telescopes, and it is considered by some authors to be the galaxy with the highest absolute magnitude within
+                            a radius of 10 megaparsecs of the Milky Way. Its large bulge, its central supermassive black hole,
+                            and its dust lane all attract the attention of professional astronomers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center dark-green-grad w3-bottombar w3-border-amber w3-padding-32 header-text">Observation history</h2>
+                    <div class="w3-padding">
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:16px;">Discovery</h3>
+                        <p>
+                            The Sombrero Galaxy was discovered on May 11, 1781 by Pierre Méchain, who described the object in a May 1783 letter to J. Bernoulli
+                            that was later published in the Berliner Astronomisches Jahrbuch. Charles Messier made a hand-written note about this and
+                            five other objects (now collectively recognized as M104 – M109) to his personal list of objects now known as the Messier Catalogue,
+                            but it was not "officially" included until 1921. William Herschel independently discovered the object in 1784 and additionally noted
+                            the presence of a "dark stratum" in the galaxy's disc, what is now called a dust lane. Later astronomers were able to connect
+                            Méchain's and Herschel's observations.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Designation as a Messier object</h3>
+                        <p>
+                            In 1921, Camille Flammarion found Messier's personal list of the Messier objects including the hand-written notes about
+                            the Sombrero Galaxy. This was identified with object 4594 in the New General Catalogue, and Flammarion declared that
+                            it should be included in the Messier Catalogue. Since this time, the Sombrero Galaxy has been known as M104.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center blue-grey-grad w3-bottombar w3-border-amber w3-padding-32 header-text">Dust ring</h2>
+                    <div class="w3-padding">
+                        <p>
+                            As noted above, this galaxy's most striking feature is the dust lane that crosses in front of the bulge of the galaxy.
+                            This dust lane is actually a symmetrical ring that encloses the bulge of the galaxy.
+                            Most of the cold atomic hydrogen gas and the dust lie within this ring. The ring might also contain most of
+                            the Sombrero Galaxy's cold molecular gas, although this is an inference based on observations with
+                            low resolution and weak detections. Additional observations are needed to confirm that
+                            the Sombrero galaxy's molecular gas is constrained to the ring. Based on infrared spectroscopy,
+                            the dust ring is the primary site of star formation within this galaxy.
+                        </p>
+                        <div class="w3-content w3-margin-bottom cool-font" style="max-width:900px;padding:0;">
+                            <picture>
+                                <!--/static/images/universe/sombrero-small.jpg-->
+                                <source class="load-after-body" media="(max-width: 600px)">
+                                <!--/static/images/universe/sombrero-md-lg.jpg-->
+                                <img class="load-after-body" alt="M104 in infrared" style="width:100%;" />
+                            </picture>
+                            <div class="w3-container w3-center">
+                                <p class="sm-text">
+                                    M104 in infrared
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center gold-grad w3-bottombar w3-border-amber w3-padding-32 header-text">Nucleus</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The nucleus of the Sombrero Galaxy is classified as a low-ionization nuclear emission-line region (LINER).
+                            These are nuclear regions where ionized gas is present, but the ions are only weakly ionized
+                            (i.e. the atoms are missing relatively few electrons). The source of energy for ionizing
+                            the gas in LINERs has been debated extensively. Some LINER nuclei may be powered by hot,
+                            young stars found in star formation regions, whereas other LINER nuclei may be powered by
+                            active galactic nuclei (highly energetic regions that contain supermassive black holes).
+                            Infrared spectroscopy observations have demonstrated that the nucleus of
+                            the Sombrero Galaxy is probably devoid of any significant star formation activity.
+                            However, a supermassive black hole has been identified in the nucleus (as discussed in the subsection below),
+                            so this active galactic nucleus is probably the energy source that weakly ionizes the gas in the Sombrero Galaxy.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Central supermassive black hole</h3>
+                        <p>
+                            In the 1990s, a research group led by John Kormendy demonstrated that a supermassive black hole is present within
+                            the Sombrero Galaxy. Using spectroscopy data from both the CFHT and the Hubble Space Telescope,
+                            the group showed that the speed of revolution of the stars within the center of the galaxy could not be maintained unless
+                            a mass 1 billion times the mass of the Sun, or 109 M☉, is present in the center. This is among
+                            the most massive black holes measured in any nearby galaxies.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Synchrotron radiation</h3>
+                        <p>
+                            At radio and X-ray wavelengths, the nucleus is a strong source of synchrotron radiation.
+                            Synchrotron radiation is produced when high-velocity electrons oscillate as they pass through regions with
+                            strong magnetic fields. This emission is quite common for active galactic nuclei.
+                            Although radio synchrotron radiation may vary over time for some active galactic nuclei,
+                            the luminosity of the radio emission from the Sombrero Galaxy varies only 10–20%.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Unidentified terahertz radiation</h3>
+                        <p>
+                            In 2006, two groups published measurements of the terahertz radiation from the nucleus of the Sombrero Galaxy at
+                            a wavelength of 850 μm. This terahertz radiation was found not to originate from the thermal emission from dust
+                            (which is commonly seen at infrared and submillimeter wavelengths), synchrotron radiation (which is commonly seen
+                            at radio wavelengths), bremsstrahlung emission from hot gas (which is uncommonly seen at millimeter wavelengths),
+                            or molecular gas (which commonly produces submillimeter spectral lines). The source of
+                            the terahertz radiation remains unidentified.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center red-orange-grad w3-bottombar w3-border-amber w3-padding-32 header-text">Globular clusters</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The Sombrero Galaxy has a relatively large number of globular clusters. Observational studies of
+                            globular clusters in the Sombrero Galaxy have produced estimates of the population in the range of 1,200 to 2,000.
+                            The ratio of the number of globular clusters to the total luminosity of the galaxy is high compared to the Milky Way
+                            and similar galaxies with small bulges, but the ratio is comparable to other galaxies with large bulges.
+                            These results have been repeatedly used to demonstrate that the number of globular clusters in galaxies is thought
+                            to be related to the size of the galaxies' bulges. The surface density of the globular clusters generally follows
+                            the light profile of the bulge except for near the center of the galaxy.
+                        </p>
+                    </div>
+                </div>
+            </dvi>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center teal-grad w3-bottombar w3-border-deep-purple w3-padding-32 header-text">Distance and brightness</h2>
+                    <div class="w3-padding">
+                        <p>
+                            At least two methods have been used to measure the distance to the Sombrero Galaxy.
+                        </p>
+                        <p>
+                            The first method relies on comparing the measured fluxes from planetary nebulae in the Sombrero Galaxy to
+                            the known Luminosity of planetary nebulae in the Milky Way. This method gave the distance to
+                            the Sombrero Galaxy as 29 ± 2 Mly (8,890 ± 610 kpc).
+                        </p>
+                        <p>
+                            The other method used is the surface brightness fluctuations method. This method uses the grainy appearance of
+                            the galaxy's bulge to estimate the distance to it. Nearby galaxy bulges will appear very grainy,
+                            while more distant bulges will appear smooth. Early measurements using this technique gave distances
+                            of 30.6 ± 1.3 Mly (9,380 ± 400 kpc). Later, after some refinement of the technique, a distance
+                            of 32 ± 3 Mly (9,810 ± 920 kpc) was measured. This was even further refined
+                            in 2003 to be 29.6 ± 2.5 Mly (9,080 ± 770 kpc).
+                        </p>
+                        <p>
+                            The average distance measured through these two techniques is 29.3 ± 1.6 Mly (8,980 ± 490 kpc).
+                        </p>
+                        <p>
+                            The absolute magnitude (in the blue) of the Sombrero Galaxy is estimated to be −21.9 at 30.6 Mly (9,400 kpc)
+                            (−21.8 at the average distance of above), that as stated above makes it the brightest galaxy within a radius
+                            of 32.6 Mly (10,000 kpc) around the Milky Way.
+                        </p>
+                        <p>
+                            A report from 2016 used the Hubble Space Telescope to measure the distance to M104 based on
+                            the tip of the red-giant branch method yielding 9.55 ± 0.13 ± 0.31 Mpc.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="w3-row-padding w3-stretch">
+                        <div class="w3-col l2 m4 s6 w3-left w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/andromeda">
+                                    <!--https://thumbor.forbes.com/thumbor/711x459/https://specials-images.forbesimg.com/dam/imageserve/541409306/960x0.jpg?fit=scale-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>The Andromeda</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-right w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/black-hole">
+                                    <!--https://astronomy.com/-/media/Images/News%20and%20Observing/News/2019/07/image_4606e47TucanaeBlackHole.jpg?mw=600-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>A black hole</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+{% block info %}
+                <span>The source of most text information is</span>
+                <a class="source" href="https://en.wikipedia.org/wiki/Sombrero_Galaxy" target="_blank">Wikipedia</a>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            // Load images after a page has loaded
+            loadImgsAfterBody([
+                '/static/images/universe/sombrero-small.jpg',
+                '/static/images/universe/sombrero-md-lg.jpg'
+            ], true);
+            // Load images when a user has scrolled down the middle of a page
+            loadAfterScrollMid([
+                'https://thumbor.forbes.com/thumbor/711x459/https://specials-images.forbesimg.com/dam/imageserve/541409306/960x0.jpg?fit=scale',
+                'https://astronomy.com/-/media/Images/News%20and%20Observing/News/2019/07/image_4606e47TucanaeBlackHole.jpg?mw=600'
+            ]);
+            // Make a link to the current page active
+            makeActive('.sombrero');
+        </script>
+{% endblock %}

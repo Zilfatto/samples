@@ -1,0 +1,363 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    The Big Bang
+{% endblock %}
+
+{% block style %}
+        <style>
+            /* Transparent bg for text */
+            .fix-text {
+                width: 100%;
+                background-color: rgba(0,0,0,0.6);
+                margin: 0 auto;
+            }
+            .sm-text {
+                font-size: 16px;
+            }
+            @media screen and (min-width:993px){.head-img{background-image:url("/static/images/universe/hero-bang-large.jpg");}}
+            @media screen and (max-width:992px){.sm-text{font-size:14px;}.head-img{background-image:url("/static/images/universe/hero-bang-medium.jpg");}}
+            @media screen and (max-width:600px){.head-img{height:76%;background-image:url("/static/images/universe/hero-bang-small.jpg");}}
+        </style>
+{% endblock %}
+
+{% block head_content %}
+            <div class="w3-display-bottomleft w3-center w3-margin-bottom w3-padding-large w3-hide-medium w3-hide-small">
+                <span class="w3-tag">So much universe, and so little time</span>
+            </div>
+            <div class="w3-display-top w3-center w3-padding-large">
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>THE BIG BANG</b></h1>
+            </div>
+            <div class="w3-display-bottomright w3-center w3-margin-bottom w3-padding-large tag-text">
+                <span id="bigger_font" class="contour w3-text-white">The vastness of the universe humbles me...</span>
+            </div>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center dark-blue-grad w3-bottombar w3-border-amber w3-padding-64 header-text">General information</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The Big Bang theory is a cosmological model of the observable universe from the earliest known periods through
+                            its subsequent large-scale evolution. The model describes how the universe expanded from an initial state of
+                            very high density and high temperature, and offers a comprehensive explanation for a broad range of observed phenomena,
+                            including the abundance of light elements, the cosmic microwave background (CMB) radiation, large-scale structure,
+                            and Hubble's law – the farther away galaxies are, the faster they are moving away from Earth.
+                            If the observed conditions are extrapolated backwards in time using the known laws of physics,
+                            the prediction is that just before a period of very high density there was a singularity. Current knowledge is
+                            insufficient to determine if anything existed prior to the singularity.
+                        </p>
+                        <p>
+                            Georges Lemaître first noted in 1927 that an expanding universe could be traced back in time to an originating single point,
+                            calling his theory that of the "primeval atom". For much of the rest of the 20th century scientific community was divided between
+                            supporters of the Big Bang and the rival Steady-state model, but a wide range of empirical evidence has strongly favored the Big Bang,
+                            which is now universally accepted. Edwin Hubble concluded from analysis of galactic redshifts in 1929 that galaxies are drifting apart;
+                            this is important observational evidence for an expanding universe. In 1964, the CMB was discovered, which was crucial evidence in favor of
+                            the hot Big Bang model, since that theory predicted the existence of a background radiation throughout the universe.
+                        </p>
+                        <p>
+                            The known laws of physics can be used to calculate the characteristics of the universe in detail back in time to an initial state of
+                            extreme density and temperature. Detailed measurements of the expansion rate of the universe place the Big Bang at around 13.8 billion years ago,
+                            which is thus considered the age of the universe. After its initial expansion, the universe cooled sufficiently to allow the formation of
+                            subatomic particles, and later atoms. Giant clouds of these primordial elements – mostly hydrogen, with some helium and lithium – later coalesced through gravity,
+                            forming early stars and galaxies, the descendants of which are visible today. Besides these primordial building materials, astronomers observe
+                            the gravitational effects of an unknown dark matter surrounding galaxies. Most of the gravitational potential in the universe seems to be in this form,
+                            and the Big Bang theory and various observations indicate that it is not conventional baryonic matter that forms atoms.
+                            Measurements of the redshifts of supernovae indicate that the expansion of the universe is accelerating, an observation attributed to dark energy's existence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center teal-grad w3-bottombar w3-border-deep-purple w3-padding-64 header-text">Features of the model</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The Big Bang theory offers a comprehensive explanation for a broad range of observed phenomena, including the abundance of light elements, the CMB,
+                            large-scale structure, and Hubble's law. The theory depends on two major assumptions: the universality of physical laws and the cosmological principle.
+                            The universality of physical laws is one of the underlying principles of the theory of relativity. The cosmological principle states that on large scales
+                            the universe is homogeneous and isotropic.
+                        </p>
+                        <p>
+                            These ideas were initially taken as postulates, but later efforts were made to test each of them. For example, the first assumption has been tested by
+                            observations showing that largest possible deviation of the fine-structure constant over much of the age of the universe is of order 10−5.
+                            Also, general relativity has passed stringent tests on the scale of the Solar System and binary stars.
+                        </p>
+                        <p>
+                            The large-scale universe appears isotropic as viewed from Earth. If it is indeed isotropic, the cosmological principle can be derived from
+                            the simpler Copernican principle, which states that there is no preferred (or special) observer or vantage point. To this end,
+                            the cosmological principle has been confirmed to a level of 10−5 via observations of the temperature of the CMB. At the scale of the CMB horizon,
+                            the universe has been measured to be homogeneous with an upper bound on the order of 10% inhomogeneity, as of 1995.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Expansion of space</h3>
+                        <p>
+                            The expansion of the Universe was inferred from early twentieth century astronomical observations and is an essential ingredient of
+                            the Big Bang theory. Mathematically, general relativity describes spacetime by a metric, which determines the distances that separate nearby points.
+                            The points, which can be galaxies, stars, or other objects, are specified using a coordinate chart or "grid" that is laid down over all spacetime.
+                            The cosmological principle implies that the metric should be homogeneous and isotropic on large scales, which uniquely singles out
+                            the Friedmann–Lemaître–Robertson–Walker (FLRW) metric. This metric contains a scale factor, which describes how the size of the universe changes with time.
+                            This enables a convenient choice of a coordinate system to be made, called comoving coordinates. In this coordinate system, the grid expands along with
+                            the universe, and objects that are moving only because of the expansion of the universe, remain at fixed points on the grid.
+                            While their coordinate distance (comoving distance) remains constant, the physical distance between two such co-moving points expands proportionally with
+                            the scale factor of the universe.
+                        </p>
+                        <p>
+                            The Big Bang is not an explosion of matter moving outward to fill an empty universe. Instead, space itself expands with time everywhere and increases
+                            the physical distances between comoving points. In other words, the Big Bang is not an explosion in space, but rather an expansion of space.
+                            Because the FLRW metric assumes a uniform distribution of mass and energy, it applies to our universe only on large scales—local concentrations of
+                            matter such as our galaxy do not necessarily expand with the same speed as the whole Universe.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Horizons</h3>
+                        <p>
+                            An important feature of the Big Bang spacetime is the presence of particle horizons. Since the universe has a finite age, and light travels at
+                            a finite speed, there may be events in the past whose light has not yet had time to reach us. This places a limit or a past horizon on
+                            the most distant objects that can be observed. Conversely, because space is expanding, and more distant objects are receding ever more quickly,
+                            light emitted by us today may never "catch up" to very distant objects. This defines a future horizon, which limits the events in the future
+                            that we will be able to influence. The presence of either type of horizon depends on the details of the FLRW model that describes our universe.
+                        </p>
+                        <p>
+                            Our understanding of the universe back to very early times suggests that there is a past horizon, though in practice our view is also limited by
+                            the opacity of the universe at early times. So our view cannot extend further backward in time, though the horizon recedes in space.
+                            If the expansion of the universe continues to accelerate, there is a future horizon as well.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px!important;">
+                    <div class="fix-text w3-container w3-margin-top w3-margin-bottom w3-padding w3-round">
+                        <p>
+                            &#8220;Because there is a law such as gravity, the universe can and will create itself from nothing&#8221;
+                        </p>
+                        <p>
+                            - Stephen Hawking
+                        </p>
+                    </div>
+                    <div class="w3-center">
+                        <picture>
+                            <!--/static/images/universe/bb-universe-small.jpg-->
+                            <source class="load-after-body" media="(max-width: 600px)" />
+                            <!--/static/images/universe/bb-universe-medium.jpg-->
+                            <source class="load-after-body" media="(max-width: 992px)" />
+                            <!--/static/images/universe/bb-universe-large.jpg-->
+                            <img class="load-after-body" alt="The universe" style="width:100%;" />
+                        </picture>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center gold-grad w3-bottombar w3-border-dark-grey w3-padding-64 header-text">Timeline</h2>
+                    <div class="w3-padding">
+                        <p>
+                            According to the Big Bang theory, the universe at the beginning was very hot and very small, and since then it is expanding and cooling down.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 silver-grad" style="margin-top:32px;">Singularity</h3>
+                        <p>
+                            Extrapolation of the expansion of the universe backwards in time using general relativity yields an infinite density and temperature at
+                            a finite time in the past.[17] This irregular behavior, known as the gravitational singularity, indicates that general relativity is not
+                            an adequate description of the laws of physics in this regime. Models based on general relativity alone can not extrapolate toward
+                            the singularity — beyond the end of the so-called Planck epoch.
+                        </p>
+                        <p>
+                            This primordial singularity is itself sometimes called "the Big Bang", but the term can also refer to a more generic early hot,
+                            dense phase of the universe. In either case, "the Big Bang" as an event is also colloquially referred to as the "birth" of
+                            our universe since it represents the point in history where the universe can be verified to have entered into a regime where
+                            the laws of physics as we understand them (specifically general relativity and the Standard Model of particle physics) work.
+                            Based on measurements of the expansion using Type Ia supernovae and measurements of temperature fluctuations in
+                            the cosmic microwave background, the time that has passed since that event — known as
+                            the "age of the universe" — is 13.799 ± 0.021 billion years. The agreement of independent measurements of this age supports
+                            the Lambda-CDM (ΛCDM) model that describes in detail the characteristics of the universe.
+                        </p>
+                        <p>
+                            Despite being extremely dense at this time—far denser than is usually required to form a black hole—the universe
+                            did not re-collapse into a singularity. This may be explained by considering that commonly-used calculations and
+                            limits for gravitational collapse are usually based upon objects of relatively constant size, such as stars,
+                            and do not apply to rapidly expanding space such as the Big Bang. Likewise, since
+                            the early universe did not immediately collapse into a multitude of black holes, matter at
+                            that time must have been very evenly distributed with a negligible density gradient.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 silver-grad" style="margin-top:32px;">Inflation and baryogenesis</h3>
+                        <p>
+                            The earliest phases of the Big Bang are subject to much speculation, since astronomical data about them are not available.
+                            In the most common models the universe was filled homogeneously and isotropically with a very high energy density and
+                            huge temperatures and pressures, and was very rapidly expanding and cooling. The period from 0 to 10-43 seconds into
+                            the expansion, the Planck epoch, was a phase in which the four fundamental forces — the electromagnetic force,
+                            the strong nuclear force, the weak nuclear force, and the gravitational force, were unified as one.
+                            In this stage, the universe was only about 10−35 meters wide and consequently had a temperature of
+                            approximately 1032 degrees Celsius. The Planck epoch was succeeded by the grand unification epoch beginning
+                            at 10-43 seconds, where gravitation separated from the other forces as the universe's temperature fell.
+                            The universe was pure energy at this stage, too hot for any particles to be created.
+                        </p>
+                        <p>
+                            At approximately 10−37 seconds into the expansion, a phase transition caused a cosmic inflation,
+                            during which the universe grew exponentially, faster than the speed of light, and temperatures dropped by
+                            a factor of 100,000. Microscopic quantum fluctuations that occurred because of Heisenberg's uncertainty
+                            principle were amplified into the seeds that would later form the large-scale structure of the universe.
+                            At a time around 10-36 seconds, the Electroweak epoch begins when the strong nuclear force separates from
+                            the other forces, with only the electromagnetic force and weak nuclear force remaining unified.
+                        </p>
+                        <p>
+                            Inflation stopped at around the 10−33 to 10−32 seconds mark, with the universe's volume having increased
+                            by a factor of at least 1078. Reheating occurred until the universe obtained the temperatures required for
+                            the production of a quark–gluon plasma as well as all other elementary particles. Temperatures were so high
+                            that the random motions of particles were at relativistic speeds, and particle–antiparticle pairs of
+                            all kinds were being continuously created and destroyed in collisions. At some point,
+                            an unknown reaction called baryogenesis violated the conservation of baryon number,
+                            leading to a very small excess of quarks and leptons over antiquarks and antileptons—of the order of
+                            one part in 30 million. This resulted in the predominance of matter over antimatter in the present universe.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 silver-grad" style="margin-top:32px;">Cooling</h3>
+                        <p>
+                            The universe continued to decrease in density and fall in temperature, hence the typical energy of
+                            each particle was decreasing. Symmetry breaking phase transitions put the fundamental forces of physics
+                            and the parameters of elementary particles into their present form, with the electromagnetic force and
+                            weak nuclear force separating at about 10−12 seconds. After about 10−11 seconds, the picture becomes less speculative,
+                            since particle energies drop to values that can be attained in particle accelerators. At about 10−6 seconds,
+                            quarks and gluons combined to form baryons such as protons and neutrons. The small excess of
+                            quarks over antiquarks led to a small excess of baryons over antibaryons. The temperature was now no longer high enough
+                            to create new proton–antiproton pairs (similarly for neutrons–antineutrons), so a mass annihilation immediately followed,
+                            leaving just one in 1010 of the original protons and neutrons, and none of their antiparticles.
+                            A similar process happened at about 1 second for electrons and positrons. After these annihilations,
+                            the remaining protons, neutrons and electrons were no longer moving relativistically and the energy density of
+                            the universe was dominated by photons (with a minor contribution from neutrinos).
+                        </p>
+                        <p>
+                            A few minutes into the expansion, when the temperature was about a billion kelvin and the density of matter in
+                            the universe was comparable to the current density of Earth's atmosphere, neutrons combined with protons to form
+                            the universe's deuterium and helium nuclei in a process called Big Bang nucleosynthesis (BBN).
+                            Most protons remained uncombined as hydrogen nuclei.
+                        </p>
+                        <p>
+                            As the universe cooled, the rest energy density of matter came to gravitationally dominate that of
+                            the photon radiation. After about 379,000 years, the electrons and nuclei combined into atoms (mostly hydrogen),
+                            which were able to emit radiation. This relic radiation, which continued through space largely unimpeded,
+                            is known as the cosmic microwave background. The chemistry of life may have begun during a habitable epoch when
+                            the universe was only 10–17 million years old.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 silver-grad" style="margin-top:32px;">Structure formation</h3>
+                        <p>
+                            Over a long period of time, the slightly denser regions of the uniformly distributed matter gravitationally
+                            attracted nearby matter and thus grew even denser, forming gas clouds, stars, galaxies, and
+                            the other astronomical structures observable today. The details of this process depend on the amount and
+                            type of matter in the universe. The four possible types of matter are known as cold dark matter, warm dark matter,
+                            hot dark matter, and baryonic matter. The best measurements available, from the Wilkinson Microwave Anisotropy Probe (WMAP),
+                            show that the data is well-fit by a Lambda-CDM model in which dark matter is assumed to be cold
+                            (warm dark matter is ruled out by early reionization), and is estimated to make up about 23% of the matter/energy of
+                            the universe, while baryonic matter makes up about 4.6%. In an "extended model" which includes hot dark matter in
+                            the form of neutrinos, then if the "physical baryon density" {\displaystyle \Omega _{\text{b}}h^{2}}{\displaystyle \Omega _{\text{b}}h^{2}}
+                            is estimated at about 0.023 (this is different from the 'baryon density' {\displaystyle \Omega _{\text{b}}}{\displaystyle \Omega _{\text{b}}}
+                            expressed as a fraction of the total matter/energy density, which is about 0.046), and the corresponding cold dark matter density
+                            {\displaystyle \Omega _{\text{c}}h^{2}}{\displaystyle \Omega _{\text{c}}h^{2}} is about 0.11, the corresponding neutrino density
+                            {\displaystyle \Omega _{\text{v}}h^{2}}{\displaystyle \Omega _{\text{v}}h^{2}} is estimated to be less than 0.0062.
+                        </p>
+                        <div class="w3-row-padding w3-stretch" style="width:100%;margin:0 0 16px 0;padding:0;">
+                            <div class="w3-col m6 w3-margin-bottom">
+                                <picture>
+                                    <!--/static/images/universe/bb-universe2-sm-md.jpg-->
+                                    <source class="last-load" media="(max-width: 992px)" />
+                                    <!--/static/images/universe/bb-universe2-large.jpg-->
+                                    <img class="last-load" alt="Abell 2744 galaxy cluster" style="width:100%;" />
+                                </picture>
+                                <div class="w3-container w3-dark-grey w3-center">
+                                    <p class="sm-text">Abell 2744 galaxy cluster – Hubble Frontier Fields view.</p>
+                                </div>
+                            </div>
+                            <div class="w3-col m6 w3-margin-bottom">
+                                <picture>
+                                    <!--/static/images/universe/bb-universe3-sm-md.jpg-->
+                                    <source class="last-load" media="(max-width: 992px)" />
+                                    <!--/static/images/universe/bb-universe3-large.jpg-->
+                                    <img class="last-load" alt="Artist's depiction of the WMAP satellite" style="width:100%;" />
+                                </picture>
+                                <div class="w3-container w3-dark-grey w3-center">
+                                    <p class="sm-text">Artist's depiction of the WMAP satellite gathering data to help scientists understand the Big Bang</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="w3-center w3-padding-16 silver-grad" style="margin-top:32px;">Cosmic acceleration</h3>
+                        <p>
+                            Independent lines of evidence from Type Ia supernovae and the CMB imply that the universe today is dominated by a mysterious form of
+                            energy known as dark energy, which apparently permeates all of space. The observations suggest 73% of the total energy density of
+                            today's universe is in this form. When the universe was very young, it was likely infused with dark energy, but with less space
+                            and everything closer together, gravity predominated, and it was slowly braking the expansion. But eventually,
+                            after numerous billion years of expansion, the growing abundance of dark energy caused the expansion of
+                            the universe to slowly begin to accelerate.
+                        </p>
+                        <p>
+                            Dark energy in its simplest formulation takes the form of the cosmological constant term in Einstein field equations of
+                            general relativity, but its composition and mechanism are unknown and, more generally, the details of its equation of state
+                            and relationship with the Standard Model of particle physics continue to be investigated both through observation and theoretically.
+                        </p>
+                        <p>
+                            All of this cosmic evolution after the inflationary epoch can be rigorously described and modeled by the ΛCDM model of cosmology,
+                            which uses the independent frameworks of quantum mechanics and general relativity. There are no easily testable models
+                            that would describe the situation prior to approximately 10−15 seconds. Apparently a new unified theory of quantum gravitation
+                            is needed to break this barrier. Understanding this earliest of eras in the history of the universe is currently one of
+                            the greatest unsolved problems in physics.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="w3-row-padding w3-stretch">
+                        <div class="w3-col l2 m4 s6 w3-left w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/universe">
+                                    <!--https://cdn.theatlantic.com/thumbor/NoNY27QeP046K0k0DKxjCPR5aZs=/0x207:1280x927/720x405/media/img/mt/2017/06/hubble_spies_big_bang_frontiers_22202541749_o_orig/original.jpg-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>The universe</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-right w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/galaxy">
+                                    <!--https://www.wallpaperup.com/uploads/wallpapers/2012/04/04/2040/0680f415682b6b42da0d9834b5c887da-700.jpg-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>A galaxy</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+{% block info %}
+    <span>The source of most text information is</span>
+    <a class="source" href="https://en.wikipedia.org/wiki/Big_Bang" target="_blank">Wikipedia</a>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            // Load images after a page has loaded
+            loadImgsAfterBody([
+                '/static/images/universe/bb-universe-small.jpg',
+                '/static/images/universe/bb-universe-medium.jpg',
+                '/static/images/universe/bb-universe-large.jpg'
+            ], true);
+            // Load images when a user has scrolled down the middle of a page
+            loadAfterScrollMid([
+                '/static/images/universe/bb-universe2-sm-md.jpg',
+                '/static/images/universe/bb-universe2-large.jpg',
+                '/static/images/universe/bb-universe3-sm-md.jpg',
+                '/static/images/universe/bb-universe3-large.jpg',
+                'https://cdn.theatlantic.com/thumbor/NoNY27QeP046K0k0DKxjCPR5aZs=/0x207:1280x927/720x405/media/img/mt/2017/06/hubble_spies_big_bang_frontiers_22202541749_o_orig/original.jpg',
+                'https://www.wallpaperup.com/uploads/wallpapers/2012/04/04/2040/0680f415682b6b42da0d9834b5c887da-700.jpg'
+            ]);
+            // Make a link to the current page active
+            makeActive('.big-bang');
+        </script>
+{% endblock %}

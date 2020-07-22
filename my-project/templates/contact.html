@@ -1,0 +1,333 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Contact
+{% endblock %}
+
+{% block style %}
+        <style>
+            #head_img, footer {
+                display: none;
+            }
+            input, textarea {
+                width: 100%;
+                padding: 12px 20px;
+                border: 3px solid #ccc;
+                transition: 0.7s;
+                outline: none;
+                display: block;
+                margin: 8px 0;
+                font-weight: 500;
+            }
+            textarea {
+                height:300px;
+                resize: vertical;
+            }
+            #form1 button {
+                width: 100%;
+                font-family: "Railway", Arial, Helvetica, sans-serif;
+                font-size: 18px;
+                letter-spacing: 2px;
+                background-image: linear-gradient(to right top, #4dffb8, #4dff4d);
+                color: black;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: 2px outset #ccc;
+                cursor: pointer;
+            }
+            .form {
+                max-width: 700px;
+                border-radius: 5px;
+                background-color: white;
+                padding: 20px 30px !important;
+                margin-bottom: 70px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            .form-control {
+                margin-bottom: 10px;
+            	padding-bottom: 20px;
+            	position: relative;
+            }
+            .form-control.success input, .form-control.success textarea {border: 3px solid #1aff1a;}
+            .form-control.error input, .form-control.error textarea {border: 3px solid #ff2e10;}
+            .form-control i {
+            	position: absolute;
+            	top: 50px;
+            	right: 13px;
+            	font-size: 25px;
+            	visibility: hidden;
+            }
+            .custom-select.form-control i {
+                top: 41px;
+            }
+            .form-control.success i.fa-check-circle {
+            	color: #00b300;
+            	visibility: visible;
+            }
+            .form-control.error i.fa-exclamation-circle {
+            	color: #e62e00;
+            	visibility: visible;
+            }
+            .form-control small {
+            	color: #e74c3c;
+            	position: absolute;
+            	visibility: hidden;
+            	bottom: 5px;
+            	left: 3px;
+            }
+            .form-control.error small {
+            	visibility: visible;
+            }
+            .form-control > label {
+                background-color: #111;
+                color: #ffffff;
+                padding: 0 8px;
+                border-radius: 40px 20px 40px 20px;
+            }
+            input:focus, textarea:focus {
+                border: 3px solid #555;
+                background-color: #d9d9d9;
+                color: black;
+            }
+            textarea:focus {
+                background-color: #f1f1f1;
+            }
+            #form1 button:hover {
+                background-image: linear-gradient(to right top, #00664d, #009900);
+                color: white;
+            }
+            input::placeholder, textarea::placeholder {
+                font-weight: 400;
+                opacity: 0.7;
+            }
+            input:focus::placeholder, textarea:focus::placeholder {
+                color: #666;
+                font-weight: 400;
+                opacity: 1;  /* Firefox */
+            }
+            .form-head {
+                max-width:700px;
+                border-radius:60px 60px 0 0;
+                text-shadow: -1px 2px 6px black, 0 0 9px blue, 0 0 7px darkblue;
+            }
+            .field-icon {
+                color: #008ae6;
+                float: right;
+                margin-right: 35px;
+                margin-top: -45px;
+                position: relative;
+                z-index: 2;
+            }
+            @media screen and (max-width:600px){.form{padding:15px 20px!important;}.form-control{margin-bottom:0;}.header-text{padding:16px 8px!important;border-radius:30px 30px 0 0;}}
+            @media screen and (max-width:380px){.form{padding:10px 15px!important;}.header-text{font-size:30px!important;}}
+            @media screen and (max-width:350px){.form{padding:8px 9px!important;}input, label{font-size:15px;}.form-control small{font-size:12px;}#form1 button{margin-top:20px;font-size:15px;}}
+        </style>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <h2 class="w3-padding-32 w3-content blue-black-grad w3-center header-text form-head">Contact form</h2>
+                <div class="w3-content form w3-padding w3-round-large my-xxcard w3-white">
+                    <form id="form1" name="form1" action="/contact" method="post" novalidate="novalidate">
+                        <div class="form-control">
+                            <label>Full name</label>
+                            <input type="text" name="fullname" placeholder="Your full name" autofocus="autofocus" maxlength="255" />
+                            <i class="fa fa-check-circle"></i>
+                			<i class="fa fa-exclamation-circle"></i>
+                			<small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Email</label>
+                            <input type="email" name="email" placeholder="Your email" maxlength="255" />
+                            <i class="fa fa-check-circle"></i>
+                			<i class="fa fa-exclamation-circle"></i>
+                			<small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Subject</label>
+                            <input type="text" name="subject" placeholder="Your subject" maxlength="63" />
+                            <i class="fa fa-check-circle"></i>
+                			<i class="fa fa-exclamation-circle"></i>
+                			<small>Error message</small>
+                        </div>
+                        <div class="form-control">
+                            <label>Message</label>
+                            <textarea name="message" placeholder="Your message" maxlength="2047"></textarea>
+                			<i class="fa fa-check-circle"></i>
+                    		<i class="fa fa-exclamation-circle"></i>
+                			<small>Error message</small>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <button id="btnforclick" style="display:none!important;"></button>
+            </div>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            const BTN_FOR_CLICK = document.getElementById('btnforclick'),
+                // Snackbar for showing messages to the user
+                SNACK_BAR = document.getElementById('snackbar'),
+                FORM = document.forms['form1'];
+            // All the data provided by a user
+            let formValues = {},
+                values = '';
+            // On submit validate all the inputs
+            FORM.addEventListener('submit', e => {
+                e.preventDefault();
+                validateForm() ? sendMessage(values, '/contact') : BTN_FOR_CLICK.click();
+            });
+            // Execute this only once after the first 'onclick' event
+            BTN_FOR_CLICK.addEventListener('click', function addListenersOnce(e) {
+                e.stopPropagation();
+                separateValidation();
+                BTN_FOR_CLICK.removeEventListener('click', addListenersOnce);
+            });
+            // When all sepate validation functions return 1, the form can be submitted
+            function validateForm() {
+                // Sum up and return the result
+                const validatedCount = textInputValidation('fullname') + emailValidation() +
+                                    textInputValidation('subject') + textInputValidation('message');
+                // If all the data is corect, prepare it for sending to the server
+                if (validatedCount === 4) {
+                    values = '';
+                    let key;
+                    for (key in formValues) {
+                        values += key + '=' + formValues[key] + '&';
+                    }
+                    values = values.slice(0, values.length - 1);
+                    return true;
+                } else {
+                    showErrorBar('One or more of your inputs are invalid', 5000);
+                    return false;
+                }
+            }
+            // If after first submission the certain provided data will be invalid, add event listeners to each
+            // input field and validate them immediately in the future
+            function separateValidation() {
+                // Adding event listeners to form elements
+                for (let i = 0, j = FORM.length; i < j; i++) {
+                    if (FORM.elements[i].type === 'email') {
+                        FORM.elements[i].addEventListener('input', window[FORM.elements[i].name + 'Validation']);
+                    } else if (FORM.elements[i].tagName !== 'BUTTON') {
+                        FORM.elements[i].addEventListener('input', () => {
+                            textInputValidation(FORM.elements[i].name);
+                        });
+                    }
+                }
+            }
+            // For validation of a full name, subject and message
+            function textInputValidation(name) {
+                const input = document.forms['form1'][name],
+                    inputValue = input.value.trim(),
+                    // Regex for imojis
+                    imojiRegEx = /(?:[\u2700-\u27bf]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\u0023-\u0039]\ufe0f?\u20e3|\u3299|\u3297|\u303d|\u3030|\u24c2|\ud83c[\udd70-\udd71]|\ud83c[\udd7e-\udd7f]|\ud83c\udd8e|\ud83c[\udd91-\udd9a]|\ud83c[\udde6-\uddff]|\ud83c[\ude01-\ude02]|\ud83c\ude1a|\ud83c\ude2f|\ud83c[\ude32-\ude3a]|\ud83c[\ude50-\ude51]|\u203c|\u2049|[\u25aa-\u25ab]|\u25b6|\u25c0|[\u25fb-\u25fe]|\u00a9|\u00ae|\u2122|\u2139|\ud83c\udc04|[\u2600-\u26FF]|\u2b05|\u2b06|\u2b07|\u2b1b|\u2b1c|\u2b50|\u2b55|\u231a|\u231b|\u2328|\u23cf|[\u23e9-\u23f3]|[\u23f8-\u23fa]|\ud83c\udccf|\u2934|\u2935|[\u2190-\u21ff])/;
+                if (inputValue === '') {
+                    setErrorFor(input, 'This field cannot be blank');
+                    return 0;
+                } else if (imojiRegEx.test(inputValue)) {
+            	    setErrorFor(input, 'Imojis are not allowed');
+            	    return 0;
+                } else {
+                    if (name === 'fullname') {
+                        if (inputValue.length > 255) {
+                            setErrorFor(input, 'Too long full name');
+                            return 0;
+                        }
+                    } else if (name === 'subject') {
+                        if (inputValue.length > 63) {
+                            setErrorFor(input, 'Too long subject');
+                            return 0;
+                        }
+                    } else {
+                        if (inputValue.length > 2047) {
+                            setErrorFor(input, 'Too long message');
+                            return 0;
+                        }
+                    }
+                    setSuccessFor(input);
+                    formValues[name] = inputValue;
+                    return 1;
+                }
+            }
+            // Validate an email
+            function emailValidation() {
+                const email = document.forms['form1']['email'],
+                    emailValue = email.value.trim(),
+                    // Regex for correct email
+            	    emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                // Validation of an email
+                if(emailValue === '') {
+            		setErrorFor(email, 'This field cannot be blank');
+            		return 0;
+            	} else if (!emailRegEx.test(emailValue)) {
+            		setErrorFor(email, 'Not a valid email');
+            		return 0;
+            	} else if (emailValue.length > 255) {
+            	    setErrorFor(email, 'Your email is too long');
+            	    return 0;
+            	} else {
+            		setSuccessFor(email);
+            		formValues[email.name] = emailValue;
+            		return 1;
+            	}
+            }
+            // Trow an error to user if an input is invalid
+        	function setErrorFor(input, message) {
+            	const formControl = input.parentElement;
+            	if (formControl.classList.contains('success')) {
+            	    formControl.classList.remove('success');
+            	}
+            	formControl.classList.add('error');
+            	formControl.querySelector('small').innerText = message;
+            }
+            // Make style for success inout visible via adding a class
+            function setSuccessFor(input) {
+            	const formControl = input.parentElement;
+            	if (formControl.classList.contains('error')) {
+            	    formControl.classList.remove('error');
+                }
+            	formControl.classList.add('success');
+            }
+            function makeDefaultControls() {
+                const controls = FORM.getElementsByClassName('form-control');
+                for (let i = 0, j = controls.length; i < j; i++) {
+                    controls[i].className = 'form-control';
+                }
+            }
+            // Common AJAX function for sending and loading data
+            function sendMessage(values, url) {
+                const xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState === 4 && this.status === 200) {
+                        const response = JSON.parse(this.responseText);
+                        if (response['received']) {
+                            showSuccessBar();
+                            FORM.reset();
+                            makeDefaultControls();
+                        }
+                    } else if (this.status >= 500) {
+                        showErrorBar();
+                    }
+                };
+                xmlhttp.open('POST', url, true);
+                xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                xmlhttp.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+                xmlhttp.send(values);
+            }
+            function showSuccessBar(text='Successfully', time=5000) {
+                SNACK_BAR.innerText = text;
+                SNACK_BAR.className = 'show success';
+                // After 5 seconds, remove the show class from DIV
+                setTimeout(function(){ SNACK_BAR.className = SNACK_BAR.className.replace('show ', ''); }, time);
+            }
+            function showErrorBar(text='Server does not respond', time = 6000) {
+                SNACK_BAR.innerText = text;
+                SNACK_BAR.className = 'show error';
+                // After 5 seconds, remove the show class from DIV
+                setTimeout(function(){ SNACK_BAR.className = SNACK_BAR.className.replace('show ', ''); }, time);
+            }
+        </script>
+{% endblock %}

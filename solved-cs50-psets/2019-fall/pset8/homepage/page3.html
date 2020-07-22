@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <!-- http://getbootstrap.com/ -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="static/styles.css" rel="stylesheet">
+        <title>Page 3</title>
+    </head>
+    <body>
+        <header>
+          <h1>My web page</h1>
+        </header>
+        <!-- http://getbootstrap.com/docs/4.1/components/navbar/ -->
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark clearfix">
+            <span class="navbar-brand mb-1 h1">Transportation</span>
+            <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" type="button" data-target="#navbarNav" data-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Page 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page2.html">Page 2</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#page3">Page 3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page4.html">Page 4</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page5.html">Page 5</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="clearfix">
+            <div class="column">
+                <div>
+                    <div class="tooltip1">
+                        <h2 id="colour">Trains</h2>
+                        <span id="tooltiptext1">Hover over the header</span>
+                    </div>
+                    <p>
+                        A train is a form of rail transport consisting of a series of connected vehicles
+                        that generally run along a railroad (or railway) track to transport passengers or cargo
+                        (also known as "freight" or "goods"). The word "train" comes from the Old French trahiner,
+                        derived from the Latin trahere meaning "to pull" or "to draw".
+                    </p>
+                    <p>
+                        Motive power for a train is provided by a separate locomotive or
+                        individual motors in a self-propelled multiple unit. The term "engine"
+                        is often used as an alternative to locomotive. Although historically steam propulsion dominated,
+                        the most common types of locomotive are diesel and electric, the latter supplied by overhead wires
+                        or additional rails. Trains can also be hauled by horses, pulled by engine or water-driven cable
+                        or wire winch, run downhill using gravity, or powered by pneumatics, gas turbines or batteries.
+                    </p>
+                    <p>
+                        The track usually consists of two running rails with a fixed spacing, which may be supplemented
+                        by additional rails such as electric conducting rails and rack rails.
+                        Monorails and maglev guideways are also used occasionally.
+                    </p>
+                    <p>
+                        A passenger train includes passenger-carrying vehicles and can often be very long and fast.
+                        High-speed rail service began expanding rapidly in the late 20th century,
+                        and is also a major subject of further development. The term "light rail" is sometimes used
+                        to refer to a modern tram system, but it may also mean an intermediate form between a tram
+                        and a train, similar to a heavy rail rapid transit system.
+                    </p>
+                    <p>
+                        A freight train (or goods train) uses freight cars (or wagons/trucks) to transport goods
+                        or materials (cargo). It is possible to carry passengers and freight in the same train using a mixed consist.
+                    </p>
+                    <p>
+                        Rail cars and machinery that are used for the maintenance and repair of tracks, are termed "maintenance of way"
+                        equipment; these may be assembled into maintenance of way trains. Similarly, dedicated trains may be used to provide
+                        support services to stations along a train line, such as garbage or revenue collection.
+                    </p>
+                </div>
+                <div>
+                    <button id="trig">Click here to learn about <b>Motive power</b></button>
+                    <div id="info">
+                        <h3>Motive power</h3>
+                        <p>
+                            The first trains were rope-hauled, gravity powered or pulled by horses,
+                            but from the early 19th century almost all trains were powered by steam locomotives.
+                            From the 1910s onwards, steam locomotives began to be replaced with less labor-intensive
+                            (and cleaner) diesel and electric locomotives, although these new forms of propulsion
+                            were far more complex and expensive than steam power. At about the same time,
+                            self-propelled multiple unit vehicles (both diesel and electric) became much more widely
+                            used in passenger service. Dieselisation of locomotives in day-to-day use was completed
+                            in most countries by the 1970s. Steam locomotives are still used in heritage railways operated
+                            in many countries for the leisure and enthusiast market.
+                        </p>
+                        <p>
+                            Electric traction offers a lower cost per mile of train operation but at a higher initial cost,
+                            which can only be justified on high traffic lines. Even though the cost per mile of construction
+                            is much higher, electric traction is more viable during operation because diesel import costs
+                            are substantially higher. Electric trains receive their current via overhead lines or through
+                            a third rail electric system.
+                        </p>
+                        <p>
+                            A developing technology is fuel cells, which combine the advantage of not needing an electrical
+                            system in place, with the advantage of emissionless operation. However, an impediment is substantial
+                            initial cost associated with fuel cell vehicles.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div id="boxshadow">
+                    <img src="https://images.pexels.com/photos/2691205/pexels-photo-2691205.jpeg?cs=srgb&dl=black-and-brown-train-on-rail-2691205.jpg&fm=jpg" alt="A train" width="200" height="100">
+                </div><!-- src="images/train.jpg"-->
+            </div>
+        </main>
+
+        <footer>
+            <div>
+                <span>The source of that information is</span>
+                <a id="wiki" href="https://en.wikipedia.org/wiki/Train" target="_blank">Wikipedia</a>
+            </div>
+        </footer>
+    <script src="javascript/common.js"></script>
+    <script src="javascript/some.js"></script>
+    </body>
+
+</html>

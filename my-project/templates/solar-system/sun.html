@@ -1,0 +1,256 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    The Sun
+{% endblock %}
+
+{% block style %}
+        <style>
+            /* Transparent bg for text */
+            .fix-text {
+                width: 60%;
+                background-color: rgba(0,0,0,0.8);
+                margin: 0 auto;
+            }
+            /* Transparent header bg */
+            .transp_header {
+                color: #fff;
+                background-color: rgba(250, 232, 0, 0.6);
+            }
+            @media screen and (min-width:993px){.head-img{background-image:url("/static/images/solar-system/hero-sun-large.jpg");}}
+            @media screen and (max-width:992px){.fix-text{width:85%;}.head-img{background-image:url("/static/images/solar-system/hero-sun-medium.jpg");}}
+            @media screen and (max-width:600px){.head-img{height:76%;background-image:url("/static/images/solar-system/hero-sun-small.jpg");}}
+            </style>
+{% endblock %}
+
+{% block head_content %}
+            <div class="w3-display-bottomleft w3-center w3-margin-bottom w3-padding-large w3-hide-medium w3-hide-small">
+                <span class="w3-tag">Sun is alone too, but stiil shines</span>
+            </div>
+            <div class="w3-display-top w3-center w3-padding-large">
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>THE SUN</b></h1>
+            </div>
+            <div class="w3-display-bottomright w3-center w3-margin-bottom w3-padding-large tag-text">
+                <span id="bigger_font" class="contour w3-text-white">Like the sun, life spread its light in all direction</span>
+            </div>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center teal-grad w3-bottombar w3-border-orange w3-padding-64 header-text">General information</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The Sun is the star at the center of the Solar System. It is a nearly perfect sphere of hot plasma,
+                            with internal convective motion that generates a magnetic field via a dynamo process.
+                            It is by far the most important source of energy for life on Earth. Its diameter is about 1.39 million kilometers
+                            (864,000 miles), or 109 times that of Earth, and its mass is about 330,000 times that of Earth.
+                            It accounts for about 99.86% of the total mass of the Solar System. Roughly three quarters of the Sun's mass
+                            consists of hydrogen (~73%); the rest is mostly helium (~25%), with much smaller quantities of heavier elements,
+                            including oxygen, carbon, neon, and iron.
+                        </p>
+                        <p>
+                            The Sun is a G-type main-sequence star (G2V) based on its spectral class. As such, it is informally
+                            and not completely accurately referred to as a yellow dwarf (its light is closer to white than yellow).
+                            It formed approximately 4.6 billion years ago from the gravitational collapse of matter within a region
+                            of a large molecular cloud. Most of this matter gathered in the center, whereas the rest flattened into an orbiting disk
+                            that became the Solar System. The central mass became so hot and dense that it eventually initiated nuclear fusion in its core.
+                            It is thought that almost all stars form by this process.
+                        </p>
+                        <p>
+                            The Sun currently fuses about 600 million tons of hydrogen into helium every second, converting 4 million tons of matter
+                            into energy every second as a result. This energy, which can take between 10,000 and 170,000 years to escape from its core,
+                            is the source of the Sun's light and heat. When hydrogen fusion in its core has diminished to the point
+                            at which the Sun is no longer in hydrostatic equilibrium, its core will undergo a marked increase in density and
+                            temperature while its outer layers expand, eventually transforming the Sun into a red giant. It is calculated that
+                            the Sun will become sufficiently large to engulf the current orbits of Mercury and Venus,
+                            and render Earth uninhabitable – but not for about five billion years. After this, it will shed its outer layers and
+                            become a dense type of cooling star known as a white dwarf, and no longer produce energy by fusion, but still glow and
+                            give off heat from its previous fusion.
+                        </p>
+                        <p>
+                            The enormous effect of the Sun on Earth has been recognized since prehistoric times, and the Sun has been regarded
+                            by some cultures as a deity. The synodic rotation of Earth and its orbit around the Sun are the basis of solar calendars,
+                            one of which is the predominant calendar in use today.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center orange-grad w3-bottombar w3-border-indigo w3-padding-64 header-text">Sunlight</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The solar constant is the amount of power that the Sun deposits per unit area that is directly exposed to sunlight.
+                            The solar constant is equal to approximately 1,368 W/m2 (watts per square meter) at a distance of one astronomical unit (AU)
+                            from the Sun (that is, on or near Earth). Sunlight on the surface of Earth is attenuated by Earth's atmosphere,
+                            so that less power arrives at the surface (closer to 1,000 W/m2) in clear conditions when the Sun is near the zenith.
+                            Sunlight at the top of Earth's atmosphere is composed (by total energy) of about 50% infrared light, 40% visible light,
+                            and 10% ultraviolet light. The atmosphere in particular filters out over 70% of solar ultraviolet, especially at the shorter wavelengths.
+                            Solar ultraviolet radiation ionizes Earth's dayside upper atmosphere, creating the electrically conducting ionosphere.
+                        </p>
+                        <p>
+                            The Sun's color is white, with a CIE color-space index near (0.3, 0.3), when viewed from space or when the Sun is high in the sky.
+                            When measuring all the photons emitted, the Sun is emitting more photons in the green portion of the spectrum than any other.
+                            When the Sun is low in the sky, atmospheric scattering renders the Sun yellow, red, orange, or magenta. Despite its typical whiteness,
+                            most people mentally picture the Sun as yellow; the reasons for this are the subject of debate. The Sun is a G2V star,
+                            with G2 indicating its surface temperature of approximately 5,778 K (5,505 °C, 9,941 °F), and V that it, like most stars,
+                            is a main-sequence star. The average luminance of the Sun is about 1.88 giga candela per square metre, but as viewed through Earth's atmosphere,
+                            this is lowered to about 1.44 Gcd/m2. However, the luminance is not constant across the disk of the Sun (limb darkening).
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="div_add_to" class="boximg div-rep-from w3-container" style="margin:0;padding:0;">
+                <div class="fix-text">
+                    <h2 class="w3-center transp_header w3-bottombar w3-border-orange w3-padding-64 header-text mb2">Composition</h2>
+                    <div id="add_to" class="w3-padding">
+                    </div>
+                </div>
+            </div>
+
+            <div id="div_copy_from" class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center yellow-grad w3-bottombar w3-border-orange w3-padding-64 header-text mb2">Composition</h2>
+                    <div id="copy_from" class="w3-padding">
+                        <p>
+                            The Sun is composed primarily of the chemical elements hydrogen and helium. At this time in the Sun's life,
+                            they account for 74.9% and 23.8% of the mass of the Sun in the photosphere, respectively. All heavier elements,
+                            called metals in astronomy, account for less than 2% of the mass, with oxygen (roughly 1% of the Sun's mass), carbon (0.3%),
+                            neon (0.2%), and iron (0.2%) being the most abundant.
+                        </p>
+                        <p>
+                            The Sun's original chemical composition was inherited from the interstellar medium out of which it formed. Originally it would have contained
+                            about 71.1% hydrogen, 27.4% helium, and 1.5% heavier elements. The hydrogen and most of the helium in the Sun would have been produced by
+                            Big Bang nucleosynthesis in the first 20 minutes of the universe, and the heavier elements were produced by previous generations of stars before
+                            the Sun was formed, and spread into the interstellar medium during the final stages of stellar life and by events such as supernovae.
+                        </p>
+                        <p>
+                            Since the Sun formed, the main fusion process has involved fusing hydrogen into helium. Over the past 4.6 billion years, the amount of helium and
+                            its location within the Sun has gradually changed. Within the core, the proportion of helium has increased from about 24% to about 60% due to fusion,
+                            and some of the helium and heavy elements have settled from the photosphere towards the center of the Sun because of gravity.
+                            The proportions of metals (heavier elements) is unchanged. Heat is transferred outward from the Sun's core by radiation rather than
+                            by convection (see Radiative zone below), so the fusion products are not lifted outward by heat; they remain in the core[57] and gradually an inner core
+                            of helium has begun to form that cannot be fused because presently the Sun's core is not hot or dense enough to fuse helium. In the current photosphere
+                            the helium fraction is reduced, and the metallicity is only 84% of what it was in the protostellar phase (before nuclear fusion in the core started).
+                            In the future, helium will continue to accumulate in the core, and in about 5 billion years this gradual build-up will eventually cause the Sun to exit
+                            the main sequence and become a red giant.
+                        </p>
+                        <p>
+                            The chemical composition of the photosphere is normally considered representative of the composition of the primordial Solar System. The solar heavy-element abundances
+                            described above are typically measured both using spectroscopy of the Sun's photosphere and by measuring abundances in meteorites that have never been heated to melting temperatures.
+                            These meteorites are thought to retain the composition of the protostellar Sun and are thus not affected by settling of heavy elements. The two methods generally agree well.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center orange-grad w3-bottombar w3-border-cyan w3-padding-64 header-text">Distances and scales</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The structure of the Sun contains the following layers:
+                        </p>
+                        <ul>
+                            <li>
+                                <b>Core</b> – the innermost 20–25% of the Sun's radius, where temperature (energies) and pressure are sufficient
+                                for nuclear fusion to occur. Hydrogen fuses into helium (which cannot currently be fused at this point in the Sun's life).
+                                The fusion process releases energy, and the helium gradually accumulates to form an inner core of helium within the core itself.
+                            </li>
+                            <li>
+                                <b>Radiative zone</b> - Convection cannot occur until much nearer the surface of the Sun. Therefore, between about 20–25% of the radius,
+                                and 70% of the radius, there is a "radiative zone" in which energy transfer occurs by means of radiation (photons) rather than by convection.
+                            </li>
+                            <li>
+                                <b>Tachocline</b> - the boundary region between the radiative and convective zones.
+                            </li>
+                            <li>
+                                <b>Convective zone</b> - Between about 70% of the Sun's radius and a point close to the visible surface, the Sun is cool and diffuse enough
+                                for convection to occur, and this becomes the primary means of outward heat transfer, similar to weather cells which form in the earth's atmosphere.
+                            </li>
+                            <li>
+                                <b>Photosphere</b> - the deepest part of the Sun which we can directly observe with visible light. Because the Sun is a gaseous object,
+                                it does not have a clearly defined surface; its visible parts are usually divided into a 'photosphere' and 'atmosphere'.
+                            </li>
+                            <li>
+                                <b>Atmosphere</b> - a gaseous 'halo' surrounding the Sun, comprising the chromosphere, solar transition region, corona and heliosphere.
+                                These can be seen when the main part of the Sun is hidden, for example, during a solar eclipse.
+                            </li>
+                        </ul>
+                        <div class="boxshadow w3-content w3-center w3-round w3-margin-bottom" style="max-width:980px;">
+                            <picture>
+                                <!--/static/images/solar-system/sun2-sm-md.jpg-->
+                                <source class="last-load" media="(max-width: 992px)" />
+                                <!--/static/images/solar-system/sun2-large.jpg-->
+                                <img class="last-load" alt="The Sun structure" style="width:100%;" />
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="w3-row-padding w3-stretch">
+                        <div class="w3-col l2 m4 s6 w3-left w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/solar-system">
+                                    <!--https://media.istockphoto.com/photos/solar-system-picture-id481507279?k=6&m=481507279&s=612x612&w=0&h=DIMoMFobJZ3Wx0icHKQeWQmY8LyRv57uKanR4_wlevA=-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>The Solar System</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-right w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/mercury">
+                                    <!--/static/images/solar-system/mercury-link.jpg-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>Mercury</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+{% block info %}
+                <span>The source of most text information is</span>
+                <a class="source" href="https://en.wikipedia.org/wiki/The_Sun" target="_blank">Wikipedia</a>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            // For different screens display different layout for the same content
+            (function () {
+                // Actions for smartphones
+                if (isMobile) {
+                    document.getElementById('div_add_to').style.display = 'none';
+                // and for more powerful devices
+                } else {
+                    document.getElementById('add_to').innerHTML =
+                    document.getElementById('copy_from').innerHTML;
+                    document.getElementById('div_copy_from').style.display = 'none';
+                    document.getElementById('div_add_to').style.backgroundImage = 'url("/static/images/solar-system/sun-md-lg.jpg")';
+                }
+            })();
+            // Load images when a user has scrolled down the middle of a page
+            loadAfterScrollMid([
+                '/static/images/solar-system/sun2-sm-md.jpg',
+                '/static/images/solar-system/sun2-large.jpg',
+                'https://media.istockphoto.com/photos/solar-system-picture-id481507279?k=6&m=481507279&s=612x612&w=0&h=DIMoMFobJZ3Wx0icHKQeWQmY8LyRv57uKanR4_wlevA=',
+                '/static/images/solar-system/mercury-link.jpg'
+            ]);
+            // Make a link to the current page active
+            makeActive('.sun');
+        </script>
+{% endblock %}

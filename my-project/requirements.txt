@@ -1,0 +1,7 @@
+Flask
+Flask-Session
+requests
+gunicorn
+psycopg2
+SQLAlchemy==1.3.16
+sqlparse==0.3.1

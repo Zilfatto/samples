@@ -1,0 +1,346 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Space stations
+{% endblock %}
+
+{% block style %}
+        <style>
+            .crosslink:link {color:#000099;}
+            .crosslink:visited {color:#ff751a;}
+            .crosslink:hover {
+                text-decoration: none;
+                color: #009900;
+                cursor: pointer;
+            }
+            .crosslink:active {color:#ff0000;}
+            .sm-text {
+                font-size: 16px;
+            }
+            .sm-img {
+                width: 65%;
+            }
+            @media screen and (min-width:993px){.head-img{background-image:url("https://static1.squarespace.com/static/57ed3edb37c58182f815c65f/57ed3f076a49633d10d11e12/5cae1247e79c707fbfed0f13/1554912091369/shutterstock_571916983.jpg?format=2500w");}}
+            @media screen and (min-width:601px){table th{padding:20px 10px!important;}}
+            @media screen and (max-width:992px){.sm-text{font-size:14px;}.sm-img{width:80%;}.head-img{background-image:url("/static/images/history/hero-history-medium.jpg");}}
+            @media screen and (max-width:600px){.sm-img{width:100%;}.w3-table{table-layout:auto!important;}.head-img{height:76%;background-image:url("/static/images/history/hero-history-small.jpg");}}
+            @media screen and (max-width:545px){.no-smpad{padding:0 !important;}}
+        </style>
+{% endblock %}
+
+{% block head_content %}
+            <div class="w3-display-bottomleft w3-center w3-margin-bottom w3-padding-large w3-hide-medium w3-hide-small">
+                <span class="w3-tag">Whatever it takes</span>
+            </div>
+            <div class="w3-display-top w3-center w3-padding-large">
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>ORBITING SPACE</b></h1>
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>PLATFORMS</b></h1>
+            </div>
+            <div class="w3-display-bottomright w3-center w3-margin-bottom w3-padding-large tag-text">
+                <span id="bigger_font" class="contour w3-text-white">The only limits on human achievement are self-imposed</span>
+            </div>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center dark-blue-grad w3-bottombar w3-border-amber w3-padding-64 header-text">Space stations</h2>
+                    <div class="w3-padding">
+                        <p>
+                            By 1969, even though the U.S.S.R. was still moving forward with its lunar landing program,
+                            it had begun to shift its emphasis in human spaceflight to the development of Earth-orbiting stations
+                            in which cosmonaut crews could carry out extended observations and experiments on missions that
+                            lasted weeks or months rather than a few days. The first Soviet space station, called Salyut 1,
+                            was launched April 19, 1971. The first crew to occupy the station—Georgy Dobrovolsky, Viktor Patsayev,
+                            and Vladislav Volkov—spent 23 days aboard carrying out scientific studies but perished when
+                            their Soyuz spacecraft depressurized during reentry.
+                        </p>
+                        <div class="w3-content cool-font sm-img" style="padding:0;max-width:610px;">
+                            <!-- https://cdn.britannica.com/s:700x500/32/432-050-386E80F5/Soyuz-10-launch-Baikonur-Cosmodrome-Kazakhstan-cosmonauts-April-23-1971.jpg -->
+                            <img class="load-after-body" alt="Soyuz 10" />
+                            <div class="w3-container w3-black">
+                                <h3 class="w3-margin-top">Soyuz 10</h3>
+                                <p class="sm-text">
+                                    Soyuz 10 before being positioned for launch at the Baikonur Cosmodrome in Kazakhstan.
+                                    Carrying three cosmonauts, Soyuz 10 was launched April 23, 1971, to the Salyut 1 space station,
+                                    which had been put into orbit four days earlier. Equipment malfunction prevented
+                                    the cosmonauts from entering and occupying the station.
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            With similar objectives for a long-term crewed platform in space, the United States converted
+                            the third stage of a Saturn V rocket into an orbital workshop for solar and biomedical studies.
+                            This first U.S. space station, called Skylab, was launched May 14, 1973. Over a period of eight
+                            and a half months, three three-person crews using Apollo spacecraft for transport spent time aboard Skylab,
+                            with the final crew staying for 84 days. Skylab was abandoned in February 1974 and
+                            reentered Earth’s atmosphere in July 1979, with some portions of
+                            the station surviving reentry and landing in Australia.
+                        </p>
+                        <div class="w3-content cool-font sm-img" style="padding:0;max-width:610px;">
+                            <!-- https://cdn.britannica.com/s:700x500/22/71322-050-1AB5E6E7/space-station-orbit-astronauts-Skylab-4-crew-February-8-1974.jpg -->
+                            <img class="load-after-body" alt="Skylab in orbit" />
+                            <div class="w3-container w3-black">
+                                <h3 class="w3-margin-top">Skylab in orbit</h3>
+                                <p class="sm-text">
+                                    U.S. Skylab space station in orbit over a cloud-covered Earth, photographed February 8, 1974,
+                                    by the departing third crew of astronauts from their Skylab 4 Command Module.
+                                    The makeshift gold-coloured sun shield and underlying parasol on the main part of
+                                    the station were installed by the first two crews to cover damage done
+                                    to Skylab's protective shielding during launch. The launch mishap also tore off one of
+                                    the station's lateral solar arrays.
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            Because of budgetary cuts, the United States did not launch a planned second Skylab. In contrast,
+                            the Soviet Union orbited and successfully occupied five more Salyut stations in a program
+                            that continued through the mid-1980s. Two of these stations had a military reconnaissance mission,
+                            but the others were devoted to scientific studies, particularly biomedical research.
+                            The Soviet Union also launched guest cosmonauts from allied countries for short stays aboard Salyut 6 and 7.
+                        </p>
+                        <div class="w3-content w3-center cool-font sm-img" style="padding:0;">
+                            <!-- https://cdn.britannica.com/s:700x500/33/433-050-5914B26C/spacecraft-Soyuz-T-5-Salyut-7-space-station-June-24.jpg -->
+                            <img class="load-after-body" alt="Soyuz T-5 and Salyut 7" />
+                            <div class="w3-container">
+                                <h3>Soyuz T-5 and Salyut 7</h3>
+                                <p class="sm-text">
+                                    Soyuz T-5 spacecraft (foreground) docked with the Salyut 7 space station, as photographed in orbit
+                                    from Soyuz T-6. Salyut 7 was launched on April 19, 1982. Soyuz T-5, carrying the station's primary
+                                    two-man crew, was launched nearly a month later, on May 13. Soyuz T-6, launched on June 24,
+                                    carried three additional crew members, including a French guest cosmonaut, to the orbiting station.
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            These early stations were a reflection of a long-held belief among space visionaries, dating back to Tsiolkovsky at
+                            the start of the 20th century, that living and working in space, first in Earth orbit and then on the Moon, Mars,
+                            and other locations, were an important part of the human future. It also was thought that
+                            increasingly complex orbital outposts would be the first steps in a long-term process of space development
+                            and colonization. The early focus of the United States and the U.S.S.R. on sending people to the Moon
+                            for political reasons deviated from this vision, which has since returned to dominate space thinking.
+                        </p>
+                        <p>
+                            The Soviet Union followed its Salyut station series with the February 1986 launch of the core element of
+                            the modular Mir space station. Additional modules carrying scientific equipment and expanding
+                            the living space were attached to Mir in subsequent years. In 1994–95 Valery Polyakov,
+                            a medical doctor, spent 438 continuous days aboard the station. More than 100 different people
+                            from 12 countries visited Mir, including seven American astronauts in the 1995–98 period.
+                            The station, which was initially scheduled to operate for only five years, supported human habitation
+                            until mid-2000 (continuously between 1989 and 1999), although it experienced a number of accidents
+                            and other serious problems. In March 2001 it made a controlled atmospheric reentry,
+                            with the surviving pieces falling into the Pacific Ocean.
+                        </p>
+                        <div class="w3-content w3-center cool-font sm-img" style="padding:0;">
+                            <!-- https://cdn.britannica.com/s:700x500/18/73218-050-126F8312/space-station-Mir-Russian-Atlantis-Cook-Strait-March-23-1996.jpg -->
+                            <img class="load-after-body" alt="Mir" />
+                            <div class="w3-container">
+                                <h3 class="w3-margin-top">Mir</h3>
+                                <p class="sm-text">
+                                    Russian space station Mir, backdropped against Cook Strait near New Zealand's South Island,
+                                    as photographed March 23, 1996, from the space shuttle orbiter <em>Atlantis</em> prior to docking of
+                                    the two spacecraft.
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            The United States did not follow up on Skylab until 1984, when Pres. Ronald Reagan approved a space station program
+                            and invited U.S. allies to participate. By 1988, 11 countries—Canada, Japan, and 9 countries from Europe—had decided
+                            to join what was known as Space Station Freedom. Progress in developing the station was slow, however,
+                            and in 1993 newly elected Pres. Bill Clinton ordered a sweeping redesign of the program. The United States and
+                            its existing partners invited Russia, which had inherited most of the Soviet Union’s space efforts after
+                            the U.S.S.R.’s collapse in 1991, to participate in the multinational program, renamed the International Space Station (ISS).
+                            Three additional countries joined during the 1990s and thereby made the 16-country project the largest-ever
+                            cooperative technological undertaking. The first two elements of the ISS were launched and connected in space in late 1998.
+                            Between 2000 and 2011, U.S., European, Japanese, and Russian modules were added to the ISS, along with Canadian robotic equipment
+                            and U.S.-provided trusses, solar panels, and associated hardware. An initial three-person crew began
+                            its stay aboard the ISS in November 2000, and the station has been continuously occupied since then.
+                            When ISS assembly was completed in 2011, the program’s focus shifted to scientific and technological utilization of
+                            the orbiting laboratory, which is planned to remain in service until at least 2024.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center teal-grad w3-bottombar w3-border-orange w3-padding-64 header-text">International space endurance records</h2>
+                    <p class="w3-padding-large w3-xlarge">A list of human endurance records in space is provided in the table.</p>
+                    <div class="no-smpad w3-padding-large w3-padding-24">
+                        <div class="w3-responsive my-xxlarge w3-margin-bottom w3-card">
+                            <table class="w3-table w3-striped w3-bordered" style="table-layout:fixed">
+                                <thead>
+                                    <tr class="my-theme">
+                                        <th scope="col">cosmonaut / astronaut</th>
+                                        <th scope="col">primary habitat</th>
+                                        <th scope="col">month and year launched</th>
+                                        <th scope="col">days in space</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td scope="row"><a href="https://www.britannica.com/biography/Yuri-Gagarin" class="crosslink">Yury A. Gagarin</a></td>
+                                        <td><a href="https://www.britannica.com/technology/Vostok-Soviet-spacecraft" class="crosslink">Vostok</a> 1</td>
+                                        <td>April 1961</td>
+                                        <td>0.07</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row"><a href="https://www.britannica.com/biography/Gherman-Stepanovich-Titov" class="crosslink">Gherman S. Titov</a></td>
+                                        <td><a href="https://www.britannica.com/technology/Vostok-Soviet-spacecraft" class="crosslink">Vostok</a> 2</td>
+                                        <td>August 1961</td>
+                                        <td>1.05</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row"><a href="https://www.britannica.com/biography/Andriyan-Grigoryevich-Nikolayev" class="crosslink">Andriyan G. Nikolayev</a></td>
+                                        <td><a href="https://www.britannica.com/technology/Vostok-Soviet-spacecraft" class="crosslink">Vostok</a> 3</td>
+                                        <td>August 1962</td>
+                                        <td>3.93</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row"><a href="https://www.britannica.com/biography/Valery-Bykovsky" class="crosslink">Valery F. Bykovsky</a></td>
+                                        <td><a href="https://www.britannica.com/technology/Vostok-Soviet-spacecraft" class="crosslink">Vostok</a> 5</td>
+                                        <td>June 1963</td>
+                                        <td>4.97</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row"><a href="https://www.britannica.com/biography/Gordon-Cooper" class="crosslink">L. Gordon Cooper, Jr.</a><br>
+                                        <a href="https://www.britannica.com/biography/Pete-Conrad" class="crosslink">Charles Conrad, Jr.</a></td>
+                                        <td><a href="https://www.britannica.com/science/Gemini-spacecraft-and-space-program" class="crosslink">Gemini</a> 5</td>
+                                        <td>August 1965</td>
+                                        <td>7.92</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row"><a href="https://www.britannica.com/biography/Frank-Borman" class="crosslink">Frank Borman</a><br>
+                                        <a href="https://www.britannica.com/biography/Jim-Lovell" class="crosslink">James A. Lovell, Jr.</a></td>
+                                        <td><a href="https://www.britannica.com/science/Gemini-spacecraft-and-space-program" class="crosslink">Gemini</a> 7</td>
+                                        <td>December 1965</td>
+                                        <td>13.75</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row"><a href="https://www.britannica.com/biography/Andriyan-Grigoryevich-Nikolayev" class="crosslink">Andriyan G. Nikolayev</a><br>
+                                        Vitaly I. Sevastyanov</td>
+                                        <td><a href="https://www.britannica.com/technology/Soyuz" class="crosslink">Soyuz</a> 9</td>
+                                        <td>June 1970</td>
+                                        <td>17.71</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Georgy T. Dobrovolsky<br>
+                                        <a href="https://www.britannica.com/biography/Viktor-Ivanovich-Patsayev" class="crosslink">Viktor I. Patsayev</a><br>
+                                        <a href="https://www.britannica.com/biography/Vladislav-Nikolayevich-Volkov" class="crosslink">Vladislav N. Volkov</a></td>
+                                        <td><a href="https://www.britannica.com/technology/Salyut" class="crosslink">Salyut</a> 1</td>
+                                        <td>June 1971</td>
+                                        <td>23.76</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row"><a href="https://www.britannica.com/biography/Pete-Conrad" class="crosslink">Charles Conrad, Jr.</a><br>
+                                        Paul J. Weitz<br>
+                                        Joseph P. Kerwin</td>
+                                        <td><a href="https://www.britannica.com/topic/Skylab" class="crosslink">Skylab</a></td>
+                                        <td>May 1973</td>
+                                        <td>28.04</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row"><a href="https://www.britannica.com/biography/Alan-Bean" class="crosslink">Alan L. Bean</a><br>
+                                        Jack R. Lousma<br>
+                                        Owen K. Garriott<br></td>
+                                        <td><a href="https://www.britannica.com/topic/Skylab" class="crosslink">Skylab</a></td>
+                                        <td>July 1973</td>
+                                        <td>59.49</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Gerald P. Carr<br>
+                                        William R. Pogue<br>
+                                        Edward G. Gibson<br></td>
+                                        <td><a href="https://www.britannica.com/topic/Skylab" class="crosslink">Skylab</a></td>
+                                        <td>November 1973</td>
+                                        <td>84.04</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Yury V. Romanenko<br>
+                                        Georgy M. Grechko</td>
+                                        <td><a href="https://www.britannica.com/technology/Salyut" class="crosslink">Salyut</a> 6</td>
+                                        <td>December 1977</td>
+                                        <td>96.42</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Vladimir V. Kovalyonok<br>
+                                        Aleksandr S. Ivanchenkov</td>
+                                        <td><a href="https://www.britannica.com/technology/Salyut" class="crosslink">Salyut</a> 6</td>
+                                        <td>June 1978</td>
+                                        <td>139.6</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Vladimir A. Lyakhov<br>
+                                        Valery V. Ryumin</td>
+                                        <td><a href="https://www.britannica.com/technology/Salyut" class="crosslink">Salyut</a> 6</td>
+                                        <td>February 1979</td>
+                                        <td>175.06</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Leonid I. Popov<br>
+                                        Valery V. Ryumin</td>
+                                        <td><a href="https://www.britannica.com/technology/Salyut" class="crosslink">Salyut</a> 6</td>
+                                        <td>April 1980</td>
+                                        <td>184.84</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Anatoly N. Berezovoy<br>
+                                        Valentin V. Lebedev</td>
+                                        <td><a href="https://www.britannica.com/technology/Salyut" class="crosslink">Salyut</a> 7</td>
+                                        <td>May 1982</td>
+                                        <td>211.38</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Leonid D. Kizim<br>
+                                        Vladimir A. Solovyov<br>
+                                        Oleg Y. Atkov</td>
+                                        <td><a href="https://www.britannica.com/technology/Salyut" class="crosslink">Salyut</a> 7</td>
+                                        <td>February 1984</td>
+                                        <td>236.95</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Yury V. Romanenko</td>
+                                        <td><a href="https://www.britannica.com/topic/Mir-Soviet-Russian-space-station" class="crosslink">Mir</a></td>
+                                        <td>February 1987</td>
+                                        <td>326.48</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Vladimir G. Titov<br>
+                                        Musa K. Manarov</td>
+                                        <td><a href="https://www.britannica.com/topic/Mir-Soviet-Russian-space-station" class="crosslink">Mir</a></td>
+                                        <td>December 1987</td>
+                                        <td>365.95</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Valery V. Polyakov</td>
+                                        <td><a href="https://www.britannica.com/topic/Mir-Soviet-Russian-space-station" class="crosslink">Mir</a></td>
+                                        <td>January 1994</td>
+                                        <td>437.75</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+{% block info %}
+                <span>The source of most text information is</span>
+                <a class="source" href="https://www.britannica.com/science/space-exploration/History-of-space-exploration" target="_blank">Britannica</a>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            // Load images after a page has loaded
+            loadImgsAfterBody([
+                'https://cdn.britannica.com/s:700x500/32/432-050-386E80F5/Soyuz-10-launch-Baikonur-Cosmodrome-Kazakhstan-cosmonauts-April-23-1971.jpg',
+                'https://cdn.britannica.com/s:700x500/22/71322-050-1AB5E6E7/space-station-orbit-astronauts-Skylab-4-crew-February-8-1974.jpg',
+                'https://cdn.britannica.com/s:700x500/33/433-050-5914B26C/spacecraft-Soyuz-T-5-Salyut-7-space-station-June-24.jpg',
+                'https://cdn.britannica.com/s:700x500/18/73218-050-126F8312/space-station-Mir-Russian-Atlantis-Cook-Strait-March-23-1996.jpg'
+            ], false);
+            // Make a link to the current page active
+            makeActive('.space-stations');
+        </script>
+{% endblock %}

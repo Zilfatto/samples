@@ -1,0 +1,284 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Cosmic dust
+{% endblock %}
+
+{% block style %}
+        <style>
+            .sm-text {
+                font-size: 16px;
+            }
+            @media screen and (min-width:993px){.head-img{background-image:url("/static/images/universe/hero-dust-large.jpg");}}
+            @media screen and (max-width:992px){.sm-text{font-size:14px;}.head-img{background-image:url("/static/images/universe/hero-dust-medium.jpg");}}
+            @media screen and (max-width:600px){.head-img{height:76%;background-image:url("/static/images/universe/hero-dust-small.jpg");}}
+        </style>
+{% endblock %}
+
+{% block head_content %}
+            <div class="w3-display-bottomleft w3-center w3-margin-bottom w3-padding-large w3-hide-medium w3-hide-small">
+                <span class="w3-tag">So much universe, and so little time</span>
+            </div>
+            <div class="w3-display-top w3-center w3-padding-large">
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>COSMIC DUST</b></h1>
+            </div>
+            <div class="w3-display-bottomright w3-center w3-margin-bottom w3-padding-large tag-text">
+                <span id="bigger_font" class="contour w3-text-white">At some point, entireness will be known</span>
+            </div>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center dark-blue-grad w3-bottombar w3-border-amber w3-padding-64 header-text">General information</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Cosmic dust, also called extraterrestrial dust or space dust, is dust which exists in outer space, or has fallen on Earth.
+                            Most cosmic dust particles measure between a few molecules and 0.1 µm. Cosmic dust can be further distinguished by
+                            its astronomical location: intergalactic dust, interstellar dust, interplanetary dust (such as in the zodiacal cloud)
+                            and circumplanetary dust (such as in a planetary ring).
+                        </p>
+                        <p>
+                            In the Solar System, interplanetary dust causes the zodiacal light. Solar System dust includes comet dust, asteroidal dust,
+                            dust from the Kuiper belt, and interstellar dust passing through the Solar System. Thousands of tons of
+                            cosmic dust are estimated to reach the Earth's surface every year, with most grains having a mass between 10−16 kg (0.1 pg)
+                            and 10−4 kg (100 mg). The density of the dust cloud through which the Earth is traveling is approximately 10−6 dust grains/m3.
+                        </p>
+                        <p>
+                            Cosmic dust contains some complex organic compounds (amorphous organic solids with a mixed aromatic–aliphatic structure)
+                            that could be created naturally, and rapidly, by stars. A smaller fraction of dust in space is "stardust" consisting of
+                            larger refractory minerals that condensed as matter left by stars.
+                        </p>
+                        <p>
+                            Interstellar dust particles were collected by the Stardust spacecraft and samples were returned to Earth in 2006.
+                        </p>
+                        <div class="w3-content w3-margin-bottom w3-center cool-font" style="max-width:600px;padding:0;">
+                            <!--https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Porous_chondriteIDP.jpg/375px-Porous_chondriteIDP.jpg-->
+                            <img class="load-after-body" alt="Porous chondrite interplanetary dust particle" style="width:100%;" />
+                            <div class="w3-container w3-center">
+                                <p class="sm-text">
+                                    Porous chondrite interplanetary dust particle.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center dark-green-grad w3-bottombar w3-border-amber w3-padding-64 header-text">Study and importance</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Cosmic dust was once solely an annoyance to astronomers, as it obscures objects they wish to observe.
+                            When infrared astronomy began, the dust particles were observed to be significant and vital components of
+                            astrophysical processes. Their analysis can reveal information about phenomena like the formation of
+                            the Solar System. For example, cosmic dust can drive the mass loss when a star is nearing the end of its life,
+                            play a part in the early stages of star formation, and form planets. In the Solar System, dust plays
+                            a major role in the zodiacal light, Saturn's B Ring spokes, the outer diffuse planetary rings at Jupiter,
+                            Saturn, Uranus and Neptune, and comets.
+                        </p>
+                        <p>
+                            The interdisciplinary study of dust brings together different scientific fields: physics (solid-state, electromagnetic theory,
+                            surface physics, statistical physics, thermal physics), fractal mathematics, surface chemistry on dust grains) meteoritics,
+                            as well as every branch of astronomy and astrophysics. These disparate research areas can be linked by the following theme:
+                            the cosmic dust particles evolve cyclically; chemically, physically and dynamically. The evolution of dust traces out paths
+                            in which the Universe recycles material, in processes analogous to the daily recycling steps with which many people are familiar:
+                            production, storage, processing, collection, consumption, and discarding.
+                        </p>
+                        <div class="w3-content w3-margin-bottom cool-font" style="max-width:800px;padding:0;">
+                            <picture>
+                                <!--/static/images/universe/dust-small.jpg-->
+                                <source class="load-after-body" media="(max-width: 600px)" />
+                                <!--/static/images/universe/dust-md-lg.jpg-->
+                                <img class="load-after-body" alt="Zodiacal light caused by cosmic dust" style="width:100%;" />
+                            </picture>
+                            <div class="w3-container w3-dark-grey w3-center">
+                                <p class="sm-text">
+                                    Zodiacal light caused by cosmic dust.
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            Observations and measurements of cosmic dust in different regions provide an important insight into the Universe's recycling processes;
+                            in the clouds of the diffuse interstellar medium, in molecular clouds, in the circumstellar dust of young stellar objects,
+                            and in planetary systems such as the Solar System, where astronomers consider dust as in its most recycled state.
+                            The astronomers accumulate observational ‘snapshots’ of dust at different stages of its life and, over time, form a more complete movie of
+                            the Universe's complicated recycling steps.
+                        </p>
+                        <p>
+                            Parameters such as the particle's initial motion, material properties, intervening plasma and magnetic field determined
+                            the dust particle's arrival at the dust detector. Slightly changing any of these parameters can give significantly
+                            different dust dynamical behavior. Therefore, one can learn about where that object came from, and what is (in) the intervening medium.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center teal-grad w3-bottombar w3-border-deep-purple w3-padding-64 header-text">Detection methods</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Cosmic dust can be detected by indirect methods that utilize the radiative properties of the cosmic dust particles.
+                        </p>
+                        <p>
+                            Cosmic dust can also be detected directly ('in-situ') using a variety of collection methods and from a variety of
+                            collection locations. Estimates of the daily influx of extraterrestrial material entering
+                            the Earth's atmosphere range between 5 and 300 tonnes.
+                        </p>
+                        <p>
+                            NASA collects samples of star dust particles in the Earth's atmosphere using plate collectors under the wings of
+                            stratospheric-flying airplanes. Dust samples are also collected from surface deposits on the large Earth ice-masses
+                            (Antarctica and Greenland/the Arctic) and in deep-sea sediments.
+                        </p>
+                        <p>
+                            Don Brownlee at the University of Washington in Seattle first reliably identified the extraterrestrial nature of
+                            collected dust particles in the latter 1970s. Another source is the meteorites, which contain stardust extracted from them.
+                            Stardust grains are solid refractory pieces of individual presolar stars. They are recognized by
+                            their extreme isotopic compositions, which can only be isotopic compositions within evolved stars,
+                            prior to any mixing with the interstellar medium. These grains condensed from the stellar matter as
+                            it cooled while leaving the star.
+                        </p>
+                        <p>
+                            In interplanetary space, dust detectors on planetary spacecraft have been built and flown, some are presently flying,
+                            and more are presently being built to fly. The large orbital velocities of dust particles in interplanetary space
+                            (typically 10–40 km/s) make intact particle capture problematic. Instead, in-situ dust detectors are
+                            generally devised to measure parameters associated with the high-velocity impact of dust particles on the instrument,
+                            and then derive physical properties of the particles (usually mass and velocity) through laboratory calibration
+                            (i.e. impacting accelerated particles with known properties onto a laboratory replica of the dust detector).
+                            Over the years dust detectors have measured, among others, the impact light flash, acoustic signal and impact ionisation.
+                            Recently the dust instrument on Stardust captured particles intact in low-density aerogel.
+                        </p>
+                        <div class="w3-content w3-margin-bottom cool-font" style="max-width:900px;padding:0;">
+                            <picture>
+                                <!--/static/images/universe/dust2-small.jpg-->
+                                <source class="last-load" media="(max-width: 600px)" />
+                                <!--/static/images/universe/dust2-md-lg.jpg-->
+                                <img class="last-load" alt="Cosmic dust of the Horsehead Nebula" style="width:100%;" />
+                            </picture>
+                            <div class="w3-container w3-dark-grey w3-center">
+                                <p class="sm-text">
+                                    Cosmic dust of the Horsehead Nebula as revealed by the Hubble Space Telescope.
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            Dust detectors in the past flew on the HEOS-2, Helios, Pioneer 10, Pioneer 11, Giotto, Galileo and
+                            Cassini space missions, on the Earth-orbiting LDEF, EURECA, and Gorid satellites, and
+                            some scientists have utilized the Voyager 1 and 2 spacecraft as giant Langmuir probes to directly sample
+                            the cosmic dust. Presently dust detectors are flying on the Ulysses, Proba, Rosetta, Stardust,
+                            and the New Horizons spacecraft. The collected dust at Earth or collected further in space and returned by
+                            sample-return space missions is then analyzed by dust scientists in their respective laboratories all over the world.
+                            One large storage facility for cosmic dust exists at the NASA Houston JSC.
+                        </p>
+                        <p>
+                            Infrared light can penetrate cosmic dust clouds, allowing us to peer into regions of star formation and
+                            the centers of galaxies. NASA's Spitzer Space Telescope is the largest infrared telescope yet launched into space.
+                            It was carried by a Delta rocket from Cape Canaveral, Florida on 25 August 2003. During its mission,
+                            Spitzer obtained images and spectra by detecting the thermal radiation emitted by objects in space between wavelengths
+                            of 3 and 180 micrometres. Most of this infrared radiation is blocked by the Earth's atmosphere and
+                            cannot be observed from the ground. Findings from the Spitzer have revitalized the studies of cosmic dust.
+                            One report showed some evidence that cosmic dust is formed near a supermassive black hole.
+                        </p>
+                        <p>
+                            Another detection mechanism is polarimetry. Dust grains are not spherical and tend to align to interstellar magnetic fields,
+                            preferentially polarizing starlight that passes through dust clouds. In nearby interstellar space,
+                            where interstellar reddening is not intense enough to be detected, high precision optical polarimetry has been used to glean
+                            the structure of dust within the Local Bubble.
+                        </p>
+                        <p>
+                            In 2019, researchers found interstellar dust in Antarctica which they relate to the Local Interstellar Cloud.
+                            The detection of interstellar dust in Antarctica was done by the measurement of the radionuclides Fe-60 and Mn-53 by
+                            highly sensitive Accelerator mass spectrometry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center red-orange-grad w3-bottombar w3-border-amber w3-padding-64 header-text">Radiative properties</h2>
+                    <div class="w3-padding">
+                        <p>
+                            A dust particle interacts with electromagnetic radiation in a way that depends on its cross section, the wavelength of
+                            the electromagnetic radiation, and on the nature of the grain: its refractive index, size, etc. The radiation process for
+                            an individual grain is called its emissivity, dependent on the grain's efficiency factor. Furthermore,
+                            we have to specify whether the emissivity process is extinction, scattering, absorption, or polarisation.
+                            In the radiation emission curves, several important signatures identify the composition of the emitting or absorbing dust particles.
+                        </p>
+                        <p>
+                            Dust particles can scatter light nonuniformly. Forward scattered light is light that is redirected slightly off
+                            its path by diffraction, and back-scattered light is reflected light.
+                        </p>
+                        <p>
+                            The scattering and extinction ("dimming") of the radiation gives useful information about the dust grain sizes.
+                            For example, if the object(s) in one's data is many times brighter in forward-scattered visible light than in
+                            back-scattered visible light, then we know that a significant fraction of the particles are about a micrometer in diameter.
+                        </p>
+                        <p>
+                            The scattering of light from dust grains in long exposure visible photographs is quite noticeable in reflection nebulae,
+                            and gives clues about the individual particle's light-scattering properties. In X-ray wavelengths,
+                            many scientists are investigating the scattering of X-rays by interstellar dust, and some have suggested that
+                            astronomical X-ray sources would possess diffuse haloes, due to the dust.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="w3-row-padding w3-stretch">
+                        <div class="w3-col l2 m4 s6 w3-left w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/black-hole">
+                                    <!--https://astronomy.com/-/media/Images/News%20and%20Observing/News/2019/07/image_4606e47TucanaeBlackHole.jpg?mw=600-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>A black hole</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-right w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/universe">
+                                    <!--https://cdn.theatlantic.com/thumbor/NoNY27QeP046K0k0DKxjCPR5aZs=/0x207:1280x927/720x405/media/img/mt/2017/06/hubble_spies_big_bang_frontiers_22202541749_o_orig/original.jpg-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>The universe</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+{% block info %}
+                <span>The source of most text information is</span>
+                <a class="source" href="https://en.wikipedia.org/wiki/Cosmic_dust" target="_blank">Wikipedia</a>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            // Load images after a page has loaded
+            loadImgsAfterBody([
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Porous_chondriteIDP.jpg/375px-Porous_chondriteIDP.jpg',
+                '/static/images/universe/dust-small.jpg',
+                '/static/images/universe/dust-md-lg.jpg'
+            ], true);
+            // Load images when a user has scrolled down the middle of a page
+            loadAfterScrollMid([
+                '/static/images/universe/dust2-small.jpg',
+                '/static/images/universe/dust2-md-lg.jpg',
+                'https://astronomy.com/-/media/Images/News%20and%20Observing/News/2019/07/image_4606e47TucanaeBlackHole.jpg?mw=600',
+                'https://cdn.theatlantic.com/thumbor/NoNY27QeP046K0k0DKxjCPR5aZs=/0x207:1280x927/720x405/media/img/mt/2017/06/hubble_spies_big_bang_frontiers_22202541749_o_orig/original.jpg'
+            ]);
+            // Make a link to the current page active
+            makeActive('.cosmic-dust');
+        </script>
+{% endblock %}
+

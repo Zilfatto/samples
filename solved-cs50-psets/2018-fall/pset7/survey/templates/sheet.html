@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <h1>Users data</h1>
+    <table class="tabl">
+    <tr>
+        {% for header in data[0] %}
+            <th>{{ header.upper() }}</th>
+        {% endfor %}
+    </tr>
+    {% for item in data %}
+    <tr>
+        {% for elem in item %}
+            <td>{{ item[elem] }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+    </table>
+{% endblock %}

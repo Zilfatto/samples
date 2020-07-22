@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+/* Fill viewport, hide scroll bar */
+body
+{
+    margin: 0;
+}
+/* Style the header and footer*/
+header, footer {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+/* Make image to fit in all possible width */
+img {
+  width: 100%;
+  height: auto;
+}
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 15px;
+}
+
+#wiki:link {color:#ff0000;}
+#wiki:visited {color:#3333ff;}
+#wiki:hover {
+  text-decoration: none;
+  color: #cc7a00;
+  cursor: pointer;
+}
+
+/* Button for extra text */
+button {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/* Creating polariod image */
+div.polaroid {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+div.container {
+  padding: 10px;
+}
+/* Creating boxshadow around the image */
+#boxshadow {
+  position: relative;
+  -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  padding: 10px;
+  background: white;
+}
+
+#boxshadow img {
+  border: 1px solid #8a4419;
+  border-style: inset;
+}
+
+#boxshadow::after {
+  content: '';
+  position: absolute;
+  z-index: -1; /* hide shadow behind image */
+  -webkit-box-shadow: 0 6px 45px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 6px 45px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 45px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  left: 5%; /* one half of the remaining 10% */
+  height: 100px;
+  bottom: 0;
+}
+/* For the header of a left column */
+#colour {
+  display: inline-block;
+}
+/* tooltip for the header of a left column */
+.tooltip1 {
+  position: relative;
+  display: inline-block;
+}
+
+#tooltiptext1 {
+  visibility: hidden;
+  width: 170px;
+  background-color: #151515;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  left: 110%;
+}
+
+#tooltiptext1::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+.header-text {
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 1;
+  letter-spacing: -1px;
+  letter-spacing: -.08rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  margin-bottom: 20px;
+}
+.mb2 { margin-bottom: 16px !important; margin-bottom: 1rem !important}
+
+/* Responsive layout - makes the two columns stack
+on top of each other instead of next to each other */
+@media screen and (max-width:1000px) {
+  .column {
+    width: 100%;
+  }
+}

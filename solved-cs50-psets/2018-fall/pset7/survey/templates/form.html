@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <h1 class="mb-3">Form</h1>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+    <div class="wrap">
+        <form id="form1" action="/form" method="post">
+            <div>
+                <input type="text" autocomplete="off" name="name" placeholder="Name">
+                <input type="text" autocomplete="off" name="country" placeholder="Country">
+            </div><br>
+            <div>
+                <div>
+                    <label for="age">Your age:</label>
+    	            <input type="number" id="age" name="age" min="1" max="150" value="0"><br><br>
+    	        </div>
+    	        <div>
+        	        <select name="transport">
+        		        <option value="" selected disabled>Transport</option>
+        		        <option value="bike">Bike</option>
+        		        <option value="car">Car</option>
+        		        <option value="plain">Plain</option>
+        		        <option value="no">No</option>
+        	        </select>
+        	    </div>
+    	    </div><br>
+    	    <div class="rad">
+    	        <div>
+    	            <input type="radio" id="01" name="device" value="andriod">
+    	            <label for="01">Andriod</label>
+    	        </div>
+    	        <div>
+    	            <input type="radio" id="02" name="device" value="ios">
+     	            <label for="02">IOS</label>
+                </div>
+            </div>
+
+            <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+            <button type="submit">Submit</button>
+
+        </form>
+    </div>
+
+    <script>
+        // Getting a form node
+        let validator = document.getElementById("form1");
+        // Getting two input fields of a type radio
+        dev1 = document.getElementById("01");
+        dev2 = document.getElementById("02");
+        // Setting an event listener to the form
+        validator.onsubmit = function() {
+            // If the user didn't typed in his/her name
+            if (validator.name.value == "") {
+                alert("Provide your name!");
+                return false;
+            }
+            // If the user didn't typed in his/her country
+            else if (validator.country.value == "") {
+                alert("Provide your country!");
+                return false;
+            }
+            // If the user didn't provide his/her age
+            else if (validator.age.value == "0") {
+                alert("Provide your age!");
+                return false;
+            }
+            // If the user didn't provide his/her transport
+            else if (validator.transport.value == "") {
+                alert("Specify your transport!");
+                return false;
+            }
+            // If the user didn't specify his/her operating system
+            else if ((dev1.checked == false) && (dev2.checked == false)) {
+                alert("Specify your device!");
+                return false;
+            }
+            // Otherwise it's OK
+            return true;
+        };
+
+
+    </script>
+
+{% endblock %}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Space station: {% block title %}{% endblock %}</title>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="Keywords" content="Earth, Moon, Sun, Solar System, Universe, Galaxy, Mercury, Venus, Mars, Jupiter, Saturn,
+        Uranus, Neptune, Pluto, Asteroid belt, Comet, black hole, big bang, history of space flights, first sattelite, rocket,
+        human spaceflight, race to the moon, space station, space shuttle" />
+        <meta name="Description" content="This website is about outer space, universe, galaxies and history of space exploration." />
+
+        <link rel="icon" href="/static/images/favicon-32x32.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="/static/w3.css" />
+        <link rel="stylesheet" type="text/css" href="/static/styles.css" />
+        <!-- Getting Font Awesome Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        {% block style %}{% endblock %}
+    </head>
+
+    <body>
+
+        <header class="w3-row w3-padding w3-hide-medium w3-hide-small head-grad cont">
+            <div class="w3-col s5" style="padding-top:4px;"><a class="my-logo" href="/">My-project<span class="dotcom">.dev</span></a></div>
+            <div class="w3-col s7 w3-margin-top w3-wide w3-hide-medium w3-hide-small">
+                <div class="w3-right w3-text-white w3-tag w3-round" style="position:relative;top:10px;">THIS WEBSITE WAS MADE FOR A PORTFOLIO</div>
+            </div>
+        </header>
+
+        <header class="w3-display-container w3-hide-large w3-padding head-grad cont">
+             <div class="w3-center"><a class="my-logo" href="/">My-project<span class="dotcom"><i style="letter-spacing:-8px;"> </i>.dev</span></a></div>
+             <div class="w3-display-bottomright">
+                 <div class="w3-small w3-text-white w3-tag w3-round">THIS WEBSITE WAS MADE FOR A PORTFOLIO</div>
+             </div>
+        </header>
+
+        <div id="wrapBar">
+            <nav id="navbar" class="w3-wide" style="overflow:hidden;">
+                <div class="w3-bar my-theme">
+                    <a id="hamburger" class="w3-bar-item w3-button w3-hover-light-grey w3-padding-16 hidesm mob-bar" href="javascript:void(0)" onclick="openBar(event)"><div class="bar1"></div><div class="bar2"></div><div class="bar3"></div></a>
+                    <a class="w3-bar-item w3-button barex w3-hover-light-grey w3-padding-16" href="javascript:void(0)" onclick="openNav('info')" id="navbtn_info">INFORMATION <i class="fa fa-caret-down"></i><i class="fa fa-caret-up" style="display:none"></i></a>
+                    <a class="w3-bar-item w3-button barex w3-hover-none w3-text-grey w3-border-black w3-bottombar w3-hover-border-white w3-hover-text-white w3-padding-16" href="/contact">CONTACT</a>
+                    <a class="w3-bar-item w3-button barex w3-hover-none w3-text-grey w3-border-black w3-bottombar w3-hover-border-white w3-hover-text-white w3-padding-16" href="/about">ABOUT</a>
+                    <div class="w3-right">
+                        {% if session.user_id %}
+                            <a class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-border-black w3-bottombar w3-hover-border-white w3-hover-text-white w3-padding-16 mob-bar w3-right" href="/logout" title="Log out">LOG OUT</a>
+                            <a class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-border-black w3-bottombar w3-hover-border-white w3-hover-text-white w3-padding-16 mob-bar w3-right" href="/shop" title="Shop">SHOP</a>
+                            <a class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-border-black w3-bottombar w3-hover-border-white w3-hover-text-white profile-icon" href="/profile" title="Profile"><i class="fa fa-user-circle-o"></i><span class="badge"></span></a>
+                        {% else %}
+                            <a class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-border-black w3-bottombar w3-hover-border-white w3-hover-text-white w3-padding-16 mob-bar w3-right" href="/register" title="Register">REGISTER</a>
+                            <a class="w3-bar-item w3-button w3-hover-none w3-text-grey w3-border-black w3-bottombar w3-hover-border-white w3-hover-text-white w3-padding-16 mob-bar w3-right" href="/login" title="Log in">LOG IN</a>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div id='myAccordion' class="w3-card-2 w3-light-grey w3-center w3-hide-large">
+                    <a href="javascript:void(0)" onclick="closeBar()" class="w3-button w3-xlarge w3-right">&times;</a><br>
+                    <div class="w3-container w3-padding-32">
+                          <a class="w3-button w3-block w3-large w3-wide" onclick="openMenu('info');" href="javascript:void(0);" id="accord_btn">INFORMATION <i class="fa fa-caret-down"></i><i class="fa fa-caret-up w3-hide"></i></a>
+                          <div id="section_info" class="w3-white w3-show"></div>
+                          <a class="w3-button w3-block w3-large w3-wide" href="/contact">CONTACT</a>
+                          <a class="w3-button w3-block w3-large w3-wide" href="/about">ABOUT</a>
+                    </div>
+                </div>
+
+                <div id="nav_info" class="w3-bar-block w3-light-grey w3-card-2 w3-hide-small navex">
+                    <span onclick="closeNav('info')" class="w3-button w3-xxlarge w3-display-topright w3-margin-right barex">&times;</span><br>
+                    <div class="w3-row-padding w3-bar-block">
+                        <div class="w3-col m4">
+                            <h3 class="padding-tb">History of space exploration</h3>
+                            <a class="w3-bar-item w3-button precursors" href="/precursors">Precursors in fiction and fact</a>
+                            <a class="w3-bar-item w3-button early-rocket-development" href="/early-rocket-development">Early rocket development</a>
+                            <a class="w3-bar-item w3-button first-satellites" href="/first-satellites">The first satellites</a>
+                            <a class="w3-bar-item w3-button first-human-spaceflights" href="/first-human-spaceflights">The first human spaceflightes</a>
+                            <a class="w3-bar-item w3-button race-to-the-moon" href="/race-to-the-moon">The race to the Moon</a>
+                            <a class="w3-bar-item w3-button space-stations" href="/space-stations">Space stations</a>
+                            <a class="w3-bar-item w3-button space-shuttle" href="/space-shuttle">The space shuttle</a>
+                            <a class="w3-bar-item w3-button milestones" href="/milestones">Significant milestones</a>
+                        </div>
+                        <div class="w3-col m4">
+                            <h3 class="padding-tb">The Solar System</h3>
+                            <a class="w3-bar-item w3-button solar-system" href="/solar-system">About the Solar System</a>
+                            <a class="w3-bar-item w3-button sun" href="/sun">The Sun</a>
+                            <a class="w3-bar-item w3-button mercury" href="/mercury">Mercury</a>
+                            <a class="w3-bar-item w3-button venus" href="/venus">Venus</a>
+                            <a class="w3-bar-item w3-button earth" href="/earth">Earth and the Moon</a>
+                            <a class="w3-bar-item w3-button mars" href="/mars">Mars</a>
+                            <a class="w3-bar-item w3-button jupiter" href="/jupiter">Jupiter</a>
+                            <a class="w3-bar-item w3-button saturn" href="/saturn">Saturn</a>
+                            <a class="w3-bar-item w3-button uranus" href="/uranus">Uranus</a>
+                            <a class="w3-bar-item w3-button neptune" href="/neptune">Neptune</a>
+                            <a class="w3-bar-item w3-button pluto" href="/pluto">Pluto <span class="w3-opacity">(not a planet)</span></a>
+                            <a class="w3-bar-item w3-button asteroid-belt" href="/asteroid-belt">The asteroid belt</a>
+                            <a class="w3-bar-item w3-button comets" href="/comets">Comets</a>
+                        </div>
+                        <div class="w3-col m4">
+                            <h3 class="padding-tb">The universe</h3>
+                            <a class="w3-bar-item w3-button universe" href="/universe">About the universe</a>
+                            <a class="w3-bar-item w3-button big-bang" href="/big-bang">The Big Bang</a>
+                            <a class="w3-bar-item w3-button galaxy" href="/galaxy">A galaxy</a>
+                            <a class="w3-bar-item w3-button milky-way" href="/milky-way">The Milky Way Galaxy</a>
+                            <a class="w3-bar-item w3-button whirlpool" href="/whirlpool">The Whirlpool Galaxy</a>
+                            <a class="w3-bar-item w3-button andromeda" href="/andromeda">The Andromeda Galaxy</a>
+                            <a class="w3-bar-item w3-button sombrero" href="/sombrero">The Sombrero Galaxy</a>
+                            <a class="w3-bar-item w3-button black-hole" href="/black-hole">A black hole</a>
+                            <a class="w3-bar-item w3-button cosmic-dust" href="/cosmic-dust">Cosmic dust</a>
+                        </div>
+                    </div>
+                <br class="hidesm">
+                </div>
+            </nav>
+        </div>
+
+        <!-- Second header with image for main page -->
+        <header id="head_img" class="boximg cont head-img w3-grayscale-min w3-display-container w3-wide w3-border-grey">
+            {% block head_content %}{% endblock %}
+        </header>
+
+        <!-- Add a background color and large text to the whole page -->
+        <main class="cont main-grad w3-container w3-large w3-grayscale-min" style="padding:0;">
+            {% block main %}{% endblock %}
+
+            {% if next_link and prev %}
+                <div class="w3-content w3-margin-top w3-margin-bottom w3-padding">
+                    <div class="w3-content" style="border-radius:50%;background-color:rgba(0,0,0, 0.6);">
+                        <div class="w3-row" style="margin-left:-2px;margin-right:-2px;">
+                            <a class="butt-link next w3-wide w3-right" href="{{ next_link }}">Next</a>
+                            <a class="butt-link prev w3-left" href="{{ prev }}">Previous</a>
+                        </div>
+                    </div>
+            {% endif %}
+        </main>
+        <div id="snackbar"></div>
+        <footer class="w3-container w3-center footer-grad w3-padding-48 w3-large" style="margin-top:-1px;">
+            <div class="w3-content">
+                {% block info %}{% endblock %}
+                <p class="my-tiny-padding" style="margin:0;">All rights for code and pages reserved.</p>
+            </div>
+        </footer>
+        <script src="{{ url_for('static', filename='javascript/common.js') }}"></script>
+        {% if session.user_id %}
+            <script>
+                // The cart for storing all the items that a user added to it
+                let cart;
+                // If a browser supports storage
+                if (typeof(Storage) !== 'undefined') {
+                    if (sessionStorage['cart']) {
+                        cart = getStorageObj('cart');
+                        updateCount();
+                    } else {
+                        cart = [];
+                        setStorageObj('cart', cart);
+                    }
+                }
+            </script>
+        {% endif %}
+        {% block scripts %}{% endblock %}
+    </body>
+</html>

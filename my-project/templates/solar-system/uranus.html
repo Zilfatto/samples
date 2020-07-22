@@ -1,0 +1,347 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Uranus
+{% endblock %}
+
+{% block style %}
+        <style>
+            /* Transparent bg for text */
+            .fix-text {
+                width: 100%;
+                background-color: rgba(0,0,0,0.6);
+                margin: 0 auto;
+            }
+            .sm-text {
+                font-size: 16px;
+            }
+            @media screen and (min-width:993px){.head-img{background-image:url("/static/images/solar-system/hero-uranus-large.jpg");}}
+            @media screen and (min-width:601px){table th{padding:20px 10px!important;}}
+            @media screen and (max-width:992px){.sm-text{font-size:14px;}.head-img{background-image:url("/static/images/solar-system/hero-uranus-medium.jpg");}}
+            @media screen and (max-width:600px){.w3-table{table-layout:auto!important;}.head-img{height:76%;background-image:url("/static/images/solar-system/hero-uranus-small.jpg");}}
+        </style>
+{% endblock %}
+
+{% block head_content %}
+            <div class="w3-display-bottomleft w3-center w3-margin-bottom w3-padding-large w3-hide-medium w3-hide-small">
+                <span class="w3-tag">So much universe and so little time</span>
+            </div>
+            <div class="w3-display-top w3-center w3-padding-large">
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>URANUS</b></h1>
+            </div>
+            <div class="w3-display-bottomright w3-center w3-margin-bottom w3-padding-large tag-text">
+                <span id="bigger_font" class="contour w3-text-white">The moons of Uranus seem to have got a twist</span>
+            </div>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center dark-blue-grad w3-bottombar w3-border-orange w3-padding-64 header-text">General information</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Uranus is the seventh planet from the Sun. It has the third-largest planetary radius and fourth-largest planetary mass
+                            in the Solar System. Uranus is similar in composition to Neptune, and both have bulk chemical compositions which differ
+                            from that of the larger gas giants Jupiter and Saturn. For this reason, scientists often classify Uranus
+                            and Neptune as "ice giants" to distinguish them from the gas giants. Uranus' atmosphere is similar to Jupiter's
+                            and Saturn's in its primary composition of hydrogen and helium, but it contains more "ices" such as water, ammonia,
+                            and methane, along with traces of other hydrocarbons. It has the coldest planetary atmosphere in the Solar System,
+                            with a minimum temperature of 49 K (−224 °C; −371 °F), and has a complex, layered cloud structure with water thought
+                            to make up the lowest clouds and methane the uppermost layer of clouds. The interior of Uranus
+                            is mainly composed of ices and rock.
+                        </p>
+                        <p>
+                            Like the other giant planets, Uranus has a ring system, a magnetosphere, and numerous moons.
+                            The Uranian system has a unique configuration because its axis of rotation is tilted sideways, nearly into the plane
+                            of its solar orbit. Its north and south poles, therefore, lie where most other planets have their equators. In 1986,
+                            images from Voyager 2 showed Uranus as an almost featureless planet in visible light, without the cloud bands
+                            or storms associated with the other giant planets. Voyager 2 remains the only spacecraft to visit the planet.
+                            Observations from Earth have shown seasonal change and increased weather activity as Uranus approached its equinox in 2007.
+                            Wind speeds can reach 250 metres per second (900 km/h; 560 mph).
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center blue-grey-grad w3-bottombar w3-border-orange w3-padding-64 header-text">Axial tilt</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The Uranian axis of rotation is approximately parallel with the plane of the Solar System, with an axial tilt of 97.77°
+                            (as defined by prograde rotation). This gives it seasonal changes completely unlike those of the other planets.
+                            Near the solstice, one pole faces the Sun continuously and the other faces away. Only a narrow strip around
+                            the equator experiences a rapid day–night cycle, but with the Sun low over the horizon.
+                            At the other side of Uranus' orbit the orientation of the poles towards the Sun is reversed.
+                            Each pole gets around 42 years of continuous sunlight, followed by 42 years of darkness. Near the time of the equinoxes,
+                            the Sun faces the equator of Uranus giving a period of day–night cycles similar to those seen on most of the other planets.
+                        </p>
+                        <p>
+                            Uranus reached its most recent equinox on 7 December 2007.
+                        </p>
+                        <div class="w3-responsive my-xxlarge w3-card">
+                            <table class="w3-table w3-striped w3-bordered" style="table-layout:fixed">
+                                <thead>
+                                    <tr class="my-theme">
+                                      <th>Northern hemisphere</th>
+                                      <th>Year</th>
+                                      <th>Southern hemisphere</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Winter solstice</td>
+                                        <td>1902, 1986</td>
+                                        <td>Summer solstice</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vernal equinox</td>
+                                        <td>1923, 2007</td>
+                                        <td>Autumnal equinox</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Summer solstice</td>
+                                        <td>1944, 2028</td>
+                                        <td>Winter solstice</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Autumnal equinox</td>
+                                        <td>1965, 2049</td>
+                                        <td>Vernal equinox</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>
+                            One result of this axis orientation is that, averaged over the Uranian year, the polar regions
+                            of Uranus receive a greater energy input from the Sun than its equatorial regions. Nevertheless,
+                            Uranus is hotter at its equator than at its poles. The underlying mechanism that causes this is unknown.
+                            The reason for Uranus' unusual axial tilt is also not known with certainty, but the usual speculation
+                            is that during the formation of the Solar System, an Earth-sized protoplanet collided with Uranus,
+                            causing the skewed orientation.[63] Research by Jacob Kegerreis of Durham University suggests that
+                            the tilt resulted from a rock larger than the Earth crashing into the planet 3 to 4 billion years ago.
+                            Uranus' south pole was pointed almost directly at the Sun at the time of Voyager 2's flyby in 1986.
+                            The labelling of this pole as "south" uses the definition currently endorsed by
+                            the International Astronomical Union, namely that the north pole of a planet or satellite is the pole
+                            that points above the invariable plane of the Solar System, regardless of the direction the planet is spinning.
+                            A different convention is sometimes used, in which a body's north and south poles are defined according to
+                            the right-hand rule in relation to the direction of rotation.
+                        </p>
+                        <div class="boxshadow w3-content w3-margin-bottom w3-center w3-round" style="max-width:1024px;">
+                            <!--https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Alien_aurorae_on_Uranus.jpg/1024px-Alien_aurorae_on_Uranus.jpg-->
+                            <img class="load-after-body" alt="Aurorae on Uranus" style="width:100%;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content my-xxcard" style="color:white;background-color:#414141;">
+                    <h2 class="w3-center teal-grad w3-bottombar w3-border-deep-purple w3-padding-64 header-text">Internal structure</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Uranus' mass is roughly 14.5 times that of Earth, making it the least massive of the giant planets. Its diameter is slightly larger than
+                            Neptune's at roughly four times that of Earth. A resulting density of 1.27 g/cm3 makes Uranus the second least dense planet, after Saturn.
+                            This value indicates that it is made primarily of various ices, such as water, ammonia, and methane.
+                            The total mass of ice in Uranus' interior is not precisely known, because different figures emerge depending on the model chosen;
+                            it must be between 9.3 and 13.5 Earth masses. Hydrogen and helium constitute only a small part of the total,
+                            with between 0.5 and 1.5 Earth masses. The remainder of the non-ice mass (0.5 to 3.7 Earth masses) is accounted for by rocky material.
+                        </p>
+                        <p>
+                            The standard model of Uranus' structure is that it consists of three layers: a rocky (silicate/iron–nickel) core in the centre,
+                            an icy mantle in the middle and an outer gaseous hydrogen/helium envelope. The core is relatively small, with a mass of only 0.55 Earth masses
+                            and a radius less than 20% of Uranus'; the mantle comprises its bulk, with around 13.4 Earth masses, and the upper atmosphere
+                            is relatively insubstantial, weighing about 0.5 Earth masses and extending for the last 20% of Uranus' radius.
+                            Uranus' core density is around 9 g/cm3, with a pressure in the centre of 8 million bars (800 GPa) and a temperature of about 5000 K.
+                            The ice mantle is not in fact composed of ice in the conventional sense, but of a hot and dense fluid consisting of water,
+                            ammonia and other volatiles. This fluid, which has a high electrical conductivity, is sometimes called a water–ammonia ocean.
+                        </p>
+                    </div>
+                    <div class="w3-margin cool-font">
+                        <div class="w3-content w3-center w3-black" style="max-width:1000px;padding:0;">
+                            <picture>
+                                <!--/static/images/solar-system/uranus-small.jpg-->
+                                <source class="load-after-body" media="(max-width: 600px)" />
+                                <!--/static/images/solar-system/uranus-large.jpg-->
+                                <img class="load-after-body" alt="the interior of Uranus" style="width:100%;" />
+                            </picture>
+                            <div class="w3-container w3-light-grey">
+                                <p class="sm-text">Diagram of the interior of Uranus</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-padding">
+                        <p>
+                            The extreme pressure and temperature deep within Uranus may break up the methane molecules, with the carbon atoms condensing into
+                            crystals of diamond that rain down through the mantle like hailstones. Very-high-pressure experiments at
+                            the Lawrence Livermore National Laboratory suggest that the base of the mantle may comprise an ocean of liquid diamond,
+                            with floating solid 'diamond-bergs'. Scientists also believe that rainfalls of solid diamonds occur on Uranus,
+                            as well as on Jupiter, Saturn, and Neptune.
+                        </p>
+                        <p>
+                            The bulk compositions of Uranus and Neptune are different from those of Jupiter and Saturn, with ice dominating over gases,
+                            hence justifying their separate classification as ice giants. There may be a layer of ionic water where
+                            the water molecules break down into a soup of hydrogen and oxygen ions, and deeper down superionic water in which
+                            the oxygen crystallises but the hydrogen ions move freely within the oxygen lattice.
+                        </p>
+                        <p>
+                            Although the model considered above is reasonably standard, it is not unique; other models also satisfy observations.
+                            For instance, if substantial amounts of hydrogen and rocky material are mixed in the ice mantle, the total mass of ices in
+                            the interior will be lower, and, correspondingly, the total mass of rocks and hydrogen will be higher.
+                            Presently available data does not allow a scientific determination which model is correct.
+                            The fluid interior structure of Uranus means that it has no solid surface. The gaseous atmosphere gradually transitions into
+                            the internal liquid layers. For the sake of convenience, a revolving oblate spheroid set at the point at which
+                            atmospheric pressure equals 1 bar (100 kPa) is conditionally designated as a "surface". It has equatorial and
+                            polar radii of 25,559 ± 4 km (15,881.6 ± 2.5 mi) and 24,973 ± 20 km (15,518 ± 12 mi), respectively.
+                            This surface is used throughout this article as a zero point for altitudes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center dark-green-grad w3-bottombar w3-border-orange w3-padding-64 header-text">Atmosphere</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Although there is no well-defined solid surface within Uranus' interior, the outermost part of Uranus' gaseous envelope
+                            that is accessible to remote sensing is called its atmosphere. Remote-sensing capability extends down to roughly 300 km below
+                            the 1 bar (100 kPa) level, with a corresponding pressure around 100 bar (10 MPa) and temperature of 320 K (47 °C; 116 °F).
+                            The tenuous thermosphere extends over two planetary radii from the nominal surface, which is defined to lie at a pressure of 1 bar.
+                            The Uranian atmosphere can be divided into three layers: the troposphere, between altitudes of −300 and 50 km (−186 and 31 mi) and
+                            pressures from 100 to 0.1 bar (10 MPa to 10 kPa); the stratosphere, spanning altitudes between 50 and 4,000 km (31 and 2,485 mi) and
+                            pressures of between 0.1 and 10−10 bar (10 kPa to 10 µPa); and the thermosphere extending from 4,000 km to as high as 50,000 km from
+                            the surface. There is no mesosphere.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="fix-text w3-container w3-margin-top w3-margin-bottom w3-padding w3-round">
+                        <p>
+                            &#8220;The first day or so we all pointed to our countries. The third or fourth day we were pointing to our continents.
+                            By the fifth day we were only aware of earth&#8221;
+                        </p>
+                        <p>
+                            - Sultan Bin Salman Al-Suad
+                        </p>
+                    </div>
+                    <div class="w3-center">
+                        <picture>
+                            <!--/static/images/solar-system/uranus2-small.jpg-->
+                            <source class="last-load" media="(max-width: 600px)" />
+                            <!--/static/images/solar-system/uranus2-medium.jpg-->
+                            <source class="last-load" media="(max-width: 992px)" />
+                            <!--/static/images/solar-system/uranus2-large.jpg-->
+                            <img class="last-load" alt="Uranus" style="width:100%;" />
+                        </picture>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center blue-grey-grad w3-bottombar w3-border-orange w3-padding-64 header-text">Magnetosphere</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Before the arrival of Voyager 2, no measurements of the Uranian magnetosphere had been taken, so its nature remained a mystery.
+                            Before 1986, scientists had expected the magnetic field of Uranus to be in line with the solar wind,
+                            because it would then align with Uranus' poles that lie in the ecliptic.
+                        </p>
+                        <p>
+                            Voyager's observations revealed that Uranus' magnetic field is peculiar, both because it does not originate from its geometric centre,
+                            and because it is tilted at 59° from the axis of rotation. In fact the magnetic dipole is shifted from Uranus' centre towards
+                            the south rotational pole by as much as one third of the planetary radius. This unusual geometry results in
+                            a highly asymmetric magnetosphere, where the magnetic field strength on the surface in the southern hemisphere can be
+                            as low as 0.1 gauss (10 µT), whereas in the northern hemisphere it can be as high as 1.1 gauss (110 µT).
+                            The average field at the surface is 0.23 gauss (23 µT). Studies of Voyager 2 data in 2017 suggest that
+                            this asymmetry causes Uranus' magnetosphere to connect with the solar wind once a Uranian day, opening the planet to the Sun's particles.
+                            In comparison, the magnetic field of Earth is roughly as strong at either pole, and its "magnetic equator" is roughly parallel with its
+                            geographical equator. The dipole moment of Uranus is 50 times that of Earth. Neptune has a similarly displaced and tilted magnetic field,
+                            suggesting that this may be a common feature of ice giants. One hypothesis is that, unlike the magnetic fields of the terrestrial
+                            and gas giants, which are generated within their cores, the ice giants' magnetic fields are generated by motion at relatively shallow depths,
+                            for instance, in the water–ammonia ocean. Another possible explanation for the magnetosphere's alignment is that there are
+                            oceans of liquid diamond in Uranus' interior that would deter the magnetic field.
+                        </p>
+                        <p>
+                            Despite its curious alignment, in other respects the Uranian magnetosphere is like those of other planets: it has a bow shock at about
+                            23 Uranian radii ahead of it, a magnetopause at 18 Uranian radii, a fully developed magnetotail, and radiation belts.
+                            Overall, the structure of Uranus' magnetosphere is different from Jupiter's and more similar to Saturn's.
+                            Uranus' magnetotail trails behind it into space for millions of kilometres and is twisted by its sideways rotation into a long corkscrew.
+                        </p>
+                        <p>
+                            Uranus' magnetosphere contains charged particles: mainly protons and electrons, with a small amount of H2+ ions.
+                            Many of these particles probably derive from the thermosphere. The ion and electron energies can be as high as 4 and 1.2 megaelectronvolts,
+                            respectively. The density of low-energy (below 1 kiloelectronvolt) ions in the inner magnetosphere is about 2 cm−3.
+                            The particle population is strongly affected by the Uranian moons, which sweep through the magnetosphere, leaving noticeable gaps.
+                            The particle flux is high enough to cause darkening or space weathering of their surfaces on an astronomically rapid timescale of 100,000 years.
+                            This may be the cause of the uniformly dark colouration of the Uranian satellites and rings. Uranus has relatively well developed aurorae,
+                            which are seen as bright arcs around both magnetic poles. Unlike Jupiter's, Uranus' aurorae seem to be insignificant for the energy balance of
+                            the planetary thermosphere.
+                        </p>
+                        <p>
+                            In March 2020, NASA astronomers reported the detection of a large atmospheric magnetic bubble, also known as a plasmoid, released into outer space
+                            from the planet Uranus, after reevaluating old data recorded by the Voyager 2 space probe during a flyby of the planet in 1986.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="w3-row-padding w3-stretch">
+                        <div class="w3-col l2 m4 s6 w3-left w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/saturn">
+                                    <!--https://images.immediate.co.uk/production/volatile/sites/4/2019/10/Saturn-NasaPA-dd3706c.jpg-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>Saturn</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-right w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/neptune">
+                                    <!--https://www.thefactsite.com/wp-content/uploads/2012/11/neptune-facts.jpg-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>Neptune</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+{% block info %}
+                <span>The source of most text information is</span>
+                <a class="source" href="https://en.wikipedia.org/wiki/Uranus" target="_blank">Wikipedia</a>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            // Load images after a page has loaded
+            loadImgsAfterBody([
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Alien_aurorae_on_Uranus.jpg/1024px-Alien_aurorae_on_Uranus.jpg',
+                '/static/images/solar-system/uranus-small.jpg',
+                '/static/images/solar-system/uranus-large.jpg'
+            ], true);
+            // Load images when a user has scrolled down the middle of a page
+            loadAfterScrollMid([
+                '/static/images/solar-system/uranus2-small.jpg',
+                '/static/images/solar-system/uranus2-medium.jpg',
+                '/static/images/solar-system/uranus2-large.jpg',
+                'https://images.immediate.co.uk/production/volatile/sites/4/2019/10/Saturn-NasaPA-dd3706c.jpg',
+                'https://www.thefactsite.com/wp-content/uploads/2012/11/neptune-facts.jpg'
+            ]);
+            // Make a link to the current page active
+            makeActive('.uranus');
+        </script>
+{% endblock %}

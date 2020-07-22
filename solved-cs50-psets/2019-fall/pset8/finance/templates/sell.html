@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <form action="/sell" method="post">
+        <div class="form-group">
+            <div class="padd clearfix">
+                <label class="shift" for="selectsymbol">Choose the symbol of a stock</label>
+            </div>
+            <select name="symbol" class="form-control" id="selectsymbol">
+                <option selected disabled="disabled" value="">Symbol</option>
+                {% if rows %}
+                    {% for row in rows %}
+                        <option value="{{ row['symbol'] }}">{{ row["symbol"].upper() }}</option>
+                    {% endfor %}
+                {% endif %}
+            </select>
+        </div>
+        <div class="form-group">
+            <div class="padd clearfix">
+                <label class="shift" for="forminput">Specify a number of shares</label>
+            </div>
+            <input type="number" name="shares" class="form-control" id="forminput" />
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Sell</button>
+        </div>
+    </form>
+{% endblock %}

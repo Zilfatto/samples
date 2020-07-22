@@ -1,0 +1,1399 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block style %}
+        <style>
+            #head_img, footer {
+                display: none;
+            }
+            .card {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                max-width: 300px;
+                margin: auto;
+                text-align: center;
+                font-family: arial;
+            }
+            .price {
+                color: #4a4a4a;
+                font-size: 22px;
+                margin: 20px 0 15px;
+            }
+            .w3-btn {
+                outline: 0;
+                padding: 4px;
+                width: 100%;
+                color: white;
+                background-color: #bc0000;
+                font-size: 14px;
+                position: relative;
+                font-weight: 900;
+                font-family: "Raleway", sans-serif;
+            }
+            .w3-btn:hover {background-color: #ff0000;}
+            /* Center the loader */
+            .loader {
+                position: absolute;
+                display: none;
+                left: 50%;
+                top: 50%;
+                z-index: 8;
+                width: 150px;
+                height: 150px;
+                margin: -75px 0 0 -75px;
+                border: 16px solid yellow;
+                border-radius: 50%;
+                border-top-color: #000;
+                border-bottom-color: #000;
+                -webkit-animation: spin 2s linear infinite;
+                animation: spin 2s linear infinite;
+            }
+            .w3-modal .loader {
+                width: 100px;
+                height: 100px;
+                margin: -50px 0 0 -50px;
+                border-width: 9px;
+            }
+            @-webkit-keyframes spin {
+                0% { -webkit-transform: rotate(0deg); }
+                100% { -webkit-transform: rotate(360deg); }
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            .press-btn {
+                padding: 15px 25px;
+                font-size: 24px;
+                text-align: center;
+                cursor: pointer;
+                color: #fff;
+                border: none;
+                border-radius: 15px;
+                box-shadow: 0 9px #999;
+                outline: none;
+            }
+            .w3-modal .press-btn {
+                padding: 10px 20px;
+            }
+            .modal-btn {
+                padding: 10px 20px;
+                text-align: center;
+                cursor: pointer;
+                color: #000;
+                border-radius:10px;
+                outline: none;
+            }
+            .buy-btn, #add_modal .add-btn {background-color: #00e600;}
+            .remove-all {background-color: #f20000;}
+            #withdraw_modal .withdraw {background-color: #bb8800;}
+            #change_modal .change {background-color: #00ffff;}
+            .buy-btn:hover:enabled, #add_modal .add-btn:hover {background-color: #00cc00;}
+            .buy-btn.pressed, #add_modal .add-btn.pressed {background-color: #009900;}
+            .remove-all:hover:enabled {background-color: #d90000;}
+            .remove-all.pressed {background-color: #bc0000;}
+            #withdraw_modal .withdraw:hover {background-color: #b08000;}
+            #withdraw_modal .withdraw.pressed {background-color: #a97900;}
+            #change_modal .change:hover {background-color: #00d9d9;}
+            #change_modal .change.pressed {background-color: #00b3b3;}
+
+            #account .add-btn {background-color: #f1fff1; border: 1px solid #00bb00;}
+            #account .withdraw {background-color: #fff1e1; border: 1px solid #b08000;}
+            #account .change {background-color: #00ffff; border: 2px solid #777777}
+            #account .add-btn:hover {background-color: #00cc00;}
+            #account .withdraw:hover {background-color: #b08000;}
+            #account .change:hover {background-color: #00e6e6; border: 2px solid #000}
+            .pressed {
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+            .modal-btn:hover {
+                color: #fff;
+            }
+            .w3-modal-content {
+                padding: 20px;
+            }
+            .item-message {
+                margin:0;
+                padding:6px 0 4px;
+                background-color: #ffffcc;
+            }
+            .item-message p {
+                font-size:17px;
+                color:red;
+                padding:2px 8px;
+                margin: 0 8px 10px;
+                border-top:2px solid blue;
+                border-bottom:2px solid blue;
+                border-radius: 30px;
+                line-height:120%;
+            }
+            .item-message .w3-button {
+                width: 40%;
+                border: 2px solid #777;
+                background-color: #000;
+                color:#fff!important;
+
+            }
+            .item-message .w3-button:hover {
+                background-color: #cca300!important;
+                border-color:#000;
+            }
+            .tab-contents {
+                margin-left:200px!important;
+            }
+            .w3-sidebar .active-tab-link {
+                background-color:white;
+                color: black;
+            }
+            .w3-bar .active-tab-link {
+                border-bottom: 6px solid #00bcd4!important;
+            }
+            .w3-sidebar {position:absolute!important}
+            main {
+                min-height:82%;
+                padding-bottom: 100px!important;
+            }
+            #tab_head {
+                font-size: 24px;
+                letter-spacing:1px;
+                font-weight: 600;
+            }
+            #profile {
+                max-width:1300px;
+                min-height:194px;
+                position:relative;
+            }
+            #tab_div.w3-bar .w3-bar-item {
+                border-bottom: 6px solid black;
+            }
+            #tab_div.w3-bar .w3-bar-item:hover {
+                border-bottom: 6px solid #ffc107;
+                background-color: inherit!important;
+                color: white!important;
+            }
+            #tab_div.w3-sidebar .w3-bar-item {
+                width:100%;
+                display:block;
+                padding:8px 16px;
+                text-align:left;
+                border:none;
+                white-space:normal;
+                float:none;
+            }
+            #tab_div .w3-bar-item {
+                padding: 10px 20px;
+            }
+            #tab_div .tablink.active-tab-link:hover {
+                background-color: #fff!important;
+            }
+            .main-grad {background-image: linear-gradient(165deg, #616161 0%, #555 36%, #333 65%);}
+            .my-hover-shadow:hover {box-shadow:0 3px 12px 0 rgba(255, 255, 0, 0.35), 0 3px 20px 0 rgb(204, 129, 0, 0.27)!important;}
+            /*Custom select for choosing quantity of every item*/
+            .custom-select {position:relative!important;}
+            /*Hide original SELECT element:*/
+            .custom-select select {display: none;}
+            .select-selected {background-color:#7a7a7a;}
+            .select-selected:hover {background-color:#5a5a5a;}
+            /*Style the arrow inside the select element*/
+            .select-selected:after {
+                position: absolute;
+                content: "";
+                top: 20px;
+                right: 12px;
+                width: 0;
+                height: 0;
+                border: 6px solid transparent;
+                border-color: #fff transparent transparent transparent;
+            }
+            /*Point the arrow upwards when the select box is open (active)*/
+            .select-selected.select-arrow-active:after {
+                border-color: transparent transparent #fff transparent;
+                top: 14px;
+            }
+            /*Style the items (options), including the selected item*/
+            .select-items div,.select-selected {
+                color: #ffffff;
+                padding: 8px 16px;
+                border: 1px solid transparent;
+                border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+                cursor: pointer;
+                user-select: none;
+            }
+            /*Style items (options)*/
+            .select-items {
+                position: absolute;
+                background-color: #898989;
+                top: 100%;
+                left: 0;
+                right: 0;
+                height:auto!important;
+                max-height: 500%!important;
+                overflow-y:auto;
+                z-index: 6;
+            }
+            /*Hide the items when the select box is closed*/
+            .select-hide {display:none;}
+            .select-items div:hover, .same-as-selected {background-color:rgba(0, 0, 0, 0.2);}
+            /* Custom scroll bar */
+            .select-items{-webkit-overflow-scrolling:touch;overflow:auto;}
+            .select-items::-webkit-scrollbar{width:8px;}
+            .select-items::-webkit-scrollbar-track{background:#393939;}
+            .select-items::-webkit-scrollbar-thumb{background:#00a3cc;}
+            input {
+                width: 100%;
+                font-weight: 500;
+                padding: 12px 20px;
+                border: 3px solid #ccc;
+                transition: 0.7s;
+                outline: none;
+                display: block;
+                margin: 8px 0;
+                box-sizing: border-box;
+            }
+            .form-control {
+                margin-bottom: 4px;
+            	padding-bottom: 20px;
+            	position: relative;
+            }
+            .form-control.error input {border: 3px solid #ff3300;}
+            .form-control i {
+            	position: absolute;
+            	top: 44px;
+            	right: 13px;
+            	font-size: 25px;
+            	visibility: hidden;
+            }
+            .form-control.error i.fa-exclamation-circle {
+            	color: #e62e00;
+            	visibility: visible;
+            }
+            .form-control small {
+            	color: #e74c3c;
+            	position: absolute;
+            	visibility: hidden;
+            	bottom: 5px;
+            	left: 3px;
+            }
+            .pd-for-text .hint {
+                visibility: visible;
+                color: #2a2a2a;
+                opacity: 0.8;
+                bottom:3px;
+            }
+            .form-control.error small {visibility: visible;}
+            .pd-for-text.error .hint {visibility: hidden;}
+            .form-control > label {
+                background-color: #111;
+                color: #ffffff;
+                padding: 0 8px;
+                border-radius: 40px 20px 40px 20px;
+            }
+            #add_modal .form-control small, #withdraw_modal .form-control small {
+                bottom: 8px;
+            }
+            input:focus {
+                border: 3px solid #555;
+                background-color: #d9d9d9;
+                color: black;
+            }
+            input::placeholder {
+                font-weight: 400;
+                opacity: 0.7;
+            }
+            input:focus::placeholder {
+                color: #666;
+                font-weight: 400;
+                opacity: 1;  /* Firefox */
+            }
+            .pd-for-text {margin-bottom:8px;}
+            .pd-for-text.error {
+                margin-bottom: 4px;
+            	padding-bottom: 20px!important;
+            }
+            .field-icon {
+                color: #000;
+                font-size: 23px;
+                float: right;
+                margin-right: 35px;
+                margin-top: -46px;
+                position: relative;
+                z-index: 2;
+            }
+            #buying_error {
+                display: inline-block;
+                color:red;
+                border: 2px solid red;
+                border-radius: 20px;
+            }
+            #account .user-cash, #account .all-user-cash {
+                padding: 6px;
+                border: 2px solid white;
+                border-radius: 20px;
+            }
+            .tab-header {
+                text-align: center;
+                font-size: 36px;
+                letter-spacing: 1px;
+                font-weight: 600;
+                font-family: "Raleway", sans-serif;
+                margin-top: 14px;
+            }
+            .w3-table th {padding: 14px 8px!important;}
+            .w3-table th:first-child {padding-left: 16px!important;}
+            .no-smpad {
+                padding: 0 16px 20px!important;
+            }
+            .times-pad {
+                padding: 0px 12px!important;
+                border-radius:0 4px 0;
+            }
+            .round-top {
+                border-radius: 8px 8px 0 0;
+            }
+            .round-bottom {
+                border-radius: 0 0 8px 8px;
+            }
+            .detector {
+                visibility: hidden;
+                margin:0;
+                padding:0;
+            }
+            .card.w3-white.my-hover-shadow .w3-col {
+                padding:0!important;
+                margin:0!important;
+            }
+            #cart_items .w3-col.l4.w3-animate-zoom {padding:0;}
+            #cart_items img {width:100%;}
+            @media screen and (min-width:601px){table th{padding:20px 10px!important;}#account .tab-header:first-of-type{margin-top:0;}}
+            @media screen and (max-width:992px){.card{max-width:800px;}.pd-for-text{padding-bottom:35px;}.select-items div,.select-selected{font-size:22px;}#cart_items .w3-btn{font-size:17px;padding:6px 10px;}#cart_items .item-name{font-size:40px;margin:16px 0 6px;}#cart_items .price{font-size:26px;margin:16px 0 0;}.w3-row div:nth-of-type(2){height:100%;}.w3-row .to-bottom{width:100%;position:absolute;bottom:0;}}
+            @media screen and (max-width:800px){.select-items div,.select-selected{font-size:20px;}#cart_items .item-name{font-size:34px;margin:14px 0 6px;}#cart_items .price{font-size:24px;margin:14px 0 0;}.item-message .w3-button{width:55%;padding:6px 12px!important;}.item-message p{font-size:16px;}}
+            @media screen and (max-width:600px){.card{width:100%;}main{min-height:85%;}.w3-table{table-layout:auto!important;}.form-control{margin-bottom:2px;}.pd-for-text{padding-bottom:40px;}.pd-for-text .hint{bottom:6px;}.field-icon{font-size:19px;margin-top:-45px;}.tab-content{padding:8px 8px;}.tab-header{font-size:30px;}#account .user-cash{float:left!important;}#cart_items{padding:0;}.item-message{padding:2px 0 2px}.item-message .w3-button{width:70%;padding:3px 6px!important;font-size:14px!important;margin:2px 0!important;}.item-message p{margin:2px;font-size:15px;}#buying_error,#account_message{padding:2px 4px;font-size:14px;margin:20px 0 0;}}
+            @media screen and (max-width:545px){.no-smpad{padding:0 0 20px !important;}.press-btn{padding:8px 16px;font-size:20px;}.modal-btn{padding: 7px 14px;}#history_table .no-smpad{padding-bottom:0!important;}#cart_items .item-name{font-size:30px;margin:14px 0 0;}#cart_items .price{font-size:20px;margin:10px 0 0;padding:0px;}#cart_items .w3-btn,.item-message p{font-size:13px;}.select-items div,.select-selected{padding:6px 12px;font-size:16px;}.select-selected:after{top:18px}.select-selected.select-arrow-active:after{top:12px}main{padding-bottom:50px!important;}.loader{width:80px;height:80px;margin:-40px 0 0 -40px;border-width:8px;}.w3-modal .loader{width:50px;height:50px;margin:-25px 0 0 -25px;border-width:6px;}}
+            @media screen and (max-width:460px){.pd-for-text{padding-bottom:56px;}#account div:nth-of-type(3){padding:8px!important;}#account{padding-top:12px!important;}#cart_items .item-name{font-size:24px;margin:12px 0 6px;line-height:110%;}#cart_items .price{font-size:18px;margin:8px 0 0;}#cart_items .w3-btn{font-size:12px;}.item-message p{font-size:12px;}.select-items div,.select-selected{padding:5px 8px;}.select-selected:after{top:16px}.select-selected.select-arrow-active:after{top:10px}}
+            @media screen and (max-width:380px){.form{padding:10px 15px!important;}.header-text{font-size:30px!important;}#for_btns div:first-child{padding:0 8px!important;}}
+            @media screen and (max-width:365px){.select-items div,.select-selected{padding:4px 6px;font-size:15px;}.select-selected:after{top:14px}.select-selected.select-arrow-active:after{top:8px}#cart_items .item-name{font-size:22px;margin:10px 0 4px;}#cart_items .price{font-size:16px;margin:6px 0 0;}#cart_items .w3-btn{font-size:11px;}.item-message p{font-size:11px;}}
+            @media screen and (max-width:350px){input, label, .form-control small{font-size:12px;}.pd-for-text{padding-bottom:48px;}.form-control small{font-size:10px;}#for_btns div:first-child div:last-of-type{float:left!important;}#tiny_separator{display:block!important;}.press-btn{padding:6px 12px;font-size:18px;}.modal-btn{padding: 5px 10px;}.item-message{padding:2px 0 0}.item-message .w3-button{width:70%;padding:2px 4px!important;font-size:12px!important;margin:1px 0!important;}.item-message p{margin:1px;font-size:10px;}#buying_error,#account_message{padding:2px 4px;font-size:12px;margin:16px 0 0;}}
+        </style>
+{% endblock %}
+
+{% block main %}
+            <div id="items_store" style="display:none;">
+                <div class="w3-row-padding"></div>
+            </div>
+            <div class="w3-hide">
+                <div class="item-message">
+                    <p>This item is out of stock</p>
+                    <span onclick="this.parentNode.previousElementSibling.click()" class="w3-button w3-large w3-round-large">OK</span>
+                </div>
+            </div>
+            <div class="w3-margin">
+                <div id="profile" class="w3-content">
+                    <h2 id="tab_head" class="w3-text-white w3-xxlarge w3-padding">Profile</h2>
+                    <div id="tab_div" class="w3-bar w3-black round-top">
+                        <button class="w3-bar-item w3-button tablink" onclick="openTab(event,'cart_items')">Cart</button>
+                        <button class="w3-bar-item w3-button tablink" onclick="openTab(event,'account')">Account</button>
+                        <button class="w3-bar-item w3-button tablink" onclick="openTab(event,'history')">History</button>
+                    </div>
+                    <div id="tab_contents" class="w3-white round-bottom">
+                        <div id="cart_items" class="w3-container tab-content w3-padding-32 w3-animate-opacity">
+                            <div class="spin-cart loader"></div>
+                            <p class="w3-red w3-center w3-hide">Message</p>
+                            <p class="detector"></p>
+                            <div id="for_btns">
+                                <div class="w3-container">
+                                    <div class="w3-show-inline-block w3-left w3-bottombar w3-border-orange">Your money:
+                                        <span class="user-cash">{{ user_data["cash"] }}</span>
+                                    </div>
+                                    <div id="tiny_separator" class="w3-container" style="height:50px;display:none;"></div>
+                                    <div class="w3-show-inline-block w3-right w3-bottombar w3-border-indigo">Total:
+                                        <span id="total">0</span>
+                                    </div>
+                                </div>
+                                <div class="w3-container w3-margin-top">
+                                    <button class="remove-all press-btn w3-left" onclick="removeAllItems()">Remove all</button>
+                                    <button class="buy-btn press-btn w3-right" onclick="buy()">Buy</button>
+                                </div>
+                                <div class="w3-center">
+                                    <p id="buying_error" class="w3-padding w3-hide">Buying error</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="account" class="w3-container tab-content w3-padding-32 w3-animate-opacity">
+                            <div class="spin-account loader"></div>
+                            <p class="w3-red w3-hide">Message</p>
+                            <div class="w3-container w3-padding-large w3-hide-small">
+                                <span class="w3-left w3-bottombar w3-border-indigo">All your money:</span>
+                                <span class="w3-right w3-bottombar w3-border-indigo">Your current cash:</span>
+                            </div>
+                            <div class="w3-container w3-padding-large">
+                                <span class="w3-left w3-bottombar w3-border-indigo w3-margin-right w3-hide-large w3-hide-medium" style="margin-top: 6px;">All your money:</span>
+                                <span class="all-user-cash w3-left w3-bottombar w3-border-indigo">{{ user_data["all_cash"] }}</span>
+                                <div class="w3-container w3-hide-large w3-hide-medium" style="height:64px;"></div>
+                                <span class="w3-left w3-bottombar w3-border-indigo w3-margin-right w3-hide-large w3-hide-medium" style="margin-top: 6px;">Your current cash:</span>
+                                <span class="user-cash w3-right w3-bottombar w3-border-indigo">{{ user_data["cash"] }}</span>
+                            </div>
+                            <div class="w3-content">
+                                <div class="no-smpad">
+                                    <h1 class="tab-header"><span class="w3-bottombar w3-border-deep-orange">Your data</span></h1>
+                                    <div class="w3-responsive my-xxlarge w3-card w3-margin-top w3-margin-bottom w3-round">
+                                        <table class="w3-table w3-striped w3-bordered" style="table-layout:fixed">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Username:</td>
+                                                    <td>{{ user_data["username"] }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email:</td>
+                                                    <td>{{ user_data["email"] }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Country:</td>
+                                                    <td>{{ user_data["country"].title() }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Age:</td>
+                                                    <td>{{ user_data["age"] }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Transport:</td>
+                                                    <td>{{ user_data["transport"].title() }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Gender:</td>
+                                                    <td>{{ user_data["gender"].title() }}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <button class="change w3-block modal-btn w3-auto" onclick="openModal('Change')" style="max-width:500px;">Change password</button>
+                                </div>
+                            </div>
+                            <div id="purchases_table" class="w3-content w3-hide">
+                                <div class="no-smpad">
+                                    <h1 class="tab-header w3-bottombar w3-border-amber">All the items you have bought</h1>
+                                    <div class="w3-responsive my-xxlarge w3-card w3-margin-top w3-margin-bottom w3-round">
+                                        <table class="w3-table w3-striped w3-bordered" style="table-layout:fixed">
+                                            <thead>
+                                                <tr class="my-theme">
+                                                  <th>Name</th>
+                                                  <th>Number</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="user_items"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w3-container">
+                                <button class="withdraw modal-btn w3-left" onclick="openModal('Withdraw')">Withdraw cash</button>
+                                <button class="add-btn modal-btn w3-right" onclick="openModal('Add')">Add cash</button>
+                            </div>
+                            <div class="w3-center">
+                                <p id="account_message" class="w3-round w3-black w3-bottombar w3-topbar w3-border-blue w3-padding">
+                                    This is not a real account, so the sum of all you adding money cannot be more than 20000 on one account to prevent you from
+                                    buying all the items in the shop &#128521;
+                                </p>
+                            </div>
+                        </div>
+                        <div id="history" class="w3-container tab-content w3-animate-opacity">
+                            <div class="spin-history loader"></div>
+                            <p class="w3-red w3-center w3-hide">Message</p>
+                            <div id="history_table" class="w3-content w3-hide">
+                                <div class="no-smpad">
+                                    <h2 class="tab-header">All your purchases</h2>
+                                    <div class="w3-responsive my-xxlarge w3-card w3-margin-top w3-round">
+                                        <table class="w3-table w3-striped w3-bordered" style="table-layout:fixed">
+                                            <thead>
+                                                <tr class="my-theme">
+                                                  <th>Name</th>
+                                                  <th>Price</th>
+                                                  <th>Number</th>
+                                                  <th>Sum</th>
+                                                  <th>Date</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="user_history"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="add_modal" name="Add" class="w3-modal">
+                <div class="w3-modal-content w3-card-4 w3-round">
+                    <div class="spin-add loader"></div>
+                    <span class="w3-button w3-xxlarge w3-display-topright times-pad" onclick="closeModal('Add')">&times;</span>
+                    <h2 class="tab-header">Adding money</h2>
+                    <div class="form-control">
+                        <label for="age">Money:</label>
+                        <input id="age" class="age" type="number" name="withdraw" min="1" max="3000" step="1" />
+            			<small>Error message</small>
+        	        </div>
+                    <div class="w3-container">
+                        <button class="add-btn press-btn w3-right" onclick="add()">Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="withdraw_modal" name="Withdraw" class="w3-modal">
+                <div class="w3-modal-content w3-card-4 w3-round">
+                    <div class="spin-withdraw loader"></div>
+                    <span class="w3-button w3-xxlarge w3-display-topright times-pad" onclick="closeModal('Withdraw')">&times;</span>
+                    <h2 class="tab-header">Withdrawing money</h2>
+                    <div class="form-control">
+                        <label for="age">Money:</label>
+                        <input id="age" class="age" type="number" name="withdraw" min="1" step="1" />
+            			<small>Error message</small>
+        	        </div>
+                    <div class="w3-container">
+                        <button class="withdraw press-btn w3-right" onclick="withdraw()">Withdraw</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="change_modal" name="Change" class="w3-modal">
+                <div class="w3-modal-content w3-card-4 w3-round">
+                    <div class="spin-change loader"></div>
+                    <span class="w3-button w3-xxlarge w3-display-topright times-pad" onclick="closeModal('Change')">&times;</span>
+                    <h2 class="tab-header">Resetting a password</h2>
+                    <div class="form-control">
+                        <label>Old password</label>
+                        <input type="password" autocomplete="off" name="oldpassword" placeholder="Enter your old password" maxlength="64" />
+                        <span class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                        <i class="fa fa-check-circle"></i>
+            			<i class="fa fa-exclamation-circle"></i>
+            			<small>Error message</small>
+                    </div>
+                    <div class="pd-for-text form-control">
+                        <label>New password</label>
+                        <input type="password" autocomplete="off" name="password" placeholder="Enter a new password" maxlength="64" />
+                        <span class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                        <i class="fa fa-check-circle"></i>
+            			<i class="fa fa-exclamation-circle"></i>
+            			<small>Error message</small>
+            			<small class="hint">Your password must be 6-40 characters long, contain uppercase and lowercase letters and numbers, and must not contain spaces or emoji</small>
+                    </div>
+                    <div class="form-control">
+                        <label>Confirmation</label>
+                        <input type="password" autocomplete="off" name="confirm" placeholder="Enter your new password again" maxlength="64" />
+                        <span class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                        <i class="fa fa-check-circle"></i>
+            			<i class="fa fa-exclamation-circle"></i>
+            			<small>Error message</small>
+                    </div>
+                    <button class="change press-btn w3-margin-top w3-block" onclick="validatePasswords()">Change</button>
+                </div>
+            </div>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            // Items data from database
+            let itemsFromDB = retrieve({{rows|tojson}}),
+                userCash = retrieve({{user_data["cash"]|tojson}}),
+                allUserCash = retrieve({{user_data["all_cash"]|tojson}}),
+                // For mobile browsers that do not support unload and visibilitychange events
+                alwaysUpdateStorg,
+                total = 0,
+                pickedItems = {},
+                gotNewHistory = false,
+                gotNewPurchases = false,
+                firstLoad = true,
+                previousWidth = window.innerWidth;
+            // Snackbar for showing messages to the user
+            const SNACK_BAR = document.getElementById('snackbar'),
+                // Main element for searching in it, instead of in whole document
+                MAIN_ELEM = document.querySelector('main'),
+                // Message about the absence of an item
+                MESSAGE = MAIN_ELEM.querySelector('.item-message'),
+                // Tab contents
+                CART_ITEMS = MAIN_ELEM.querySelector('#cart_items'),
+                ACCOUNT = MAIN_ELEM.querySelector('#account'),
+                HISTORY = MAIN_ELEM.querySelector('#history'),
+                // Modals
+                ADD_MODAL = MAIN_ELEM.querySelector('#add_modal'),
+                WITHDRAW_MODAL = MAIN_ELEM.querySelector('#withdraw_modal'),
+                CHANGE_MODAL = MAIN_ELEM.querySelector('#change_modal'),
+                // For displaying an error
+                BUY_ERROR = CART_ITEMS.querySelector('#buying_error'),
+                MAX_CASH = 20000;
+            // Insert all modals to male them positioned fixed
+            document.body.insertBefore(ADD_MODAL, MAIN_ELEM);
+            document.body.insertBefore(WITHDRAW_MODAL, MAIN_ELEM);
+            document.body.insertBefore(CHANGE_MODAL, MAIN_ELEM);
+            (function() {
+                // In this case these actions are not so necessary, but if there will be much more
+                // items in the shop, load only small part of them might be quite reasonably for
+                // faster transmitting and parsing
+                if (cart.length > 0) {
+                    cart.sort(function(a, b){return a - b;});
+                    // Preparing needed data for a request
+                    let partsRequest = {};
+                    for (let i = 4, include; i <= 24; i += 4) {
+                        include = cart.some(number => number >= i - 4 && number < i);
+                        partsRequest['part' + i] = include;
+                    }
+                    requestData(partsRequest, '/shop-items', showItems, 'cart', false);
+                } else {
+                    CART_ITEMS.querySelector('.buy-btn').setAttribute('disabled', 'disabled');
+                    CART_ITEMS.querySelector('.remove-all').setAttribute('disabled', 'disabled');
+                    showCartMessage();
+                }
+            })();
+            // If it is not a mobile, change the layout of a menu
+            if (!isMobile) {
+                const tab = MAIN_ELEM.querySelector('#tab_div'),
+                    tabHead = tab.previousElementSibling,
+                    tabContents = tab.nextElementSibling,
+                    loaders = tabContents.getElementsByClassName('loader');
+                tab.className = 'w3-sidebar w3-bar-block w3-black w3-card w3-round-large';
+                tabHead.className = 'w3-bar-item w3-border-cyan w3-bottombar w3-text-amber w3-padding-16';
+                tab.insertBefore(tabHead, tab.firstChild);
+                tabContents.className = 'w3-white tab-contents w3-round-large';
+                tab.parentNode.classList.add('w3-white', 'w3-round-large');
+                // Move the loaders a little bit to the right for these changed tabs
+                for (let i = 0, j = loaders.length; i < j; i++) {
+                    loaders[i].style.left = '58%';
+                }
+                // Before living this page, send new items in a cart to the server
+                window.addEventListener('unload', () => {
+                    // Update storage
+                    setStorageObj('cart', cart);
+                });
+            // Unload event does not work in mobile devices
+            } else {
+                const ua = navigator.userAgent;
+                // Using UA is not very reliable way of determining the browser, but it works well for now
+                if (/FxiOS|Firefox|Mobile\/15E148|EdgA|OPR|YaBrowser|BlackBerry|IEMobile|Opera Mini|CriOS/i.test(ua)) {
+                    alwaysUpdateStorg = true;
+                } else {
+                    // Handle page visibility change for mobile Chrome
+                    document.addEventListener('visibilitychange', () => {
+                        if (document['hidden']) {
+                            // Update storage
+                            setStorageObj('cart', cart);
+                        }
+                    });
+                }
+            }
+            // Open one tab
+            MAIN_ELEM.querySelector('.tablink').click();
+            // If the user clicks anywhere outside the select box, close all select boxes
+            document.addEventListener('click', closeAllSelect);
+            // Add onclick listener to account button
+            MAIN_ELEM.querySelector('#tab_div button:nth-of-type(2)').addEventListener('click', function checkAccount() {
+                // If data was not received after buying items, request it now
+                if (!gotNewPurchases) {
+                    requestData({'account':true}, '/profile', showPurchases, 'account', true);
+                }
+            });
+            // Add onclick listener to history button
+            MAIN_ELEM.querySelector('#tab_div button:nth-of-type(3)').addEventListener('click', function checkHistory() {
+                // If data was not received after buying items, request it now
+                if (!gotNewHistory) {
+                    requestData({'history':true}, '/profile', showHistory, 'history', true);
+                }
+            });
+            (function() {
+                // Make animated press buttons
+                const pressBtns = document.body.getElementsByClassName('press-btn'),
+                    eyes = document.body.getElementsByClassName('toggle-password'),
+                    touchScreen = 'ontouchstart' in window;
+                    // For touchscreens and typical screens it needs to use different animation methods for press buttons
+                    // For laptops with touchscreens
+                    if (touchScreen && (screen.width > 1300 || screen.height > 1300)) {
+                        addTouchListeners(pressBtns);
+                        addMouseListeners(pressBtns);
+                    // For desktops or laptops without touchscreens
+                    } else if (!touchScreen) {
+                        addMouseListeners(pressBtns);
+                    // For tablets or smartphones
+                    } else {
+                        addTouchListeners(pressBtns);
+                    }
+                // Make the password visible or invisible on clicking an eye
+                for (let i = 0, j = eyes.length; i < j; i++) {
+                    eyes[i].addEventListener('click', function() {
+                        const inpt = this.parentNode.querySelector('input');
+                        if (this.classList.contains('fa-eye-slash')) {
+                            this.classList.remove('fa-eye-slash');
+                            this.classList.add('fa-eye');
+                        } else {
+                            this.classList.add('fa-eye-slash');
+                            this.classList.remove('fa-eye');
+                        }
+                        inpt.type === 'password' ? inpt.type = 'text' : inpt.type = 'password';
+                    });
+                }
+            })();
+            window.addEventListener('resize', setRowHeight);
+            function showItems(success, data) {
+                // Rows count starts with 3 element from the end
+                let rowNumber = CART_ITEMS.children.length - 2;
+                if (success) {
+                    const itemStore = MAIN_ELEM.querySelector('#items_store'),
+                        itemsRow = itemStore.children[0],
+                        cartBtns = CART_ITEMS.querySelector('#for_btns');
+                    let item;
+                    itemStore.innerHTML += data;
+                    for (let i = 0, j = cart.length; i < j; i++) {
+                        // Add a new row for each group of 3 items
+                        if (i % 3 === 0) {
+                            CART_ITEMS.insertBefore(itemsRow.cloneNode(false), cartBtns);
+                            rowNumber++;
+                        }
+                        item = itemStore.querySelector('#item' + cart[i]);
+                        CART_ITEMS.children[rowNumber].appendChild(item);
+                    }
+                    setSelects(true);
+                } else {
+                    const cartMessage = CART_ITEMS.querySelector('p');
+                    cartMessage.innerText = 'Sorry, cannot load your items';
+                    cartMessage.classList.remove('w3-hide');
+                }
+            }
+            function showPurchases(success, data) {
+                const purchaseMessage = ACCOUNT.querySelector('p');
+                if (success) {
+                    const purchasesTable = ACCOUNT.querySelector('#purchases_table');
+                    if (data.length > 0) {
+                        const userItems = ACCOUNT.querySelector('#user_items');
+                        let tableRows = '';
+                        for (let i = 0, j = data.length; i < j; i++) {
+                            tableRows += '<tr><td>' + data[i]['name'] + '</td><td>' + data[i]['number'] + '</td></tr>';
+                        }
+                        purchasesTable.classList.remove('w3-hide');
+                        userItems.innerHTML = tableRows;
+                        purchaseMessage.classList.add('w3-hide');
+                    }
+                    gotNewPurchases = true;
+                } else {
+                    purchaseMessage.innerText = 'Sorry, couldn\'t load your purchases data';
+                    purchaseMessage.classList.remove('w3-hide');
+                }
+            }
+            function showHistory(success, data) {
+                const historyMessage = HISTORY.querySelector('p');
+                if (success) {
+                    const historyTable = HISTORY.querySelector('#history_table');
+                    if (data.length > 0) {
+                        const userHistory = HISTORY.querySelector('#user_history');
+                        let tableRows = '';
+                        for (let i = 0, j = data.length; i < j; i++) {
+                            tableRows += '<tr><td>' + data[i]['name'] + '</td><td>' + data[i]['price'] + '</td><td>' +
+                                            data[i]['number'] + '</td><td>' + data[i]['price'] * data[i]['number'] + '</td><td>' + data[i]['date'] + '</td></tr>';
+                        }
+                        historyTable.classList.remove('w3-hide');
+                        userHistory.innerHTML = tableRows;
+                        historyMessage.classList.add('w3-hide');
+                    } else {
+                        historyMessage.innerText = 'You have not bought anything yet';
+                        historyMessage.classList.remove('w3-hide');
+                    }
+                    gotNewHistory = true;
+                } else {
+                    historyMessage.innerText = 'Sorry, couldn\'t load your history data';
+                    historyMessage.classList.remove('w3-hide');
+                }
+            }
+            function showCartMessage() {
+                const cartMessage = CART_ITEMS.querySelector('p');
+                cartMessage.innerText = 'You do not have any items in your cart';
+                cartMessage.classList.remove('w3-hide');
+            }
+            function openTab(evt, name) {
+                const tabContents = MAIN_ELEM.getElementsByClassName('tab-content'),
+                    tabLinks = MAIN_ELEM.getElementsByClassName('tablink');
+                for (let i = 0, j = tabContents.length; i < j; i++) {
+                    tabContents[i].style.display = 'none';
+                    tabLinks[i].classList.remove('active-tab-link');
+                }
+                MAIN_ELEM.querySelector('#' + name).style.display = 'block';
+                evt.currentTarget.classList.add('active-tab-link');
+            }
+            function addTouchListeners(pressBtns) {
+                for (let i = 0, j = pressBtns.length; i < j; i++) {
+                    pressBtns[i].addEventListener('pointerdown', function() {
+                        this.classList.add('pressed');
+                    });
+                    pressBtns[i].addEventListener('touchend', function() {
+                        this.classList.remove('pressed');
+                    });
+                    pressBtns[i].addEventListener('touchcancel', function() {
+                        this.classList.remove('pressed');
+                    });
+                }
+            }
+            function addMouseListeners(pressBtns) {
+                for (let i = 0, j = pressBtns.length; i < j; i++) {
+                    pressBtns[i].addEventListener('mousedown', function() {
+                        this.classList.add('pressed');
+                    });
+                    pressBtns[i].addEventListener('mouseup', function() {
+                        this.classList.remove('pressed');
+                    });
+                    pressBtns[i].addEventListener('mouseleave', function() {
+                        this.classList.remove('pressed');
+                    });
+                }
+            }
+            // Common AJAX function for sending and loading data
+            function requestData(data, url, cFunction, name, parsing) {
+                // Show a loader
+                document.body.querySelector('.spin-' + name).style.display = 'block';
+                const xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState === 4 && this.status === 200) {
+                        // Hide a loader
+                        document.body.querySelector('.spin-' + name).style.display = 'none';
+                        parsing ? cFunction(true, JSON.parse(this.responseText)) : cFunction(true, this.responseText);
+                    } else if (this.status >= 500) {
+                        showErrorBar();
+                        // Hide a loader
+                        document.body.querySelector('.spin-' + name).style.display = 'none';
+                        cFunction(false);
+                    }
+                };
+                xmlhttp.open('POST', url, true);
+                xmlhttp.setRequestHeader('Content-type', 'application/json');
+                xmlhttp.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+                xmlhttp.send(JSON.stringify(data));
+            }
+            function setSelects(firstTime) {
+                const selects = CART_ITEMS.getElementsByTagName('select');
+                for (let i = 0, j = selects.length; i < j; i++) {
+                    let options = '',
+                        // Getting a previous selected index
+                        prevSelectedOption = selects[i].selectedIndex,
+                        messageContainer = selects[i].parentNode.parentNode.parentNode.nextElementSibling,
+                        // Quantity of an item
+                        ItemQuantity = itemsFromDB[cart[i]]['current_number'];
+                    // Write names and prices of items on the first loading
+                    if (firstTime) {
+                        selects[i].parentNode.parentNode.previousElementSibling.previousElementSibling.innerText = itemsFromDB[cart[i]]['name'];
+                        selects[i].parentNode.parentNode.previousElementSibling.innerText += itemsFromDB[cart[i]]['price'];
+                    // For updating custom selects it needs to remove old ones
+                    } else {
+                        selects[i].parentNode.removeChild(selects[i].nextElementSibling);
+                        selects[i].parentNode.removeChild(selects[i].nextElementSibling);
+                    }
+                    // If an item is out of stock directly when the user moved to this page or after attempting to buy an item
+                    if (ItemQuantity === 0) {
+                        addMessage(messageContainer);
+                        // There is no need to create options immediately after loading a page
+                        if (prevSelectedOption === 0) {
+                            continue;
+                        }
+                        // Otherwise set default option to 0 and go further
+                        prevSelectedOption = 0;
+                        messageContainer.querySelector('span').classList.remove('w3-hide');
+                        messageContainer.querySelector('p').innerText = 'This item is out of stock';
+                    } else if (ItemQuantity < prevSelectedOption) {
+                        // In case if a user picked some number of an item, but during choosing the quantity
+                        // someone has alredy bought the same item and now there is available less number of this item
+                        addMessage(messageContainer);
+                        messageContainer.querySelector('span').classList.add('w3-hide');
+                        messageContainer.children[1].firstElementChild.innerText = 'Sorry, there is no such quantity (' + prevSelectedOption + ') of this item';
+                        // Set the quantity to the dafault value in order to make a user picking the quantity from new available options
+                        prevSelectedOption = 0;
+                    }
+                    // Add to a select the number of options according to the number of this item in database
+                    for (let k = 0; k <= ItemQuantity; k++) {
+                        k === 0 ? options += '<option value="' + k + '">Quantity</option>' : options += '<option value="' + k + '">' + k + '</option>';
+                    }
+                    // Create a new select based on data from DB
+                    selects[i].innerHTML = options;
+                    // Set selected option
+                    selects[i].selectedIndex = prevSelectedOption;
+                }
+                createCustomSelects();
+                if (firstTime) {
+                    setRowHeight();
+                    firstLoad = false;
+                }
+            }
+            function createCustomSelects() {
+                // Variables for custom select
+                let customDivs, selElmnt, selField, selMenu, selItem;
+                // Look for any elements with the class "custom-select":
+                customDivs = CART_ITEMS.getElementsByClassName('custom-select');
+                for (let i = 0, k = customDivs.length; i < k; i++) {
+                    selElmnt = customDivs[i].querySelector('select');
+                    // For each element, create a new DIV that will act as the selected item:
+                    selField = document.createElement('DIV');
+                    selField.setAttribute('class', 'select-selected');
+                    selField.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+                    customDivs[i].appendChild(selField);
+                    // For each element, create a new DIV that will contain the option list:
+                    selMenu = document.createElement('DIV');
+                    selMenu.setAttribute('class', 'select-items select-hide');
+                    for (let j = 1, x = selElmnt.length; j < x; j++) {
+                        // For each option in the original select element,
+                        // create a new DIV that will act as an option item:
+                        selItem = document.createElement('DIV');
+                        selItem.innerHTML = selElmnt.options[j].innerHTML;
+                        selItem.addEventListener('click', function(e) {
+                            // When an item is clicked, update the original select box, and the selected item:
+                            let prevSelected, origSelect, prevSib;
+                            origSelect = this.parentNode.parentNode.querySelector('select');
+                            prevSib = this.parentNode.previousElementSibling;
+                            for (let i = 0, k = origSelect.length; i < k; i++) {
+                                if (origSelect.options[i].innerHTML === this.innerHTML) {
+                                    origSelect.selectedIndex = i;
+                                    prevSib.innerHTML = this.innerHTML;
+                                    prevSelected = this.parentNode.querySelector('.same-as-selected');
+                                    if (prevSelected) {
+                                        prevSelected.removeAttribute('class');
+                                    }
+                                    this.setAttribute('class', 'same-as-selected');
+                                    break;
+                                }
+                            }
+                            count(this);
+                            prevSib.click();
+                            checkBuying();
+                        });
+                        selMenu.appendChild(selItem);
+                    }
+                    customDivs[i].appendChild(selMenu);
+                    selField.addEventListener('click', function(e) {
+                        // When the select box is clicked, close any other select boxes,
+                        // and open/close the current select box:
+                        e.stopPropagation();
+                        closeAllSelect(this);
+                        this.nextElementSibling.classList.toggle('select-hide');
+                        this.classList.toggle('select-arrow-active');
+                    });
+                }
+            }
+            function closeAllSelect(elmnt) {
+                // A function that will close all select boxes in the document,
+                // except the current select box:
+                const selMenus = CART_ITEMS.getElementsByClassName('select-items'),
+                    selFields = CART_ITEMS.getElementsByClassName('select-selected');
+                for (let i = 0, j = selFields.length; i < j; i++) {
+                    if (elmnt !== selFields[i]) {
+                        selFields[i].classList.remove('select-arrow-active');
+                        selMenus[i].classList.add('select-hide');
+                    }
+                }
+            }
+            function count(elem) {
+                const number = elem.parentNode.parentNode.children[0].selectedIndex,
+                    itemId = elem.parentNode.parentNode.parentNode.parentNode.nextElementSibling.querySelector('button').id;
+                pickedItems[itemId] = number;
+                // In case if a user has changed the quantity of an item it needs to update a value of total
+                // not just add the sum of a new item
+                total = 0;
+                for (key in pickedItems) {
+                    total += itemsFromDB[key]['price'] * pickedItems[key];
+                }
+                updateTotal();
+            }
+            function buy() {
+                const selects = CART_ITEMS.getElementsByTagName('select'),
+                    selLength = selects.length;
+                // In case if cannot load items from the server and user clicked the buy button
+                if (selLength === 0 || userCash < total) {
+                    return;
+                }
+                for (let i = 0; i < selLength; i++) {
+                    // newTotal += selects[i].selectedIndex * btns[i].id;
+                    if (selects[i].length > 1 && selects[i].selectedIndex === 0) {
+                        BUY_ERROR.innerText = 'Specify the quantities of all items.';
+                        BUY_ERROR.classList.remove('w3-hide');
+                        return;
+                    }
+                }
+                BUY_ERROR.classList.add('w3-hide');
+                if (Object.keys(pickedItems).length > 0) {
+                    requestData({'total':total, 'items':pickedItems}, '/profile', showResult, 'cart', true);
+                }
+            }
+            function removeAllItems() {
+                for (let i = 0, j = cart.length; i < j; i++) {
+                    removeItemBehind(cart[i]);
+                }
+                cart = [];
+                total = 0;
+                pickedItems = {};
+                updateCount();
+                updateTotal();
+                checkBuying();
+                if (alwaysUpdateStorg) {
+                    // Update storage
+                    setStorageObj('cart', cart);
+                }
+            }
+            function showResult(success, response) {
+                if (success) {
+                    if (response['bought']) {
+                        showSuccessBar();
+                        userCash -= total;
+                        BUY_ERROR.classList.add('w3-hide');
+                        removeAllItems();
+                    } else {
+                        let newCart = [];
+                        const cancelledItems = response['cancelledItems'],
+                            pickedItemsLen = Object.keys(pickedItems).length;
+                        if (pickedItemsLen === 1 || pickedItemsLen === cancelledItems.length) {
+                            showErrorBar('Sorry, your item(s) could not be bought');
+                        } else {
+                            showSuccessBar('Almost successfully, but one or more items couldn\'t be bought', 7000);
+                        }
+                        itemsFromDB = response['rows'];
+                        for (let i = 0, j = cart.length; i < j; i++) {
+                            cancelledItems.includes(cart[i]) ? newCart.push(cart[i]) : removeItemBehind(cart[i]);
+                        }
+                        userCash -= response['total'];
+                        cart = newCart.sort(function(a, b){return a - b;});
+                        updateCount();
+                        if (alwaysUpdateStorg) {
+                            // Update storage
+                            setStorageObj('cart', cart);
+                        }
+                        setSelects(false);
+                        BUY_ERROR.innerText = 'One or more items could not be bought';
+                        BUY_ERROR.classList.remove('w3-hide');
+                        pickedItems = {};
+                    }
+                    // Set these variables to false in order to request new updated data from database
+                    // if a user will click on account or history
+                    gotNewHistory = false;
+                    gotNewPurchases = false;
+                    total = 0;
+                    updateCash();
+                    updateTotal();
+                } else {
+                    showErrorBar();
+                }
+            }
+            function removeItem(elem) {
+                const position = cart.indexOf(parseInt(elem.id));
+                let item = elem.parentNode.parentNode.parentNode.parentNode;
+                if (pickedItems[elem.id]) {
+                    total -= itemsFromDB[elem.id]['price'] * pickedItems[elem.id];
+                    delete pickedItems[elem.id];
+                    updateTotal();
+                }
+                cart.splice(position, 1);
+                item.parentNode.removeChild(item);
+                updateCount();
+                checkBuying();
+                if (alwaysUpdateStorg) {
+                    // Update storage
+                    setStorageObj('cart', cart);
+                }
+            }
+            function removeItemBehind(id) {
+                let item = CART_ITEMS.querySelector('#item' + id);
+                if (item) {
+                    item.parentNode.removeChild(item);
+                }
+            }
+            function updateCash() {
+                CART_ITEMS.querySelector('.user-cash').innerText = userCash;
+                ACCOUNT.querySelector('.user-cash').innerText = userCash;
+            }
+            function updateTotal() {
+                CART_ITEMS.querySelector('#total').innerText = total;
+            }
+            function updateAllCash() {
+                ACCOUNT.querySelector('.all-user-cash').innerText = allUserCash;
+            }
+            function addMessage(container) {
+                if (!container.querySelector('.item-message')) {
+                    // Show a message that an item is sold out
+                    container.appendChild(MESSAGE.cloneNode(true));
+                }
+            }
+            // Open a modal
+            function openModal(name) {
+                if (name === 'Add') {
+                    ADD_MODAL.style.display = 'block';
+                } else if (name === 'Change') {
+                    CHANGE_MODAL.style.display = 'block';
+                } else {
+                    WITHDRAW_MODAL.style.display = 'block';
+                }
+                window.addEventListener('click', window['check' + name]);
+            }
+            // Onclick check if a user clicked outside the modal, if so, close it
+            function checkAdd(event) {
+                if (event.target === ADD_MODAL) {
+                    closeModal(ADD_MODAL.getAttribute('name'));
+                }
+            }
+            // Onclick check if a user clicked outside the modal, if so, close it
+            function checkWithdraw(event) {
+                if (event.target === WITHDRAW_MODAL) {
+                    closeModal(WITHDRAW_MODAL.getAttribute('name'));
+                }
+            }
+            // Onclick check if a user clicked outside the modal, if so, close it
+            function checkChange(event) {
+                if (event.target === CHANGE_MODAL) {
+                    closeModal(CHANGE_MODAL.getAttribute('name'));
+                }
+            }
+            function closeModal(name) {
+                let formControls, modal;
+                if (name === 'Add') {
+                    ADD_MODAL.style.display = 'none';
+                    modal = ADD_MODAL;
+                } else if (name === 'Change') {
+                    CHANGE_MODAL.style.display = 'none';
+                    modal = CHANGE_MODAL;
+                } else {
+                    WITHDRAW_MODAL.style.display = 'none';
+                    modal = WITHDRAW_MODAL;
+                }
+                window.removeEventListener('click', window['check' + name]);
+                formControls = modal.getElementsByClassName('form-control');
+                for (let i = 0, j = formControls.length; i < j; i++) {
+                    formControls[i].classList.remove('error');
+                    formControls[i].querySelector('input').value = '';
+                }
+            }
+            // Check validity of an input for adding cash
+            function add() {
+                const cashInput = ADD_MODAL.querySelector('input');
+                let cashValue = cashInput.value.trim();
+
+                if (cashValue === '') {
+                    setErrorFor(cashInput, 'Please provide your adding cash');
+            	    return;
+                } else if (!/^[0-9]+$/.test(cashValue)) {
+                    setErrorFor(cashInput, 'Value must be a positive integer');
+                    return;
+                }
+                cashValue = parseInt(cashValue);
+                if (cashValue < 1) {
+                    setErrorFor(cashInput, 'Please enter a valid value');
+                    return;
+                } else if (cashValue > 5000) {
+                    setErrorFor(cashInput, 'You cannot add more than 5000$ at once');
+                    return;
+                } else if ((cashValue + allUserCash) > MAX_CASH) {
+                    setErrorFor(cashInput, 'You cannot have more than ' + MAX_CASH +'$ on your account');
+                    return;
+                } else {
+                    requestData({'data':'add', 'value':cashValue}, '/data-change', cashResult, 'add', true);
+                    removeErrorFor(cashInput);
+                }
+            }
+            function cashResult(success, data) {
+                if (success) {
+                    let cash = data['cash'];
+                    if (data['action'] === 'add') {
+                        userCash += cash;
+                        allUserCash += cash;
+                    } else {
+                        userCash -= cash;
+                        allUserCash -= cash;
+                    }
+                    showSuccessBar();
+                    updateCash();
+                    updateAllCash();
+                    checkBuying();
+                }
+            }
+            // Check validity of an input for withdrawing cash
+            function withdraw() {
+                const cashInput = WITHDRAW_MODAL.querySelector('input');
+                let cashValue = cashInput.value.trim();
+
+                if (cashValue === '') {
+                    setErrorFor(cashInput, 'Please provide your adding cash');
+            	    return;
+                } else if (!/^[0-9]+$/.test(cashValue)) {
+                    setErrorFor(cashInput, 'Value must be a positive integer');
+                    return;
+                }
+                cashValue = parseInt(cashValue);
+                if (cashValue < 1) {
+                    setErrorFor(cashInput, 'Please enter a valid value');
+                    return;
+                } else if (cashValue > userCash) {
+                    setErrorFor(cashInput, 'You do not have ' + cashValue + '$ on your account');
+                    return;
+                } else {
+                    requestData({'data':'withdraw', 'value':cashValue}, '/data-change', cashResult, 'withdraw', true);
+                    removeErrorFor(cashInput);
+                }
+            }
+            function showSuccessBar(text='Successfully', time = 4000) {
+                SNACK_BAR.innerText = text;
+                SNACK_BAR.className = 'show success';
+                // After 5 seconds, remove the show class from DIV
+                setTimeout(function(){ SNACK_BAR.className = SNACK_BAR.className.replace('show ', ''); }, time);
+            }
+            function showErrorBar(text='Server does not respond', time = 6000) {
+                SNACK_BAR.innerText = text;
+                SNACK_BAR.className = 'show error';
+                // After 5 seconds, remove the show class from DIV
+                setTimeout(function(){ SNACK_BAR.className = SNACK_BAR.className.replace('show ', ''); }, time);
+            }
+            // Check validity of passwords
+            function validatePasswords() {
+                const oldPassword = CHANGE_MODAL.querySelector('input[name=oldpassword]'),
+                    oldPassValue = oldPassword.value.trim(),
+                    newPassword = CHANGE_MODAL.querySelector('input[name=password]'),
+                    newPassValue = newPassword.value.trim(),
+                    confirm = CHANGE_MODAL.querySelector('input[name=confirm]'),
+                    // The result of validation of all inputs
+                    result = validateOldPass(oldPassword, oldPassValue) + validateNewPass(newPassword, newPassValue) +
+                                validateConfirm(confirm, newPassword);
+
+                if (result === 3) {
+                    requestData({'data':'change', 'old_password':oldPassValue, 'new_password':newPassValue}, '/data-change', showAnswer, 'change', true);
+                }
+            }
+            // Validation of an old password
+            function validateOldPass(oldPassword, passValue) {
+                // Users can have account only with a strong password
+                const mediumRegEx = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*(\s|\t))(?=.{6,})(?!.{41,})/;
+
+                if (passValue === '') {
+                    setErrorFor(oldPassword, 'Please enter your password');
+                    return 0;
+                } else if (!mediumRegEx.test(passValue)) {
+                    setErrorFor(oldPassword, 'Wrong password');
+                    return 0;
+                } else if (containsImoji(oldPassword, passValue)) {
+                    return 0;
+                } else {
+                    removeErrorFor(oldPassword);
+                    return 1;
+                }
+            }
+            // Validation a new password
+            function validateNewPass(newPassword, passValue) {
+                if (passValue.trim() === '') {
+            	    setErrorFor(newPassword, 'Please enter your password');
+            	    return 0;
+                } else if (/^(?!.*[a-z])/.test(passValue)) {
+            	    setErrorFor(newPassword, 'Please add at least one lowercase letter');
+            	    return 0;
+            	} else if (/^(?!.*[A-Z])/.test(passValue)) {
+            	    setErrorFor(newPassword, 'Please add at least one uppercase letter');
+            	    return 0;
+            	} else if (/^(?!.*[0-9])/.test(passValue)) {
+            	    setErrorFor(newPassword, 'Please add one or more digits');
+            	    return 0;
+            	} else if (/^(?=.*(\s|\t))/.test(passValue)) {
+            	    setErrorFor(newPassword, 'Please remove all the whitespaces');
+            	    return 0;
+            	} else if (/^(?!.{6,})/.test(passValue)) {
+            	    setErrorFor(newPassword, 'Your password is too short');
+            	    return 0;
+            	} else if (/^(?=.{41,})/.test(passValue)) {
+            	    setErrorFor(newPassword, 'Your password is too long');
+            	    return 0;
+            	} else if (containsImoji(newPassword, passValue)) {
+                    return 0;
+                } else {
+                    removeErrorFor(newPassword);
+                    return 1;
+                }
+            }
+            // Validation a confirm password
+            function validateConfirm(confirm, password) {
+                // Validate a confirm password
+            	if (confirm.value.trim() === '') {
+            	    setErrorFor(confirm, 'Please confirm your password');
+            	    return 0;
+            	} else if (confirm.value !== password.value) {
+            	    setErrorFor(confirm, 'Your passwords do not match');
+            	    return 0;
+            	} else {
+            	    removeErrorFor(confirm);
+            	    return 1;
+            	}
+            }
+            // Show what the server responded, correct of not the old password was
+            function showAnswer(success, data) {
+                if (!success) {
+                    return;
+                }
+                let inputs = CHANGE_MODAL.querySelectorAll('input');
+                if (data['correct']) {
+                    for (let i = 0, j = inputs.length; i < j; i++) {
+                        inputs[i].value = '';
+                    }
+                    showSuccessBar();
+                } else {
+                    showErrorBar('Wrong password', 5000);
+                    setErrorFor(inputs[0], 'Your old password is wrong');
+                }
+            }
+            // Determine if there is an imoji in an input
+            function containsImoji(input, value) {
+                // Regex for imojis
+                let imojiRegEx = /(?:[\u2700-\u27bf]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\u0023-\u0039]\ufe0f?\u20e3|\u3299|\u3297|\u303d|\u3030|\u24c2|\ud83c[\udd70-\udd71]|\ud83c[\udd7e-\udd7f]|\ud83c\udd8e|\ud83c[\udd91-\udd9a]|\ud83c[\udde6-\uddff]|\ud83c[\ude01-\ude02]|\ud83c\ude1a|\ud83c\ude2f|\ud83c[\ude32-\ude3a]|\ud83c[\ude50-\ude51]|\u203c|\u2049|[\u25aa-\u25ab]|\u25b6|\u25c0|[\u25fb-\u25fe]|\u00a9|\u00ae|\u2122|\u2139|\ud83c\udc04|[\u2600-\u26FF]|\u2b05|\u2b06|\u2b07|\u2b1b|\u2b1c|\u2b50|\u2b55|\u231a|\u231b|\u2328|\u23cf|[\u23e9-\u23f3]|[\u23f8-\u23fa]|\ud83c\udccf|\u2934|\u2935|[\u2190-\u21ff])/;
+                if (imojiRegEx.test(value)) {
+            	    setErrorFor(input, 'Imojis are not allowed');
+            	    return true;
+                } else {
+                    return false;
+                }
+            }
+            // Trow an error to user if an input is invalid
+        	function setErrorFor(input, message) {
+            	const formControl = input.parentElement;
+            	if (formControl.classList.contains('success')) {
+            	    formControl.classList.remove('success');
+            	}
+            	formControl.classList.add('error');
+            	formControl.querySelector('small').innerText = message;
+            }
+            // Make style for success inout visible via adding a class
+            function removeErrorFor(input) {
+            	input.parentElement.classList.remove('error');
+            }
+            function checkBuying() {
+                if (userCash >= total) {
+                    BUY_ERROR.classList.add('w3-hide');
+                } else {
+                    BUY_ERROR.innerText = 'You do not have enough money';
+                    BUY_ERROR.classList.remove('w3-hide');
+                }
+            }
+            // On middle and small screen set the height of each row of an item to position the select at the bottom
+            function setRowHeight() {
+                const rows = CART_ITEMS.getElementsByClassName('w3-row'),
+                    currentWidth = window.innerWidth;
+                let rowWidth = CART_ITEMS.querySelector('.detector').offsetWidth - 16;
+                if (rows.length === 0) {
+                    return;
+                }
+                if (currentWidth < 993) {
+                    if (rowWidth > 800) {
+                        rowWidth = 800;
+                    }
+                    for (let i = 0, j = rows.length; i < j; i++) {
+                        rows[i].style.height = rowWidth / 12 * 5 + 'px';
+                    }
+                } else {
+                    if (!firstLoad && previousWidth < 993) {
+                        for (let i = 0, j = rows.length; i < j; i++) {
+                            rows[i].style.height = 'auto';
+                        }
+                    }
+                }
+                previousWidth = currentWidth;
+            }
+            // Retrieve data from jinja
+            function retrieve(data) {
+                return data;
+            }
+        </script>
+{% endblock %}

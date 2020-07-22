@@ -1,0 +1,315 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Mars
+{% endblock %}
+
+{% block style %}
+        <style>
+            /* Transparent bg for text */
+            .fix-text {
+                width: 100%;
+                background-color: rgba(0,0,0,0.6);
+                margin: 0 auto;
+            }
+            .sm-text {
+                font-size: 16px;
+            }
+            @media screen and (min-width:993px){.head-img{background-image:url("/static/images/solar-system/hero-mars-large.jpg");}}
+            @media screen and (max-width:992px){.sm-text{font-size:14px;}.head-img{background-image:url("/static/images/solar-system/hero-mars-medium.jpg");}}
+            @media screen and (max-width:600px){.head-img{height:76%;background-image:url("/static/images/solar-system/hero-mars-small.jpg");}}
+        </style>
+{% endblock %}
+
+{% block head_content %}
+            <div class="w3-display-bottomleft w3-center w3-margin-bottom w3-padding-large w3-hide-medium w3-hide-small">
+                <span class="w3-tag">Mars is there, waiting to be reached</span>
+            </div>
+            <div class="w3-display-top w3-center w3-padding-large">
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>MARS</b></h1>
+            </div>
+            <div class="w3-display-bottomright w3-center w3-margin-bottom w3-padding-large tag-text">
+                <span id="bigger_font" class="contour w3-text-white">Mars is the only known planet inhabited solely by robots</span>
+            </div>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center blue-grey-grad w3-bottombar w3-border-amber w3-padding-64 header-text">General information</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System after Mercury.
+                            In English, Mars carries the name of the Roman god of war and is often referred to as the 'Red Planet'.
+                            The latter refers to the effect of the iron oxide prevalent on Mars' surface, which gives it a reddish appearance distinctive among
+                            the astronomical bodies visible to the naked eye. Mars is a terrestrial planet with a thin atmosphere,
+                            with surface features reminiscent of the impact craters of the Moon and the valleys, deserts and polar ice caps of Earth.
+                        </p>
+                        <p>
+                            The days and seasons are comparable to those of Earth, because the rotational period as well as the tilt of the rotational axis
+                            relative to the ecliptic plane are similar. Mars is the site of Olympus Mons, the largest volcano and highest known mountain on
+                            any planet in the Solar System and of Valles Marineris, one of the largest canyons in the Solar System. The smooth Borealis basin
+                            in the northern hemisphere covers 40% of the planet and may be a giant impact feature. Mars has two moons, Phobos and Deimos,
+                            which are small and irregularly shaped. These may be captured asteroids, similar to 5261 Eureka, a Mars trojan.
+                        </p>
+                        <p>
+                            Mars has been explored by unmanned spacecraft. Mariner 4, launched by NASA on November 28, 1964, was the first spacecraft to visit Mars,
+                            making its closest approach to the planet on July 15, 1965. Mariner 4 detected the weak Martian radiation belt,
+                            measured at about 0.1% that of Earth and captured the first images of another planet from deep space. On July 20, 1976,
+                            Viking 1 performed the first successful landing on the Martian surface. The Soviet Mars 3 spacecraft achieved a soft landing
+                            in December 1971 but contact was lost with its lander seconds after touchdown. On July 4, 1997, the Mars Pathfinder spacecraft landed
+                            on Mars and on July 5 released its rover, Sojourner, the first robotic rover to operate on Mars. Pathfinder was followed by
+                            the Mars Exploration Rovers, Spirit and Opportunity, which landed on Mars in January 2004 and operated until March 22,
+                            2010 and June 10, 2018, respectively. The Mars Express orbiter, the first European Space Agency spacecraft to visit Mars,
+                            arrived in orbit on December 25, 2003. On September 24, 2014, the Indian Space Research Organization became the fourth space agency to visit Mars,
+                            when its maiden interplanetary mission, the Mars Orbiter Mission spacecraft, arrived in orbit.
+                        </p>
+                        <p>
+                            There are investigations assessing the past habitability of Mars, as well as the possibility of extant life. Astrobiology missions are planned,
+                            including the Perseverance and Rosalind Franklin rovers. Liquid water cannot exist on the surface of Mars due to low atmospheric pressure,
+                            which is less than 1% of the atmospheric pressure on Earth, except at the lowest elevations for short periods.
+                            The two polar ice caps appear to be made largely of water. The volume of water ice in the south polar ice cap, if melted,
+                            would be sufficient to cover the planetary surface to a depth of 11 meters (36 ft). In November 2016,
+                            NASA reported finding a large amount of underground ice in the Utopia Planitia region.
+                            The volume of water detected has been estimated to be equivalent to the volume of water in Lake Superior.
+                        </p>
+                        <p>
+                            Mars can easily be seen from Earth with the naked eye, as can its reddish coloring. Its apparent magnitude reaches −2.94,
+                            which is surpassed only by Venus, the Moon and the Sun. Optical ground-based telescopes are typically limited to resolving features
+                            about 300 kilometers (190 mi) across when Earth and Mars are closest because of Earth's atmosphere.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center dark-brown-grad w3-bottombar w3-border-amber w3-padding-64 header-text">Internal structure</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Like Earth, Mars has differentiated into a dense metallic core overlaid by less dense materials.
+                            Current models of its interior imply a core with a radius of about 1,794 ± 65 kilometers (1,115 ± 40 mi),
+                            consisting primarily of iron and nickel with about 16–17% sulfur. This iron(II) sulfide core is thought to be twice as rich
+                            in lighter elements as Earth's. The core is surrounded by a silicate mantle that formed many of the tectonic
+                            and volcanic features on the planet, but it appears to be dormant. Besides silicon and oxygen,
+                            the most abundant elements in the Martian crust are iron, magnesium, aluminum, calcium, and potassium.
+                            The average thickness of the planet's crust is about 50 km (31 mi),
+                            with a maximum thickness of 125 km (78 mi). Earth's crust averages 40 km (25 mi).
+                        </p>
+                        <p>
+                            Mars is seismically active, with InSight recording over 450 marsquakes and related events in 2019.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center red-orange-grad w3-bottombar w3-border-amber w3-padding-64 header-text">Atmosphere</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Mars lost its magnetosphere 4 billion years ago, possibly because of numerous asteroid strikes,
+                            so the solar wind interacts directly with the Martian ionosphere, lowering the atmospheric density by stripping away atoms
+                            from the outer layer. Both Mars Global Surveyor and Mars Express have detected ionised atmospheric particles
+                            trailing off into space behind Mars, and this atmospheric loss is being studied by the MAVEN orbiter. Compared to Earth,
+                            the atmosphere of Mars is quite rarefied. Atmospheric pressure on the surface today ranges from a low of 30 Pa (0.030 kPa)
+                            on Olympus Mons to over 1,155 Pa (1.155 kPa) in Hellas Planitia, with a mean pressure at the surface level of 600 Pa (0.60 kPa).
+                            The highest atmospheric density on Mars is equal to that found 35 km (115,000 ft) above Earth's surface.
+                            The resulting mean surface pressure is only 0.6% of that of Earth (101.3 kPa).
+                            The scale height of the atmosphere is about 10.8 km (35,000 ft), which is higher than Earth's, 6 km (20,000 ft),
+                            because the surface gravity of Mars is only about 38% of Earth's, an effect offset by both the lower temperature
+                            and 50% higher average molecular weight of the atmosphere of Mars.
+                        </p>
+                        <p>
+                            The atmosphere of Mars consists of about 96% carbon dioxide, 1.93% argon and 1.89% nitrogen along with traces of oxygen and water.
+                            The atmosphere is quite dusty, containing particulates about 1.5 µm in diameter which give
+                            the Martian sky a tawny color when seen from the surface. It may take on a pink hue due to iron oxide particles suspended in it.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="fix-text w3-container w3-margin-top w3-margin-bottom w3-padding w3-round">
+                        <p>
+                            &#8220;Going to Mars would evolve humankind into a two-planet species&#8221;
+                        </p>
+                        <p>
+                            - Buzz Aldrin
+                        </p>
+                    </div>
+                    <div class="w3-center">
+                        <picture>
+                            <!--/static/images/solar-system/mars-small.jpg-->
+                            <source class="load-after-body" media="(max-width: 600px)" />
+                            <!--/static/images/solar-system/mars-medium.jpg-->
+                            <source class="load-after-body" media="(max-width: 992px)" />
+                            <!--/static/images/solar-system/mars-large.jpg-->
+                            <img class="load-after-body" alt="Mars" style="width:100%;" />
+                        </picture>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center orange-grad w3-bottombar w3-border-indigo w3-padding-64 header-text">Habitability and search for life</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The current understanding of planetary habitability—the ability of a world to develop environmental conditions favorable
+                            to the emergence of life—favors planets that have liquid water on their surface. Most often this requires the orbit of
+                            a planet to lie within the habitable zone, which for the Sun extends from just beyond Venus to about the semi-major axis of Mars.
+                            During perihelion, Mars dips inside this region, but Mars's thin (low-pressure) atmosphere prevents liquid water from existing
+                            over large regions for extended periods. The past flow of liquid water demonstrates the planet's potential for habitability.
+                            Recent evidence has suggested that any water on the Martian surface may have been too salty and acidic to support regular terrestrial life.
+                        </p>
+                        <p>
+                            The lack of a magnetosphere and the extremely thin atmosphere of Mars are a challenge: the planet has little heat transfer across its surface,
+                            poor insulation against bombardment of the solar wind and insufficient atmospheric pressure to retain water in a liquid form
+                            (water instead sublimes to a gaseous state). Mars is nearly, or perhaps totally, geologically dead; the end of volcanic activity has apparently stopped
+                            the recycling of chemicals and minerals between the surface and interior of the planet
+                        </p>
+                        <p>
+                            In situ investigations have been performed on Mars by the Viking landers, Spirit and Opportunity rovers, Phoenix lander, and Curiosity rover.
+                            Evidence suggests that the planet was once significantly more habitable than it is today, but whether living organisms ever existed there remains unknown.
+                            The Viking probes of the mid-1970s carried experiments designed to detect microorganisms in Martian soil at their respective landing sites and
+                            had positive results, including a temporary increase of CO2 production on exposure to water and nutrients. This sign of life was later disputed by scientists,
+                            resulting in a continuing debate, with NASA scientist Gilbert Levin asserting that Viking may have found life. A re-analysis of the Viking data,
+                            in light of modern knowledge of extremophile forms of life, has suggested that the Viking tests were not sophisticated enough to detect these forms of life.
+                            The tests could even have killed a (hypothetical) life form. Tests conducted by the Phoenix Mars lander have shown that the soil has an alkaline pH and
+                            it contains magnesium, sodium, potassium and chloride. The soil nutrients may be able to support life, but life would still have to be shielded from
+                            the intense ultraviolet light. A recent analysis of martian meteorite EETA79001 found 0.6 ppm ClO−4, 1.4 ppm ClO−3, and 16 ppm NO−3, most likely of Martian origin.
+                            The ClO−3 suggests the presence of other highly oxidizing oxychlorines, such as ClO−2 or ClO, produced both by UV oxidation of Cl and X-ray radiolysis of ClO−4.
+                            Thus, only highly refractory and/or well-protected (sub-surface) organics or life forms are likely to survive.
+                        </p>
+                    </div>
+                    <div class="w3-row-padding w3-stretch w3-grey w3-center" style="width:100%;margin:0;padding:0;">
+                        <div class="w3-container w3-light-grey w3-margin-bottom">
+                            <h3>Possible life</h3>
+                        </div>
+                        <div class="w3-col m6 w3-margin-bottom">
+                            <picture>
+                                <!--/static/images/solar-system/mars2-sm-md.jpg-->
+                                <source class="last-load" media="(max-width: 992px)" />
+                                <!--/static/images/solar-system/mars2-large.jpg-->
+                                <img class="last-load" alt="A possible site for preserved ancient life on Mars" style="width:100%;" />
+                            </picture>
+                            <div class="w3-container w3-light-grey">
+                                <p class="sm-text">Detection of impact glass deposits (green spots) at Alga crater, a possible site for preserved ancient life.</p>
+                            </div>
+                        </div>
+                        <div class="w3-col m6 w3-margin-bottom">
+                            <picture>
+                                <!--/static/images/solar-system/mars3-sm-md.jpg-->
+                                <source class="last-load" media="(max-width: 992px)" />
+                                <!--/static/images/solar-system/mars3-large.jpg-->
+                                <img class="last-load" alt="Geological formations probably formed under water on Mars" style="width:100%;" />
+                            </picture>
+                            <div class="w3-container w3-light-grey">
+                                <p class="sm-text">This image from Gale crater in 2018 prompted speculation that some shapes were worm-like fossils, but they were geological formations probably formed under water.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-padding">
+                        <p>
+                            A 2014 analysis of the Phoenix WCL showed that the Ca(ClO4)2 in the Phoenix soil has not interacted with liquid water of any form, perhaps for as long as 600 Myr.
+                            If it had, the highly soluble Ca(ClO4)2 in contact with liquid water would have formed only CaSO4. This suggests a severely arid environment, with minimal
+                            or no liquid water interaction.
+                        </p>
+                        <p>
+                            Scientists have proposed that carbonate globules found in meteorite ALH84001, which is thought to have originated from Mars, could be fossilized microbes extant
+                            on Mars when the meteorite was blasted from the Martian surface by a meteor strike some 15 million years ago. This proposal has been met with skepticism,
+                            and an exclusively inorganic origin for the shapes has been proposed.
+                        </p>
+                        <p>
+                            Small quantities of methane and formaldehyde detected by Mars orbiters are both claimed to be possible evidence for life,
+                            as these chemical compounds would quickly break down in the Martian atmosphere. Alternatively, these compounds may instead be replenished
+                            by volcanic or other geological means, such as serpentinization.
+                        </p>
+                        <p>
+                            Impact glass, formed by the impact of meteors, which on Earth can preserve signs of life, has been found on the surface of the impact craters on Mars. Likewise,
+                            the glass in impact craters on Mars could have preserved signs of life if life existed at the site.
+                        </p>
+                        <p>
+                            In May 2017, evidence of the earliest known life on land on Earth may have been found in 3.48-billion-year-old geyserite and other related mineral deposits
+                            (often found around hot springs and geysers) uncovered in the Pilbara Craton of Western Australia. These findings may be helpful in deciding
+                            where best to search for early signs of life on the planet Mars.
+                        </p>
+                        <p>
+                            In early 2018, media reports speculated that certain rock features at a site called Jura looked like a type of fossil, but project scientists say
+                            the formations likely resulted from a geological process at the bottom of an ancient drying lakebed,
+                            and are related to mineral veins in the area similar to gypsum crystals.
+                        </p>
+                        <p>
+                            On June 7, 2018, NASA announced that the Curiosity rover had discovered organic compounds in sedimentary rocks dating to three billion years old,
+                            indicating that some of the building blocks for life were present.
+                        </p>
+                        <p>
+                            In July 2018, scientists reported the discovery of a subglacial lake on Mars, the first known stable body of water on the planet.
+                            It sits 1.5 km (0.9 mi) below the surface at the base of the southern polar ice cap and is about 20 km (12 mi) wide.
+                            The lake was discovered using the MARSIS radar on board the Mars Express orbiter, and the profiles were collected between May 2012 and December 2015.
+                            The lake is centered at 193°E, 81°S, a flat area that does not exhibit any peculiar topographic characteristics.
+                            It is mostly surrounded by higher ground except on its eastern side, where there is a depression.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="w3-row-padding w3-stretch">
+                        <div class="w3-col l2 m4 s6 w3-left w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/earth">
+                                    <!--https://www.technewsworld.com/article_images/story_graphics_xlarge/xl-2020-earth-1.jpg-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>Earth</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-right w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/jupiter">
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>Jupiter</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+{% block info %}
+                <span>The source of most text information is</span>
+                <a class="source" href="https://en.wikipedia.org/wiki/Mars" target="_blank">Wikipedia</a>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            // Load images after a page has loaded
+            loadImgsAfterBody([
+                '/static/images/solar-system/mars-small.jpg',
+                '/static/images/solar-system/mars-medium.jpg',
+                '/static/images/solar-system/mars-large.jpg'
+            ], true);
+            // Load images when a user has scrolled down the middle of a page
+            loadAfterScrollMid([
+                '/static/images/solar-system/mars2-sm-md.jpg',
+                '/static/images/solar-system/mars2-large.jpg',
+                '/static/images/solar-system/mars3-sm-md.jpg',
+                '/static/images/solar-system/mars3-large.jpg',
+                'https://www.technewsworld.com/article_images/story_graphics_xlarge/xl-2020-earth-1.jpg',
+                'https://ak.picdn.net/shutterstock/videos/3217210/thumb/1.jpg'
+            ]);
+            // Make a link to the current page active
+            makeActive('.mars');
+        </script>
+{% endblock %}

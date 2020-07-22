@@ -1,0 +1,333 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Asteroid belt
+{% endblock %}
+
+{% block style %}
+        <style>
+            /* Transparent bg for text */
+            .fix-text {
+                width: 100%;
+                background-color: rgba(0,0,0,0.6);
+                margin: 0 auto;
+            }
+            .sm-text {
+                font-size: 16px;
+            }
+            @media screen and (min-width:993px){.head-img{background-image:url("/static/images/solar-system/hero-asteroid-large.jpg");}}
+            @media screen and (max-width:992px){.sm-text{font-size:14px;}.head-img{background-image:url("/static/images/solar-system/hero-asteroid-medium.jpg");}}
+            @media screen and (max-width:600px){.head-img{height:76%;background-image:url("/static/images/solar-system/hero-asteroid-small.jpg");}}
+        </style>
+{% endblock %}
+
+{% block head_content %}
+            <div class="w3-display-bottomleft w3-center w3-margin-bottom w3-padding-large w3-hide-medium w3-hide-small">
+                <span class="w3-tag">Look up and get lost</span>
+            </div>
+            <div class="w3-display-top w3-center w3-padding-large">
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>ASTEROID BELT</b></h1>
+            </div>
+            <div class="w3-display-bottomright w3-center w3-margin-bottom w3-padding-large tag-text">
+                <span id="bigger_font" class="contour w3-text-white">In all chaos there is a cosmos, in all disorder a secret order</span>
+            </div>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center blue-grey-grad w3-bottombar w3-border-orange w3-padding-64 header-text">General information</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The asteroid belt is a torus-shaped region in the Solar System, located roughly between the orbits of
+                            the planets Jupiter and Mars, that is occupied by a great many solid, irregularly shaped bodies,
+                            of many sizes but much smaller than planets, called asteroids or minor planets. This asteroid belt is also called
+                            the main asteroid belt or main belt to distinguish it from other asteroid populations in the Solar System such as
+                            near-Earth asteroids and trojan asteroids.
+                        </p>
+                        <p>
+                            About half the mass of the belt is contained in the four largest asteroids: Ceres, Vesta, Pallas, and Hygiea.
+                            The total mass of the asteroid belt is approximately 4% that of the Moon, or 22% that of Pluto,
+                            and roughly twice that of Pluto's moon Charon (whose diameter is 1200 km).
+                        </p>
+                        <p>
+                            Ceres, the only object in the asteroid belt large enough to be a dwarf planet, is about 950 km in diameter,
+                            whereas Vesta, Pallas, and Hygiea have mean diameters of less than 600 km. The remaining bodies range down to
+                            the size of a dust particle. The asteroid material is so thinly distributed that numerous unmanned spacecraft have traversed it
+                            without incident. Nonetheless, collisions between large asteroids do occur, and these can produce an asteroid family
+                            whose members have similar orbital characteristics and compositions. Individual asteroids within the asteroid belt are
+                            categorized by their spectra, with most falling into three basic groups: carbonaceous (C-type), silicate (S-type),
+                            and metal-rich (M-type).
+                        </p>
+                        <p>
+                            The asteroid belt formed from the primordial solar nebula as a group of planetesimals. Planetesimals are
+                            the smaller precursors of the protoplanets. Between Mars and Jupiter, however, gravitational perturbations
+                            from Jupiter imbued the protoplanets with too much orbital energy for them to accrete into a planet.
+                            Collisions became too violent, and instead of fusing together, the planetesimals and most of the protoplanets shattered.
+                            As a result, 99.9% of the asteroid belt's original mass was lost in the first 100 million years of the Solar System's history.
+                            Some fragments eventually found their way into the inner Solar System, leading to meteorite impacts with the inner planets.
+                            Asteroid orbits continue to be appreciably perturbed whenever their period of revolution about the Sun forms
+                            an orbital resonance with Jupiter. At these orbital distances, a Kirkwood gap occurs as they are swept into other orbits.
+                        </p>
+                        <p>
+                            Classes of small Solar System bodies in other regions are the near-Earth objects, the centaurs, the Kuiper belt objects,
+                            the scattered disc objects, the sednoids, and the Oort cloud objects.
+                        </p>
+                        <p>
+                            On 22 January 2014, ESA scientists reported the detection, for the first definitive time, of water vapor on Ceres,
+                            the largest object in the asteroid belt. The detection was made by using the far-infrared abilities of
+                            the Herschel Space Observatory. The finding was unexpected because comets, not asteroids,
+                            are typically considered to "sprout jets and plumes". According to one of the scientists,
+                            "The lines are becoming more and more blurred between comets and asteroids."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center gold-grad w3-bottombar w3-border-orange w3-padding-64 header-text">Formation</h2>
+                    <div class="w3-padding">
+                        <p>
+                            In 1802, shortly after discovering Pallas, Olbers suggested to Herschel that Ceres and Pallas were fragments of
+                            a much larger planet that once occupied the Mars–Jupiter region, this planet having suffered an internal explosion
+                            or a cometary impact many million years before (Odessan astronomer K. N. Savchenko suggested that Ceres, Pallas, Juno,
+                            and Vesta were escaped moons rather than fragments of the exploded planet). The large amount of energy required
+                            to destroy a planet, combined with the belt's low combined mass, which is only about 4% of the mass of the Moon,
+                            does not support the hypothesis. Further, the significant chemical differences between the asteroids become
+                            difficult to explain if they come from the same planet. In 2018, a study from researchers at the University of Florida found
+                            the asteroid belt was created from the remnants of several ancient planets instead of a single planet.
+                        </p>
+                        <p>
+                            A hypothesis to the asteroid belt creation is that in general, in the Solar System, a planetary formation is thought
+                            to have occurred via a process comparable to the long-standing nebular hypothesis: a cloud of interstellar dust
+                            and gas collapsed under the influence of gravity to form a rotating disc of material that
+                            then further condensed to form the Sun and planets. During the first few million years of the Solar System's history,
+                            an accretion process of sticky collisions caused the clumping of small particles, which gradually increased in size.
+                            Once the clumps reached sufficient mass, they could draw in other bodies through gravitational attraction
+                            and become planetesimals. This gravitational accretion led to the formation of the planets.
+                        </p>
+                        <p>
+                            Planetesimals within the region which would become the asteroid belt were too strongly perturbed by Jupiter's gravity
+                            to form a planet. Instead, they continued to orbit the Sun as before, occasionally colliding. In regions where
+                            the average velocity of the collisions was too high, the shattering of planetesimals tended to dominate over accretion,
+                            preventing the formation of planet-sized bodies. Orbital resonances occurred where the orbital period of an object in
+                            the belt formed an integer fraction of the orbital period of Jupiter, perturbing the object into a different orbit;
+                            the region lying between the orbits of Mars and Jupiter contains many such orbital resonances.
+                            As Jupiter migrated inward following its formation, these resonances would have swept across the asteroid belt,
+                            dynamically exciting the region's population and increasing their velocities relative to each other.
+                        </p>
+                        <p>
+                            During the early history of the Solar System, the asteroids melted to some degree, allowing elements within them
+                            to be partially or completely differentiated by mass. Some of the progenitor bodies may even have
+                            undergone periods of explosive volcanism and formed magma oceans. However, because of the relatively small size of
+                            the bodies, the period of melting was necessarily brief (compared to the much larger planets),
+                            and had generally ended about 4.5 billion years ago, in the first tens of millions of years of formation.
+                            In August 2007, a study of zircon crystals in an Antarctic meteorite believed to have originated
+                            from Vesta suggested that it, and by extension the rest of the asteroid belt, had formed rather quickly,
+                            within 10 million years of the Solar System's origin.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="fix-text w3-container w3-margin-top w3-margin-bottom w3-padding w3-round">
+                        <p>
+                            &#8220;There is only one corner of the universe you can be certain of improving, and that's your own self&#8221;
+                        </p>
+                        <p>
+                            - Aldous Huxley
+                        </p>
+                    </div>
+                    <div class="w3-center">
+                        <picture>
+                            <!--/static/images/solar-system/asteroids-small.jpg -->
+                            <source class="load-after-body" media="(max-width: 600px)" />
+                            <!--/static/images/solar-system/asteroids-medium.jpg-->
+                            <source class="load-after-body" media="(max-width: 992px)" />
+                            <!--/static/images/solar-system/asteroids-large.jpg-->
+                            <img class="load-after-body" alt="Asteroid belt" style="width:100%;" />
+                        </picture>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center silver-grad w3-bottombar w3-border-orange w3-padding-64 header-text">Evolution</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The asteroids are not samples of the primordial Solar System. They have undergone considerable evolution since
+                            their formation, including internal heating (in the first few tens of millions of years), surface melting from impacts,
+                            space weathering from radiation, and bombardment by micrometeorites. Although some scientists refer to
+                            the asteroids as residual planetesimals, other scientists consider them distinct.
+                        </p>
+                        <p>
+                            The current asteroid belt is believed to contain only a small fraction of the mass of the primordial belt.
+                            Computer simulations suggest that the original asteroid belt may have contained the mass equivalent to the Earth.
+                            Primarily because of gravitational perturbations, most of the material was ejected from the belt
+                            within about 1 million years of formation, leaving behind less than 0.1% of the original mass. Since their formation,
+                            the size distribution of the asteroid belt has remained relatively stable: there has been no significant increase
+                            or decrease in the typical dimensions of the main-belt asteroids.
+                        </p>
+                        <p>
+                            The 4:1 orbital resonance with Jupiter, at a radius 2.06 AU, can be considered the inner boundary of the asteroid belt.
+                            Perturbations by Jupiter send bodies straying there into unstable orbits. Most bodies formed within the radius of
+                            this gap were swept up by Mars (which has an aphelion at 1.67 AU) or ejected by its gravitational perturbations
+                            in the early history of the Solar System. The Hungaria asteroids lie closer to the Sun than the 4:1 resonance,
+                            but are protected from disruption by their high inclination.
+                        </p>
+                        <p>
+                            When the asteroid belt was first formed, the temperatures at a distance of 2.7 AU from the Sun formed a "snow line" below
+                            the freezing point of water. Planetesimals formed beyond this radius were able to accumulate ice.
+                            In 2006 it was announced that a population of comets had been discovered within the asteroid belt beyond the snow line,
+                            which may have provided a source of water for Earth's oceans. According to some models,
+                            there was insufficient outgassing of water during the Earth's formative period to form the oceans,
+                            requiring an external source such as a cometary bombardment.
+                        </p>
+                    </div>
+                    <div class="w3-row-padding w3-stretch w3-grey w3-center" style="width:100%;margin:0;padding:0;">
+                        <div class="w3-container w3-light-grey w3-margin-bottom">
+                            <h3>Asteroids</h3>
+                        </div>
+                        <div class="w3-col m6 w3-margin-bottom">
+                            <picture>
+                                <!--/static/images/solar-system/asteroid-sm-md.jpg-->
+                                <source class="load-after-body" media="(max-width: 992px)">
+                                <!--/static/images/solar-system/asteroid-large.jpg-->
+                                <img class="load-after-body" alt="The first asteroid" />
+                            </picture>
+                            <div class="w3-container w3-light-grey">
+                                <p class="sm-text">
+                                    951 Gaspra, the first asteroid imaged by a spacecraft,
+                                    as viewed during Galileo's 1991 flyby; colors are exaggerated
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w3-col m6 w3-margin-bottom">
+                            <picture>
+                                <!--/static/images/solar-system/asteroid2-sm-md.jpg-->
+                                <source class="load-after-body" media="(max-width: 992px)">
+                                <!--/static/images/solar-system/asteroid2-large.jpg-->
+                                <img class="load-after-body" alt="The Allende meteorite" />
+                            </picture>
+                            <div class="w3-container w3-light-grey">
+                                <p class="sm-text">
+                                    Fragment of the Allende meteorite, a carbonaceous chondrite that fell
+                                    to Earth in Mexico in 1969
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center yellow-grad w3-bottombar w3-border-orange w3-padding-64 header-text">Composition</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The current belt consists primarily of three categories of asteroids: C-type or carbonaceous asteroids,
+                            S-type or silicate asteroids, and M-type or metallic asteroids.
+                        </p>
+                        <p>
+                            Carbonaceous asteroids, as their name suggests, are carbon-rich. They dominate the asteroid belt's outer regions.
+                            Together they comprise over 75% of the visible asteroids. They are redder in hue than the other asteroids
+                            and have a very low albedo. Their surface composition is similar to carbonaceous chondrite meteorites.
+                            Chemically, their spectra match the primordial composition of the early Solar System, with only the lighter elements
+                            and volatiles removed.
+                        </p>
+                        <p>
+                            S-type (silicate-rich) asteroids are more common toward the inner region of the belt, within 2.5 AU of the Sun.
+                            The spectra of their surfaces reveal the presence of silicates and some metal, but no significant carbonaceous compounds.
+                            This indicates that their materials have been significantly modified from their primordial composition,
+                            probably through melting and reformation. They have a relatively high albedo and form about 17% of the total asteroid population.
+                        </p>
+                        <p>
+                            M-type (metal-rich) asteroids form about 10% of the total population; their spectra resemble that of iron-nickel.
+                            Some are believed to have formed from the metallic cores of differentiated progenitor bodies that were disrupted through collision.
+                            However, there are also some silicate compounds that can produce a similar appearance. For example,
+                            the large M-type asteroid 22 Kalliope does not appear to be primarily composed of metal. Within the asteroid belt,
+                            the number distribution of M-type asteroids peaks at a semi-major axis of about 2.7 AU. It is not yet clear whether all M-types are
+                            compositionally similar, or whether it is a label for several varieties which do not fit neatly into the main C and S classes.
+                        </p>
+                        <p>
+                            One mystery of the asteroid belt is the relative rarity of V-type or basaltic asteroids. Theories of asteroid formation predict
+                            that objects the size of Vesta or larger should form crusts and mantles, which would be composed mainly of basaltic rock,
+                            resulting in more than half of all asteroids being composed either of basalt or olivine. Observations, however,
+                            suggest that 99 percent of the predicted basaltic material is missing. Until 2001, most basaltic bodies discovered in
+                            the asteroid belt were believed to originate from the asteroid Vesta (hence their name V-type). However, the discovery of
+                            the asteroid 1459 Magnya revealed a slightly different chemical composition from the other basaltic asteroids discovered until then,
+                            suggesting a different origin. This hypothesis was reinforced by the further discovery in 2007 of two asteroids in the outer belt,
+                            7472 Kumakiri and (10537) 1991 RY16, with a differing basaltic composition that could not have originated from Vesta.
+                            These latter two are the only V-type asteroids discovered in the outer belt to date.
+                        </p>
+                        <p>
+                            The temperature of the asteroid belt varies with the distance from the Sun. For dust particles within the belt,
+                            typical temperatures range from 200 K (−73 °C) at 2.2 AU down to 165 K (−108 °C) at 3.2 AU However, due to rotation,
+                            the surface temperature of an asteroid can vary considerably as the sides are alternately exposed to solar radiation
+                            and then to the stellar background.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="w3-row-padding w3-stretch">
+                        <div class="w3-col l2 m4 s6 w3-left w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/pluto">
+                                    <!--https://specials-images.forbesimg.com/imageserve/5d72a5675b52ce00088287fb/960x0.jpg-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>Pluto</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-right w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/comets">
+                                    <!--https://www.rochesterfirst.com/wp-content/uploads/sites/66/2020/03/960x0.jpg-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>Comets</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+{% block info %}
+                <span>The source of most text information is</span>
+                <a class="source" href="https://en.wikipedia.org/wiki/Asteroid_belt" target="_blank">Wikipedia</a>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            // Load images after a page has loaded
+            loadImgsAfterBody([
+                '/static/images/solar-system/asteroids-small.jpg',
+                '/static/images/solar-system/asteroids-medium.jpg',
+                '/static/images/solar-system/asteroids-large.jpg',
+                '/static/images/solar-system/asteroid-sm-md.jpg',
+                '/static/images/solar-system/asteroid-large.jpg',
+                '/static/images/solar-system/asteroid2-sm-md.jpg',
+                '/static/images/solar-system/asteroid2-large.jpg'
+            ], true);
+            // Load images when a user has scrolled down the middle of a page
+            loadAfterScrollMid([
+                'https://specials-images.forbesimg.com/imageserve/5d72a5675b52ce00088287fb/960x0.jpg',
+                'https://www.rochesterfirst.com/wp-content/uploads/sites/66/2020/03/960x0.jpg'
+            ]);
+            // Make a link to the current page active
+            makeActive('.asteroid-belt');
+        </script>
+{% endblock %}

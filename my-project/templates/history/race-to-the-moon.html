@@ -1,0 +1,286 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Race to the Moon
+{% endblock %}
+
+{% block style %}
+        <style>
+            .boxshadow {
+                width: 65%;
+            }
+            .sm-text {
+                font-size: 16px;
+            }
+            .sm-img {
+                width: 65%;
+            }
+            @media screen and (min-width:993px){.head-img{background-image:url("https://static1.squarespace.com/static/57ed3edb37c58182f815c65f/57ed3f076a49633d10d11e12/5cae1247e79c707fbfed0f13/1554912091369/shutterstock_571916983.jpg?format=2500w");}}
+            @media screen and (max-width:992px){.sm-text{font-size:14px;}.sm-img{width:80%;}.head-img{background-image:url("/static/images/history/hero-history-medium.jpg");}}
+            @media screen and (max-width:600px){.sm-img{width:100%;}.head-img{height:76%;background-image:url("/static/images/history/hero-history-small.jpg");}}
+        </style>
+{% endblock %}
+
+{% block head_content %}
+            <div class="w3-display-bottomleft w3-center w3-margin-bottom w3-padding-large w3-hide-medium w3-hide-small">
+                <span class="w3-tag">Whatever it takes</span>
+            </div>
+            <div class="w3-display-top w3-center w3-padding-large">
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>FROM SPUTNIK</b></h1>
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>TO APOLLO</b></h1>
+            </div>
+            <div class="w3-display-bottomright w3-center w3-margin-bottom w3-padding-large tag-text">
+                <span id="bigger_font" class="contour w3-text-white">The only limits on human achievement are self-imposed</span>
+            </div>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center dark-blue-grad w3-bottombar w3-border-orange w3-padding-64 header-text">The race to the Moon</h2>
+                    <div class="w3-padding">
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad">The American commitment</h3>
+                        <p>
+                            In the immediate aftermath of Gagarin’s orbital flight, President Kennedy was advised by NASA and by his vice president,
+                            Lyndon B. Johnson, of Braun’s belief that the Soviet Union, using Korolyov’s existing R-7 launcher,
+                            could well succeed in sending a multiperson spacecraft into Earth orbit and perhaps even around the Moon before
+                            the United States. The first competition that the United States had a good chance of winning would be that of
+                            a crewed lunar landing, because it would require each country to develop a new, more-powerful rocket.
+                            On those technical grounds and because a lunar landing would be a very visible demonstration of American strength,
+                            Kennedy announced on May 25, 1961, that the United States would commit itself to a lunar landing before 1970.
+                            At that time, only one American human spaceflight, Shepard’s 15-minute suborbital journey, had been made.
+                        </p>
+                        <p>
+                            In response to Kennedy’s decision, the United States carried out a warlike, but peaceful, mobilization of financial
+                            and human resources. NASA’s budget was increased almost 500 percent in three years, and at its peak
+                            the lunar landing program involved more than 34,000 NASA employees
+                            and 375,000 employees of industrial and university contractors.
+                        </p>
+                        <p>
+                            By the end of 1962, the basic elements of what was called Project Apollo were in place. The launch vehicle would be
+                            a powerful Saturn V rocket, 110.6 metres (362.9 feet) tall and power-driven by five huge engines generating
+                            a total of 33,000 kilonewtons (7.4 million pounds) of lifting power at takeoff—100 times
+                            the takeoff thrust of the Redstone rocket that had launched Shepard. After an intense debate, NASA chose
+                            a spacecraft configuration for Apollo that could be sent up in one launch, rather than a larger spacecraft that
+                            would need to be assembled in a series of rendezvous in Earth orbit. The Apollo spacecraft would have three sections.
+                            A Command Module would house the three-person crew on liftoff and landing and during the trip to and from the Moon.
+                            A Service Module would carry various equipment and the rocket engine needed to guide the spacecraft into lunar orbit
+                            and then send it back to Earth. A Lunar Module, comprising a descent stage and an ascent stage,
+                            would carry two people from lunar orbit to the Moon’s surface and back to the Command Module.
+                            The ability of the Lunar Module’s ascent stage to rendezvous and dock in lunar orbit with
+                            the Command Module after takeoff from the Moon was critical to the success of the mission.
+                            NASA also created a large new launch facility on Merritt Island, near Cape Canaveral,
+                            Florida, as the Apollo spaceport.
+                        </p>
+                        <div class="w3-content w3-center w3-center cool-font sm-img" style="padding:0;">
+                            <!-- https://cdn.britannica.com/s:700x500/88/70088-050-D36F21E2/elements-program-Apollo-configurations-journey-Saturn-V.jpg -->
+                            <img class="load-after-body" alt="Apollo program: launch vehicle and spacecraft modules" />
+                            <div class="w3-container">
+                                <h3>Apollo program: launch vehicle and spacecraft modules</h3>
+                                <p class="sm-text">
+                                    Major elements of the U.S. Apollo program, showing the Saturn V launch vehicle and configurations of
+                                    the Apollo spacecraft modules at launch and during their journey to the Moon.
+                                </p>
+                            </div>
+                        </div>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">The Soviet response</h3>
+                        <p>
+                            While committing the United States to winning the Moon race, President Kennedy also made several attempts in
+                            the early 1960s to convince the Soviet leadership that a cooperative lunar landing program between
+                            their two countries would be a better alternative. No positive reply from the Soviet Union was forthcoming, however.
+                            In fact, between 1961 and 1963, there was still vigorous debate within the Soviet Union over
+                            the wisdom of undertaking a lunar program, and no final decision had been made on the question.
+                        </p>
+                        <p>
+                            Meanwhile, the separate design bureaus headed by Korolyov and his rival Vladimir Chelomey competed fiercely
+                            for a lunar mission assignment, either a flight around the Moon or an actual landing. Finally, in August 1964,
+                            Korolyov received the lunar landing assignment, and soon afterward Chelomey was given responsibility
+                            for planning a circumlunar flight to be carried out before the 50th anniversary of the Bolshevik Revolution,
+                            which would take place in October 1967. In 1965 Soviet leaders decided to combine the efforts of the two rivals for
+                            the circumlunar mission, using a version of Korolyov’s Soyuz spacecraft and a new rocket,
+                            the UR-500 (also called the Proton), designed by Chelomey.
+                        </p>
+                        <p>
+                            The rocket that Korolyov designed for the lunar landing effort was called the N1. Like the Saturn V, it was huge,
+                            standing 112.8 metres (370.1 feet) tall and having a planned takeoff thrust of 44,500 kilonewtons (10 million pounds).
+                            Instead of a few large rocket engines in its first stage, however, the N1 had 30 smaller engines.
+                            These were developed by Nikolay Kuznetsov, an aircraft-engine chief designer who had little experience
+                            with rocket engines, rather than the more capable Glushko. Korolyov and Valentin Glushko,
+                            already personal adversaries for many years, had disagreed on the proper fuel for the N1,
+                            and they finally decided that they could no longer work together. Consequently, Korolyov turned to Kuznetsov,
+                            who chose the small-engine approach.
+                        </p>
+                        <p>
+                            Indecision, inefficiencies, inadequate budgets, and personal and organizational rivalries in the Soviet system
+                            thus posed major obstacles to success in the race to the Moon. To these was added the unexpected death of Korolyov,
+                            age 59, during surgery on January 14, 1966. This was a serious setback to the Soviet space program.
+                            Korolyov had been a charismatic leader and organizer. His successor, Vasily Mishin, attempted to maintain
+                            the program’s momentum, but he was not the effective manager or politically sophisticated operator that Korolyov had been.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Interim developments</h3>
+                        <p>
+                            In the United States, Apollo moved forward as a high-priority program; after the assassination of President Kennedy
+                            in November 1963, it became seen as a memorial to the fallen young president. A major setback occurred on January 27, 1967,
+                            when astronauts Grissom, White, and Roger Chaffee were killed after their Apollo 1 Command Module caught fire during
+                            a ground test. The first crewed Apollo mission, designated Apollo 7 and intended to test the redesigned Command Module,
+                            was launched into Earth orbit on October 11, 1968. The launcher used was a Saturn IB, a less-powerful rocket than
+                            the Saturn V needed to reach the Moon. The mission’s success cleared the way for a bold step—the first launch of
+                            a crew atop a Saturn V to the lunar vicinity. On December 21, 1968, the Apollo 8 Command and Service Modules were put on
+                            a trajectory that sent them into orbit around the Moon on Christmas Eve, December 24. The three astronauts—Frank Borman, James A.
+                            Lovell, Jr., and William A. Anders—sent back close-up images of the lunar surface, read from the biblical book of Genesis,
+                            and brought back vivid colour photographs of a blue planet Earth rising over the desolate lunar landscape. By the end of
+                            the mission, it was clear that the first lunar landing was only months away.
+                        </p>
+                        <div class="w3-content w3-center w3-center cool-font sm-img" style="padding:0;">
+                            <!-- https://cdn.britannica.com/s:700x500/46/65046-050-C41868E4/view-Planet-Earth-lunar-horizon-spacecraft-farside-December-1968.jpg -->
+                            <img class="load-after-body" alt="Earthrise" />
+                            <div class="w3-container">
+                                <h3>“Earthrise”</h3>
+                                <p class="sm-text">
+                                    Earth rising above the lunar horizon, an unprecedented view captured in December 1968 from the Apollo 8 spacecraft as
+                                    its orbit carried it clear of the far side of the Moon. Taken by astronaut William Anders,
+                                    this photograph has become known as “Earthrise.”
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            One reason for conducting the Apollo 8 mission was to allow NASA to test most of the systems needed for a lunar landing attempt
+                            while waiting to carry out a crewed trial in Earth orbit of the Lunar Module, whose development was behind schedule.
+                            Another was the concern that the Soviet Union would beat the United States in sending people to the lunar vicinity.
+                            A circumlunar mission indeed had been part of Soviet plans, but the Soyuz 1 accident had made the October 1967 deadline infeasible.
+                            During 1968 a number of test flights of a circumlunar mission were made, using the Proton launcher and a version of
+                            the Soyuz spacecraft designated Zond. In September Zond 5 carried a biological payload, including two tortoises,
+                            around the Moon and safely back to Earth, but two months later the Zond 6 spacecraft depressurized and then crashed on landing,
+                            ending any hope for a quick follow-on launch with a human crew. Plans to send cosmonauts around the Moon in
+                            a Zond spacecraft were postponed indefinitely in March 1969, but two more scientifically successful uncrewed circumlunar missions,
+                            Zond 7 and Zond 8, were carried out in 1969 and 1970, respectively.
+                        </p>
+                        <p>
+                            The Soviet lunar landing program went forward rather fitfully after 1964. The missions were intended to employ the N1 launch vehicle
+                            and another variation of the Soyuz spacecraft, designated L3, that included a lunar landing module designed for one cosmonaut.
+                            Although an L3 spacecraft was constructed and three cosmonauts trained for its use, the N1 rocket was never successfully launched.
+                            After four failed attempts between 1969 and 1972—including a spectacular launch pad explosion in July 1969—the N1 program
+                            was finally canceled in May 1974, and Soviet hopes for human missions to the Moon thus ended.
+                        </p>
+                        <p>
+                            In contrast to the Soviet lunar landing efforts, during 1969 all went well for the Apollo program. In March the Apollo 9 crew
+                            successfully tested the Lunar Module in Earth orbit, and in May the Apollo 10 crew carried out a full dress rehearsal for
+                            the landing, coming within 15,200 metres (50,000 feet) of the lunar surface. On July 16, 1969, astronauts Armstrong, Aldrin,
+                            and Michael Collins set off on the Apollo 11 mission, the first lunar landing attempt. While Collins remained in lunar orbit in
+                            the Command Module, Armstrong piloted the Lunar Module, nicknamed Eagle, away from boulders on the lunar surface and
+                            to a successful landing on a flat lava plain called the Sea of Tranquillity at 4:18 PM U.S. Eastern Daylight Time on July 20.
+                            He reported to mission control, “Houston, Tranquillity Base here. The Eagle has landed.” Six and a half hours later, Armstrong,
+                            soon followed by Aldrin, left the Lunar Module and took the first human step on the surface of another celestial body.
+                            As he did so, he noted, “That’s one small step for [a] man, one giant leap for mankind.” (In the excitement of the moment,
+                            Armstrong apparently skipped the “a” in the statement he had prepared.) Concluding 2.5 hours of activity on the lunar surface,
+                            the two men returned to the Lunar Module with 21.7 kg (47.8 pounds) of lunar samples. Twelve hours later,
+                            they blasted off the Moon in the Lunar Module’s ascent stage and rejoined Collins in the Command Module.
+                            The crew returned to Earth on July 24, splashing down in the Pacific Ocean, where they were greeted by U.S. Pres. Richard Nixon.
+                        </p>
+                        <div class="w3-row-padding w3-stretch w3-black cool-font">
+                            <div class="w3-col l6 w3-margin-bottom">
+                                <div class="w3-center">
+                                    <!-- https://cdn.britannica.com/s:700x500/15/415-050-5342912B/Edwin-Aldrin-Apollo-11-mission-surface-Neil-July-20-1969.jpg -->
+                                    <img class="load-after-body" alt="Apollo 11 astronaut" />
+                                </div>
+                                <div class="w3-content">
+                                    <h3 class="w3-margin-top w3-center">Apollo 11 astronaut Buzz Aldrin on the Moon</h3>
+                                    <p class="sm-text">
+                                        Apollo 11 astronaut Buzz Aldrin, photographed July 20, 1969, during the first crewed mission to the Moon's surface.
+                                        Reflected in Aldrin's faceplate is the Lunar Module and astronaut Neil Armstrong, who took the picture.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="w3-col l6 w3-margin-bottom">
+                                <!-- https://cdn.britannica.com/s:700x500/41/100241-050-A9D6E218/farside-Moon-Apollo-11-mission-1969.jpg -->
+                                <img class="load-after-body" alt="Far side of the Moon<" />
+                                <div class="w3-content">
+                                    <h3 class="w3-margin-top">Far side of the Moon</h3>
+                                    <p class="sm-text">
+                                        The far side of the Moon, photographed during the Apollo 11 mission, 1969.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <p>
+                            The successful Apollo 12 mission followed in November 1969. The Apollo 13 mission, launched in April 1970,
+                            experienced an explosion of the oxygen tank in its Service Module on the outbound trip to the Moon.
+                            The crew survived this accident only through the improvised use of the Lunar Module as living quarters in order to preserve
+                            the remaining capabilities of the Command Module for reentering Earth’s atmosphere after they had returned from
+                            their circumlunar journey. Four more Apollo missions followed. On each of the final three, the crew had a small cartlike rover
+                            that allowed them to travel several kilometres from their landing site. The final mission, Apollo 17, which was conducted
+                            in December 1972, included geologist Harrison Schmitt, the only trained scientist to set foot on the Moon.
+                        </p>
+                        <div class="w3-content w3-center cool-font" style="padding:0;margin-top:32px;max-width:630px;">
+                            <!-- https://cdn.britannica.com/s:700x500/16/416-050-5EA533A7/spacecraft-liftoff-Apollo-15-rocket-Florida-Cape-July-26-1971.jpg -->
+                            <img class="load-after-body" alt="Apollo 15 liftoff" />
+                            <div class="w3-content">
+                                <h3 class="w3-margin-top">Apollo 15 liftoff</h3>
+                                <p class="sm-text">
+                                    Apollo 15 spacecraft during liftoff from Cape Kennedy, Florida, U.S., atop a Saturn V three-stage rocket,
+                                    July 26, 1971. A camera mounted at the mobile launch tower's 110-metre (360-foot) level recorded this photograph.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w3-content w3-center cool-font" style="padding:0;margin-top:32px;max-width:630px;">
+                            <!-- https://cdn.britannica.com/s:700x500/13/413-050-80F3ECDE/James-B-Irwin-Apollo-15-back-Lunar-July-26-1971.jpg -->
+                            <img class="load-after-body" alt="Apollo 15" />
+                            <div class="w3-content">
+                                <h3 class="w3-margin-top">Apollo 15</h3>
+                                <p class="sm-text">
+                                    Apollo 15 astronaut James B. Irwin standing in back of the Lunar Roving Vehicle; the Lunar Module (LM) is at left with
+                                    the modular equipment storage assembly (MESA) in front of it. Apollo 15 was launched July 26, 1971.
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            The United States had won the race to the Moon, but that race had been motivated primarily by political considerations.
+                            No equally compelling reason to continue to travel to the Moon or to send humans to Mars was put forth in the following years.
+                            Proposals by U.S. presidents in 1989 and 2004 to restart human exploration beyond Earth orbit received
+                            insufficient political support to be implemented. No human has traveled beyond near-Earth orbit since Apollo 17 in December 1972.
+                            U.S. plans have called for a return to the Moon in the 2020s.
+                        </p>
+                        <div class="w3-content w3-center cool-font" style="padding:0;max-width:630px;">
+                            <!-- https://cdn.britannica.com/s:700x500/14/414-050-80F443C9/geologist-astronaut-Apollo-17-foot-split-boulder-mission-December-13-1972.jpg -->
+                            <img class="load-after-body" alt="Apollo 17 astronaut Harrison Schmitt on the Moon, 1972" />
+                            <div class="w3-container w3-black">
+                                <h3 class="w3-margin-top">Apollo 17 astronaut Harrison Schmitt on the Moon, 1972</h3>
+                                <p class="sm-text">
+                                    Apollo 17 geologist-astronaut Harrison Schmitt at the foot of a huge split boulder, December 13, 1972, during
+                                    the mission's third extravehicular exploration of the Taurus-Littrow Valley landing site on the Moon.
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            An Apollo spacecraft was used for the last time in 1975. Three years earlier, as a sign of improved U.S.-Soviet relations,
+                            the two countries had agreed to carry out a joint mission in which an Apollo spacecraft carrying three astronauts would dock
+                            in orbit with a Soyuz vehicle having two cosmonauts aboard. The Apollo-Soyuz Test Project, which took place in July 1975,
+                            featured a “handshake in space” between Apollo commander Thomas P. Stafford and Soyuz commander Aleksey Leonov.
+                        </p>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+{% block info %}
+                <span>The source of most text information is</span>
+                <a class="source" href="https://www.britannica.com/science/space-exploration/History-of-space-exploration" target="_blank">Britannica</a>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            // Load images after a page has loaded
+            loadImgsAfterBody([
+                'https://cdn.britannica.com/s:700x500/88/70088-050-D36F21E2/elements-program-Apollo-configurations-journey-Saturn-V.jpg',
+                'https://cdn.britannica.com/s:700x500/46/65046-050-C41868E4/view-Planet-Earth-lunar-horizon-spacecraft-farside-December-1968.jpg',
+                'https://cdn.britannica.com/s:700x500/15/415-050-5342912B/Edwin-Aldrin-Apollo-11-mission-surface-Neil-July-20-1969.jpg',
+                'https://cdn.britannica.com/s:700x500/41/100241-050-A9D6E218/farside-Moon-Apollo-11-mission-1969.jpg',
+                'https://cdn.britannica.com/s:700x500/16/416-050-5EA533A7/spacecraft-liftoff-Apollo-15-rocket-Florida-Cape-July-26-1971.jpg',
+                'https://cdn.britannica.com/s:700x500/13/413-050-80F3ECDE/James-B-Irwin-Apollo-15-back-Lunar-July-26-1971.jpg',
+                'https://cdn.britannica.com/s:700x500/14/414-050-80F443C9/geologist-astronaut-Apollo-17-foot-split-boulder-mission-December-13-1972.jpg'
+            ], false);
+            // Make a link to the current page active
+            makeActive('.race-to-the-moon');
+        </script>
+{% endblock %}

@@ -1,0 +1,250 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    The Whirlpool Galaxy
+{% endblock %}
+
+{% block style %}
+        <style>
+            .sm-text {
+                font-size: 16px;
+            }
+            @media screen and (min-width:993px){.head-img{background-image:url("/static/images/universe/hero-whirlpool-large.jpg");}}
+            @media screen and (max-width:992px){.sm-text{font-size:14px;}.head-img{background-image:url("/static/images/universe/hero-whirlpool-medium.jpg");}}
+            @media screen and (max-width:600px){.head-img{height:76%;background-image:url("/static/images/universe/hero-whirlpool-small.jpg");}}
+        </style>
+{% endblock %}
+
+{% block head_content %}
+            <div class="w3-display-bottomleft w3-center w3-margin-bottom w3-padding-large w3-hide-medium w3-hide-small">
+                <span class="w3-tag">So much universe, and so little time</span>
+            </div>
+            <div class="w3-display-top w3-center w3-padding-large">
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>THE WHIRLPOOL</b></h1>
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>GALAXY</b></h1>
+            </div>
+            <div class="w3-display-bottomright w3-center w3-margin-bottom w3-padding-large tag-text">
+                <span id="bigger_font" class="contour w3-text-white">At some point, entireness will be known</span>
+            </div>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center dark-blue-grad w3-bottombar w3-border-amber w3-padding-64 header-text">General information</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The Whirlpool Galaxy, also known as Messier 51a, M51a, and NGC 5194, is an interacting grand-design spiral galaxy
+                            with a Seyfert 2 active galactic nucleus. It lies in the constellation Canes Venatici, and was the first galaxy
+                            to be classified as a spiral galaxy. Its distance is estimated to be 23 million light-years away from Earth.
+                        </p>
+                        <p>
+                            The galaxy and its companion, NGC 5195, are easily observed by amateur astronomers, and
+                            the two galaxies may be seen with binoculars. The Whirlpool Galaxy has been extensively observed by
+                            professional astronomers, who study it to understand galaxy structure (particularly structure associated with
+                            the spiral arms) and galaxy interactions.
+                        </p>
+                        <div class="boxshadow w3-content w3-margin-bottom w3-center w3-round" style="max-width:730px;">
+                            <picture>
+                                <!--/static/images/universe/whirlpool-small.jpg-->
+                                <source class="load-after-body" media="(max-width: 600px)">
+                                <!--https://c4.wallpaperflare.com/wallpaper/581/311/685/space-galaxy-whirlpool-galaxy-wallpaper-preview.jpg-->
+                                <img class="load-after-body" alt="Whirlpool Galaxy" style="width:100%;" />
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center dark-brown-grad w3-bottombar w3-border-amber w3-padding-64 header-text">Discovery</h2>
+                    <div class="w3-padding">
+                        <p>
+                            What later became known as the Whirlpool Galaxy was discovered on October 13, 1773, by Charles Messier while
+                            hunting for objects that could confuse comet hunters, and was designated in Messier's catalogue as M51.
+                            Its companion galaxy, NGC 5195, was discovered in 1781 by Pierre Méchain, although it was not known whether
+                            it was interacting or merely another galaxy passing at a distance. In 1845, William Parsons, 3rd Earl of Rosse,
+                            employing a 72-inch (1.8 m) reflecting telescope at Birr Castle, Ireland, found that the Whirlpool possessed
+                            a spiral structure, the first "nebula" to be known to have one. These "spiral nebulae" were not recognized
+                            as galaxies until Edwin Hubble was able to observe Cepheid variables in some of these spiral nebulae,
+                            which provided evidence that they were so far away that they must be entirely separate galaxies
+                            even though they are seen close together.
+                        </p>
+                        <p>
+                            The advent of radio astronomy and subsequent radio images of M51 unequivocally demonstrated that the Whirlpool
+                            and its companion galaxy are indeed interacting. Sometimes the designation M51 is used to refer to the pair of
+                            galaxies, in which case the individual galaxies may be referred to as M51a (NGC 5194) and M51b (NGC 5195).
+                        </p>
+                        <div class="w3-content w3-margin-bottom w3-center cool-font" style="max-width:500px;padding:0;">
+                            <!--https://upload.wikimedia.org/wikipedia/commons/6/6a/M51Sketch.jpg-->
+                            <img class="load-after-body" alt="Sketch of M51 by Lord Rosse in 1845" style="width:100%;" />
+                            <div class="w3-container w3-light-grey w3-center">
+                                <p class="sm-text">
+                                    Sketch of M51 by Lord Rosse in 1845
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center dark-brown-grad w3-bottombar w3-border-amber w3-padding-64 header-text">Visual appearance</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Located within the constellation Canes Venatici, M51 is found by following the easternmost star of the Big Dipper,
+                            Eta Ursae Majoris, and going 3.5° southwest. Its declination is +47°, making it a circumpolar for
+                            observers located above 43°N latitude; it reaches high altitudes throughout the northern hemisphere making it
+                            an accessible object from the early hours in winter through the end of spring season, after which observation
+                            is hindered in lower latitudes.
+                        </p>
+                        <p>
+                            M51 is visible through binoculars under dark sky conditions, and it can be resolved in detail
+                            with modern amateur telescopes. When seen through a 100 mm telescope the basic outlines of M51 (limited to 5x6')
+                            and its companion are visible. Under dark skies, and with a moderate eyepiece through a 150 mm telescope,
+                            M51's intrinsic spiral structure can be detected. With larger (>300 mm) instruments under dark sky conditions,
+                            the various spiral bands are apparent with HII regions visible, and M51 can be seen to be attached to M51B.
+                        </p>
+                        <p>
+                            As is usual for galaxies, the true extent of its structure can only be gathered from inspecting photographs;
+                            long exposures reveal a large nebula extending beyond the visible circular appearance. In 1984, thanks to
+                            the high-speed detector - the so-called image-photon-counting- IPCS - system - developed jointly by
+                            the CNRS Laboratoire d'Astronomie Spatiald (L.A.S.- CNRS) and the Observatoire de Haute Provence (O.H.P.)
+                            along with the particularly nice seeing offered by the Canada-France-Hawaii-Telescope (C.F.H.T.) 3.60m Cassegrain
+                            focus at Mauna Kea summit in Hawaii, Hua et al. detected the double component of the very nucleus of
+                            the Whirlpool galaxy (article in Astrophysical Letters and Communications, 1987, vol. 25, pp. 187-204).
+                        </p>
+                        <p>
+                            In January 2005 the Hubble Heritage Project constructed a 11477 × 7965-pixel composite image
+                            (shown in the infobox above) of M51 using Hubble's ACS instrument. The image highlights the galaxy's spiral arms,
+                            and shows detail into some of the structures inside the arms.
+                        </p>
+                        <div class="w3-content w3-margin-bottom cool-font" style="max-width:750px;padding:0;">
+                            <picture>
+                                <!--/static/images/universe/whirlpool2-small.jpg-->
+                                <source class="load-after-body" media="(max-width: 600px)">
+                                <!--https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/PIA23128-WhirlpoolGalaxy-VariousLight-20190626.jpg/750px-PIA23128-WhirlpoolGalaxy-VariousLight-20190626.jpg-->
+                                <img class="load-after-body" alt="Whirlpool Galaxy" style="width:100%;" />
+                            </picture>
+                            <div class="w3-container w3-center">
+                                <p class="sm-text">
+                                    Whirlpool Galaxy – Observed in Various Light a) 0.4; 0.7 μm – b) vis-blue/green; ir-red – c) 3.6; 4.5; 8 μm – d) 24 μm
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center dark-green-grad w3-bottombar w3-border-amber w3-padding-64 header-text">Properties</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Whirlpool Galaxy lies 23 million light years from Earth and has an estimated diameter of 76,000 light years.
+                            Overall the galaxy is about 43% the size of the Milky Way. Its mass is estimated to be 160 billion solar masses
+                            or around 10.3% of the mass of Milky Way Galaxy.
+                        </p>
+                        <p>
+                            A black hole, once thought to be surrounded by a ring of dust, but now believed to be partially occluded by
+                            dust instead, exists at the heart of the spiral. A pair of ionization cones extend from the active galactic nucleus.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Spiral structure</h3>
+                        <p>
+                            The pronounced spiral structure of the Whirlpool Galaxy is believed to be the result of the close interaction between it
+                            and its companion galaxy NGC 5195, which may have passed through the main disk of M51 about 500 to 600 million years ago.
+                            In this proposed scenario, NGC 5195 came from behind M51 through the disk towards the observer and
+                            made another disk crossing as recently as 50 to 100 million years ago until
+                            it is where we observe it to be now, slightly behind M51.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Star formation</h3>
+                        <p>
+                            The central region of M51 appears to be undergoing a period of enhanced star formation. The present efficiency of star formation,
+                            defined as the ratio of mass of new stars to the mass of star-forming gas, is only ~1%, quite comparable to the global value for
+                            the Milky Way and other galaxies. It is estimated that the current high rate of star formation can last no more than
+                            another 100 million years or so.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Transient events</h3>
+                        <p>
+                            Three supernovae have been observed in the Whirlpool Galaxy.
+                        </p>
+                        <p>
+                            In 1994, SN 1994I was observed in the Whirlpool Galaxy. It was classified as type Ic, indicating that its progenitor star was
+                            very massive and had already shed much of its mass, and its brightness peaked at apparent magnitude 12.91.
+                        </p>
+                        <p>
+                            In June 2005 the type II supernova SN 2005cs was observed in the Whirlpool Galaxy, peaking at apparent magnitude 14.
+                        </p>
+                        <p>
+                            On 31 May 2011 a type II supernova was detected in the Whirlpool Galaxy, peaking at magnitude 12.1. This supernova,
+                            designated SN 2011dh, showed a spectrum much bluer than average, with P Cygni profiles, which indicate rapidly expanding material,
+                            in its hydrogen-Balmer lines. The progenitor was probably a yellow supergiant and not a red or blue supergiant,
+                            which are thought to be the most common supernova progenitors.
+                        </p>
+                        <p>
+                            On 22 January 2019, a supernova impostor, designated AT2019abn, was discovered in Messier 51. The transient was later identified as
+                            a luminous red nova. The progenitor star was detected in archival Spitzer Space Telescope infrared images. No object could be seen at
+                            the position of the transient in archival Hubble images, indicating that the progenitor star was heavily obstructed by interstellar dust.
+                            2019abn peaked at magnitude 17, reaching an intrinsic brightness of {\displaystyle M_{r}=-14.9}{\displaystyle M_{r}=-14.9}.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="w3-row-padding w3-stretch">
+                        <div class="w3-col l2 m4 s6 w3-left w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/milky-way">
+                                    <!--https://www.dw.com/image/45348566_303.jpg-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>The Milky Way</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-right w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/andromeda">
+                                    <!--https://thumbor.forbes.com/thumbor/711x459/https://specials-images.forbesimg.com/dam/imageserve/541409306/960x0.jpg?fit=scale-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>The Andromeda</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+{% block info %}
+                <span>The source of most text information is</span>
+                <a class="source" href="https://en.wikipedia.org/wiki/Whirlpool_Galaxy" target="_blank">Wikipedia</a>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            // Load images after a page has loaded
+            loadImgsAfterBody([
+                '/static/images/universe/whirlpool-small.jpg',
+                'https://c4.wallpaperflare.com/wallpaper/581/311/685/space-galaxy-whirlpool-galaxy-wallpaper-preview.jpg',
+                'https://upload.wikimedia.org/wikipedia/commons/6/6a/M51Sketch.jpg',
+                '/static/images/universe/whirlpool2-small.jpg',
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/PIA23128-WhirlpoolGalaxy-VariousLight-20190626.jpg/750px-PIA23128-WhirlpoolGalaxy-VariousLight-20190626.jpg'
+            ], true);
+            // Load images when a user has scrolled down the middle of a page
+            loadAfterScrollMid([
+                'https://www.dw.com/image/45348566_303.jpg',
+                'https://thumbor.forbes.com/thumbor/711x459/https://specials-images.forbesimg.com/dam/imageserve/541409306/960x0.jpg?fit=scale'
+            ]);
+            // Make a link to the current page active
+            makeActive('.whirlpool');
+        </script>
+{% endblock %}

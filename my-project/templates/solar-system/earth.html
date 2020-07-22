@@ -1,0 +1,320 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Earth and the Moon
+{% endblock %}
+
+{% block style %}
+        <style>
+            /* Transparent bg for text */
+            .fix-text {
+                width: 100%;
+                background-color: rgba(0,0,0,0.6);
+                margin: 0 auto;
+            }
+            .marg-text {
+                margin: 8px 0 8px 8px;
+            }
+            @media screen and (min-width:993px){.head-img{background-image:url("/static/images/earth-hero-large.jpg");}}
+            @media screen and (max-width:992px){.marg-text{margin:16px;}.head-img{background-image:url("/static/images/earth-hero-medium.jpg");}}
+            @media screen and (max-width:600px){.head-img{height:76%;background-image:url("/static/images/earth-hero-small.jpg");}}
+        </style>
+{% endblock %}
+
+{% block head_content %}
+            <div class="w3-display-bottomleft w3-center w3-margin-bottom w3-padding-large w3-hide-medium w3-hide-small">
+                <span class="w3-tag">Just like the Moon we go through phases</span>
+            </div>
+            <div class="w3-display-top w3-center w3-padding-large">
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>EARTH</b></h1>
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>AND THE MOON</b></h1>
+            </div>
+            <div class="w3-display-bottomright w3-center w3-margin-bottom w3-padding-large tag-text">
+                <span id="bigger_font" class="contour w3-text-white">The Earth is what we all have in common</span>
+            </div>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center blue-grey-grad w3-bottombar w3-border-orange w3-padding-64 header-text">General information about Earth</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Earth is the third planet from the Sun and the only astronomical object known to harbor life. According to radiometric dating and
+                            other evidence, Earth formed over 4.5 billion years ago. Earth's gravity interacts with other objects in space,
+                            especially the Sun and the Moon, which is Earth's only natural satellite. Earth orbits around the Sun in 365.256 solar days,
+                            a period known as an Earth sidereal year. During this time, Earth rotates about its axis 366.256 times, that is,
+                            a sidereal year has 366.256 sidereal days.
+                        </p>
+                        <p>
+                            Earth's axis of rotation is tilted with respect to its orbital plane, producing seasons on Earth. The gravitational interaction between Earth
+                            and the Moon causes tides, stabilizes Earth's orientation on its axis, and gradually slows its rotation. Earth is the densest planet
+                            in the Solar System and the largest and most massive of the four rocky planets.
+                        </p>
+                        <p>
+                            Earth's outer layer (lithosphere) is divided into several rigid tectonic plates that migrate across the surface over many millions of years.
+                            About 29% of Earth's surface is land consisting of continents and islands. The remaining 71% is covered with water,
+                            mostly by oceans but also lakes, rivers and other fresh water, which all together constitute the hydrosphere.
+                            The majority of Earth's polar regions are covered in ice, including the Antarctic ice sheet and the sea ice of the Arctic ice pack.
+                            Earth's interior remains active with a solid iron inner core, a liquid outer core that generates Earth's magnetic field,
+                            and a convecting mantle that drives plate tectonics.
+                        </p>
+                        <p>
+                            Within the first billion years of Earth's history, life appeared in the oceans and began to affect Earth's atmosphere and surface,
+                            leading to the proliferation of anaerobic and, later, aerobic organisms. Some geological evidence indicates that life may have arisen
+                            as early as 4.1 billion years ago. Since then, the combination of Earth's distance from the Sun, physical properties and
+                            geological history have allowed life to evolve and thrive. In the history of life on Earth, biodiversity has gone through long periods of
+                            expansion, occasionally punctuated by mass extinctions. Over 99% of all species that ever lived on Earth are extinct.
+                            Estimates of the number of species on Earth today vary widely; most species have not been described. Over 7.7 billion humans live on Earth
+                            and depend on its biosphere and natural resources for their survival. Politically, the world has around 200 sovereign states.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="w3-margin">
+                <div class="w3-row w3-stretch" style="background-color:#0a0a0a;">
+                    <div class="w3-col l6">
+                        <div class="w3-content marg-text w3-white w3-card-2" style="padding:0;">
+                            <h2 class="w3-center teal-grad w3-bottombar w3-border-deep-purple w3-padding-32 header-text">Formation</h2>
+                            <div class="w3-padding">
+                                <p>
+                                    The oldest material found in the Solar System is dated to 4.5672±0.0006 billion years ago (Bya).
+                                    By 4.54±0.04 Bya the primordial Earth had formed. The bodies in the Solar System formed and evolved with the Sun.
+                                    In theory, a solar nebula partitions a volume out of a molecular cloud by gravitational collapse,
+                                    which begins to spin and flatten into a circumstellar disk, and then the planets grow out of that disk with the Sun.
+                                    A nebula contains gas, ice grains, and dust (including primordial nuclides). According to nebular theory,
+                                    planetesimals formed by accretion, with the primordial Earth taking 10–20 million years (Mys) to form.
+                                </p>
+                                <p>
+                                    A subject of research is the formation of the Moon, some 4.53 Bya. A leading hypothesis is that it was formed by accretion
+                                    from material loosed from Earth after a Mars-sized object, named Theia, hit Earth. In this view,
+                                    the mass of Theia was approximately 10 percent of Earth; it hit Earth with a glancing blow and some of its mass merged with Earth.
+                                    Between approximately 4.1 and 3.8 Bya, numerous asteroid impacts during the Late Heavy Bombardment caused significant changes
+                                    to the greater surface environment of the Moon and, by inference, to that of Earth.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w3-content marg-text w3-white w3-card-2" style="padding:0;">
+                            <h2 class="w3-center dark-green-grad w3-bottombar w3-border-orange w3-padding-32 header-text">Geological history</h2>
+                            <div class="w3-padding">
+                                <p>
+                                    Earth's atmosphere and oceans were formed by volcanic activity and outgassing. Water vapor from
+                                    these sources condensed into the oceans, augmented by water and ice from asteroids, protoplanets,
+                                    and comets. In this model, atmospheric "greenhouse gases" kept the oceans from freezing
+                                    when the newly forming Sun had only 70% of its current luminosity. By 3.5 Bya,
+                                    Earth's magnetic field was established, which helped prevent the atmosphere from being stripped away
+                                    by the solar wind.
+                                </p>
+                                <p>
+                                    A crust formed when the molten outer layer of Earth cooled to form a solid. The two models that explain
+                                    land mass propose either a steady growth to the present-day forms or, more likely, a rapid growth
+                                    early in Earth history followed by a long-term steady continental area. Continents formed by plate tectonics,
+                                    a process ultimately driven by the continuous loss of heat from Earth's interior.
+                                    Over the period of hundreds of millions of years, the supercontinents have assembled and broken apart.
+                                    Roughly 750 million years ago (Mya), one of the earliest known supercontinents, Rodinia, began to break apart.
+                                    The continents later recombined to form Pannotia 600–540 Mya, then finally Pangaea, which also broke apart 180 Mya.
+                                </p>
+                                <p>
+                                    The present pattern of ice ages began about 40 Mya, and then intensified during the Pleistocene about 3 Mya.
+                                    High-latitude regions have since undergone repeated cycles of glaciation and thaw,
+                                    repeating about every 40,000–100,000 years. The last continental glaciation ended 10,000 years ago.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-col l6">
+                        <picture>
+                            <!--/static/images/solar-system/earth-small.jpg-->
+                            <source class="load-after-body" media="(max-width: 600px)" />
+                            <!--/static/images/solar-system/earth-medium.jpg-->
+                            <source class="load-after-body" media="(max-width: 992px)" />
+                            <!--/static/images/solar-system/earth-large.jpg-->
+                            <img class="load-after-body" alt="Earth" style="width:100%;" />
+                        </picture>
+                    </div>
+                    <div class="w3-container">
+                        <div class="w3-content w3-black w3-margin-top w3-margin-bottom w3-card-2" style="padding:0;">
+                            <h2 class="w3-center dark-brown-grad w3-bottombar w3-border-orange w3-padding-32 header-text">Origin of life and evolution</h2>
+                            <div class="w3-padding">
+                                <p>
+                                    Chemical reactions led to the first self-replicating molecules about four billion years ago. A half billion years later,
+                                    the last common ancestor of all current life arose. The evolution of photosynthesis allowed
+                                    the Sun's energy to be harvested directly by life forms. The resultant molecular oxygen (O2) accumulated in the atmosphere
+                                    and due to interaction with ultraviolet solar radiation, formed a protective ozone layer (O3) in the upper atmosphere.
+                                    The incorporation of smaller cells within larger ones resulted in the development of complex cells called eukaryotes.
+                                    True multicellular organisms formed as cells within colonies became increasingly specialized.
+                                    Aided by the absorption of harmful ultraviolet radiation by the ozone layer, life colonized Earth's surface.
+                                    Among the earliest fossil evidence for life is microbial mat fossils found in 3.48 billion-year-old sandstone in Western Australia,
+                                    biogenic graphite found in 3.7 billion-year-old metasedimentary rocks in Western Greenland,
+                                    and remains of biotic material found in 4.1 billion-year-old rocks in Western Australia.
+                                    The earliest direct evidence of life on Earth is contained in 3.45 billion-year-old Australian rocks showing fossils of microorganisms.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center silver-grad w3-bottombar w3-border-orange w3-padding-64 header-text">General information about the Moon</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The Moon is an astronomical body orbiting Earth as its only natural satellite. It is the fifth-largest satellite in the Solar System,
+                            and by far the largest among planetary satellites relative to the size of the planet that it orbits (its primary).
+                            The Moon is, after Jupiter's satellite Io, the second-densest satellite in the Solar System among those whose densities are known.
+                        </p>
+                        <p>
+                            The Moon is thought to have formed about 4.51 billion years ago, not long after Earth. The most widely accepted explanation is that
+                            the Moon formed from the debris left over after a giant impact between Earth and a hypothetical Mars-sized body called Theia.
+                            New research of Moon rocks, although not rejecting the Theia hypothesis, suggests that the Moon may be older than previously thought.
+                        </p>
+                        <p>
+                            The Moon is in synchronous rotation with Earth, and thus always shows the same side to Earth, the near side. Because of libration,
+                            slightly more than half (about 59%) of the total lunar surface can be viewed from Earth. The near side is marked by dark volcanic maria
+                            that fill the spaces between the bright ancient crustal highlands and the prominent impact craters. After the Sun,
+                            the Moon is the second-brightest celestial object regularly visible in Earth's sky. Its surface is actually dark,
+                            although compared to the night sky it appears very bright, with a reflectance just slightly higher than that of worn asphalt.
+                            Its gravitational influence produces the ocean tides, body tides, and the slight lengthening of the day.
+                        </p>
+                        <p>
+                            The Moon's average orbital distance is 384,402 km (238,856 mi), or 1.28 light-seconds. This is about thirty times
+                            the diameter of Earth. The Moon's apparent size in the sky is almost the same as that of the Sun,
+                            since the star is about 400 times the lunar distance and diameter. Therefore, the Moon covers the Sun nearly precisely
+                            during a total solar eclipse. This matching of apparent visual size will not continue in the far future because
+                            the Moon's distance from Earth is gradually increasing.
+                        </p>
+                        <p>
+                            The Moon was first reached by a human-made object in September 1959, when the Soviet Union's Luna 2, an unmanned spacecraft,
+                            was intentionally crashed onto the lunar surface. This accomplishment was followed by
+                            the first successful soft landing on the Moon by Luna 9 in 1966. The United States' NASA Apollo program achieved
+                            the only manned lunar missions to date, beginning with the first manned orbital mission by Apollo 8 in 1968,
+                            and six manned landings between 1969 and 1972, with the first being Apollo 11 in July 1969.
+                            These missions returned lunar rocks which have been used to develop a geological understanding of the Moon's origin,
+                            internal structure, and the Moon's later history. Since the 1972 Apollo 17 mission,
+                            the Moon has been visited only by unmanned spacecraft.
+                        </p>
+                        <p>
+                            Both the Moon's natural prominence in the earthly sky and its regular cycle of phases as seen from Earth have provided
+                            cultural references and influences for human societies and cultures since time immemorial.
+                            Such cultural influences can be found in language, lunar calendar systems, art, and mythology.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="fix-text w3-container w3-margin-top w3-margin-bottom w3-padding w3-round">
+                        <p>
+                            And if you are ever feeling lonely just look at the Moon. Someone, somewhere is looking right at it too.
+                        </p>
+                    </div>
+                    <div class="w3-center">
+                        <picture>
+                            <!--/static/images/solar-system/moon-small.jpg-->
+                            <source class="last-load" media="(max-width: 600px)" />
+                            <!--/static/images/solar-system/moon-medium.jpg-->
+                            <source class="last-load" media="(max-width: 992px)" />
+                            <!--/static/images/solar-system/moon-large.jpg-->
+                            <img class="last-load" alt="The Moon" style="width:100%;" />
+                        </picture>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center dark-brown-grad w3-bottombar w3-border-amber w3-padding-64 header-text">Internal structure</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The Moon is a differentiated body. It has a geochemically distinct crust, mantle, and core.
+                            The Moon has a solid iron-rich inner core with a radius possibly as small as 240 kilometres (150 mi)
+                            and a fluid outer core primarily made of liquid iron with a radius of roughly 300 kilometres (190 mi).
+                            Around the core is a partially molten boundary layer with a radius of about 500 kilometres (310 mi).
+                            This structure is thought to have developed through the fractional crystallization of
+                            a global magma ocean shortly after the Moon's formation 4.5 billion years ago.
+                        </p>
+                        <p>
+                            Crystallization of this magma ocean would have created a mafic mantle from the precipitation and sinking of
+                            the minerals olivine, clinopyroxene, and orthopyroxene; after about three-quarters of the magma ocean had crystallised,
+                            lower-density plagioclase minerals could form and float into a crust atop.
+                            The final liquids to crystallise would have been initially sandwiched between the crust and mantle,
+                            with a high abundance of incompatible and heat-producing elements.
+                        </p>
+                        <p>
+                            Consistent with this perspective, geochemical mapping made from orbit suggests the crust of mostly anorthosite.
+                            The Moon rock samples of the flood lavas that erupted onto the surface from partial melting in the mantle confirm
+                            the mafic mantle composition, which is more iron-rich than that of Earth.
+                            The crust is on average about 50 kilometres (31 mi) thick.
+                        </p>
+                        <p>
+                            The Moon is the second-densest satellite in the Solar System, after Io. However, the inner core of the Moon is small,
+                            with a radius of about 350 kilometres (220 mi) or less, around 20% of the radius of the Moon.
+                            Its composition is not well understood, but is probably metallic iron alloyed with a small amount of sulphur and nickel;
+                            analyses of the Moon's time-variable rotation suggest that it is at least partly molten.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="w3-row-padding w3-stretch">
+                        <div class="w3-col l2 m4 s6 w3-left w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/venus">
+                                    <!--/static/images/solar-system/venus-link.jpg-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>Venus</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m4 s6 w3-right w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/mars">
+                                    <!--https://www.wfyi.org/files/wfyi/programs_radio/current/wsky-mars-esa.jpg-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>Mars</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+{% block info %}
+                <span>The sources of most text information are</span>
+                <a class="source" href="https://en.wikipedia.org/wiki/Earth" target="_blank">Wikipedia (Earth)</a>,
+                <a class="source" href="https://en.wikipedia.org/wiki/Moon" target="_blank">Wikipedia (The Moon)</a>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            // Load images after a page has loaded
+            loadImgsAfterBody([
+                '/static/images/solar-system/earth-small.jpg',
+                '/static/images/solar-system/earth-medium.jpg',
+                '/static/images/solar-system/earth-large.jpg'
+            ], true);
+            // Load images when a user has scrolled down the middle of a page
+            loadAfterScrollMid([
+                '/static/images/solar-system/moon-small.jpg',
+                '/static/images/solar-system/moon-medium.jpg',
+                '/static/images/solar-system/moon-large.jpg',
+                '/static/images/solar-system/venus-link.jpg',
+                'https://www.wfyi.org/files/wfyi/programs_radio/current/wsky-mars-esa.jpg'
+            ]);
+            // Make a link to the current page active
+            makeActive('.earth');
+        </script>
+{% endblock %}

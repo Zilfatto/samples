@@ -1,0 +1,128 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    About
+{% endblock %}
+
+{% block style %}
+        <style>
+            footer {
+                display: none;
+            }
+            h3, h4 {
+                font-family: "Raleway", sans-serif;
+                font-weight: 600;
+            }
+            h3 {
+                font-size: 28px;
+            }
+            @media screen and (min-width:993px){.head-img{background-image:url("/static/images/earth-hero-large.jpg");}}
+            @media screen and (max-width:992px){.head-img{background-image:url("/static/images/earth-hero-medium.jpg");}}
+            @media screen and (max-width:600px){.head-img{height:76%;background-image:url("/static/images/earth-hero-small.jpg");}}
+        </style>
+{% endblock %}
+
+{% block head_content %}
+            <div class="w3-display-bottomleft w3-center w3-margin-bottom w3-padding-large w3-hide-medium w3-hide-small">
+                <span class="w3-tag">Honesty is the best policy</span>
+            </div>
+            <div class="w3-display-top w3-center w3-padding-large">
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>ABOUT</b></h1>
+            </div>
+            <div class="w3-display-bottomright w3-center w3-margin-bottom w3-padding-large tag-text">
+                <span id="bigger_font" class="contour w3-text-white">While we are postponing, life speeds by.</span>
+            </div>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center dark-blue-grad w3-bottombar w3-border-amber w3-padding-32 header-text">About me (the developer of this webapp)</h2>
+                    <div class="w3-padding">
+                        <p class="w3-margin-left">Hello, visitor. My name is Daniel Krasnenko, I am 21 years old and was born in Russia.</p>
+                        <h3 class="w3-center">My little story</h3>
+                        <p>
+                            After graduating from high school, I did not know what career I wanted. By that time I had a dream to be fluent in English and
+                            go to America some day, but I did not take any actions for making this come true. So I did what my parents told me to do.
+                            I went to university for studying Specialist’s degree program of &#8220;Mining and underground constructions&#8221; because my parents considered that profession to be quite high-paying or
+                            at least I would have a Specialist's degree which gives me the experience and opportunities for life.
+                        </p>
+                        <p>
+                            One day, at the end of my freshman year I started thinking about my life, dreams and future, and realised that,
+                            if I continued to go through life in the same way, I would never live my dreams. Nothing would change in my life without taking actions towards my dreams.
+                            Also it became clear to me that education in most Russian universities was quite poor, and yes, the university would give me a degree, but would not give much knowledge.
+                            For these reasons, I started my self-education journey by learning English, and now as you can see, there is a progress in it.
+                        </p>
+                        <p>
+                            About a year ago, I found my true passion, and it was programming. Since then, I became completely obsessed with it. So far, I have completed <a class="source" href="https://cs50.harvard.edu/x/2020/" target="_blank">CS50x</a>
+                            course (Computer Science 50 at Harvard University), <a class="source" href="https://www.w3schools.com/" target="_blank">w3schools</a>'s tutorials on HTML, CSS, JavaScript, W3.CSS (CSS framework from w3schools), SASS and React. Currently I am taking
+                            <a class="source" href="https://cs50.harvard.edu/web/2020/" target="_blank">CS50 Web Programming</a> course, and that is only the beginning.
+                        </p>
+                        <h3 class="w3-center">My mindset</h3>
+                        <div style="padding:16px 0;">
+                            Please, do not believe, if I was born in this country, it means that I have the same polotical views as most Russians.
+                            To be honest, I do not like this country because the authorities are very corrupted, and also my mindset is quite different from most people here.
+                            <h3 style="padding:16px 20px 0;">I -</h3>
+                            <ul>
+                                <li>am always open-minded</li>
+                                <li>think there is one thing that we all have in common, it is the Earth - our Home, and the boundaries are only in our minds</li>
+                                <li>want we all to build bridges for our common good, not walls</li>
+                                <li>did not choose where I wanted to be born, and so I think that at least we all have to be able to choose where we want to live</li>
+                                <li>am not a very religious person</li>
+                                <li>do not drink</li>
+                                <li>have been going to the gym for 7 years (almost every day)</li>
+                                <li>am always curious about the world</li>
+                                <li>seek to improve myself and never miss an occasion to learn something new</li>
+                                <li>with regard to my desire like a citizen, I really want to live in a truly democratic country with free and fair elections,
+                                good health care and education, and free mass media, where freedom is a sacred right.</li>
+                            </ul>
+
+                            In my view, life long education is an essential part of our life, because we live in a fast-changing world and need to be adaptive.
+                            So, if you want to stay afloat for a long time, it demands putting some of your time and effort into developing yourself. But first, it is important to follow your heart and
+                            find your true passion for moving in the right direction. The best motivation to continue doing something is your own progress in it, but the hardest thing is to get started.
+                            I clearly remember when I started learning English or programming for the first time and the most difficult part was just to get started. But every time I compare my today's version of myself with
+                            that old one, it makes me feel so good that I want to put more and more energy, effort and time into further improvement these skills. A few years ago I could only dream about being able to write and
+                            speak in English or creating a website, but now it is the reality.
+                        </div>
+                        <h3 class="w3-center">My project</h3>
+                        <h4 class="w3-margin-left">Why did I choose this subject?</h4>
+                        <p>
+                            Firstly, I am not so good in English for writing perfect articles and secondly, I made it for showing my developer's skills, but not copywriter's ones.
+                            So I was finding subjects where I did not need to generate most of the text content by myself and could just copy and paste it. (and of course sources that were available for non-commercial using)
+                        </p>
+                        <h4 class="w3-margin-left">What I did not do in it or did wrong</h4>
+                        <ul>
+                            <li>I started creating first pages for &#8220;desktop first&#8221;, then realised that it was not the best decision, but it was quite late for changing it because it would take quite a lot of time.
+                            So I left it as it was.</li>
+                            <li>I did not find any ways for caching only images in Flask, so they are always loading.</li>
+                            <li>I used a jpeg format for images, but there are next-gen ones for better compression. I needed to convert copies of that images to WebP format and add links to them to a picture HTML elements,
+                            but it also would take quite a lot of time.</li>
+                        </ul>
+                        <p class="w3-margin-left">My web app is not for the production, so I only write about these details here in order to say that I have an understanding of it.</p>
+                        <h3 class="w3-center">About my programming experience, skills and future job</h3>
+                        <ul>
+                        <h4 class="w3-margin-top">I have:</h4>
+                            <li>experience with HTML, CSS, JavaScript, C, SASS and not so much with Python, Flask and SQL.</li>
+                            <li>a basic understanding of software development and programming languages.</li>
+                            <li>a thorough knowledge of computer science fundamentals (algorithms and data structures).</li>
+                            <li>the ability to write clean and maintainable code, following standards and guidelines.</li>
+                        <h4 class="w3-margin-top">I am:</h4>
+                            <li>a team player and like to collaborate with other people.</li>
+                            <li>highly motivated and have a passion for creating and supporting great products.</li>
+                            <li>great at efficient problem solving.</li>
+                        </ul>
+                        <p>On my <a class="source" href="https://github.com/" target="_blank">github repository</a> you can find samples of my code.</p>
+                        <p>Taking CS50, I implemented merge sort in C for an array of integers. Creating this project, for finding a country (ies) in the most efficient way on a register page for an autocomplete,
+                        I implemented binary search. I am always striving to make something in the best possible way and paying attention to details.</p>
+                        <p>Although, I am currently a fourth-year student, there is no any reason for me to continue going to university because my program does not have anything to do with IT,
+                        a degree itself does not make much sense here in Russia and I found an alternative way for getting education using my English skills and the internet. For me, there is a big difference
+                        in the quality of education between foreign and local one. So I am ready to drop out at any time when I get my first job offer.</p>
+                        <p>I want to find an ambitious team for which only sky is the limit and also make a contribution to the development of a company, by working on big projects.</p>
+                        <div class="w3-center w3-panel w3-topbar w3-bottombar w3-border-black w3-round-xxlarge" style="background-color:#ffff99;">
+                            <p>My email - <strong>danielkrasnenko@gmail.com</strong></p>
+                            <p>My linkedIn <b><a class="source" href="https://www.linkedin.com/in/daniel-krasnenko">profile</a></b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}

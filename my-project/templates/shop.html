@@ -1,0 +1,494 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Shop
+{% endblock %}
+
+{% block style %}
+        <style>
+            .card {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                max-width: 300px;
+                margin: auto;
+                text-align: center;
+                font-family: arial;
+            }
+            .price {
+                color: #4a4a4a;
+                font-size: 22px;
+                margin: 20px 0 15px;
+            }
+            .w3-btn {
+                outline: 0;
+                padding: 12px;
+                width: 100%;
+                color: white;
+                background-color: black;
+                font-size: 18px;
+                position: relative;
+                font-weight: 900;
+                font-family: "Raleway", sans-serif;
+            }
+            .w3-btn.cancel {
+                background-color: #bc0000;
+            }
+            .w3-btn:hover {background-color: #b08000;}
+            .w3-btn.cancel:hover {background-color: #ff0000;}
+            .w3-btn:disabled:hover{background-color:black;}
+            .w3-btn.cancel:disabled:hover {background-color:#bc0000}
+            .w3-btn:after {
+                content: "";
+                background: #d9d9d9;
+                display: block;
+                position: absolute;
+                padding-top: 300%;
+                padding-left: 350%;
+                margin-left: -20px!important;
+                margin-top: -120%;
+                opacity: 0;
+                transition: 0.8s
+            }
+            .w3-btn.click:after {
+                padding: 0;
+                margin: 0;
+                opacity: 1;
+                transition: 0s
+            }
+            /* Center the loader */
+            .loader {
+                position: absolute;
+                display: none;
+                left: 50%;
+                top: 100%;
+                z-index: 8;
+                width: 150px;
+                height: 150px;
+                margin: -75px 0 0 -75px;
+                border: 16px solid yellow;
+                border-radius: 50%;
+                border-top: 16px solid #000;
+                border-bottom: 16px solid #000;
+                -webkit-animation: spin 2s linear infinite;
+                animation: spin 2s linear infinite;
+            }
+            @-webkit-keyframes spin {
+                0% { -webkit-transform: rotate(0deg); }
+                100% { -webkit-transform: rotate(360deg); }
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            /* Add animation to "page content" */
+            .animate-bottom {
+                -webkit-animation-name: animatebottom;
+                -webkit-animation-duration: 1s;
+                animation-name: animatebottom;
+                animation-duration: 1s
+            }
+            @-webkit-keyframes animatebottom {
+                from { bottom:-100px; opacity:0 }
+                to { bottom:0px; opacity:1 }
+            }
+            @keyframes animatebottom {
+                from{ bottom:-100px; opacity:0 }
+                to{ bottom:0; opacity:1 }
+            }
+            #part0, #part8, #part16 {
+                margin:0!important;
+                padding:0!important;
+                position: relative;
+            }
+            .my-tiny-padding {
+                height:120px;
+                margin:0;
+                padding: 0 10px 10px;
+                text-align: justify;
+                text-align-last: center;
+                text-justify: auto;
+            }
+            .item-message {
+                margin:0;
+                padding:10px 0 10px;
+                background-color: #ffffcc;
+            }
+            .item-message p {
+                color:red;
+                padding:2px 6px;
+                margin: 0 12px 16px;
+                border-top:2px solid blue;
+                border-bottom:2px solid blue;
+                border-radius: 30px;
+            }
+            .item-message .w3-button {
+                width: 40%;
+                border: 2px solid #777;
+                background-color: #000;
+                color:#fff!important;
+
+            }
+            .item-message .w3-button:hover {
+                background-color: #cca300!important;
+                border-color:#000;
+            }
+            /* Transparent bg for text */
+            .fix-text {
+                width: 100%;
+                background-color: rgba(0,0,0,0.6);
+                margin: 0 auto;
+            }
+            .main-grad {background-image: linear-gradient(165deg, #444 0%, #818181 36%, #333 60%);}
+            .my-hover-shadow:hover {box-shadow:0 3px 12px 0 rgba(255, 255, 0, 0.35), 0 3px 20px 0 rgb(204, 129, 0, 0.27)!important;}
+            @media screen and (min-width:993px){.head-img{background-image:url("/static/images/shop/shop-large.jpg");}}
+            @media screen and (max-width:1200px) and (min-width: 1009px){.my-tiny-padding{height:140px;}}
+            @media screen and (max-width:1008px) and (min-width: 993px){.my-tiny-padding{height:160px;}}
+            @media screen and (max-width:992px){.head-img{background-image:url("/static/images/shop/shop-medium.jpg");}}
+            @media screen and (max-width:628px) and (min-width: 601px){.my-tiny-padding{height:140px;}}
+            @media screen and (max-width:600px){.head-img{height:76%;background-image:url("/static/images/shop/shop-small.jpg");}.loader{width:80px;height:80px;margin:-40px 0 0 -40px;border-width:8px;}}
+            @media screen and (max-width:380px){.card{max-width:100%;}}
+        </style>
+{% endblock %}
+
+{% block head_content %}
+            <div class="w3-display-bottomleft w3-center w3-margin-bottom w3-padding-large w3-hide-medium w3-hide-small">
+                <span class="w3-tag">Open for everyone</span>
+            </div>
+            <div class="w3-display-top w3-center w3-padding-large">
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>SHOP</b></h1>
+            </div>
+            <div class="w3-display-bottomright w3-center w3-margin-bottom w3-padding-large tag-text">
+                <span id="bigger_font" class="w3-tag w3-round"><i>Everything is in your hands</i></span>
+            </div>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="fix-text w3-container w3-margin-top w3-margin-bottom w3-padding w3-round">
+                        <p>It's actually not a real shop, but have some fun to play with it!</p>
+                        <p>Here everything is possible.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-message my-tiny-padding w3-hide">
+                <p>This item is out of stock</p>
+                <span onclick="removeMessage(this)" class="w3-button w3-large w3-round-large">OK</span>
+            </div>
+
+            <span id="img_count" style="display:none;"></span>
+
+            <div id="storage" style="display:none;"></div>
+
+            <div id="part24" class="w3-margin">
+                <div id="for_items" class="w3-content" style="max-width:1400px;">
+                    <div id="part0">
+                        <div class="w3-row-padding">
+                            <div class="w3-col l3 m6 w3-margin-bottom">
+                                <div class="card w3-white my-hover-shadow">
+                                    <img class="load-after-body" alt="cosmic dust" style="width:100%">
+                                    <h1></h1>
+                                    <p class="price">$</p>
+                                    <p class="my-tiny-padding">The smell of the freedom and something unusual in every particle, directly from outer space. </p>
+                                    <button id="0" class="w3-btn" onclick="changeBtn(this)">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="w3-col l3 m6 w3-margin-bottom">
+                                <div class="card w3-white my-hover-shadow">
+                                    <img class="load-after-body" alt="luxury house" style="width:100%">
+                                    <h1></h1>
+                                    <p class="price">$</p>
+                                    <p class="my-tiny-padding">Every human on Earth deserves to live in the luxury mansion by the sea and enjoy this incredible life</p>
+                                    <button id="1" class="w3-btn" onclick="changeBtn(this)">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="w3-col l3 m6 w3-margin-bottom">
+                                <div class="card w3-white my-hover-shadow">
+                                    <img class="load-after-body" alt="rarity car" style="width:100%">
+                                    <h1></h1>
+                                    <p class="price">$</p>
+                                    <p class="my-tiny-padding">For those who like rare things, this one is going to be a nice addition for your collection</p>
+                                    <button id="2" class="w3-btn" onclick="changeBtn(this)">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="w3-col l3 m6 w3-margin-bottom">
+                                <div class="card w3-white my-hover-shadow">
+                                    <img class="load-after-body" alt="clouds" style="width:100%">
+                                    <h1></h1>
+                                    <p class="price">$</p>
+                                    <p class="my-tiny-padding">If you ever wondered what the clouds feel like, now it is your only chance to know this</p>
+                                    <button id="3" class="w3-btn" onclick="changeBtn(this)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w3-row-padding">
+                            <div class="w3-col l3 m6 w3-margin-bottom">
+                                <div class="card w3-white my-hover-shadow">
+                                    <img class="load-after-body" alt="star" style="width:100%">
+                                    <h1></h1>
+                                    <p class="price">$</p>
+                                    <p class="my-tiny-padding">If you ever wanted to look up at the night sky from your bed now it is possible.</p>
+                                    <button id="4" class="w3-btn" onclick="changeBtn(this)">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="w3-col l3 m6 w3-margin-bottom">
+                                <div class="card w3-white my-hover-shadow">
+                                    <img class="load-after-body" alt="sweater" style="width:100%">
+                                    <h1></h1>
+                                    <p class="price">$</p>
+                                    <p class="my-tiny-padding">Very comfortable and soft sweater which gives you much joy from wearing it</p>
+                                    <button id="5" class="w3-btn" onclick="changeBtn(this)">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="w3-col l3 m6 w3-margin-bottom">
+                                <div class="card w3-white my-hover-shadow">
+                                    <img class="load-after-body" alt="money" style="width:100%">
+                                    <h1></h1>
+                                    <p class="price">$</p>
+                                    <p class="my-tiny-padding">Who wonder why all their money disappears now can get them back, but for some other money.</p>
+                                    <button id="6" class="w3-btn" onclick="changeBtn(this)">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="w3-col l3 m6 w3-margin-bottom">
+                                <div class="card w3-white my-hover-shadow">
+                                    <img class="load-after-body" alt="flying car" style="width:100%">
+                                    <h1></h1>
+                                    <p class="price">$</p>
+                                    <p class="my-tiny-padding">A simple solution for preventing traffic jamps. Only if you are not affraid to fly</p>
+                                    <button id="7" class="w3-btn" onclick="changeBtn(this)">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="part8 loader"></div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            // Items data from database. This data might be received via AJAX, in order to make
+            // rendering of a page a little bit faster
+            let itemsFromDB = retrieve({{rows|tojson}}),
+                // In order to keep track of a number of loaded portions of items via AJAX
+                loadedItems = 0,
+                // For mobile browsers that do not support unload and visibilitychange events
+                alwaysUpdateStorg,
+                loadedImgs = 0;
+            const UA = navigator.userAgent,
+                // Snackbar for showing messages to the user
+                SNACK_BAR = document.getElementById('snackbar'),
+                // Message about the absence of an item
+                MESSAGE = document.querySelector('.item-message'),
+                IMG_COUNTER = document.getElementById('img_count'),
+                ITEMS_CONTAINER = document.getElementById('for_items'),
+                STORAGE = document.getElementById('storage');
+            // Unload event does not work in mobile devices
+            if (isMobile) {
+                // Using UA is not very reliable way of determining the browser, but it works well for now
+                if (/FxiOS|Firefox|Mobile\/15E148|EdgA|OPR|YaBrowser|BlackBerry|IEMobile|Opera Mini|CriOS/i.test(UA)) {
+                    alwaysUpdateStorg = true;
+                } else {
+                    // Handle page visibility change for mobile Chrome
+                    document.addEventListener('visibilitychange', () => {
+                        if (document['hidden']) {
+                            // Update storage
+                            setStorageObj('cart', cart);
+                        }
+                    });
+                }
+            } else {
+                // Before living this page, send new items in a cart to the server
+                window.addEventListener('unload', () => {
+                    // Update storage
+                    setStorageObj('cart', cart);
+                });
+            }
+            // Mark all the buttons with added to the cart items in first part of items in a page
+            markSelectedItems(0, 8);
+            // Begin to keep track of a user's scrolling
+            window.addEventListener('scroll', loadItems);
+            // For future SSE
+            // if (typeof(EventSource) !== "undefined") {
+            //     // Yes! Server-sent events support!
+            //     const source = new EventSource("/smth");
+            //     source.onmessage = function(event) {
+            //         const btns = document.getElementById("part24").getElementsByClassName("w3-btn");
+            //         itemsFromDB = JSON.parse(event.data);
+            //         checkAvailability(0, btns.length, btns);
+            //     };
+            // } else {
+            //     // Sorry! No server-sent events support..
+            // }
+            loadImgsAfterBody([
+                '/static/images/shop/dust.jpg',
+                '/static/images/shop/luxury-house.jpg',
+                '/static/images/shop/car.jpg',
+                '/static/images/shop/clouds.jpg',
+                '/static/images/shop/star.jpg',
+                '/static/images/shop/sweater.jpg',
+                '/static/images/shop/money.jpg',
+                '/static/images/shop/flying-car.jpg'
+            ], false);
+            // Adding items to or removing from cart
+            function changeBtn(btn) {
+                btn.classList.toggle('cancel');
+                // Adding and removing "click" class in order to make ripple effect happen only on click,
+                // but not on touchinng on smartphones
+                btn.classList.add('click');
+                if (btn.innerText === 'Add to Cart') {
+                    btn.innerText = 'Cancel';
+                    // Add an id of a clicked button (item) to the cart
+                    cart.push(parseInt(btn.id));
+                } else {
+                    btn.innerText = 'Add to Cart';
+                    // Remove an item from the cart
+                    removeItem(btn);
+                }
+                if (alwaysUpdateStorg) {
+                    // Update storage if needed
+                    setStorageObj('cart', cart);
+                }
+                updateCount();
+                // On fast devices it may be need to add 'SetTimeOut' to it
+                btn.classList.remove('click');
+            }
+            // Removing items from the cart
+            function removeItem(elem) {
+                const position = cart.indexOf(parseInt(elem.id));
+                cart.splice(position, 1);
+            }
+            // Mark all the buttons with added to the cart items
+            function markSelectedItems(start, end) {
+                const btns = ITEMS_CONTAINER.querySelector('#part' + start).getElementsByClassName('w3-btn');
+                // Mark the certain part of items (in particular 8)
+                for (let i = start, position; i < end; i++) {
+                    position = i - start;
+                    if (cart.includes(i)) {
+                        btns[position].classList.add('cancel');
+                        btns[position].innerText = 'Cancel';
+                    }
+                    btns[position].previousElementSibling.previousElementSibling.previousElementSibling.innerText = itemsFromDB[i]['name'];
+                    btns[position].previousElementSibling.previousElementSibling.innerText += itemsFromDB[i]['price'];
+                }
+                checkAvailability(start, end, btns);
+                // Update main gradient, because it does not apply css propertis to new added elements via JS
+                document.querySelector('.main-grad').style.backgroundImage = 'linear-gradient(165deg, #444 0%, #818181 36%, #333 60%';
+            }
+            // Load a portion of new items
+            function loadItems() {
+                const height = document.body.scrollHeight,
+                    winHeight = window.innerHeight,
+                    curScrollPos = window.pageYOffset;
+                // In case if a user scrolled almost to the bottom
+                if (curScrollPos > 0.98 * (height - winHeight)) {
+                    if (loadedItems === 0) {
+                        window.removeEventListener('scroll', loadItems);
+                        loadHtml(8, true);
+                        loadedItems++;
+                    } else if (loadedItems === 1) {
+                        window.removeEventListener('scroll', loadItems);
+                        loadHtml(16, false);
+                        loadedItems++;
+                    }
+                }
+            }
+            // Load HTML files of new items for the shop via GET
+            function loadHtml(number, addListener) {
+                const xmlhttp = new XMLHttpRequest();
+                // Show a loader
+                ITEMS_CONTAINER.querySelector('.part' + number).style.display = 'block';
+                xmlhttp.onreadystatechange = function() {
+                    if (this.readyState === 4 && this.status === 200) {
+                        // Add received items to a page. First into the storage and then append to the container
+                        // to prevent a browser from requesting these images more than 1 time
+                        STORAGE.innerHTML = this.responseText;
+                        ITEMS_CONTAINER.appendChild(STORAGE.children[0]);
+                        // Show new items only when all images of them are loaded
+                        waitImages(number, addListener);
+                        // Mark new added, but selected before items
+                        markSelectedItems(number, number + 8);
+                    } else if (this.status >= 500) {
+                        SNACK_BAR.innerText = 'Server does not respond';
+                        SNACK_BAR.className = 'show error';
+                        // After 6 seconds, remove the show class from DIV
+                        setTimeout(function(){ SNACK_BAR.className = SNACK_BAR.className.replace('show', ''); }, 6000);
+                    }
+                };
+                xmlhttp.open('GET', '/shop-items?data=part' + number, true);
+                xmlhttp.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+                xmlhttp.send();
+            }
+            // If an item is out of stock, disable the button for adding it to the cart
+            // But if a user already has it in the cart, show him a message about it
+            // This function is implemented to work immediately after an ordinary page loading and
+            // also with using SSE, changing item availability in real time
+            function checkAvailability(start, end, btns) {
+                let position;
+                for (let i = start; i < end; i++) {
+                    position = i - start;
+                    // If items have been out of stock
+                    if (itemsFromDB[i]['current_number'] === 0) {
+                        // In case if items are already disabled
+                        if (btns[position].disabled) {
+                            continue;
+                        }
+                        btns[position].setAttribute('disabled', 'disabled');
+                        // If a user has already added this item to the card
+                        if (cart.includes(i)) {
+                            // If a card does not contain a message div, then create
+                            if (btns[position].previousElementSibling.tagName === 'P') {
+                                // Clone a message div and insert it before the button
+                                btns[position].parentNode.insertBefore(MESSAGE.cloneNode(true), btns[position]);
+                            }
+                            // Show a message div and hide paragraph with product discription
+                            btns[position].previousElementSibling.classList.remove('w3-hide');
+                            btns[position].previousElementSibling.previousElementSibling.classList.add('w3-hide');
+                        // Otherwise just disable it
+                        } else {
+                            btns[position].innerText = 'Sold out';
+                        }
+                    } else {
+                        // Check if an item was out of stock, but now it's not. Then enable it
+                        if (btns[position].disabled) {
+                            btns[position].removeAttribute('disabled');
+                            btns[position].innerText = 'Add to cart';
+                            // If there is a message div above button, the hide it
+                            if (btns[position].previousElementSibling.tagName === 'DIV' && !btns[position].previousElementSibling.classList.contains('w3-hide')) {
+                                btns[position].previousElementSibling.classList.add('w3-hide');
+                                btns[position].previousElementSibling.previousElementSibling.remove('w3-hide');
+                            }
+                        }
+                    }
+                }
+            }
+            function removeMessage(elem) {
+                const parent = elem.parentNode;
+                changeBtn(parent.nextElementSibling);
+                parent.classList.add('w3-hide');
+                parent.previousElementSibling.classList.remove('w3-hide');
+                parent.nextElementSibling.innerText = 'Sold out';
+            }
+            function waitImages(partNumber, addListener) {
+                IMG_COUNTER.addEventListener('click', function checkImages() {
+                    if (loadedImgs === 8) {
+                        loadedImgs = 0;
+                        // Hide a loader
+                        ITEMS_CONTAINER.querySelector('.part' + partNumber).style.display = 'none';
+                        // Show new items
+                        ITEMS_CONTAINER.querySelector('#part' + partNumber).style.display = 'block';
+                        // Begin to keep track of a user's scrolling again if needed
+                        if (addListener) {
+                            window.addEventListener('scroll', loadItems);
+                        }
+                        IMG_COUNTER.removeEventListener('click', checkImages);
+                    }
+                });
+            }
+            // Retrieve data from jinja
+            function retrieve(data) {
+                return data;
+            }
+        </script>
+{% endblock %}

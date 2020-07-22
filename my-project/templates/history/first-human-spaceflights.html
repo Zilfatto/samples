@@ -1,0 +1,264 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    First human spaceflights
+{% endblock %}
+
+{% block style %}
+        <style>
+            .sm-text {
+                font-size: 16px;
+            }
+            .sm-img {
+                width: 65%;
+            }
+            @media screen and (min-width:993px){.head-img{background-image:url("https://static1.squarespace.com/static/57ed3edb37c58182f815c65f/57ed3f076a49633d10d11e12/5cae1247e79c707fbfed0f13/1554912091369/shutterstock_571916983.jpg?format=2500w");}}
+            @media screen and (max-width:992px){.sm-text{font-size:14px;}.sm-img{width:80%;}.head-img{background-image:url("/static/images/history/hero-history-medium.jpg");}}
+            @media screen and (max-width:600px){.sm-img{width:100%;}.head-img{height:76%;background-image:url("/static/images/history/hero-history-small.jpg");}}
+        </style>
+{% endblock %}
+
+{% block head_content %}
+            <div class="w3-display-bottomleft w3-center w3-margin-bottom w3-padding-large w3-hide-medium w3-hide-small">
+                <span class="w3-tag">Whatever it takes</span>
+            </div>
+            <div class="w3-display-top w3-center w3-padding-large">
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>FROM SPUTNIK</b></h1>
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>TO APOLLO</b></h1>
+            </div>
+            <div class="w3-display-bottomright w3-center w3-margin-bottom w3-padding-large tag-text">
+                <span id="bigger_font" class="contour w3-text-white">The only limits on human achievement are self-imposed</span>
+            </div>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center dark-blue-grad w3-bottombar w3-border-orange w3-padding-64 header-text">The first human spaceflights</h2>
+                    <div class="w3-padding">
+                        <p>
+                            During the 1950s space planners in both the Soviet Union and the United States anticipated the launching of
+                            a human being into orbit as soon as the required launch vehicle and spacecraft could be developed and tested.
+                            Much of the initial thinking focused on some form of piloted space plane, which, after being launched atop a rocket,
+                            could maneuver in orbit and then return to Earth, gliding to a horizontal landing on a conventional runway.
+                        </p>
+                        <p>
+                            In the United States the air force developed a rocket-powered experimental aircraft, the X-15, which,
+                            after being dropped from an in-flight B-52 bomber, could reach altitudes as high as 108 km (67 miles),
+                            the edge of outer space. Nevertheless, the X-15 could not achieve the velocity and
+                            altitude needed for orbital flight. That was the mission of Dyna-Soar, another air force project.
+                            Dyna-Soar was to be a piloted reusable delta-winged vehicle that would be launched into orbit by
+                            a modified Titan ICBM and could carry out either bombing or reconnaissance missions over
+                            the Soviet Union or intercept a Soviet satellite in orbit. Although a full-scale vehicle was built and
+                            six people were chosen to train as Dyna-Soar crew, the project was canceled in 1963.
+                        </p>
+                        <div class="w3-content cool-font sm-img" style="padding:0;max-width:610px;">
+                            <!-- https://cdn.britannica.com/s:700x500/12/65012-120-CA2E5A36/North-American-Aviation-X-15-plane-bomber-Boeing.jpg -->
+                            <img class="load-after-body" alt="X-15 launched from B052" />
+                            <div class="w3-container w3-black">
+                                <h3 class="w3-margin-top">X-15 launched from B-52</h3>
+                                <p class="sm-text">
+                                    North American Aviation X-15 rocket-powered plane being air-launched from a Boeing B-52 bomber.
+                                    Flights of the experimental X-15 in the 1960s set unofficial altitude and speed records for
+                                    piloted aircraft and contributed to the development of the U.S. crewed spaceflight program.
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            Rather than base their human spaceflight programs on space planes, the Soviet Union and the United States,
+                            in their desire to put people into space as quickly as possible, opted for a less technically demanding ballistic approach.
+                            A person would ride in a capsulelike spacecraft atop a rocket to achieve orbit. At the end of the flight,
+                            another rocket (called a retro-rocket) would slow down the spacecraft enough for it to fall back to Earth.
+                            To accomplish this feat, the spacecraft would have to survive the intense heat caused by reentering
+                            the atmosphere at a high speed and then carry its passenger safely back to Earth’s surface.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Vostok</h3>
+                        <p>
+                            Soon after the success of the first Sputniks, Korolyov and his associate Tikhonravov began work on the design of
+                            an orbital spacecraft that could be used for two purposes. One was to conduct photoreconnaissance missions
+                            and then return the exposed film to Earth. The other was to serve as a vehicle for the first human spaceflight missions,
+                            in which a human being would replace the reconnaissance camera. The spacecraft was called Vostok when it was used to carry
+                            a human into space. Vostok had two sections—a spherical capsule in which the person would ride and a conical module
+                            that contained the instruments needed for its flight. The spacecraft was large for the time, weighing 4.73 metric tons.
+                            The crew capsule was completely covered by a thermal coating to protect it during reentry. Vostok was designed so that
+                            the human aboard need not touch any control from launch to touchdown; he would be essentially just a passenger.
+                            Nor would he land with the spacecraft. Rather, he would be ejected from it at an altitude of 7 km (4.3 miles) and
+                            parachute to dry land while the spacecraft landed nearby with its own parachutes.
+                        </p>
+                        <div class="w3-content w3-center w3-center cool-font sm-img" style="padding:0;">
+                            <!-- https://cdn.britannica.com/s:700x500/34/434-004-AA460D19/spacecraft-Vostok-6-woman-cosmonaut-reentry-capsule-June-16-1963.jpg -->
+                            <img class="load-after-body" alt="Vostok 6" />
+                            <div class="w3-container">
+                                <h3>Vostok 6</h3>
+                                <p class="sm-text">
+                                    Vostok 6 spacecraft, in which the first woman cosmonaut, Valentina Tereshkova, orbited Earth for three days.
+                                    Launched June 16, 1963, the craft comprised a spherical reentry capsule for its occupant and a conical instrument module.
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            After a series of five test flights carrying dogs and human dummies, the first person, by that time designated as a cosmonaut,
+                            lifted into space in Vostok 1 atop a modified R-7 rocket on April 12, 1961, from the Soviet launch site at the Baikonur Cosmodrome
+                            in Kazakhstan. The passenger, Yuri Gagarin, was a 27-year-old Russian test pilot. After firing of the retro-rocket 78 minutes into
+                            the mission, the crew capsule separated from the instrument module—although not without problems—and Gagarin parachuted to
+                            a soft landing 108 minutes after his launch. He had reported during the mission “I feel fine” and showed no ill effects from
+                            his one-orbit trip around the globe.
+                        </p>
+                        <div class="w3-content w3-center cool-font sm-img" style="padding:0;max-width:400px;">
+                            <!-- https://cdn.britannica.com/s:700x500/70/27070-004-6073A944/Yury-A-Gagarin-Sergey-P-Korolyov-space-1961.jpg -->
+                            <img class="load-after-body" alt="Yuri Gagarin and Sergei Korolev" />
+                            <div class="w3-container w3-black">
+                                <h3>Yuri Gagarin and Sergei Korolev</h3>
+                                <p class="sm-text">
+                                    Yuri Gagarin (left), the first human to travel into space, and Sergei Korolev, Soviet rocket scientist, 1961
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            There were five additional one-person Vostok missions. In August 1961, Gherman Titov at age 25
+                            (still the youngest person ever to fly in space) completed 17 orbits of Earth in Vostok 2.
+                            He became ill with space sickness (the equivalent of motion sickness on Earth) during the flight, an incident
+                            that caused a one-year delay in Vostok flights while Soviet physicians investigated the possibility
+                            that humans could not survive for extended times in the space environment. In August 1962, two Vostoks, 3 and 4,
+                            were orbited at the same time and came within 6.5 km (4 miles) of one another. This dual mission was repeated in June 1963;
+                            aboard the Vostok 6 spacecraft was Valentina Tereshkova, the first woman to fly in space.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Mercury</h3>
+                        <p>
+                            The initial U.S. effort to launch a human into space was known as Project Mercury. It was carried out by NASA,
+                            which had been given that responsibility over air force objections. NASA engineers, led by Robert Gilruth and Maxime Faget,
+                            designed a small cone-shaped capsule for the mission. Compared with the nearly 5-metric-ton Vostok,
+                            it weighed only 1.94 metric tons. Unlike the Soviet approach, in which a cosmonaut was orbited on the first human spaceflight,
+                            NASA planned several suborbital test flights in which an astronaut would be in space for only
+                            a few minutes of his 15-minute up-and-down ride. Only after the Mercury equipment was checked out and the effects of suborbital
+                            flight on the human body were measured would the United States commit to an orbital flight attempt.
+                            The Mercury capsule would parachute with its passenger all the way back to Earth’s surface, to land in the ocean
+                            and be recovered by navy ships. Also in contrast to Vostok, the Mercury capsule was designed to allow the astronaut to control
+                            some aspects of its flight while in space.
+                        </p>
+                        <p>
+                            The United States used chimpanzees, rather than dogs, as test subjects prior to human flights. In what was intended to be
+                            the final test flight before a human launch, the chimpanzee Ham rode a suborbital trajectory on January 31, 1961, using
+                            a Redstone rocket developed by Braun’s team. Because the flight had experienced minor problems, Braun insisted on one more test flight
+                            with an unoccupied dummy spacecraft. If instead, as originally scheduled, that March 1961 flight had carried an astronaut,
+                            the United States would have been first with a human in space, although not in orbit. Alan B. Shepard, Jr.,
+                            made the first crewed Mercury flight atop a Redstone rocket on May 5, 1961. A second suborbital Mercury mission,
+                            carrying Virgil I. Grissom, followed in July.
+                        </p>
+                        <div class="w3-content w3-center cool-font sm-img" style="padding:0;max-width:550px;">
+                            <!-- https://cdn.britannica.com/s:700x500/35/18335-004-D32A11C4/Alan-B-Shepard-Jr-Freedom-7-deck-May-5-1961.jpg -->
+                            <img class="load-after-body" alt="Alan B. Shepard and Freedom 7" />
+                            <div class="w3-container w3-black">
+                                <h3>Alan B. Shepard and Freedom 7</h3>
+                                <p class="sm-text">
+                                    U.S. astronaut Alan B. Shepard, Jr., on the deck of the aircraft carrier USS Lake Champlain on May 5, 1961,
+                                    after the return of his Mercury spacecraft Freedom 7 (in background) from the first crewed suborbital flight.
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            John H. Glenn, Jr., became the first American astronaut to orbit Earth in his three-orbit mission on February 20, 1962.
+                            His Mercury spacecraft was launched by a modified air force Atlas ICBM. Three more one-man Mercury orbital flights,
+                            carrying astronauts M. Scott Carpenter, Walter M. Schirra, Jr., and L. Gordon Cooper, Jr., were conducted,
+                            the last being a 22-orbit mission in May 1963.
+                        </p>
+                        <div class="w3-content cool-font sm-img" style="padding:0;max-width:610px;">
+                            <!-- https://cdn.britannica.com/s:700x500/06/13706-050-D31BBDFC/John-H-Glenn-Jr-Friendship-7-preparation-February-20-1962.jpg -->
+                            <img class="load-after-body" alt="John Glenn and Friendship 7" />
+                            <div class="w3-container w3-margin-bottom w3-black">
+                                <h3>John Glenn and <em>Friendship 7</em></h3>
+                                <p class="sm-text">
+                                    U.S. astronaut John H. Glenn, Jr., entering the Mercury spacecraft <em>Friendship 7</em> on February 20, 1962, in preparation for launch.
+                                </p>
+                            </div>
+                        </div>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Gemini and Voskhod</h3>
+                        <p>
+                            In 1961 President John F. Kennedy announced that the United States would send people to the Moon “before this decade is out.”
+                            In order to test many of the techniques that would be needed to carry out a lunar mission, particularly rendezvousing and
+                            docking two objects in space, the United States in late 1961 decided to develop a two-person spacecraft called Gemini.
+                            The Gemini spacecraft was much more complex than the rudimentary Mercury capsule and, at 3.81 metric tons, was twice as heavy.
+                            Another converted air force ICBM, a Titan II, was used to launch the Gemini spacecraft.
+                        </p>
+                        <p>
+                            The first crewed Gemini mission lifted into space in March 1965; nine more missions followed, the last in November 1966. On the second mission,
+                            in June 1965, Edward H. White II became the first American astronaut to operate outside a spacecraft. His 20-minute space walk—also known
+                            as extravehicular activity (EVA)—was without incident. Although problems developed on many of the Gemini flights, the program demonstrated
+                            that people could live and work in space for as long as 14 days, more than the time needed for a round trip to the Moon.
+                            It also showed that astronauts could carry out a rendezvous in space and could make useful observations of Earth, both visually and photographically.
+                        </p>
+                        <p>
+                            As plans in the United States for multiple-astronaut missions became known, the Soviet Union worked to maintain its lead in the space race by
+                            modifying the Vostok spacecraft so that it could carry as many as three persons. Korolyov could accomplish this only by having
+                            the crew fly without wearing spacesuits. The redesigned spacecraft was known as Voskhod. There were two Voskhod missions,
+                            one with three people aboard in October 1964 and another with a two-man crew in March 1965. On the second mission,
+                            cosmonaut Aleksey Leonov became the first human to leave an orbiting spacecraft, less than three months before White.
+                            His 12-minute EVA was full of problems, and his reentry of the Voskhod spacecraft was particularly difficult.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Soyuz</h3>
+                        <p>
+                            Korolyov and his associates began work in 1962 on a second-generation spacecraft, to be called Soyuz. It was to be
+                            a much more complex vehicle than Vostok, holding as many as three people in an orbital crew compartment, with a separate module for
+                            crew reentry and a third section containing spacecraft equipment and rocket engines for in-orbit and reentry maneuvers.
+                            Soyuz was to be capable not only of flights in Earth orbit but also, in modified versions, of flights around the Moon and even as part of
+                            a lunar landing mission.
+                        </p>
+                        <div class="w3-content cool-font sm-img" style="padding:0;max-width:610px;">
+                            <!-- https://cdn.britannica.com/s:700x500/12/76512-050-93D2365C/spacecraft-TM-Soyuz-Russian-Atlantis-port-space-September-21-1996.jpg -->
+                            <img class="load-after-body" alt="Soyuz TM and Mir" />
+                            <div class="w3-container w3-black">
+                                <h3>Soyuz TM and Mir</h3>
+                                <p class="sm-text">
+                                    Russian Soyuz TM spacecraft (the mostly dark structure with extended solar panels) docked to a port on the Mir space station,
+                                    in an image made from the U.S. space shuttle orbiter Atlantis, September 21, 1996
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            The first launch of Soyuz, with a single cosmonaut, Vladimir Komarov, aboard, took place on April 23, 1967. Once the spacecraft reached orbit,
+                            it suffered a number of problems, which prompted ground controllers to bring Komarov back to Earth as soon as possible. After reentry, however,
+                            the spacecraft’s main parachute did not fully deploy, and the Soyuz hit the ground at high speed. Komarov became the first person to perish during
+                            a spaceflight, and the accident dealt a major blow to Soviet hopes of orbiting or landing on the Moon before the United States.
+                        </p>
+                        <p>
+                            After the problems with the Soyuz design were diagnosed and remedied, various models of the spacecraft served as the means of access to space for
+                            the Soviet, and then Russian, program of human spaceflight for more than 50 years. Versions of Soyuz have been used both to transport crews to and
+                            from the ISS and to serve as the crew rescue vehicle—the lifeboat—for the ISS.
+                        </p>
+                        <div class="w3-content w3-center cool-font sm-img" style="padding:0;max-width:332px;">
+                            <!-- https://cdn.britannica.com/s:700x500/41/194341-050-345CBFEA/rocket-Soyuz-TMA-10M-Baikonur-Cosmodrome-Kazakhstan-September-25-2013.jpg -->
+                            <img class="load-after-body" alt="Soyuz TMA-10M" />
+                            <div class="w3-container w3-black w3-margin-bottom">
+                                <h3>Soyuz TMA-10M</h3>
+                                <p class="sm-text">
+                                    The Soyuz TMA-10M rocket being launched from the Baikonur Cosmodrome in Kazakhstan, September 25, 2013.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+{% block info %}
+                <span>The source of most text information is</span>
+                <a class="source" href="https://www.britannica.com/science/space-exploration/History-of-space-exploration" target="_blank">Britannica</a>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            // Load images after a page has loaded
+            loadImgsAfterBody([
+                'https://cdn.britannica.com/s:700x500/12/65012-120-CA2E5A36/North-American-Aviation-X-15-plane-bomber-Boeing.jpg',
+                'https://cdn.britannica.com/s:700x500/34/434-004-AA460D19/spacecraft-Vostok-6-woman-cosmonaut-reentry-capsule-June-16-1963.jpg',
+                'https://cdn.britannica.com/s:700x500/70/27070-004-6073A944/Yury-A-Gagarin-Sergey-P-Korolyov-space-1961.jpg',
+                'https://cdn.britannica.com/s:700x500/35/18335-004-D32A11C4/Alan-B-Shepard-Jr-Freedom-7-deck-May-5-1961.jpg',
+                'https://cdn.britannica.com/s:700x500/06/13706-050-D31BBDFC/John-H-Glenn-Jr-Friendship-7-preparation-February-20-1962.jpg',
+                'https://cdn.britannica.com/s:700x500/12/76512-050-93D2365C/spacecraft-TM-Soyuz-Russian-Atlantis-port-space-September-21-1996.jpg',
+                'https://cdn.britannica.com/s:700x500/41/194341-050-345CBFEA/rocket-Soyuz-TMA-10M-Baikonur-Cosmodrome-Kazakhstan-September-25-2013.jpg'
+            ], false);
+            // Make a link to the current page active
+            makeActive('.first-human-spaceflights');
+        </script>
+{% endblock %}

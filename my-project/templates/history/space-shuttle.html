@@ -1,0 +1,502 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Space shuttle
+{% endblock %}
+
+{% block style %}
+        <style>
+            .crosslink:link {color:#000099;}
+            .crosslink:visited {color:#ff751a;}
+            .crosslink:hover {
+                text-decoration: none;
+                color: #009900;
+                cursor: pointer;
+            }
+            .crosslink:active {color:#ff0000;}
+            .sm-text {
+                font-size: 16px;
+            }
+            .sm-img {
+                width: 65%;
+            }
+            @media screen and (min-width:993px){.head-img{background-image:url("https://static1.squarespace.com/static/57ed3edb37c58182f815c65f/57ed3f076a49633d10d11e12/5cae1247e79c707fbfed0f13/1554912091369/shutterstock_571916983.jpg?format=2500w");}}
+            @media screen and (min-width:601px){table th{padding:20px 10px!important;}}
+            @media screen and (max-width:992px){.sm-text{font-size:14px;}.sm-img{width:80%;}.head-img{background-image:url("/static/images/history/hero-history-medium.jpg");}}
+            @media screen and (max-width:600px){.sm-img{width:100%;}.w3-table{table-layout:auto!important;}.head-img{height:76%;background-image:url("/static/images/history/hero-history-small.jpg");}}
+            @media screen and (max-width:545px){.no-smpad{padding:0 !important;}}
+        </style>
+{% endblock %}
+
+{% block head_content %}
+            <div class="w3-display-bottomleft w3-center w3-margin-bottom w3-padding-large w3-hide-medium w3-hide-small">
+                <span class="w3-tag">Whatever it takes</span>
+            </div>
+            <div class="w3-display-top w3-center w3-padding-large">
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>ORBITING SPACE</b></h1>
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>PLATFORMS</b></h1>
+            </div>
+            <div class="w3-display-bottomright w3-center w3-margin-bottom w3-padding-large tag-text">
+                <span id="bigger_font" class="contour w3-text-white">The only limits on human achievement are self-imposed</span>
+            </div>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center dark-blue-grad w3-bottombar w3-border-orange w3-padding-64 header-text">The space shuttle</h2>
+                    <div class="w3-padding">
+                        <p>
+                            After the success of the Apollo 11 mission, NASA proposed an ambitious plan for a series of
+                            large space stations to be developed during the 1970s and a new reusable space transportation system to send people
+                            and supplies to those stations, lunar bases, and crewed missions to Mars in the 1980s. This plan was quickly rejected,
+                            as there was no interest in an ambitious and expensive post-Apollo space program among the political leadership or
+                            the general public. In 1972 NASA received presidential approval to develop a partially reusable transport vehicle called
+                            a space shuttle. This vehicle was intended to carry people and as much as 29,500 kg (65,000 pounds) of cargo into
+                            low Earth orbit at low cost. On the basis of those expectations, the United States planned to use the shuttle as
+                            its sole launch vehicle once it entered operation and to operate a shuttle fleet with a launch rate as high as 60 per year.
+                            In the absence of a space station, plans also called for having the shuttle serve double duty as a space platform to conduct
+                            in-orbit research for periods as long as two weeks. To that end, Europe pledged to contribute a pressurized laboratory,
+                            known as Spacelab, that would be carried in the shuttle’s payload bay.
+                        </p>
+                        <div class="w3-content w3-center cool-font sm-img" style="padding:0;">
+                            <!-- https://cdn.britannica.com/s:700x500/17/27117-004-03C5864D/Discovery-space-shuttle-orbiter-image-mission-Florida-January-24-1985.jpg -->
+                            <img class="load-after-body" alt="Discovery liftoff, 1985" />
+                            <div class="w3-container">
+                                <h3 class="w3-margin-top">Discovery liftoff, 1985</h3>
+                                <p class="sm-text">
+                                    U.S. space shuttle orbiter Discovery lifting off from the Kennedy Space Center in Florida on its third mission,
+                                    January 24, 1985. Also visible in the image are its attached external tank (orange) and one of its two solid-fuel boosters.
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            The space shuttle design had three major components. A reusable winged orbiter carried crew and cargo and glided to a landing on
+                            a runway at the end of its mission. A large external tank carried the liquid-oxygen and liquid-hydrogen propellants for
+                            the orbiter’s three powerful engines. The tank was used only during the first eight minutes of flight; once the fuel was exhausted,
+                            the tank was discarded and burned up on reentry. Two solid-fuel rockets assisted in accelerating the vehicle during
+                            the first two minutes of flight; they were then detached and parachuted into the ocean, where they were recovered for future use.
+                            A fleet of four operational orbiters, named Columbia, Challenger, Atlantis, and Discovery, was built in order to allow multiple shuttle
+                            flights each year. Facilities in Florida originally constructed for the Apollo program were remodeled for shuttle use,
+                            and construction on a facility at Vandenberg Air Force Base in California for launching the shuttle into north-south polar orbits was begun.
+                        </p>
+                        <div class="w3-content w3-center cool-font sm-img" style="padding:0;">
+                            <!-- https://cdn.britannica.com/s:700x500/93/70093-050-BC1BD9C8/space-shuttle-orbiter-liquid-propellant-tank-rocket-boosters.jpg -->
+                            <img class="load-after-body" alt="U.S. space shuttle" />
+                            <div class="w3-container">
+                                <h3 class="w3-margin-top">U.S. space shuttle</h3>
+                                <p class="sm-text">
+                                    U.S. space shuttle, composed of a winged orbiter, an external liquid-propellant tank, and two solid-fuel rocket boosters
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            After several years of technical and budgetary delays to the program, the first space shuttle flight took place on April 12, 1981;
+                            aboard were astronauts John W. Young, a veteran of the Gemini and Apollo programs, and Robert Laurel Crippen.
+                            With additional shuttle flights, it became evident that projections of the vehicle’s operational costs and
+                            performance had been extremely optimistic. Major refurbishment was required between each launch; the highest flight rate achieved was in 1985,
+                            when the shuttle was launched nine times. Each launch cost hundreds of millions of dollars, rather than the tens of millions
+                            that had been promised in 1972. Although the space shuttle was a remarkable technological achievement as a first-generation reusable launch vehicle,
+                            the plans to use it as the only launcher for American payloads proved to be a major policy mistake, and the cost of its operation acted
+                            as a barrier to undertaking other ambitious space efforts.
+                        </p>
+                        <p>
+                            The optimism surrounding the space shuttle program was publicly shattered on January 28, 1986, when the Challenger orbiter was destroyed
+                            in a catastrophic explosion 73 seconds after liftoff. Its seven-person crew perished; among them was schoolteacher Christa McAuliffe,
+                            on board as the first teacher in space. The launch had taken place in unusually cold weather, and a sealing ring within a segment joint of one of
+                            the solid rocket boosters failed. The solid rocket broke loose and hit the external tank, rupturing it. The flame from the leaking booster ignited
+                            the shuttle’s fuel, causing the explosion.
+                        </p>
+                        <div class="w3-content w3-center cool-font sm-img" style="padding:0;">
+                            <!-- https://cdn.britannica.com/s:700x500/11/76511-050-9E25BC4B/Challenger-accident-destruction-liftoff-crew-space-teacher-January-28-1986.jpg -->
+                            <img class="load-after-body" alt="Challenger explosion, 1986" />
+                            <div class="w3-container">
+                                <h3 class="w3-margin-top">Challenger explosion, 1986</h3>
+                                <p class="sm-text">
+                                    U.S. space shuttle Challenger just seconds after its explosive destruction on January 28, 1986. The accident, which occurred
+                                    a little more than a minute after liftoff, killed the orbiter's seven-person crew, including the first teacher to be launched into space.
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            After the accident, the shuttle fleet was grounded until September 1988. A replacement orbiter, Endeavour, was built, but,
+                            upon the resumption of flights, the shuttle fleet was operated with much greater assurances for the safety of its crew.
+                            This limited the flight rate to six to eight missions per year; the 100th shuttle flight was not achieved until October 2000.
+                        </p>
+                        <p>
+                            Both before and after the Challenger accident, the space shuttle demonstrated impressive capabilities in space operations,
+                            including the repair and redeployment of damaged satellites—most striking being the in-orbit repair of
+                            the Hubble Space Telescope in 1993. Four more missions to upgrade Hubble were carried out between 1997 and 2009.
+                            Beginning in 1998, the space shuttle was used to carry components of the ISS into orbit, along with
+                            the crews to assemble those components. It also was used to ferry people and supplies to and from the space station,
+                            the role for which it was first conceived. There were a total of
+                            37 shuttle missions associated with assembling and outfitting the ISS.
+                        </p>
+                        <p>
+                            The shuttle program suffered its second fatal disaster on February 1, 2003, when the orbiter Columbia broke up over Texas
+                            at an altitude of about 60 km (40 miles) as it was returning from an orbital mission. All seven crew members died,
+                            including Ilan Ramon, the first Israeli astronaut to go into space. The shuttle fleet was once again grounded during
+                            the ensuing investigation into the cause of the accident, and flights to keep
+                            the ISS in operation were conducted by Russian spacecraft.
+                        </p>
+                        <div class="w3-content w3-center cool-font sm-img" style="padding:0;">
+                            <!-- https://cdn.britannica.com/s:700x500/55/74855-004-A45A2C8F/debris-Streaks-space-shuttle-orbiter-Texas-Columbia-February-1-2003.jpg -->
+                            <img class="load-after-body" alt="Columbia breaking up, 2003" />
+                            <div class="w3-container">
+                                <h3 class="w3-margin-top">Columbia breaking up, 2003</h3>
+                                <p class="sm-text">
+                                    Streaks of burning debris from the U.S. space shuttle orbiter Columbia as it broke up over
+                                    Texas on February 1, 2003. The accident killed all seven astronauts aboard the craft.
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            As part of the rethinking of U.S. space plans in the wake of the Columbia accident, it was decided to retire
+                            the space shuttle from service once assembly of the ISS had been completed. This decision was announced by Pres.
+                            George W. Bush in January 2004. The final space shuttle flight took place in July 2011, and
+                            the remaining three orbiters were then retired to museums around the United States.
+                        </p>
+                        <p>
+                            Between 1981 and 2011, space shuttles flew 135 missions, traveled 872,906,379 km (542,398,878 miles),
+                            and launched 355 different people (306 men and 49 women) from 16 countries into orbit. Including repeat fliers,
+                            a total of 852 people went into space on the shuttle, with two of them, U.S. astronauts Jerry Ross and
+                            Franklin Chang-Díaz, each making seven separate trips to orbit.
+                        </p>
+                        <p>
+                            In the 1980s the Soviet Union also developed a space shuttle, called Buran, and a very powerful rocket,
+                            called Energia, to launch it and other heavy payloads. Energia was launched only twice, once in 1987 with
+                            a military payload and once the next year carrying Buran on a successful uncrewed test flight into orbit and back.
+                            Use of the two vehicles was abandoned as the Soviet Union faced increasing economic problems.
+                        </p>
+                        <div class="w3-content w3-center w3-margin-bottom cool-font sm-img" style="padding:0;">
+                            <!-- https://cdn.britannica.com/s:700x500/31/60831-004-AB602BEB/cargo-transporter-Antonov-An-225-Mriya-Buran-orbiter-1988.jpg -->
+                            <img class="load-after-body" alt="Buran orbiter" />
+                            <div class="w3-container">
+                                <h3 class="w3-margin-top">Buran orbiter</h3>
+                                <p class="sm-text">
+                                    Buran orbiter, part of the Soviet space shuttle project, atop an Antonov An-225 cargo transporter, 1989.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center dark-blue-grad w3-bottombar w3-border-orange w3-padding-64 header-text">Summary of space stations launched since 1971</h2>
+                    <p class="w3-padding-large w3-xlarge">A summary of space stations launched since 1971 is provided in the table.</p>
+                    <div class="no-smpad w3-padding-large w3-padding-24">
+                        <div class="w3-responsive my-xxlarge w3-card w3-margin-bottom">
+                            <table class="w3-table w3-striped w3-margin-bottom w3-bordered" style="table-layout:fixed">
+                                <thead>
+                                    <tr class="my-theme">
+                                        <th scope="col">station, or major module for modular station</th>
+                                        <th scope="col">country of origin, or country of launch for ISS* modules</th>
+                                        <th scope="col">date launched</th>
+                                        <th scope="col">date reentered</th>
+                                        <th scope="col">occupancy, total days (and number of major expeditions)</th>
+                                        <th scope="col">comments</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td scope="row"><a href="https://www.britannica.com/technology/Salyut" class="crosslink">Salyut</a> 1</td>
+                                        <td>U.S.S.R.</td>
+                                        <td>April 19, 1971</td>
+                                        <td>October 11, 1971</td>
+                                        <td>23 (1)</td>
+                                        <td>first space station, equipped for scientific studies; abandoned after its first crew died returning to Earth</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row"><a href="https://www.britannica.com/technology/Salyut" class="crosslink">Salyut</a> 2</td>
+                                        <td>U.S.S.R.</td>
+                                        <td>April 3, 1973</td>
+                                        <td>May 28, 1973</td>
+                                        <td>0</td>
+                                        <td>military reconnaissance platform; suffered explosion after achieving orbit and was never occupied</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Cosmos 557</td>
+                                        <td>U.S.S.R.</td>
+                                        <td>May 11, 1973</td>
+                                        <td>May 22, 1973</td>
+                                        <td>0</td>
+                                        <td>scientific station; crippled after achieving orbit and was never occupied</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row"><a href="https://www.britannica.com/topic/Skylab" class="crosslink">Skylab</a></td>
+                                        <td>U.S.</td>
+                                        <td>May 14, 1973</td>
+                                        <td>July 11, 1979</td>
+                                        <td>171 (3)</td>
+                                        <td>first U.S. space station; successfully supported solar studies and biomedical experiments on the effects of weightlessness</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row"><a href="https://www.britannica.com/technology/Salyut" class="crosslink">Salyut</a> 3</td>
+                                        <td>U.S.S.R.</td>
+                                        <td>June 25, 1974</td>
+                                        <td>January 24, 1975</td>
+                                        <td>16 (1)</td>
+                                        <td>military reconnaissance platform</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row"><a href="https://www.britannica.com/technology/Salyut" class="crosslink">Salyut</a> 4</td>
+                                        <td>U.S.S.R.</td>
+                                        <td>December 26, 1974</td>
+                                        <td>February 3, 1977</td>
+                                        <td>93 (2)</td>
+                                        <td>scientific station; operated until its systems were exhausted</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row"><a href="https://www.britannica.com/technology/Salyut" class="crosslink">Salyut</a> 5</td>
+                                        <td>U.S.S.R.</td>
+                                        <td>June 22, 1976</td>
+                                        <td>August 8, 1977</td>
+                                        <td>67 (2)</td>
+                                        <td>military reconnaissance platform</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row"><a href="https://www.britannica.com/technology/Salyut" class="crosslink">Salyut</a> 6</td>
+                                        <td>U.S.S.R.</td>
+                                        <td>September 29, 1977</td>
+                                        <td>July 29, 1982</td>
+                                        <td>684 (6)</td>
+                                        <td>first second-generation Salyut, operated as highly successful scientific station; resident crews hosted a series of international visitors</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row"><a href="https://www.britannica.com/technology/Salyut" class="crosslink">Salyut</a> 7</td>
+                                        <td>U.S.S.R.</td>
+                                        <td>April 19, 1982</td>
+                                        <td>February 2, 1991</td>
+                                        <td>815 (5)</td>
+                                        <td>problem-plagued follow-up to Salyut 6 that had to be repeatedly rescued</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row"><a href="https://www.britannica.com/topic/Mir-Soviet-Russian-space-station" class="crosslink">Mir</a> (modular)</td>
+                                        <td>U.S.S.R./Russia</td>
+                                        <td>—</td>
+                                        <td>March 23, 2001</td>
+                                        <td>occupied March 14, 1986, to June 15, 2000 (continuously from September 7, 1989, to August 28, 1999)</td>
+                                        <td>first space station assembled in orbit using individually launched, specialized modules; successfully applied lessons learned from Salyut program</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Mir base block</td>
+                                        <td>—</td>
+                                        <td>February 20, 1986</td>
+                                        <td>—</td>
+                                        <td>—</td>
+                                        <td>habitat module</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Kvant 1</td>
+                                        <td>—</td>
+                                        <td>March 31, 1987</td>
+                                        <td>—</td>
+                                        <td>—</td>
+                                        <td>astrophysics observatory with X-ray telescopes</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Kvant 2</td>
+                                        <td>—</td>
+                                        <td>November 26, 1989</td>
+                                        <td>—</td>
+                                        <td>—</td>
+                                        <td>supplementary life-support systems and large air lock</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Kristall</td>
+                                        <td>—</td>
+                                        <td>May 31, 1990</td>
+                                        <td>—</td>
+                                        <td>—</td>
+                                        <td>microgravity materials-processing laboratory</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Spektr</td>
+                                        <td>—</td>
+                                        <td>May 20, 1995</td>
+                                        <td>—</td>
+                                        <td>—</td>
+                                        <td>module with apparatus for NASA research</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Priroda</td>
+                                        <td>—</td>
+                                        <td>April 23, 1996</td>
+                                        <td>—</td>
+                                        <td>—</td>
+                                        <td>module with NASA apparatus and Earth-sciences sensors</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row"><a href="https://www.britannica.com/topic/International-Space-Station" class="crosslink">International Space Station</a> (modular)</td>
+                                        <td>international consortium, primarily U.S. and Russia</td>
+                                        <td>—</td>
+                                        <td>—</td>
+                                        <td>permanently occupied since November 2, 2000</td>
+                                        <td>modular, expandable station intended to serve world's space agencies for first quarter of 21st century</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Zarya</td>
+                                        <td>Russia</td>
+                                        <td>November 20, 1998</td>
+                                        <td>—</td>
+                                        <td>—</td>
+                                        <td>U.S.-funded, Russian-built module supplying initial solar power and attitude-control system</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Unity</td>
+                                        <td>U.S.</td>
+                                        <td>December 4, 1998</td>
+                                        <td>—</td>
+                                        <td>—</td>
+                                        <td>U.S.-built connecting node</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Zvezda</td>
+                                        <td>Russia</td>
+                                        <td>July 2, 2000</td>
+                                        <td>—</td>
+                                        <td>—</td>
+                                        <td>Russian-built habitat module and control centre</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Destiny</td>
+                                        <td>U.S.</td>
+                                        <td>February 7, 2001</td>
+                                        <td>—</td>
+                                        <td>—</td>
+                                        <td>U.S.-built NASA microgravity laboratory</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Quest</td>
+                                        <td>U.S.</td>
+                                        <td>July 12, 2001</td>
+                                        <td>—</td>
+                                        <td>—</td>
+                                        <td>U.S.-built air lock, allowing station-based space walks for U.S. and Russian astronauts</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Pirs</td>
+                                        <td>Russia</td>
+                                        <td>September 14, 2001</td>
+                                        <td>—</td>
+                                        <td>—</td>
+                                        <td>Russian-built docking compartment, providing Soyuz docking port and additional air lock for Russian space walks</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Harmony</td>
+                                        <td>U.S.</td>
+                                        <td>October 23, 2007</td>
+                                        <td>—</td>
+                                        <td>—</td>
+                                        <td>U.S.-built connecting node</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Columbus</td>
+                                        <td>U.S.</td>
+                                        <td>February 7, 2008</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td><a href="https://www.britannica.com/topic/European-Space-Agency" class="crosslink">European Space Agency</a>-built microgravity laboratory</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Kibo</td>
+                                        <td>U.S.</td>
+                                        <td>March 11, 2008; May 31, 2008</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Japanese-built microgravity laboratory</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Dextre</td>
+                                        <td>U.S.</td>
+                                        <td>March 11, 2008</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Canadian-built robot</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Mini-Research Module-2</td>
+                                        <td>Russia</td>
+                                        <td>November 10, 2009</td>
+                                        <td>—</td>
+                                        <td>—</td>
+                                        <td>Russian-built docking compartment, providing Soyuz docking port and additional air lock for Russian space walks</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Tranquility</td>
+                                        <td>U.S.</td>
+                                        <td>February 8, 2010</td>
+                                        <td>—</td>
+                                        <td>—</td>
+                                        <td>U.S.-built connecting node</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Mini-Research Module-1</td>
+                                        <td>U.S.</td>
+                                        <td>May 14, 2010</td>
+                                        <td>—</td>
+                                        <td>—</td>
+                                        <td>Russian-built docking compartment</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Permanent Multipurpose Module Leonardo</td>
+                                        <td>U.S.</td>
+                                        <td>February 24, 2011</td>
+                                        <td>—</td>
+                                        <td>—</td>
+                                        <td>Italian-built module</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Bigelow Expandable Activity Module</td>
+                                        <td>U.S.</td>
+                                        <td>April 8, 2016</td>
+                                        <td>—</td>
+                                        <td>—</td>
+                                        <td>Module built by Bigelow Aerospace to test expandable module technology</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row"><a href="https://www.britannica.com/technology/Tiangong" class="crosslink">Tiangong</a> 1</td>
+                                        <td>China</td>
+                                        <td>September 29, 2011</td>
+                                        <td>April 2, 2018</td>
+                                        <td>21 (2)</td>
+                                        <td>first Chinese space station</td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row">Tiangong 2</td>
+                                        <td>China</td>
+                                        <td>September 15, 2016</td>
+                                        <td>—</td>
+                                        <td>29 (1)</td>
+                                        <td>second Chinese space station</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+{% block info %}
+                <span>The source of most text information is</span>
+                <a class="source" href="https://www.britannica.com/science/space-exploration/History-of-space-exploration" target="_blank">Britannica</a>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            // Load images after a page has loaded
+            loadImgsAfterBody([
+                'https://cdn.britannica.com/s:700x500/17/27117-004-03C5864D/Discovery-space-shuttle-orbiter-image-mission-Florida-January-24-1985.jpg',
+                'https://cdn.britannica.com/s:700x500/93/70093-050-BC1BD9C8/space-shuttle-orbiter-liquid-propellant-tank-rocket-boosters.jpg',
+                'https://cdn.britannica.com/s:700x500/11/76511-050-9E25BC4B/Challenger-accident-destruction-liftoff-crew-space-teacher-January-28-1986.jpg',
+                'https://cdn.britannica.com/s:700x500/55/74855-004-A45A2C8F/debris-Streaks-space-shuttle-orbiter-Texas-Columbia-February-1-2003.jpg',
+                'https://cdn.britannica.com/s:700x500/31/60831-004-AB602BEB/cargo-transporter-Antonov-An-225-Mriya-Buran-orbiter-1988.jpg'
+            ], false);
+            // Make a link to the current page active
+            makeActive('.space-shuttle');
+        </script>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block style %}
+        <style>
+            #head_img, footer {
+                display: none;
+            }
+            main {
+                min-height: 82%;
+            }
+        </style>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center dark-blue-grad w3-bottombar w3-border-amber header-text w3-padding-16">Apology</h2>
+                    <div class="w3-padding">
+                        <p>{{ message }}</p>
+                    </div>
+                </div>
+            </div>
+{% endblock %}

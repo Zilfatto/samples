@@ -1,0 +1,291 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    First satelites
+{% endblock %}
+
+{% block style %}
+        <style>
+            .boxshadow {
+                width: 65%;
+            }
+            .sm-text {
+                font-size: 16px;
+            }
+            .sm-img {
+                width: 65%;
+            }
+            @media screen and (min-width:993px){.head-img{background-image:url("https://static1.squarespace.com/static/57ed3edb37c58182f815c65f/57ed3f076a49633d10d11e12/5cae1247e79c707fbfed0f13/1554912091369/shutterstock_571916983.jpg?format=2500w");}}
+            @media screen and (max-width:992px){.sm-text{font-size:14px;}.sm-img{width:80%;}.head-img{background-image:url("/static/images/history/hero-history-medium.jpg");}}
+            @media screen and (max-width:600px){.sm-img{width:100%;}.head-img{height:76%;background-image:url("/static/images/history/hero-history-small.jpg");}}
+        </style>
+{% endblock %}
+
+{% block head_content %}
+            <div class="w3-display-bottomleft w3-center w3-margin-bottom w3-padding-large w3-hide-medium w3-hide-small">
+                <span class="w3-tag">Whatever it takes</span>
+            </div>
+            <div class="w3-display-top w3-center w3-padding-large">
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>FROM SPUTNIK</b></h1>
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>TO APOLLO</b></h1>
+            </div>
+            <div class="w3-display-bottomright w3-center w3-margin-bottom w3-padding-large tag-text">
+                <span id="bigger_font" class="contour w3-text-white">The only limits on human achievement are self-imposed</span>
+            </div>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center dark-blue-grad w3-bottombar w3-border-orange w3-padding-64 header-text">The first satellites</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Although Soviet plans to orbit a satellite during the IGY had been discussed extensively in technical circles,
+                            the October 4, 1957, launch of Sputnik 1 came as a surprise, and even a shock, to most people. Prior to the launch,
+                            skepticism had been widespread about the U.S.S.R.’s technical capabilities to develop both
+                            a sophisticated scientific satellite and a rocket powerful enough to put it into orbit. Under Korolyov’s direction,
+                            however, the Soviet Union had been building an intercontinental ballistic missile (ICBM), with engines designed by Glushko,
+                            that was capable of delivering a heavy nuclear warhead to American targets. That ICBM, called the R-7 or Semyorka (“Number 7”),
+                            was first successfully tested on August 21, 1957, which cleared the way for its use to launch a satellite.
+                            Fearing that development of the elaborate scientific satellite intended as the Soviet IGY contribution would keep the U.S.S.R.
+                            from being the first into space, Korolyov and his associates, particularly Tikhonravov, designed a much simpler 83.6-kg
+                            (184.3-pound) sphere carrying only two radio transmitters and four antennas. After the success of the R-7 in August,
+                            that satellite was rushed into production and became Sputnik 1. A second, larger satellite carrying scientific instruments
+                            and the dog Laika, the first living creature in orbit, was launched November 3. The even larger,
+                            instrumented spacecraft originally intended to be the first Soviet satellite went into orbit in May 1958 as Sputnik 3.
+                            (For additional information on Korolyov’s contribution to the Soviet space program, see Energia.)
+                        </p>
+                        <div class="w3-content cool-font sm-img" style="padding:0;max-width:610px;">
+                            <!-- https://cdn.britannica.com/s:700x500/64/145464-050-D9934CA4/Sputnik-1.jpg -->
+                            <img class="load-after-body" alt="Sputnik 1" />
+                            <div class="w3-container w3-dark-grey">
+                                <p class="sm-text">Sputnik 1</p>
+                            </div>
+                        </div>
+                        <p>
+                            After President Eisenhower, in May 1955, had committed the United States to an IGY satellite, the army, navy,
+                            and air force competed for the assignment. (No civilian organization existed that was capable of developing
+                            the launch vehicle needed.) The mission was assigned to the Naval Research Laboratory rather than to
+                            the army’s Redstone Arsenal, where Braun worked, so that the work would not interfere
+                            with Redstone’s higher-priority development of ballistic missiles. The navy project, called Vanguard,
+                            would use a new launch vehicle based on modified Viking and Aerobee sounding rockets to orbit
+                            a small scientific satellite. Vanguard made slow progress over the subsequent two years, but,
+                            after Sputnik’s success, the White House pressed to have the satellite launched as quickly as possible.
+                            On December 6, 1957, the Vanguard rocket rose only slightly off its launch pad before exploding
+                            and sending the satellite not into orbit but onto a Florida beach.
+                        </p>
+                        <p>
+                            Braun and his army superiors had not agreed with the decision to assign the satellite mission to the navy.
+                            After the launches of the first two Sputniks, they secured permission to attempt their own satellite launch.
+                            In anticipation of such a situation, they had kept in touch with JPL and Van Allen and so were able to prepare
+                            a satellite quickly. On January 31, 1958, Braun’s Jupiter-C launch vehicle, a modified Redstone ballistic missile,
+                            carried into orbit Explorer 1, the first U.S. satellite. Designed at JPL,
+                            Explorer 1 carried Van Allen’s experiment to measure cosmic rays. The results from this experiment and
+                            similar ones aboard other U.S. and Soviet satellites launched that same year revealed that Earth is surrounded
+                            by two zones of radiation, now known as the Van Allen radiation belts,
+                            comprising energetic particles trapped by Earth’s magnetic field.
+                        </p>
+                        <div class="w3-content w3-center cool-font sm-img">
+                            <!-- https://cdn.britannica.com/s:700x500/09/76509-050-48FA8213/William-H-Pickering-James-Van-Allen-model-January-31-1958.jpg -->
+                            <img class="load-after-body" alt="Explorer 1" />
+                            <div class="w3-container">
+                                <h3 class="w3-margin-top">Explorer 1</h3>
+                                <p class="sm-text">
+                                    (From left) William H. Pickering, James Van Allen, and Wernher von Braun triumphantly raising
+                                    a full-size model of the first U.S. satellite, Explorer 1, at a press conference following
+                                    the craft's launch on January 31, 1958. A small model of the Jupiter-C launch vehicle stands
+                                    on a table in front of Braun.
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            Initial satellite launches were scientific in character, but U.S. government interest in reconnaissance satellites persisted.
+                            In February 1958, President Eisenhower authorized the development, under conditions of great secrecy, of such a spacecraft.
+                            The project, which came to be called Corona, would take pictures over the Soviet Union and return them to Earth by dropping
+                            the exposed film in a capsule that would be snatched out of the air as it parachuted back from space. After 12 failures,
+                            the first successful Corona mission took place on August 18, 1960; the returned film contained images of many previously
+                            unknown Soviet airfields and missile sites.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center dark-green-grad w3-bottombar w3-border-orange w3-padding-64 header-text">Development of space organizations</h2>
+                    <div class="w3-padding">
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad">United States</h3>
+                        <p>
+                            As part of its response to the first Sputnik launches, the United States government debated how best to organize itself
+                            for its space activities. At the time, the military services, particularly the air force and the army,
+                            hoped that they would have a leading role in space. As an alternative to this rivalry between the services,
+                            President Eisenhower in February 1958 created within the Department of Defense the Advanced Research Projects Agency
+                            (ARPA, later the Defense Advanced Research Projects Agency [DARPA]) and assigned it responsibility for all U.S. space projects.
+                            Soon afterward, he decided to separate civilian from military space efforts and proposed the creation of a National Aeronautics
+                            and Space Administration to manage the civilian segment. After approval by Congress, NASA began operation on October 1, 1958.
+                            DARPA was not successful in establishing itself as a military space agency. By 1960, after
+                            the army had been obliged to relinquish control of JPL and Braun’s rocket team to NASA management,
+                            the air force had emerged as the leading military service for space.
+                        </p>
+                        <p>
+                            Eisenhower also decided to create a separate organization to manage the secret reconnaissance satellite program.
+                            This effort resulted in the National Reconnaissance Office (NRO), jointly directed by the Department of Defense
+                            and the Central Intelligence Agency. The very existence of this organization was kept secret until 1992.
+                            The NRO operated the initial Corona program until 1972. It continued to manage the development of
+                            successor photointelligence satellite systems of increasing technological sophistication
+                            and also developed radar-surveillance and electronic-signals-collection satellites.
+                            All were operated under conditions of the highest secrecy.
+                        </p>
+                        <p>
+                            After it received its mandate to send Americans to the Moon, NASA grew into a large organization.
+                            From its headquarters in Washington, D.C., it operated 10 field centres established throughout
+                            the United States to carry out research and technology development and to manage the various universities
+                            and industrial contractors involved in the U.S. civilian space program. At the peak of the Apollo program,
+                            NASA had 34,000 employees; by the second decade of the 21st century, this labour force had shrunk to just over 17,000,
+                            but NASA remained by far the largest space agency in the world.
+                        </p>
+                        <p>
+                            The air force had no separate organization for space until 1982, when the U.S. Air Force Space Command was created to manage
+                            its military space operations, which involved the use of satellites for meteorology, communication, navigation,
+                            and early warning of missile attack. The other U.S. military services soon created similar organizations to administer
+                            their smaller space activities. In 1985 these organizations were brought under a unified U.S. Space Command,
+                            dominated by the air force, which was responsible for 85 percent of military space activities. Research and
+                            development efforts related to military space programs were managed by various government laboratories and
+                            carried out primarily by American industry.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Soviet Union</h3>
+                        <p>
+                            The air force had no separate organization for space until 1982, when the U.S. Air Force Space Command was created
+                            to manage its military space operations, which involved the use of satellites for meteorology, communication, navigation,
+                            and early warning of missile attack. The other U.S. military services soon created similar organizations to administer
+                            their smaller space activities. In 1985 these organizations were brought under a unified U.S. Space Command,
+                            dominated by the air force, which was responsible for 85 percent of military space activities.
+                            Research and development efforts related to military space programs were managed by various government laboratories
+                            and carried out primarily by American industry.
+                        </p>
+                        <p>
+                            Only after the dissolution of the U.S.S.R. did Russia create a civilian organization for space activities.
+                            Formed in February 1992, the Russian Federal Space Agency (Roskosmos) has acted as a central focus for
+                            the country’s space policy and programs. Although it began as a small organization that dealt with international contacts
+                            and the setting of space policies, it quickly took on increasing responsibility for
+                            the management of nonmilitary space activities.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Europe</h3>
+                        <p>
+                            In 1961, within four years of the launch of the first U.S. and Soviet satellites, the government of France created
+                            the French Space Agency (CNES), which grew to become the largest national organization of its kind in Europe.
+                            Gradually other European countries formed government or government-sponsored organizations for space, among them
+                            the German Aerospace Center (DLR), the U.K. Space Agency, and the Italian Space Agency (ASI).
+                            Still others included space as part of their science or technology ministries.
+                        </p>
+                        <p>
+                            In 1964 a European Space Research Organisation (ESRO), created at the initiative of European scientists to pool
+                            government resources in support of space science, began operations. Ten western European countries and
+                            Australia joined the organization. In the same year, a parallel European Launcher Development Organisation (ELDO),
+                            which had seven European member states, was established to develop a space launch vehicle for Europe.
+                            Whereas ESRO was successful in mounting a series of science missions, many in collaboration with NASA,
+                            ELDO failed in attempts to design and launch a European rocket. In 1975 a new European Space Agency (ESA)
+                            was formed from ESRO and ELDO to carry out both of their tasks. As of 2020, ESA had 22 member states—Austria,
+                            Belgium, the Czech Republic, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy,
+                            Luxembourg, the Netherlands, Norway, Poland, Portugal, Romania, Spain, Sweden, Switzerland, and the United Kingdom.
+                            Canada also participated in some ESA projects. With a budget that made it the world’s second largest
+                            civilian space agency, ESA carried out a comprehensive program in space science, applications, and
+                            infrastructure development. In particular, the Ariane series of expendable launch vehicles was developed under ESA auspices,
+                            with France taking the leading role. These launchers proved to be extremely reliable, and they gave Europe independent
+                            access to space and a leading position in the commercial space launch industry.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Japan</h3>
+                        <p>
+                            In Japan the University of Tokyo created an Institute of Space and Astronautical Science (ISAS) in 1964.
+                            This small group undertook the development of scientific spacecraft and the vehicles needed to launch them,
+                            and it launched Japan’s first satellite, Ōsumi, in 1970. In 1981 oversight of ISAS was transferred to
+                            the Japanese Ministry of Education. In 1969 the Japanese government founded a National Space Development Agency (NASDA),
+                            which subsequently undertook a comprehensive program of space technology and satellite development and
+                            built a large launch vehicle, called the H-II, for those satellites. In 2001 both ISAS and NASDA came under
+                            the control of the Japanese Ministry of Education, Culture, Sports, Science and Technology. In 2003 ISAS, NASDA,
+                            and the National Aerospace Laboratory were merged into a new organization, the Japan Aerospace Exploration Agency (JAXA).
+                        </p>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">China</h3>
+                        <p>
+                            China’s space program evolved largely in secret, under the joint control of the Chinese military and
+                            the Commission on Science, Technology, and Industry for the National Defense. After the communist takeover of 1949,
+                            Qian Xuesen, who had worked at GALCIT in the 1940s and helped found JPL, returned to China, where he became
+                            the guiding figure in the development of Chinese missiles and launch vehicles, both originally derived from a Soviet ICBM.
+                            China developed a family of Chang Zheng (“Long March”) boosters, which are used domestically and serve as competitors in
+                            the international commercial space launch market. Its space development has concentrated on applications such
+                            as communications satellites and Earth-observation satellites for civilian and military use.
+                            In 1993 an independent Chinese Aerospace Corporation, later known as the China Aerospace Science and Technology Corporation,
+                            was established to oversee most Chinese space-equipment manufacturers, and the China National Space Administration was
+                            established to manage national space activities.
+                        </p>
+                        <p>
+                            China initiated its own human spaceflight program in 1992. The spacecraft, called Shenzhou, that it developed for
+                            the effort was modeled on Russia’s time-tested Soyuz design (see below the section Soyuz),
+                            but it relied heavily on Chinese-developed technologies and manufacturing. Following four years of uncrewed spacecraft tests,
+                            China launched its first indigenous astronaut, air force pilot Yang Liwei, into orbit on October 15, 2003. In so doing,
+                            it became the third country—after the former Soviet Union and the United States—to achieve human spaceflight.
+                            China has followed its initial human space flight with the step-by-step development of capabilities such as space walking
+                            and operating a space laboratory (Tiangong) that are required for human operations in low Earth orbit.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">International participation</h3>
+                        <p>
+                            A number of international organizations are involved in space activities. The United Nations General Assembly established
+                            a Committee on the Peaceful Uses of Outer Space in 1959 to discuss scientific, technical, and legal issues related
+                            to international space activities; 95 countries were members of the committee in 2020. The committee has provided
+                            the forum for the development of five treaties and a number of declarations of principles related to space activities.
+                            The most important of them is the 1967 Outer Space Treaty, which sets forth the general legal principles governing
+                            the uses of space. Other parts of the UN system, most notably the International Telecommunications Union (ITU),
+                            are engaged in space-related concerns. The ITU is responsible for allocation of radio frequencies and
+                            orbital locations for various satellites providing public and commercial services.
+                        </p>
+                        <p>
+                            At the initiative of the United States, an International Telecommunications Satellite Consortium (Intelsat) was founded
+                            in 1964 to develop and operate a global system of communications satellites. By 1969 the organization had established
+                            a system of satellites with global coverage; in the late 1980s it provided services to more than 200 countries and
+                            territories. Intelsat membership grew to 144 countries before a decision was made in 1999 to change the ownership of
+                            the organization from national governments to the private sector. A similar consortium,
+                            the International Maritime Satellite Organization (Inmarsat), was established as an intergovernmental organization
+                            in 1979 to supply maritime and other mobile communications services via satellite; it also was later transformed into
+                            a privately owned entity. In addition, a number of regional organizations have been created to operate communication
+                            and meteorologic satellites.
+                        </p>
+                        <div class="w3-content w3-margin-bottom cool-font sm-img" style="padding:0;max-width:700px;">
+                            <!-- https://cdn.britannica.com/s:700x500/31/124931-050-12E839D6/Intelsat-headquarters-Washington-DC.jpg -->
+                            <img class="load-after-body" alt="Intelsat" />
+                            <div class="w3-container padding-tb w3-center w3-light-grey">
+                                <h3>Intelsat</h3>
+                                <p class="sm-text">Intelsat headquarters, Washington, D.C.</p>
+                            </div>
+                        </div>
+                        <h3 class="w3-center w3-padding-16 blue-grey-grad" style="margin-top:32px;">Involvement of industry</h3>
+                        <p>
+                            Building the systems and components needed to carry out both government and commercial space programs has required
+                            the participation of private industry, and a number of firms have grown to have substantial space involvement.
+                            Often these firms have also been major suppliers of aviation and defense products, a reflection of
+                            the common technological foundation for what has become known as the aerospace industry.
+                            Other private firms have specialized in providing space-based services
+                            in such areas as telecommunications and Earth observation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+{% block info %}
+                <span>The source of most text information is</span>
+                <a class="source" href="https://www.britannica.com/science/space-exploration/History-of-space-exploration" target="_blank">Britannica</a>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            // Load images after a page has loaded
+            loadImgsAfterBody([
+                'https://cdn.britannica.com/s:700x500/64/145464-050-D9934CA4/Sputnik-1.jpg',
+                'https://cdn.britannica.com/s:700x500/09/76509-050-48FA8213/William-H-Pickering-James-Van-Allen-model-January-31-1958.jpg',
+                'https://cdn.britannica.com/s:700x500/31/124931-050-12E839D6/Intelsat-headquarters-Washington-DC.jpg'
+            ], false);
+            // Make a link to the current page active
+            makeActive('.first-satellites');
+        </script>
+{% endblock %}

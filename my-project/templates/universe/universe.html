@@ -1,0 +1,487 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    The universe
+{% endblock %}
+
+{% block style %}
+        <style>
+            /* Transparent bg for text */
+            .fix-text {
+                width: 100%;
+                background-color: rgba(0,0,0,0.6);
+                margin: 0 auto;
+            }
+            .sm-text {
+                font-size: 16px;
+            }
+            @media screen and (min-width:993px){.head-img{background-image:url("https://wallpaperaccess.com//full/7045.jpg");}}
+            @media screen and (max-width:992px){.sm-text{font-size:14px;}.head-img{background-image:url("/static/images/universe/hero-universe-medium.jpg");}}
+            @media screen and (max-width:600px){.head-img{height:76%;background-image:url("/static/images/universe/hero-universe-small.jpg");}}
+        </style>
+{% endblock %}
+
+{% block head_content %}
+            <div class="w3-display-bottomleft w3-center w3-margin-bottom w3-padding-large w3-hide-medium w3-hide-small">
+                <span class="w3-tag">So much universe, and so little time</span>
+            </div>
+            <div class="w3-display-top w3-center w3-padding-large">
+                <h1 class="w3-jumbo w3-text-white imgtext"><b>THE UNIVERSE</b></h1>
+            </div>
+            <div class="w3-display-bottomright w3-center w3-margin-bottom w3-padding-large tag-text">
+                <span id="bigger_font" class="contour w3-text-white">The vastness of the universe humbles me...</span>
+            </div>
+{% endblock %}
+
+{% block main %}
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center dark-blue-grad w3-bottombar w3-border-amber w3-padding-64 header-text">General information</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The universe (Latin: universus) is all of space and time and their contents, including planets, stars, galaxies,
+                            and all other forms of matter and energy. While the spatial size of the entire universe is unknown, it is possible to measure
+                            the size of the observable universe, which is currently estimated to be 93 billion light-years in diameter.
+                            In various multiverse hypotheses, a universe is one of many causally disconnected constituent parts of a larger multiverse,
+                            which itself comprises all of space and time and its contents; as a consequence, ‘the universe’ and ‘the multiverse’
+                            are synonymous in such theories.
+                        </p>
+                        <p>
+                            The earliest cosmological models of the universe were developed by ancient Greek and Indian philosophers and were geocentric,
+                            placing Earth at the center. Over the centuries, more precise astronomical observations led Nicolaus Copernicus to develop
+                            the heliocentric model with the Sun at the center of the Solar System. In developing the law of universal gravitation,
+                            Isaac Newton built upon Copernicus' work as well as Johannes Kepler's laws of planetary motion and observations by Tycho Brahe.
+                        </p>
+                        <p>
+                            Further observational improvements led to the realization that the Sun is one of hundreds of billions of stars in the Milky Way,
+                            which is one of at least hundreds of billions of galaxies in the universe. Many of the stars in our galaxy have planets.
+                            At the largest scale, galaxies are distributed uniformly and the same in all directions, meaning that the universe has neither
+                            an edge nor a center. At smaller scales, galaxies are distributed in clusters and superclusters which form immense filaments
+                            and voids in space, creating a vast foam-like structure. Discoveries in the early 20th century have suggested that
+                            the universe had a beginning and that space has been expanding since then, and is currently still expanding at an increasing rate.
+                        </p>
+                        <p>
+                            The Big Bang theory is the prevailing cosmological description of the development of the universe. According to estimation of
+                            this theory, space and time emerged together 13.799±0.021 billion years ago and the energy and matter initially
+                            present have become less dense as the universe expanded. After an initial accelerated expansion called the inflationary epoch
+                            at around 10−32 seconds, and the separation of the four known fundamental forces, the universe gradually cooled and
+                            continued to expand, allowing the first subatomic particles and simple atoms to form. Dark matter gradually gathered,
+                            forming a foam-like structure of filaments and voids under the influence of gravity. Giant clouds of hydrogen and
+                            helium were gradually drawn to the places where dark matter was most dense, forming the first galaxies, stars, and
+                            everything else seen today. It is possible to see objects that are now further away than 13.799 billion light-years
+                            because space itself has expanded, and it is still expanding today. This means that objects which are now up to 46.5 billion
+                            light-years away can still be seen in their distant past, because in the past, when their light was emitted,
+                            they were much closer to Earth.
+                        </p>
+                        <p>
+                            From studying the movement of galaxies, it has been discovered that the universe contains much more matter than is accounted
+                            for by visible objects; stars, galaxies, nebulas and interstellar gas. This unseen matter is known as dark matter
+                            (dark means that there is a wide range of strong indirect evidence that it exists, but we have not yet detected it directly).
+                            The ΛCDM model is the most widely accepted model of our universe. It suggests that about 69.2%±1.2% of the mass and
+                            energy in the universe is a cosmological constant (or, in extensions to ΛCDM, other forms of dark energy,
+                            such as a scalar field) which is responsible for the current expansion of space, and about 25.8%±1.1% is dark matter.
+                            Ordinary ('baryonic') matter is therefore only 4.84%±0.1% of the physical universe. Stars, planets, and
+                            visible gas clouds only form about 6% of ordinary matter, or about 0.29% of the entire universe.
+                        </p>
+                        <p>
+                            There are many competing hypotheses about the ultimate fate of the universe and about what, if anything, preceded the Big Bang,
+                            while other physicists and philosophers refuse to speculate, doubting that information about prior states will ever be accessible.
+                            Some physicists have suggested various multiverse hypotheses, in which our universe might be one among many universes that likewise exist.
+                        </p>
+                        <h3 class="w3-center w3-padding-16 silver-grad" style="margin-top:32px;">Defenition</h3>
+                        <p>
+                            The physical universe is defined as all of space and time (collectively referred to as spacetime) and their contents.
+                            Such contents comprise all of energy in its various forms, including electromagnetic radiation and matter,
+                            and therefore planets, moons, stars, galaxies, and the contents of intergalactic space.
+                            The universe also includes the physical laws that influence energy and matter, such as conservation laws,
+                            classical mechanics, and relativity.
+                        </p>
+                        <p>
+                            The universe is often defined as "the totality of existence", or everything that exists, everything that has existed,
+                            and everything that will exist. In fact, some philosophers and scientists support the inclusion of ideas
+                            and abstract concepts—such as mathematics and logic—in the definition of the universe.
+                            The word universe may also refer to concepts such as the cosmos, the world, and nature
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center dark-green-grad w3-bottombar w3-border-amber w3-padding-64 header-text">Chronology and the Big Bang</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The prevailing model for the evolution of the universe is the Big Bang theory. The Big Bang model states that
+                            the earliest state of the universe was an extremely hot and dense one, and that the universe subsequently expanded and cooled.
+                            The model is based on general relativity and on simplifying assumptions such as homogeneity and isotropy of space.
+                            A version of the model with a cosmological constant (Lambda) and cold dark matter, known as the Lambda-CDM model,
+                            is the simplest model that provides a reasonably good account of various observations about the universe.
+                            The Big Bang model accounts for observations such as the correlation of distance and redshift of galaxies,
+                            the ratio of the number of hydrogen to helium atoms, and the microwave radiation background.
+                        </p>
+                        <p>
+                            The initial hot, dense state is called the Planck epoch, a brief period extending from time zero to one Planck time unit of
+                            approximately 10−43 seconds. During the Planck epoch, all types of matter and all types of energy were concentrated into
+                            a dense state, and gravity—currently the weakest by far of the four known forces—is believed to have been as strong as
+                            the other fundamental forces, and all the forces may have been unified. Since the Planck epoch,
+                            space has been expanding to its present scale, with a very short but intense period of cosmic inflation believed
+                            to have occurred within the first 10−32 seconds. This was a kind of expansion different from those we can see around us today.
+                            Objects in space did not physically move; instead the metric that defines space itself changed.
+                            Although objects in spacetime cannot move faster than the speed of light, this limitation does not apply to
+                            the metric governing spacetime itself. This initial period of inflation is believed to explain why space appears to be very flat,
+                            and much larger than light could travel since the start of the universe.
+                        </p>
+                        <div class="w3-content w3-margin-bottom cool-font" style="max-width:1000px;padding:0;">
+                            <picture>
+                                <!--/static/images/universe/universe1-small.jpg-->
+                                <source class="load-after-body" media="(max-width: 600px)">
+                                <!--/static/images/universe/universe1-medium.jpg-->
+                                <source class="load-after-body" media="(max-width: 992px)">
+                                <!--/static/images/universe/universe1-large.jpg-->
+                                <img class="load-after-body" alt="Big Bang Expansion" style="width:100%;" />
+                            </picture>
+                            <div class="w3-container w3-center w3-dark-grey">
+                                <p class="sm-text">
+                                    In this diagram, time passes from left to right, so at any given time,
+                                    the universe is represented by a disk-shaped "slice" of the diagram
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            Within the first fraction of a second of the universe's existence, the four fundamental forces had separated.
+                            As the universe continued to cool down from its inconceivably hot state, various types of subatomic particles were able to
+                            form in short periods of time known as the quark epoch, the hadron epoch, and the lepton epoch. Together,
+                            these epochs encompassed less than 10 seconds of time following the Big Bang. These elementary particles associated stably
+                            into ever larger combinations, including stable protons and neutrons, which then formed more complex
+                            atomic nuclei through nuclear fusion. This process, known as Big Bang nucleosynthesis, only lasted for about 17 minutes and
+                            ended about 20 minutes after the Big Bang, so only the fastest and simplest reactions occurred. About 25% of the protons and
+                            all the neutrons in the universe, by mass, were converted to helium, with small amounts of deuterium (a form of hydrogen) and
+                            traces of lithium. Any other element was only formed in very tiny quantities. The other 75% of the protons remained unaffected,
+                            as hydrogen nuclei.
+                        </p>
+                        <p>
+                            After nucleosynthesis ended, the universe entered a period known as the photon epoch. During this period,
+                            the universe was still far too hot for matter to form neutral atoms, so it contained a hot, dense,
+                            foggy plasma of negatively charged electrons, neutral neutrinos and positive nuclei. After about 377,000 years,
+                            the universe had cooled enough that electrons and nuclei could form the first stable atoms. This is known as
+                            recombination for historical reasons; in fact electrons and nuclei were combining for the first time. Unlike plasma,
+                            neutral atoms are transparent to many wavelengths of light, so for the first time the universe also became transparent.
+                            The photons released ("decoupled") when these atoms formed can still be seen today; they form the cosmic microwave background (CMB).
+                        </p>
+                        <p>
+                            As the universe expands, the energy density of electromagnetic radiation decreases more quickly than does that of matter because
+                            the energy of a photon decreases with its wavelength. At around 47,000 years, the energy density of matter became larger than
+                            that of photons and neutrinos, and began to dominate the large scale behavior of the universe. This marked the end of
+                            the radiation-dominated era and the start of the matter-dominated era.
+                        </p>
+                        <p>
+                            In the earliest stages of the universe, tiny fluctuations within the universe's density led to concentrations of
+                            dark matter gradually forming. Ordinary matter, attracted to these by gravity, formed large gas clouds and eventually,
+                            stars and galaxies, where the dark matter was most dense, and voids where it was least dense. After around 100 - 300 million years,
+                            the first stars formed, known as Population III stars. These were probably very massive, luminous, non metallic and short-lived.
+                            They were responsible for the gradual reionization of the universe between about 200-500 million years and 1 billion years,
+                            and also for seeding the universe with elements heavier than helium, through stellar nucleosynthesis.
+                            The universe also contains a mysterious energy—possibly a scalar field—called dark energy, the density of
+                            which does not change over time. After about 9.8 billion years, the universe had expanded sufficiently so that
+                            the density of matter was less than the density of dark energy, marking the beginning of the present dark-energy-dominated era.
+                            In this era, the expansion of the universe is accelerating due to dark energy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center gold-grad w3-bottombar w3-border-indigo w3-padding-64 header-text">Physical properties</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Of the four fundamental interactions, gravitation is the dominant at astronomical length scales. Gravity's effects are cumulative;
+                            by contrast, the effects of positive and negative charges tend to cancel one another, making electromagnetism
+                            relatively insignificant on astronomical length scales. The remaining two interactions, the weak and strong nuclear forces,
+                            decline very rapidly with distance; their effects are confined mainly to sub-atomic length scales.
+                        </p>
+                        <p>
+                            The universe appears to have much more matter than antimatter, an asymmetry possibly related to the CP violation.
+                            This imbalance between matter and antimatter is partially responsible for the existence of all matter existing today,
+                            since matter and antimatter, if equally produced at the Big Bang, would have completely annihilated each other and
+                            left only photons as a result of their interaction. The universe also appears to have neither net momentum nor angular momentum,
+                            which follows accepted physical laws if the universe is finite. These laws are Gauss's law and the non-divergence of
+                            the stress-energy-momentum pseudotensor.
+                        </p>
+                        <div class="w3-content w3-grey w3-center" style="max-width:900px;padding:0;">
+                            <div class="w3-container w3-light-grey w3-margin-bottom">
+                                <h3>Constituent spatial scales of the observable universe</h3>
+                            </div>
+                            <div class="w3-margin-bottom">
+                                <picture>
+                                    <!--/static/images/universe/universe2-small.jpg-->
+                                    <source class="load-after-body" media="(max-width: 600px)">
+                                    <!--/static/images/universe/universe2-medium.jpg-->
+                                    <source class="load-after-body" media="(max-width: 992px)">
+                                    <!--/static/images/universe/universe2-large.jpg-->
+                                    <img class="load-after-body" alt="Earth's location in the universe" style="width:100%;" />
+                                </picture>
+                                <div class="w3-container w3-dark-grey">
+                                    <p class="sm-text">
+                                        This diagram shows Earth's location in the universe on increasingly larger scales. The images,
+                                        labeled along their left edge, increase in size from left to right, then from top to bottom.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-black my-xxcard">
+                    <h2 class="w3-center yellow-grad w3-bottombar w3-border-orange w3-padding-64 header-text">Size and regions</h2>
+                    <div class="w3-padding">
+                        <p>
+                            The size of the universe is somewhat difficult to define. According to the general theory of relativity, far regions of
+                            space may never interact with ours even in the lifetime of the universe due to the finite speed of light and
+                            the ongoing expansion of space. For example, radio messages sent from Earth may never reach some regions of space,
+                            even if the universe were to exist forever: space may expand faster than light can traverse it.
+                        </p>
+                        <p>
+                            Distant regions of space are assumed to exist and to be part of reality as much as we are,
+                            even though we can never interact with them. The spatial region that we can affect and be affected by is
+                            the observable universe. The observable universe depends on the location of the observer. By traveling,
+                            an observer can come into contact with a greater region of spacetime than an observer who remains still.
+                            Nevertheless, even the most rapid traveler will not be able to interact with all of space. Typically,
+                            the observable universe is taken to mean the portion of the universe that is observable
+                            from our vantage point in the Milky Way.
+                        </p>
+                        <div class="w3-content w3-margin-bottom cool-font" style="max-width:800px;padding:0;">
+                            <picture>
+                                <!--/static/images/universe/universe3-small.jpg-->
+                                <source class="load-after-body" media="(max-width: 600px)">
+                                <!--/static/images/universe/universe3-md-lg.jpg-->
+                                <img class="load-after-body" alt="The universe" style="width:100%;" />
+                            </picture>
+                            <div class="w3-container w3-light-grey w3-center">
+                                <p class="sm-text">Television signals broadcast from Earth will never reach the edges of this image.</p>
+                            </div>
+                        </div>
+                        <p>
+                            The proper distance—the distance as would be measured at a specific time, including the present—between Earth and
+                            the edge of the observable universe is 46 billion light-years (14 billion parsecs),
+                            making the diameter of the observable universe about 93 billion light-years (28 billion parsecs).
+                            The distance the light from the edge of the observable universe has travelled is very close to the age of
+                            the universe times the speed of light, 13.8 billion light-years (4.2×109 pc), but this does not represent
+                            the distance at any given time because the edge of the observable universe and the Earth have since moved
+                            further apart. For comparison, the diameter of a typical galaxy is 30,000 light-years (9,198 parsecs),
+                            and the typical distance between two neighboring galaxies is 3 million light-years (919.8 kiloparsecs).
+                            As an example, the Milky Way is roughly 100,000–180,000 light-years in diameter, and the nearest sister galaxy to
+                            the Milky Way, the Andromeda Galaxy, is located roughly 2.5 million light-years away.
+                        </p>
+                        <p>
+                            Because we cannot observe space beyond the edge of the observable universe, it is unknown whether the size of
+                            the universe in its totality is finite or infinite. Estimates for the total size of the universe, if finite,
+                            reach as high as {\displaystyle 10^{10^{10^{122}}}}10^{10^{10^{122}}} megaparsecs, implied by
+                            one resolution of the No-Boundary Proposal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin">
+                <div class="w3-content w3-white my-xxcard">
+                    <h2 class="w3-center dark-brown-grad w3-bottombar w3-border-amber w3-padding-64 header-text">Age and expansion</h2>
+                    <div class="w3-padding">
+                        <p>
+                            Astronomers calculate the age of the universe by assuming that the Lambda-CDM model accurately describes the evolution of the Universe from a very uniform,
+                            hot, dense primordial state to its present state and measuring the cosmological parameters which constitute the model. This model is well understood theoretically
+                            and supported by recent high-precision astronomical observations such as WMAP and Planck. Commonly, the set of observations fitted includes
+                            the cosmic microwave background anisotropy, the brightness/redshift relation for Type Ia supernovae, and large-scale galaxy clustering including
+                            the baryon acoustic oscillation feature. Other observations, such as the Hubble constant, the abundance of galaxy clusters, weak gravitational lensing
+                            and globular cluster ages, are generally consistent with these, providing a check of the model, but are less accurately measured at present.
+                            Assuming that the Lambda-CDM model is correct, the measurements of the parameters using a variety of techniques by numerous experiments yield
+                            a best value of the age of the universe as of 2015 of 13.799 ± 0.021 billion years.
+                        </p>
+                        <p>
+                            Over time, the universe and its contents have evolved; for example, the relative population of quasars and galaxies has changed
+                            and space itself has expanded. Due to this expansion, scientists on Earth can observe the light from a galaxy 30 billion light-years away even though
+                            that light has traveled for only 13 billion years; the very space between them has expanded. This expansion is consistent with the observation that
+                            the light from distant galaxies has been redshifted; the photons emitted have been stretched to longer wavelengths and lower frequency during their journey.
+                            Analyses of Type Ia supernovae indicate that the spatial expansion is accelerating.
+                        </p>
+                        <p>
+                            The more matter there is in the universe, the stronger the mutual gravitational pull of the matter. If the universe were too dense then
+                            it would re-collapse into a gravitational singularity. However, if the universe contained too little matter then the self-gravity would be too weak
+                            for astronomical structures, like galaxies or planets, to form. Since the Big Bang, the universe has expanded monotonically. Perhaps unsurprisingly,
+                            our universe has just the right mass-energy density, equivalent to about 5 protons per cubic metre, which has allowed it to expand for
+                            the last 13.8 billion years, giving time to form the universe as observed today.
+                        </p>
+                        <div class="w3-content w3-margin-bottom cool-font" style="max-width:700px;padding:0;">
+                            <picture>
+                                <!--/static/images/universe/universe4-small.jpg-->
+                                <source class="last-load" media="(max-width: 600px)">
+                                <!--/static/images/universe/universe4-md-lg.jpg-->
+                                <img class="last-load" alt="Stars in the Milky Way galaxy that are almost 13.6 billion years old" style="width:100%;" />
+                            </picture>
+                            <div class="w3-container w3-black w3-center">
+                                <p class="sm-text">Astronomers discovered stars in the Milky Way galaxy that are almost 13.6 billion years old.</p>
+                            </div>
+                        </div>
+                        <p>
+                            There are dynamical forces acting on the particles in the universe which affect the expansion rate. Before 1998, it was expected that
+                            the expansion rate would be decreasing as time went on due to the influence of gravitational interactions in the universe; and thus there is
+                            an additional observable quantity in the universe called the deceleration parameter, which most cosmologists expected to be positive and
+                            related to the matter density of the universe. In 1998, the deceleration parameter was measured by two different groups to be negative,
+                            approximately -0.55, which technically implies that the second derivative of the cosmic scale factor {\displaystyle {\ddot {a}}}{\displaystyle {\ddot {a}}}
+                            has been positive in the last 5-6 billion years. This acceleration does not, however, imply that the Hubble parameter is currently increasing;
+                            see deceleration parameter for details.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-margin cool-font">
+                <div class="w3-content" style="max-width:1400px;">
+                    <div class="w3-row-padding w3-stretch">
+                        <div id="first_link_from" class="w3-col l2 m3 s6 w3-margin-bottom w3-hide-large">
+                            <div class="w3-hover-shadow">
+                                <a href="/big-bang">
+                                    <!--'/static/images/universe/big-bang-link.jpg'-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>The Big Bang</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m3 s6 w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/galaxy">
+                                    <!--'https://www.wallpaperup.com/uploads/wallpapers/2012/04/04/2040/0680f415682b6b42da0d9834b5c887da-700.jpg'-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>A galaxy</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m3 s6 w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/milky-way">
+                                    <!--'https://www.dw.com/image/45348566_303.jpg'-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>The Milky Way</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m3 s6 w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/whirlpool">
+                                    <!--'/static/images/universe/whirlpool-link.jpg'-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>The Whirlpool</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m3 s6 w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/andromeda">
+                                    <!--'https://thumbor.forbes.com/thumbor/711x459/https://specials-images.forbesimg.com/dam/imageserve/541409306/960x0.jpg?fit=scale'-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>The Andromeda</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m3 s6 w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/sombrero">
+                                    <!--'https://www.iliketowastemytime.com/sites/default/files/imagecache/blog_image/sombrero-galaxy-hd-wallpaper.jpg'-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>The Sombrero</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="w3-col l2 m3 s6 w3-margin-bottom">
+                            <div class="w3-hover-shadow">
+                                <a href="/black-hole">
+                                    <!--'https://astronomy.com/-/media/Images/News%20and%20Observing/News/2019/07/image_4606e47TucanaeBlackHole.jpg?mw=600'-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>A black hole</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="last_link_from" class="w3-col l2 m3 s6 w3-margin-bottom w3-hide-large">
+                            <div class="w3-hover-shadow">
+                                <a href="/cosmic-dust">
+                                    <!--'https://astronomy.com/-/media/Images/News%20and%20Observing/News/2017/11/dustheader.jpg?mw=600'-->
+                                    <div class="boximg w3-container img-link last-load"></div>
+                                    <div class="w3-container w3-center w3-white">
+                                        <h3>Cosmic dust</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-row-padding w3-stretch w3-hide-medium w3-hide-small">
+                        <div id="first_link_to" class="w3-col l2 m3 s6 w3-left w3-margin-bottom">
+                        </div>
+                        <div id="last_link_to" class="w3-col l2 m3 s6 w3-right w3-margin-bottom">
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+
+{% block info %}
+                <span>The source of most text information is</span>
+                <a class="source" href="https://en.wikipedia.org/wiki/Universe" target="_blank">Wikipedia</a>
+{% endblock %}
+
+{% block scripts %}
+        <script>
+            // Load images after a page has loaded
+            loadImgsAfterBody([
+                '/static/images/universe/universe1-small.jpg',
+                '/static/images/universe/universe1-medium.jpg',
+                '/static/images/universe/universe1-large.jpg',
+                '/static/images/universe/universe2-small.jpg',
+                '/static/images/universe/universe2-medium.jpg',
+                '/static/images/universe/universe2-large.jpg',
+                '/static/images/universe/universe3-small.jpg',
+                '/static/images/universe/universe3-md-lg.jpg'
+            ], true);
+            // Load images when a user has scrolled down the middle of a page
+            loadAfterScrollMid([
+                '/static/images/universe/universe4-small.jpg',
+                '/static/images/universe/universe4-md-lg.jpg',
+                '/static/images/universe/big-bang-link.jpg',
+                'https://www.wallpaperup.com/uploads/wallpapers/2012/04/04/2040/0680f415682b6b42da0d9834b5c887da-700.jpg',
+                'https://www.dw.com/image/45348566_303.jpg',
+                '/static/images/universe/whirlpool-link.jpg',
+                'https://thumbor.forbes.com/thumbor/711x459/https://specials-images.forbesimg.com/dam/imageserve/541409306/960x0.jpg?fit=scale',
+                'https://www.iliketowastemytime.com/sites/default/files/imagecache/blog_image/sombrero-galaxy-hd-wallpaper.jpg',
+                'https://astronomy.com/-/media/Images/News%20and%20Observing/News/2019/07/image_4606e47TucanaeBlackHole.jpg?mw=600',
+                'https://astronomy.com/-/media/Images/News%20and%20Observing/News/2017/11/dustheader.jpg?mw=600',
+                '/static/images/universe/big-bang-link.jpg',
+                'https://astronomy.com/-/media/Images/News%20and%20Observing/News/2017/11/dustheader.jpg?mw=600'
+            ]);
+            // Change layout for large screens
+            if (!isMobile) {
+            // if (window.innerWidth > 992) {
+                document.getElementById('first_link_to').innerHTML =
+                document.getElementById('first_link_from').innerHTML;
+                document.getElementById('last_link_to').innerHTML =
+                document.getElementById('last_link_from').innerHTML;
+            }
+            // Make a link to the current page active
+            makeActive('.universe');
+        </script>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Adding cash
+{% endblock %}
+
+{% block main %}
+    <form action="/add" method="post">
+        <div class="form-group">
+            <div class="padd clearfix">
+                <label class="shift" for="forminput">Specify a number of cash you want to add</label>
+            </div>
+            <input type="number" name="cash" class="form-control" id="forminput" step="0.01" aria-describedby="additional"/>
+            <small id="additional" class="form-text text-muted">No more than 1.000.000,00 USD at once</small>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Add</button>
+        </div>
+    </form>
+{% endblock %}

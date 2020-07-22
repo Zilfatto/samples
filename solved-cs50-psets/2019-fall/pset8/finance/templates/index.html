@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+
+{% block main %}
+    <table class="table table-hover">
+        <tr class="table-active">
+            <th scope="col">Symbol</th>
+            <th scope="col">Name</th>
+            <th scope="col">Shares</th>
+            <th scope="col">Price</th>
+            <th scope="col">TOTAL</th>
+        </tr>
+        {% set ns = namespace(alltotal=rows[0]["cash"]) %}
+        {% if rows[0]["symbol"] %}
+            {% for row in rows %}
+                {% set total = row["price"] * row["shares"] %}
+                {% set ns.alltotal = ns.alltotal + total %}
+                <tr>
+                    <td>{{ row["symbol"] }}</td>
+                    <td>{{ row["company"] }}</td>
+                    <td>{{ row["shares"] }}</td>
+                    <td>{{ "${:,.2f}".format(row["price"]) }}</td>
+                    <td class="vertical">{{ "${:,.2f}".format(total) }}</td>
+                </tr>
+            {% endfor %}
+        {% endif %}
+        <tr>
+            <td>CASH</td>
+            <td colspan="3"></td>
+            <td class="vertical">{{ "${:,.2f}".format(rows[0]["cash"]) }}</td>
+        </tr>
+        <tr>
+            <td colspan="4"></td>
+            <td class="vertical"><b>{{ "${:,.2f}".format(ns.alltotal) }}</b></td>
+        </tr>
+    </table>
+    <div class="clearfix">
+        <a class="cash add-cash" href="/add">Add more cash</a>
+        <a class="cash withdraw" href="/withdraw">Withdraw cash</a>
+    </div>
+{% endblock %}
