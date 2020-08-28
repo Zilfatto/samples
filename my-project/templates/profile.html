@@ -601,7 +601,7 @@
                 userCash = retrieve({{user_data["cash"]|tojson}}),
                 allUserCash = retrieve({{user_data["all_cash"]|tojson}}),
                 // For mobile browsers that do not support unload and visibilitychange events
-                alwaysUpdateStorg,
+                alwaysUpdateStore,
                 total = 0,
                 pickedItems = {},
                 gotNewHistory = false,
@@ -673,7 +673,7 @@
                 const ua = navigator.userAgent;
                 // Using UA is not very reliable way of determining the browser, but it works well for now
                 if (/FxiOS|Firefox|Mobile\/15E148|EdgA|OPR|YaBrowser|BlackBerry|IEMobile|Opera Mini|CriOS/i.test(ua)) {
-                    alwaysUpdateStorg = true;
+                    alwaysUpdateStore = true;
                 } else {
                     // Handle page visibility change for mobile Chrome
                     document.addEventListener('visibilitychange', () => {
@@ -1028,7 +1028,7 @@
                 updateCount();
                 updateTotal();
                 checkBuying();
-                if (alwaysUpdateStorg) {
+                if (alwaysUpdateStore) {
                     // Update storage
                     setStorageObj('cart', cart);
                 }
@@ -1056,7 +1056,7 @@
                         userCash -= response['total'];
                         cart = newCart.sort(function(a, b){return a - b;});
                         updateCount();
-                        if (alwaysUpdateStorg) {
+                        if (alwaysUpdateStore) {
                             // Update storage
                             setStorageObj('cart', cart);
                         }
@@ -1088,7 +1088,7 @@
                 item.parentNode.removeChild(item);
                 updateCount();
                 checkBuying();
-                if (alwaysUpdateStorg) {
+                if (alwaysUpdateStore) {
                     // Update storage
                     setStorageObj('cart', cart);
                 }
