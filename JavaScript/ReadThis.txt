@@ -1,0 +1,2 @@
+Here I uploaded all the files of JS code which I was writing while learning JavaScript much deeper (in particular, about OOP and Asyncronous JS).
+I used resources such as Mozilla (developer.mozilla.org) and great courses of Mosh Hamedani (on codewithmosh.com).
