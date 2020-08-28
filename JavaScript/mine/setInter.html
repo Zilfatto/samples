@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <title>Search</title>
+    </head>
+    <body>
+        <a href="advanced.html" class="link">Advanced search</a>
+        <a href="image.html" class="link">Image search</a>
+        <h1>Google</h1>
+        <form action="https://google.com/search">
+            <div id="control">
+                <input type="text" name="q" placeholder="Search Google or type a URL" />
+                <i class="material-icons">&#xe8b6;</i>
+            </div>
+            <button type="submit">Google Search</button>
+            <button type="button" onclick="stopInterval()">Stop</button>
+        </form>
+        <script>
+            let count = 0;
+            let stop = setInterval(() => {
+                console.log(count);
+                count++;
+            }, 500);
+            function stopInterval() {
+                for (let i = 0; i < 2000000; i++) {
+                    document.querySelector('h1').innerText = 'I am ' + i + ' here';
+                    document.querySelector('a').innerText = i + 'Phhh';
+                }
+            }
+        </script>
+    </body>
+</html>
