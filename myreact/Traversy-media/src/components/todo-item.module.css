@@ -1,0 +1,22 @@
+.todo-item {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #bbbb00;
+  padding: 6px 12px;
+}
+.btn {
+  display: inline-block;
+  background-color: #cc3300;
+  color: #fff;
+  border: 1px solid #000;
+  float: right;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 50%;
+  padding: 2px 7px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #dd3300;
+  border-color: #999;
+}
