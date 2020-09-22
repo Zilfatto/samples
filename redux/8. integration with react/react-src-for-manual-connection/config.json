@@ -1,0 +1,5 @@
+{
+  "apiEndPoint": "http://localhost:9001/api",
+  "bugsUrl": "/bugs",
+  "minutesForCachedData": 10
+}
