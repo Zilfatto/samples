@@ -1,0 +1,19 @@
+$primary: #37ccd6;
+$danger: purple;
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #353535;
+
+  .title {
+    color: rgb(228, 228, 24);
+  }
+}
+
+input {
+  padding: 16px 10px;
+  border-radius: 15px;
+  border: 1px solid black;
+}

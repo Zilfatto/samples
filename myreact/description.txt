@@ -1,1 +1,1 @@
-Here are my first steps in acquiring react. I left only files from the source folder of react project to make in simpler to read my code.
+Here are my first steps in acquiring react. Somewhere I left only files from the source folder of react project to make in simpler to read my code.
