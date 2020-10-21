@@ -6,6 +6,7 @@ import { Layout } from 'antd';
 import { loadCheques } from './features/cheques/ChequesSlice';
 import './App.css';
 import 'antd/dist/antd.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   const dispatch = useDispatch();
