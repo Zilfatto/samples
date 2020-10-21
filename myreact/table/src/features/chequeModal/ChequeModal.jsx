@@ -65,24 +65,15 @@ const SearchModal = ({ closeModal, ...restProps }) => {
 
   const handleChequeSave = () => {
     // Validation
-    if (!kioskName) {
-      console.log('Укажите название киоска');
-      toast.error('Укажите название киоска');
-      return;
-    }
-    else if (!positions.every(position => position.name && position.price && position.quantity)) {
-      console.log('Один из товаров неверно заполнен');
-      toast.error('Один из товаров неверно заполнен');
-      return;
-    }
-    else if (pays[0] && !pays.every(pay => pay.sum)) {
-      console.log('Одна из оплат выполнена некорректно');
-      toast.error('Одна из оплат выполнена некорректно');
-      return;
-    }
+    if (!kioskName) return toast.error('Укажите название киоска');
+
+    else if (!positions.every(position => position.name && position.price && position.quantity))
+      return toast.error('Один из товаров неверно заполнен');
+
+    else if (pays[0] && !pays.every(pay => pay.sum))
+      return toast.error('Одна из оплат выполнена некорректно');
 
     dispatch(chequeAdded(chequeModal));
-    console.log('Чек добавлен!')
     toast('Чек добавлен!');
     closeModal();
     dispatch(chequeModalReset());
