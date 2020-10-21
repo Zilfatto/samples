@@ -11,23 +11,10 @@ const slice = createSlice({
     },
 
     chequeAdded: (cheques, action) => {
-      const {
-        kioskName,
-        chequeType,
-        pay,
-        sum,
-        quantity,
-        position
-      } = action.payload;
-
       cheques.push({
+        ...action.payload,
         uid: Date.now(),
-        dateReg: new Date().toISOString(),
-        kioskName,
-        chequeType,
-        sum,
-        pays: [{ sum: pay }],
-        positions: [{ quantity, position }]
+        dateReg: new Date().toISOString()
       });
     },
 

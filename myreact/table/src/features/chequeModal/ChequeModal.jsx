@@ -35,9 +35,7 @@ const SearchModal = ({ closeModal, ...restProps }) => {
   const calculateSum = () => {
     let newSum;
     if (!positions[0]) newSum = 0;
-    else {
-      newSum = positions.reduce((total, position) => total + position.quantity * position.price, 0);
-    }
+    else newSum = positions.reduce((total, position) => total + position.quantity * position.price, 0);
     dispatch(chequeModalSumChanged(newSum));
   };
 
@@ -53,7 +51,7 @@ const SearchModal = ({ closeModal, ...restProps }) => {
   useEffect(() => {
     const newRemainder = calculateRemainder();
     setRemainder(newRemainder);
-  }, [positions, pays]);
+  }, [positions, pays, sum]);
 
   const handleKioskNameInput = (e) => {
     const { value } = e.target;
@@ -67,11 +65,24 @@ const SearchModal = ({ closeModal, ...restProps }) => {
 
   const handleChequeSave = () => {
     // Validation
-    if (!kioskName) return toast.error('Укажите название киоска');
-    else if (!positions.every((position) => position.name && position.price && position.quantity))
-      return toast.error('Один из товаров неверно заполнен');
+    if (!kioskName) {
+      console.log('Укажите название киоска');
+      toast.error('Укажите название киоска');
+      return;
+    }
+    else if (!positions.every(position => position.name && position.price && position.quantity)) {
+      console.log('Один из товаров неверно заполнен');
+      toast.error('Один из товаров неверно заполнен');
+      return;
+    }
+    else if (pays[0] && !pays.every(pay => pay.sum)) {
+      console.log('Одна из оплат выполнена некорректно');
+      toast.error('Одна из оплат выполнена некорректно');
+      return;
+    }
 
     dispatch(chequeAdded(chequeModal));
+    console.log('Чек добавлен!')
     toast('Чек добавлен!');
     closeModal();
     dispatch(chequeModalReset());
@@ -83,54 +94,65 @@ const SearchModal = ({ closeModal, ...restProps }) => {
       {...restProps}
       centered
     >
-      <span className="input-label">Киоск</span>
-      <Input
-        placeholder="Название киоска"
-        onChange={handleKioskNameInput}
-        value={kioskName}
-      />
-      <span className="input-label">Тип</span>
-      <Select
-        style={{ width: '100%' }}
-        defaultValue={chequeType.toString()}
-        optionFilterProp="children"
-        onChange={(value) => dispatch(chequeModalChequeTypeChanged(Number(value)))}
-      >
-        <Option value="0">Продажа</Option>
-        <Option value="1">Возврат</Option>
-      </Select>
-      <span className="input-label">Сумма</span>
-      <Input
-        value={sum}
-        disabled={true}
-      />
-
+      <div className="modal-input-row">
+        <span className="input-label">Киоск</span>
+        <Input
+          placeholder="Название киоска"
+          onChange={handleKioskNameInput}
+          value={kioskName}
+        />
+      </div>
+      <div className="modal-input-row">
+        <span className="input-label">Тип</span>
+        <Select
+          style={{ width: '100%' }}
+          defaultValue={chequeType.toString()}
+          optionFilterProp="children"
+          onChange={(value) => dispatch(chequeModalChequeTypeChanged(Number(value)))}
+        >
+          <Option value="0">Продажа</Option>
+          <Option value="1">Возврат</Option>
+        </Select>
+      </div>
+      <div className="modal-input-row">
+        <span className="input-label">Сумма</span>
+        <Input
+          value={sum}
+          disabled={true}
+        />
+      </div>
       <div className="positions-container">
         <Button type="primary" onClick={() => dispatch(chequeModalPositionAdded())}>Добавить товар</Button>
         {positions.map((position, index) => (
           <div key={index} className="position">
-            <span className="input-label">Товар</span>
-            <Input
-              placeholder="Название товара"
-              value={position.name}
-              onChange={e => handlePositionNameChange({ index, e })}
-            />
-            <span className="input-label">Цена</span>
-            <InputNumber
-              min={0}
-              max={1000000}
-              style={{ margin: '0 16px' }}
-              value={position.price}
-              onChange={(price) => dispatch(chequeModalPositionPriceChanged({ index, price }))}
-            />
-            <span className="input-label">Количество</span>
-            <InputNumber
-              min={0}
-              max={1000}
-              style={{ margin: '0 16px' }}
-              value={position.quantity}
-              onChange={(quantity) => dispatch(chequeModalPositionQuantityChanged({ index, quantity }))}
-            />
+            <div className="position-row">
+              <span className="input-label">Товар</span>
+              <Input
+                placeholder="Название товара"
+                value={position.name}
+                onChange={e => handlePositionNameChange({ index, e })}
+              />
+            </div>
+            <div className="position-row">
+              <span className="input-label">Цена</span>
+              <InputNumber
+                min={1}
+                max={1000000}
+                style={{ margin: '0 16px' }}
+                value={position.price}
+                onChange={(price) => dispatch(chequeModalPositionPriceChanged({ index, price }))}
+              />
+            </div>
+            <div className="position-row">
+              <span className="input-label">Количество</span>
+              <InputNumber
+                min={1}
+                max={1000}
+                style={{ margin: '0 16px' }}
+                value={position.quantity}
+                onChange={(quantity) => dispatch(chequeModalPositionQuantityChanged({ index, quantity }))}
+              />
+            </div>
             <Button danger onClick={() => dispatch(chequeModalPositionRemoved(index))}>Удалить</Button>
           </div>
         ))}
@@ -139,14 +161,16 @@ const SearchModal = ({ closeModal, ...restProps }) => {
         <Button type="primary" disabled={remainder <= 0} onClick={() => dispatch(chequeModalPayAdded())}>Добавить оплату</Button>
         {pays.map(pay => (
           <div key={pay.uid} className="pay">
-            <span className="input-label">Оплата</span>
-            <InputNumber
-              min={1}
-              max={pay.sum === 1 ? remainder : pay.sum}
-              style={{ margin: '0 16px' }}
-              value={pay.sum}
-              onChange={(sum) => dispatch(chequeModalPaySumChanged({ sum, uid: pay.uid }))}
-            />
+            <div className="position-row">
+              <span className="input-label">Оплата</span>
+              <InputNumber
+                min={1}
+                max={remainder !== 0 ? pay.sum + remainder : pay.sum}
+                style={{ margin: '0 16px' }}
+                value={pay.sum}
+                onChange={(sum) => dispatch(chequeModalPaySumChanged({ sum, uid: pay.uid }))}
+              />
+            </div>
             <Button danger onClick={() => dispatch(chequeModalPayRemoved(pay.uid))}>Удалить</Button>
           </div>
         ))}
