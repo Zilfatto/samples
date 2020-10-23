@@ -22,36 +22,32 @@ import {
 const SearchModal = ({ closeModal, ...restProps }) => {
   const dispatch = useDispatch();
   const chequeModal = useSelector(selectChequeModal);
-  const [remainder, setRemainder] = useState(0);
+  // const [remainder, setRemainder] = useState(0);
+  // const [sum, setSum] = useState(0);
+  const [littleState, setLittleState] = useState({ sum: chequeModal.sum, remainder: 0 });
   const { Option } = Select;
   const {
     kioskName,
     chequeType,
-    sum,
     pays,
     positions
   } = chequeModal;
 
   const calculateSum = () => {
-    let newSum;
-    if (!positions[0]) newSum = 0;
-    else newSum = positions.reduce((total, position) => total + position.quantity * position.price, 0);
-    dispatch(chequeModalSumChanged(newSum));
+    if (!positions[0]) return 0;
+    return positions.reduce((total, position) => total + position.quantity * position.price, 0);
   };
 
-  const calculateRemainder = () => {
+  const calculateRemainder = (sum) => {
     if (!pays[0]) return sum;
     return pays.reduce((total, pay) => total - pay.sum, sum);
   };
 
   useEffect(() => {
-    calculateSum();
-  }, [positions]);
-
-  useEffect(() => {
-    const newRemainder = calculateRemainder();
-    setRemainder(newRemainder);
-  }, [pays, sum]);
+    const sum = calculateSum();
+    const remainder = calculateRemainder(sum);
+    setLittleState({ sum, remainder });
+  }, [positions, pays]);
 
   const handleKioskNameInput = (e) => {
     const { value } = e.target;
@@ -61,6 +57,11 @@ const SearchModal = ({ closeModal, ...restProps }) => {
   const handlePositionNameChange = ({ index, e }) => {
     const { value: name } = e.target;
     dispatch(chequeModalPositionNameChanged({ index, name }))
+  };
+
+  const convertToInt = (number) => {
+    if (!number) return number;
+    return Math.round(number)
   };
 
   const handleChequeSave = () => {
@@ -85,6 +86,7 @@ const SearchModal = ({ closeModal, ...restProps }) => {
       {...restProps}
       centered
     >
+      {console.log('Rendered!')}
       <div className="modal-input-row">
         <span className="input-label">Киоск</span>
         <Input
@@ -108,7 +110,7 @@ const SearchModal = ({ closeModal, ...restProps }) => {
       <div className="modal-input-row">
         <span className="input-label">Сумма</span>
         <Input
-          value={sum}
+          value={littleState.sum}
           disabled={true}
         />
       </div>
@@ -131,7 +133,7 @@ const SearchModal = ({ closeModal, ...restProps }) => {
                 max={1000000}
                 style={{ margin: '0 16px' }}
                 value={position.price}
-                onChange={(price) => dispatch(chequeModalPositionPriceChanged({ index, price }))}
+                onChange={price => dispatch(chequeModalPositionPriceChanged({ index, price: convertToInt(price) }))}
               />
             </div>
             <div className="position-row">
@@ -141,7 +143,7 @@ const SearchModal = ({ closeModal, ...restProps }) => {
                 max={1000}
                 style={{ margin: '0 16px' }}
                 value={position.quantity}
-                onChange={(quantity) => dispatch(chequeModalPositionQuantityChanged({ index, quantity }))}
+                onChange={quantity => dispatch(chequeModalPositionQuantityChanged({ index, quantity: convertToInt(quantity) }))}
               />
             </div>
             <Button danger onClick={() => dispatch(chequeModalPositionRemoved(index))}>Удалить</Button>
@@ -149,22 +151,26 @@ const SearchModal = ({ closeModal, ...restProps }) => {
         ))}
       </div>
       <div className="pays-container">
-        <Button type="primary" disabled={remainder <= 0} onClick={() => dispatch(chequeModalPayAdded())}>Добавить оплату</Button>
-        {pays.map(pay => (
-          <div key={pay.uid} className="pay">
-            <div className="position-row">
-              <span className="input-label">Оплата</span>
-              <InputNumber
-                min={1}
-                max={remainder !== 0 ? pay.sum + remainder : pay.sum}
-                style={{ margin: '0 16px' }}
-                value={pay.sum}
-                onChange={(sum) => dispatch(chequeModalPaySumChanged({ sum, uid: pay.uid }))}
-              />
+        <Button type="primary" disabled={littleState.remainder <= 0} onClick={() => dispatch(chequeModalPayAdded())}>Добавить оплату</Button>
+        {pays.map(pay => {
+          const { sum } = pay;
+          const { remainder } = littleState;
+          return (
+            <div key={pay.uid} className="pay">
+              <div className="position-row">
+                <span className="input-label">Оплата</span>
+                <InputNumber
+                  min={1}
+                  max={remainder !== 0 ? sum + remainder : sum}
+                  style={{ margin: '0 16px' }}
+                  value={sum}
+                  onChange={sum => dispatch(chequeModalPaySumChanged({ sum: convertToInt(sum), uid: pay.uid }))}
+                />
+              </div>
+              <Button danger onClick={() => dispatch(chequeModalPayRemoved(pay.uid))}>Удалить</Button>
             </div>
-            <Button danger onClick={() => dispatch(chequeModalPayRemoved(pay.uid))}>Удалить</Button>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </Modal>
   );
