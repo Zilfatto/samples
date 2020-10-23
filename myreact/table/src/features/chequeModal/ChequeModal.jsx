@@ -9,7 +9,6 @@ import {
   chequeModalPaySumChanged,
   chequeModalPayAdded,
   chequeModalPayRemoved,
-  chequeModalSumChanged,
   chequeModalPositionAdded,
   chequeModalPositionRemoved,
   chequeModalPositionNameChanged,
@@ -22,8 +21,6 @@ import {
 const SearchModal = ({ closeModal, ...restProps }) => {
   const dispatch = useDispatch();
   const chequeModal = useSelector(selectChequeModal);
-  // const [remainder, setRemainder] = useState(0);
-  // const [sum, setSum] = useState(0);
   const [littleState, setLittleState] = useState({ sum: chequeModal.sum, remainder: 0 });
   const { Option } = Select;
   const {
@@ -59,9 +56,13 @@ const SearchModal = ({ closeModal, ...restProps }) => {
     dispatch(chequeModalPositionNameChanged({ index, name }))
   };
 
-  const convertToInt = (number) => {
-    if (!number) return number;
-    return Math.round(number)
+  const convertToInt = (value) => {
+    if (!value) return value;
+    if (typeof value === 'number') return Math.round(value);
+
+    const parsedValue = parseInt(value);
+    if (isNaN(parsedValue)) return null;
+    return parsedValue;
   };
 
   const handleChequeSave = () => {
@@ -86,7 +87,6 @@ const SearchModal = ({ closeModal, ...restProps }) => {
       {...restProps}
       centered
     >
-      {console.log('Rendered!')}
       <div className="modal-input-row">
         <span className="input-label">Киоск</span>
         <Input
