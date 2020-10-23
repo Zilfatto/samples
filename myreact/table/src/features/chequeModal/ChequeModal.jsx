@@ -51,7 +51,7 @@ const SearchModal = ({ closeModal, ...restProps }) => {
   useEffect(() => {
     const newRemainder = calculateRemainder();
     setRemainder(newRemainder);
-  }, [positions, pays, sum]);
+  }, [pays, sum]);
 
   const handleKioskNameInput = (e) => {
     const { value } = e.target;
