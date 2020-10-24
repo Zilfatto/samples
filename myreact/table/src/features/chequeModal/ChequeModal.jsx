@@ -147,10 +147,10 @@ const SearchModal = ({ closeModal, ...restProps }) => {
       <div className="pays-container">
         <Button type="primary" disabled={calculateRemainder() <= 0} onClick={() => dispatch(chequeModalPayAdded())}>Добавить оплату</Button>
         {pays.map(pay => {
-          const { sum } = pay;
+          const { sum, uid } = pay;
           const remainder = calculateRemainder();
           return (
-            <div key={pay.uid} className="pay">
+            <div key={uid} className="pay">
               <div className="position-row">
                 <span className="input-label">Оплата</span>
                 <InputNumber
@@ -158,10 +158,10 @@ const SearchModal = ({ closeModal, ...restProps }) => {
                   max={remainder !== 0 ? sum + remainder : sum}
                   style={{ margin: '0 16px' }}
                   value={sum}
-                  onChange={sum => dispatch(chequeModalPaySumChanged({ sum: convertToInt(sum), uid: pay.uid }))}
+                  onChange={sum => dispatch(chequeModalPaySumChanged({ sum: convertToInt(sum), uid }))}
                 />
               </div>
-              <Button danger onClick={() => dispatch(chequeModalPayRemoved(pay.uid))}>Удалить</Button>
+              <Button danger onClick={() => dispatch(chequeModalPayRemoved(uid))}>Удалить</Button>
             </div>
           );
         })}
