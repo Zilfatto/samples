@@ -21,7 +21,6 @@ import {
 const SearchModal = ({ closeModal, ...restProps }) => {
   const dispatch = useDispatch();
   const chequeModal = useSelector(selectChequeModal);
-  const [littleState, setLittleState] = useState({ sum: chequeModal.sum, remainder: 0 });
   const { Option } = Select;
   const {
     kioskName,
@@ -35,16 +34,11 @@ const SearchModal = ({ closeModal, ...restProps }) => {
     return positions.reduce((total, position) => total + position.quantity * position.price, 0);
   };
 
-  const calculateRemainder = (sum) => {
+  const calculateRemainder = () => {
+    const sum = calculateSum();
     if (!pays[0]) return sum;
     return pays.reduce((total, pay) => total - pay.sum, sum);
   };
-
-  useEffect(() => {
-    const sum = calculateSum();
-    const remainder = calculateRemainder(sum);
-    setLittleState({ sum, remainder });
-  }, [positions, pays]);
 
   const handleKioskNameInput = (e) => {
     const { value } = e.target;
@@ -110,7 +104,7 @@ const SearchModal = ({ closeModal, ...restProps }) => {
       <div className="modal-input-row">
         <span className="input-label">Сумма</span>
         <Input
-          value={littleState.sum}
+          value={calculateSum()}
           disabled={true}
         />
       </div>
@@ -151,10 +145,10 @@ const SearchModal = ({ closeModal, ...restProps }) => {
         ))}
       </div>
       <div className="pays-container">
-        <Button type="primary" disabled={littleState.remainder <= 0} onClick={() => dispatch(chequeModalPayAdded())}>Добавить оплату</Button>
+        <Button type="primary" disabled={calculateRemainder() <= 0} onClick={() => dispatch(chequeModalPayAdded())}>Добавить оплату</Button>
         {pays.map(pay => {
           const { sum } = pay;
-          const { remainder } = littleState;
+          const remainder = calculateRemainder();
           return (
             <div key={pay.uid} className="pay">
               <div className="position-row">
