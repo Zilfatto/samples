@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Modal, Select, Input, InputNumber, Button } from 'antd';
 import { chequeAdded } from '../cheques/ChequesSlice';
@@ -34,13 +34,15 @@ const SearchModal = ({ closeModal, ...restProps }) => {
     return positions.reduce((total, position) => total + position.quantity * position.price, 0);
   };
 
-  const calculateRemainder = () => {
-    const sum = calculateSum();
+  const calculateRemainder = sum => {
     if (!pays[0]) return sum;
     return pays.reduce((total, pay) => total - pay.sum, sum);
   };
 
-  const handleKioskNameInput = (e) => {
+  const sum = useMemo(() => calculateSum(), [positions]);
+  const remainder = useMemo(() => calculateRemainder(sum), [pays, sum]);
+
+  const handleKioskNameInput = e => {
     const { value } = e.target;
     dispatch(chequeModalKioskNameChanged(value));
   };
@@ -50,13 +52,37 @@ const SearchModal = ({ closeModal, ...restProps }) => {
     dispatch(chequeModalPositionNameChanged({ index, name }))
   };
 
-  const convertToInt = (value) => {
+  const convertToInt = value => {
     if (!value) return value;
     if (typeof value === 'number') return Math.round(value);
 
     const parsedValue = parseInt(value);
     if (isNaN(parsedValue)) return null;
     return parsedValue;
+  };
+
+  const convertToFloat = value => {
+    if (!value) return value;
+    if (typeof value === 'number') return value.toFixed(2);
+
+    const parsedValue = parseFloat(value);
+    if (isNaN(parsedValue)) return null;
+    return parsedValue.toFixed(2);
+  };
+
+  const calculateRestPaysSum = uid => {
+    return pays.reduce((total, pay) => {
+      if (pay.uid === uid) return total;
+      return total + pay.sum;
+    }, 0);
+  };
+
+  const computeMaxPay = (paySum, uid) => {
+    if (remainder > 0) return paySum + remainder;
+
+    else if (remainder === 0) return paySum;
+
+    else return sum - calculateRestPaysSum(uid);
   };
 
   const handleChequeSave = () => {
@@ -104,7 +130,7 @@ const SearchModal = ({ closeModal, ...restProps }) => {
       <div className="modal-input-row">
         <span className="input-label">Сумма</span>
         <Input
-          value={calculateSum()}
+          value={sum.toFixed(2)}
           disabled={true}
         />
       </div>
@@ -127,7 +153,8 @@ const SearchModal = ({ closeModal, ...restProps }) => {
                 max={1000000}
                 style={{ margin: '0 16px' }}
                 value={position.price}
-                onChange={price => dispatch(chequeModalPositionPriceChanged({ index, price: convertToInt(price) }))}
+                precision={2}
+                onChange={price => dispatch(chequeModalPositionPriceChanged({ index, price: convertToFloat(price) }))}
               />
             </div>
             <div className="position-row">
@@ -145,20 +172,21 @@ const SearchModal = ({ closeModal, ...restProps }) => {
         ))}
       </div>
       <div className="pays-container">
-        <Button type="primary" disabled={calculateRemainder() <= 0} onClick={() => dispatch(chequeModalPayAdded())}>Добавить оплату</Button>
+        <Button type="primary" disabled={remainder <= 0} onClick={() => dispatch(chequeModalPayAdded())}>Добавить оплату</Button>
         {pays.map(pay => {
-          const { sum, uid } = pay;
-          const remainder = calculateRemainder();
+          const { sum: paySum, uid } = pay;
           return (
             <div key={uid} className="pay">
               <div className="position-row">
                 <span className="input-label">Оплата</span>
                 <InputNumber
                   min={1}
-                  max={remainder !== 0 ? sum + remainder : sum}
+                  max={computeMaxPay(paySum, uid)}
                   style={{ margin: '0 16px' }}
-                  value={sum}
-                  onChange={sum => dispatch(chequeModalPaySumChanged({ sum: convertToInt(sum), uid }))}
+                  value={paySum}
+                  precision={2}
+                  step={0.01}
+                  onChange={newSum => dispatch(chequeModalPaySumChanged({ sum: convertToFloat(newSum), uid }))}
                 />
               </div>
               <Button danger onClick={() => dispatch(chequeModalPayRemoved(uid))}>Удалить</Button>

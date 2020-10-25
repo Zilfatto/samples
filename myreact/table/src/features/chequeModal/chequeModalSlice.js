@@ -51,12 +51,26 @@ const slice = createSlice({
 
     chequeModalPositionQuantityChanged: (chequeModal, action) => {
       const { index, quantity } = action.payload;
-      chequeModal.positions[index].quantity = quantity;
+      const { pays, positions } = chequeModal;
+
+      positions[index].quantity = quantity;
+
+      const sum = calculateSum(positions);
+      const firstInvalid = validatePays(pays, sum);
+      // Cut off all the invalid items
+      chequeModal.pays.splice(firstInvalid);
     },
 
     chequeModalPositionPriceChanged: (chequeModal, action) => {
       const { index, price } = action.payload;
-      chequeModal.positions[index].price = price;
+      const { pays, positions } = chequeModal;
+
+      positions[index].price = price;
+
+      const sum = calculateSum(positions);
+      const firstInvalid = validatePays(pays, sum);
+      // Cut off all the invalid items
+      chequeModal.pays.splice(firstInvalid);
     },
 
     chequeModalReset: (chequeModal) => {
@@ -87,3 +101,34 @@ export default slice.reducer;
 
 // Selector
 export const selectChequeModal = state => state.entities.chequeModal;
+
+
+
+function calculateSum(items) {
+  return items.reduce((total, item) => total + item.quantity * item.price, 0);
+}
+
+function validatePays(pays, sum) {
+  let firstInvalid = 0;
+  if (!pays[0]) return firstInvalid;
+
+  let total = 0;
+  let firstExceeded = true;
+
+  pays.forEach((pay, index) => {
+    const paySum = pay.sum;
+    total += paySum;
+    if (total <= sum) {
+      firstInvalid = index + 1;
+      return;
+    }
+    if (firstExceeded) {
+      pay.sum = paySum - (total - sum);
+      firstExceeded = false;
+      firstInvalid = index + 1;
+      return;
+    }
+  });
+
+  return firstInvalid;
+}

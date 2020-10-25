@@ -15,11 +15,7 @@ const VideoSearch = () => {
       title: 'Дата покупки',
       dataIndex: 'dateReg',
       key: 'dateReg',
-      render: (iso) => {
-        const millisecs = Date.parse(iso);
-        const now = new Date(millisecs);
-        return now.toLocaleString();
-      }
+      render: iso => new Date(iso).toLocaleString()
     },
     {
       title: 'Киоск',
