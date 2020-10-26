@@ -6,6 +6,7 @@ const slice = createSlice({
     kioskName: '',
     chequeType: 0,
     pays: [],
+    activePayUid: null,
     sum: 0,
     positions: []
   },
@@ -19,8 +20,10 @@ const slice = createSlice({
     },
 
     chequeModalPaySumChanged: (chequeModal, action) => {
-      const index = chequeModal.pays.findIndex(pay => pay.uid === action.payload.uid);
-      chequeModal.pays[index].sum = action.payload.sum;
+      const { uid, sum } = action.payload;
+      const index = chequeModal.pays.findIndex(pay => pay.uid === uid);
+      chequeModal.pays[index].sum = sum;
+      chequeModal.activePayUid = uid;
     },
 
     chequeModalPayAdded: (chequeModal, action) => {
@@ -38,10 +41,12 @@ const slice = createSlice({
 
     chequeModalPositionAdded: (chequeModal, action) => {
       chequeModal.positions.push({ name: '', quantity: 1, price: 1 });
+      chequeModal.sum = calculateSum(chequeModal.positions);
     },
 
     chequeModalPositionRemoved: (chequeModal, action) => {
       chequeModal.positions.splice(action.payload, 1);
+      chequeModal.sum = calculateSum(chequeModal.positions);
     },
 
     chequeModalPositionNameChanged: (chequeModal, action) => {
@@ -57,6 +62,8 @@ const slice = createSlice({
 
       const sum = calculateSum(positions);
       const firstInvalid = validatePays(pays, sum);
+      // Update the sum
+      chequeModal.sum = sum;
       // Cut off all the invalid items
       chequeModal.pays.splice(firstInvalid);
     },
@@ -69,6 +76,8 @@ const slice = createSlice({
 
       const sum = calculateSum(positions);
       const firstInvalid = validatePays(pays, sum);
+      // Update the sum
+      chequeModal.sum = sum;
       // Cut off all the invalid items
       chequeModal.pays.splice(firstInvalid);
     },

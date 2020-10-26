@@ -26,21 +26,17 @@ const SearchModal = ({ closeModal, ...restProps }) => {
     kioskName,
     chequeType,
     pays,
-    positions
+    positions,
+    sum,
+    activePayUid
   } = chequeModal;
 
-  const calculateSum = () => {
-    if (!positions[0]) return 0;
-    return positions.reduce((total, position) => total + position.quantity * position.price, 0);
-  };
-
-  const calculateRemainder = sum => {
+  const calculateRemainder = () => {
     if (!pays[0]) return sum;
     return pays.reduce((total, pay) => total - pay.sum, sum);
   };
 
-  const sum = useMemo(() => calculateSum(), [positions]);
-  const remainder = useMemo(() => calculateRemainder(sum), [pays, sum]);
+  const remainder = useMemo(() => calculateRemainder(), [pays, sum]);
 
   const handleKioskNameInput = e => {
     const { value } = e.target;
@@ -63,7 +59,7 @@ const SearchModal = ({ closeModal, ...restProps }) => {
 
   const convertToFloat = value => {
     if (!value) return value;
-    if (typeof value === 'number') return value.toFixed(2);
+    if (typeof value === 'number') return Number(value.toFixed(2));
 
     const parsedValue = parseFloat(value);
     if (isNaN(parsedValue)) return null;
@@ -82,7 +78,10 @@ const SearchModal = ({ closeModal, ...restProps }) => {
 
     else if (remainder === 0) return paySum;
 
-    else return sum - calculateRestPaysSum(uid);
+    else {
+      if (activePayUid !== uid) return paySum;
+      return sum - calculateRestPaysSum(uid);
+    }
   };
 
   const handleChequeSave = () => {
