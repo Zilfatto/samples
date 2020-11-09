@@ -1,0 +1,21 @@
+doctype transitional
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(name="Keywords" content="Node.js and JavaScript")
+    meta(name="Description"
+    content="My app")
+    title= title
+  body
+    main
+      div
+        h1= message
+        div
+          - const items = [{ name: 'Heading', text: 'Something about something'}, {name: 'Some heading', text: 'Dreams are only dreams without a goal'}]
+          
+          each item in items
+            div
+                div
+                    h2= item.name
+                    p= item.text
