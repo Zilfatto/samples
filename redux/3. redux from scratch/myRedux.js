@@ -4,12 +4,12 @@ export function createMyStore(reducer) {
 
   return {
     getListeners: listeners,
-    dispatch: (action) => {
+    dispatch: function (action) {
       state = reducer(state, action);
       if (listeners.length > 0) listeners.forEach((listener) => listener());
     },
-    getState: () => state,
-    subscribe: (listener) => {
+    getState: function () { return state; },
+    subscribe: function (listener) {
       const number = listeners.push(listener);
       return () => listeners.splice(number - 1, 1, () => { });
     }
