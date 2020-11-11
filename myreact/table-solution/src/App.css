@@ -1,0 +1,43 @@
+@import '~antd/dist/antd.css';
+
+body {
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+.container-fluid {
+  position: relative;
+  margin: 20px auto 40px;
+  max-width: 1200px;
+  padding: 0 15px;
+}
+
+.ant-modal-title {
+  text-align: center;
+  font-size: 25px;
+}
+
+.positions-container, .pays-container {
+  margin: 15px 0;
+  padding: 10px;
+  border: 1px solid black;
+  background-color: #e1e1e1;
+}
+
+.positions-container .position, .pays-container .pay {
+  margin: 10px 0;
+  padding: 5px;
+  background-color: #c7c7c7;
+  border: 1px solid black;
+  border-width: 2px 0 2px 0; 
+}
+
+.position-row, .modal-input-row {
+  margin: 6px 0;
+}
+
+.input-label {
+  display: inline-block;
+  font-weight: 500;
+  width: 20%;
+}
